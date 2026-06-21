@@ -19,9 +19,9 @@
     "headers": {}
   },
   "download": {
-    "method": "construct_from_sparkle",
+    "method": "construct_url",
     "pattern": "https://assets.rescuetime.com/installers/RescueTimeInstaller_{VERSION}.app.zip",
-    "file_type": "app_zip",
+    "file_type": "zip",
     "headers": {}
   },
   "changelog": {

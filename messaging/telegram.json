@@ -10,7 +10,7 @@
   "min_os": "macOS 11",
   "auto_updates": true,
   "version_check": {
-    "method": "sparkle_xml",
+    "method": "sparkle_appcast",
     "url": "https://osx.telegram.org/updates/versions.xml",
     "extraction": {
       "type": "xpath",
@@ -19,10 +19,10 @@
     "headers": {}
   },
   "download": {
-    "method": "constructed_url",
-    "url_or_pattern": "https://osx.telegram.org/updates/Telegram-{shortVersion}.{buildVersion}.app.zip",
+    "method": "construct_url",
     "file_type": "dmg",
-    "headers": {}
+    "headers": {},
+    "url": "https://osx.telegram.org/updates/Telegram-12.8.282010.app.zip"
   },
   "changelog": {
     "method": "scrape",

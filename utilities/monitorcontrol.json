@@ -20,10 +20,10 @@
     "headers": {}
   },
   "download": {
-    "method": "pattern",
-    "url_or_pattern": "https://github.com/MonitorControl/MonitorControl/releases/download/v{version}/MonitorControl.{version}.dmg",
+    "method": "construct_url",
     "file_type": "dmg",
-    "headers": {}
+    "headers": {},
+    "url": "https://github.com/MonitorControl/MonitorControl/releases/download/v4.3.3/MonitorControl.4.3.3.dmg"
   },
   "changelog": {
     "method": "github_releases",

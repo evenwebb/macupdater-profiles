@@ -21,7 +21,8 @@
   "download": {
     "url_template": "https://updates.getpixelsnap.com/v2/PixelSnap-2-{VERSION}.dmg",
     "kind": "dmg",
-    "headers": {}
+    "headers": {},
+    "url": "https://updates.getpixelsnap.com/v2/PixelSnap-latest.dmg"
   },
   "changelog": "https://pixelsnap.com/changelog",
   "release_date": {

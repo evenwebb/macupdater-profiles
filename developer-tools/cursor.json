@@ -8,7 +8,7 @@
   "min_os": "macOS 11+ (Big Sur and later)",
   "auto_updates": true,
   "version_check": {
-    "method": "electron_updater",
+    "method": "yaml_api",
     "url": "https://cursor.com/api/download?platform=darwinUniversal&releaseTrack=stable",
     "extraction": {
       "type": "json_path",
@@ -19,9 +19,9 @@
   },
   "download": {
     "method": "direct_url",
-    "url_or_pattern": "https://cursor.com/downloads",
     "file_type": "zip",
-    "headers": {}
+    "headers": {},
+    "url": "https://cursor.com/downloads"
   },
   "changelog": {
     "method": "webpage",

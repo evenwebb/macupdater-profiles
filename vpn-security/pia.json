@@ -3,7 +3,7 @@
   "url": "https://www.privateinternetaccess.com",
   "description": "VPN client",
   "version_check": {
-    "method": "sparkle",
+    "method": "sparkle_appcast",
     "url": "https://www.privateinternetaccess.com/installer/sparkle/appcast.xml",
     "version_field": "sparkle:shortVersionString",
     "version_example": "3.7.2-08420",
@@ -14,7 +14,6 @@
     "url": "https://installers.privateinternetaccess.com/download/pia-macos-{VERSION}.zip",
     "url_static": "https://installers.privateinternetaccess.com/download/pia-macos-latest.zip",
     "file_type": "zip",
-    "note": "Contains .pkg installer",
     "headers": {}
   },
   "changelog": {
@@ -40,5 +39,6 @@
   "category": "vpn-security",
   "license": "paid",
   "skip": false,
-  "last_updated": "2026-06-21"
+  "last_updated": "2026-06-21",
+  "slug": "pia"
 }

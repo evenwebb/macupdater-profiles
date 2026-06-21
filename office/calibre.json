@@ -27,9 +27,9 @@
   "download": {
     "method": "construct_url",
     "pattern": "https://github.com/kovidgoyal/calibre/releases/download/v{VERSION}/calibre-{VERSION}.dmg",
-    "redirect_url": "https://calibre-ebook.com/dist/osx",
     "file_type": "dmg",
-    "headers": {}
+    "headers": {},
+    "url": "https://calibre-ebook.com/dist/osx"
   },
   "changelog": {
     "method": "web_scrape",

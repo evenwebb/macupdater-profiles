@@ -21,9 +21,9 @@
   },
   "download": {
     "method": "constructed_url",
-    "url_or_pattern": "https://desktop-release.notion-static.com/Notion-{version}-arm64.dmg (ARM) or Notion-{version}.dmg (x64)",
     "file_type": "dmg",
-    "headers": {}
+    "headers": {},
+    "url": "https://desktop-release.notion-static.com/Notion-{version}-arm64.dmg (ARM) or Notion-{version}.dmg (x64)"
   },
   "changelog": {
     "method": "scrape",

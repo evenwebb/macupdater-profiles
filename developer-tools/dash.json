@@ -8,7 +8,7 @@
   "min_os": "11",
   "auto_updates": true,
   "version_check": {
-    "method": "sparkle_xml",
+    "method": "sparkle_appcast",
     "url": "https://kapeli.com/Dash.xml",
     "extraction": {
       "type": "xpath",
@@ -17,10 +17,10 @@
     "headers": {}
   },
   "download": {
-    "method": "fixed_url",
-    "url_or_pattern": "https://kapeli.com/downloads/v8/Dash.zip",
+    "method": "construct_url",
     "file_type": "zip",
-    "headers": {}
+    "headers": {},
+    "url": "https://kapeli.com/downloads/v8/Dash.zip"
   },
   "changelog": {
     "method": "embedded_in_appcast",

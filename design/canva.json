@@ -20,7 +20,6 @@
   "download": {
     "method": "construct_url",
     "pattern": "https://desktop-release.canva.com/Canva-{VERSION}-universal.dmg",
-    "alternate_pattern": "https://desktop-release.canva.com/Canva-{VERSION}-universal-mac.zip",
     "file_type": "dmg",
     "headers": {}
   },

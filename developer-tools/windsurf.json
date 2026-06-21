@@ -8,7 +8,7 @@
   "min_os": "macOS 11+ (Big Sur and later)",
   "auto_updates": true,
   "version_check": {
-    "method": "sparkle2",
+    "method": "sparkle_appcast",
     "url": "https://windsurf-stable.codeium.com/api/update/darwin-universal/stable/latest",
     "extraction": {
       "type": "json_path",
@@ -18,9 +18,9 @@
   },
   "download": {
     "method": "json_field",
-    "url_or_pattern": ".url field in the Sparkle 2 JSON response from the update API",
     "file_type": "dmg",
-    "headers": {}
+    "headers": {},
+    "url": ".url field in the Sparkle 2 JSON response from the update API"
   },
   "changelog": {
     "method": "webpage",

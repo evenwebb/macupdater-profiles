@@ -3,7 +3,7 @@
   "url": "https://adguard.com",
   "description": "Ad blocker",
   "version_check": {
-    "method": "github_releases",
+    "method": "github_api",
     "primary_url": "https://github.com/AdguardTeam/AdguardForMac/releases/latest",
     "version_field": ".tag_name",
     "version_example": "v2.18.0",
@@ -24,8 +24,8 @@
       "nightly": "https://agrd.io/mac_nightly"
     },
     "file_type": "dmg",
-    "note": "DMG contains .pkg installer",
-    "headers": {}
+    "headers": {},
+    "url": "https://github.com/AdguardTeam/AdGuardForMac/releases/latest/download/AdGuard.dmg"
   },
   "changelog": {
     "url": "https://github.com/AdguardTeam/AdguardForMac/releases",
@@ -49,5 +49,6 @@
   "license": "paid",
   "skip": false,
   "bundle_id": "com.adguard.mac.adguard",
-  "last_updated": "2026-06-21"
+  "last_updated": "2026-06-21",
+  "slug": "adguard"
 }

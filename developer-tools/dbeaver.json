@@ -19,13 +19,10 @@
     "headers": {}
   },
   "download": {
-    "method": "pattern_arch_specific",
-    "url_or_pattern": {
-      "arm64": "https://dbeaver.io/files/dbeaver-ce-latest-macos-aarch64.dmg",
-      "x86_64": "https://dbeaver.io/files/dbeaver-ce-latest-macos-x86_64.dmg"
-    },
+    "method": "construct_url",
     "file_type": "dmg",
-    "headers": {}
+    "headers": {},
+    "url": "https://github.com/dbeaver/dbeaver/releases/download/26.1.1/dbeaver-ce-26.1.1-macos-aarch64.dmg"
   },
   "changelog": {
     "method": "github_releases",

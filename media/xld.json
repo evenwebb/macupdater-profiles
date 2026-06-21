@@ -5,7 +5,7 @@
   "repository": "https://github.com/tmkk/xld",
   "description": "Audio transcoding tool",
   "version_check": {
-    "method": "html_scrape",
+    "method": "scrape_html",
     "url": "https://sourceforge.net/projects/xld/rss?limit=20",
     "extraction": "Regex from filename in RSS feed",
     "pattern": "xld-(\\d+)\\.dmg",
@@ -40,5 +40,6 @@
   "category": "media",
   "license": "free",
   "skip": false,
-  "last_updated": "2026-06-21"
+  "last_updated": "2026-06-21",
+  "slug": "xld"
 }

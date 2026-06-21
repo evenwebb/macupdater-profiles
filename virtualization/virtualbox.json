@@ -22,8 +22,8 @@
     "intel_pattern": "https://download.virtualbox.org/virtualbox/{VERSION}/VirtualBox-{VERSION}-{BUILD}-OSX.dmg",
     "arm64_pattern": "https://download.virtualbox.org/virtualbox/{VERSION}/VirtualBox-{VERSION}-{BUILD}-macOSArm64.dmg",
     "file_type": "dmg",
-    "note": "BUILD number not in LATEST.TXT \u2014 must scrape directory listing or SHA256SUMS file",
-    "headers": {}
+    "headers": {},
+    "pattern": "https://download.virtualbox.org/virtualbox/{VERSION}/VirtualBox-{VERSION}-{BUILD}-OSX.dmg"
   },
   "changelog": {
     "method": "construct_url",

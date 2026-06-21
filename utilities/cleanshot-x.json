@@ -20,9 +20,9 @@
   },
   "download": {
     "method": "sparkle_enclosure",
-    "url_or_pattern": "https://updates.cleanshot.com/v3/CleanShot-X-{version}.dmg",
     "file_type": "dmg",
-    "headers": {}
+    "headers": {},
+    "url": "https://updates.cleanshot.com/v3/CleanShot-X-{version}.dmg"
   },
   "changelog": {
     "method": "sparkle_appcast",

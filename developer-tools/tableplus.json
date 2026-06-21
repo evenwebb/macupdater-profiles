@@ -8,7 +8,7 @@
   "min_os": "macOS 11+ (Big Sur and later)",
   "auto_updates": true,
   "version_check": {
-    "method": "sparkle",
+    "method": "sparkle_appcast",
     "url": "Likely Sparkle appcast at https://tableplus.com/release/macos/{version} \u2014 exact feed URL not publicly documented. Common pattern: https://tableplus.com/api/release/macos/latest",
     "extraction": {
       "type": "xpath",
@@ -18,9 +18,9 @@
   },
   "download": {
     "method": "direct_url",
-    "url_or_pattern": "https://tableplus.com/download",
     "file_type": "dmg",
-    "headers": {}
+    "headers": {},
+    "url": "https://tableplus.com/download"
   },
   "changelog": {
     "method": "webpage",

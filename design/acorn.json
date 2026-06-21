@@ -20,9 +20,9 @@
   },
   "download": {
     "method": "direct_url",
-    "url_or_pattern": "https://flyingmeat.com/download/Acorn.zip",
     "file_type": "zip",
-    "headers": {}
+    "headers": {},
+    "url": "https://flyingmeat.com/download/Acorn.zip"
   },
   "changelog": {
     "method": "sparkle_appcast",

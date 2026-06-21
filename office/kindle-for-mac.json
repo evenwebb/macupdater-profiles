@@ -23,10 +23,9 @@
     "headers": {}
   },
   "download": {
-    "method": "follow_redirect",
+    "method": "redirect_url",
     "url": "https://www.amazon.com/kindlemacdownload",
     "file_type": "dmg",
-    "note": "Redirects to S3: kindleformac.s3.amazonaws.com/{build}/KindleForMac-installer-{version}.{build}.dmg",
     "headers": {}
   },
   "changelog": {

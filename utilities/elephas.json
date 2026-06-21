@@ -3,7 +3,7 @@
   "url": "https://elephas.app",
   "description": "AI writing assistant for Mac",
   "version_check": {
-    "method": "sparkle",
+    "method": "sparkle_appcast",
     "url": "appcast URL embedded in app (probable: https://elephas.app/appcast.xml or https://assets.elephas.app/appcast.xml \u2014 blocked/404 when probed externally)",
     "version_field": "sparkle:shortVersionString",
     "version_example": "11.7008",
@@ -36,5 +36,6 @@
   "category": "utilities",
   "license": "paid",
   "skip": false,
-  "last_updated": "2026-06-21"
+  "last_updated": "2026-06-21",
+  "slug": "elephas"
 }

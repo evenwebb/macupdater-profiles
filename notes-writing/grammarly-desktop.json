@@ -19,11 +19,9 @@
     "headers": {}
   },
   "download": {
-    "method": "construct_from_sparkle_build",
+    "method": "construct_url",
     "pattern": "https://download-mac.grammarly.com/versions/{BUILD}/Grammarly.dmg",
-    "build_format": "sparkle:version (4-segment, e.g. 1.170.1.0)",
     "file_type": "dmg",
-    "note": "DMG contains 'Grammarly Installer.app', not Grammarly directly",
     "headers": {}
   },
   "changelog": {

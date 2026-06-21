@@ -18,7 +18,7 @@
     "headers": {}
   },
   "download": {
-    "method": "static_redirect_url",
+    "method": "direct_url",
     "url": "https://demo.pic-time.com/pic-time.pkg?beta=yes",
     "cdn_target": "https://uploaderconfigcdn.pic-time.com/pictures/clientupdate/osx/pic-time.pkg",
     "file_type": "pkg",
@@ -39,5 +39,5 @@
   "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
   "category": "cloud-backup",
   "license": "free",
-  "skip": true
+  "skip": false
 }

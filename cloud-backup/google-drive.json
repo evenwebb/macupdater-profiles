@@ -16,9 +16,9 @@
   },
   "download": {
     "method": "direct",
-    "url_or_pattern": "https://dl.google.com/drive-file-stream/GoogleDrive.dmg",
     "file_type": "dmg",
-    "headers": {}
+    "headers": {},
+    "url": "https://dl.google.com/drive-file-stream/GoogleDrive.dmg"
   },
   "changelog": {
     "method": "webpage",
@@ -32,6 +32,6 @@
   "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
   "category": "cloud-backup",
   "license": "free",
-  "skip": true,
+  "skip": false,
   "bundle_id": "com.google.drivefs"
 }

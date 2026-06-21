@@ -8,7 +8,7 @@
   "min_os": "10.10",
   "auto_updates": true,
   "version_check": {
-    "method": "rss",
+    "method": "sparkle_appcast",
     "url": "https://sourceforge.net/projects/skim-app/rss?path=/Skim",
     "extraction": {
       "type": "regex",
@@ -19,9 +19,9 @@
   },
   "download": {
     "method": "pattern",
-    "url_or_pattern": "https://sourceforge.net/projects/skim-app/files/Skim/Skim-{version}/Skim-{version}.dmg/download",
     "file_type": "dmg",
-    "headers": {}
+    "headers": {},
+    "url": "https://sourceforge.net/projects/skim-app/files/Skim/Skim-{version}/Skim-{version}.dmg/download"
   },
   "changelog": {
     "method": "web",

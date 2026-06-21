@@ -19,12 +19,12 @@
     "headers": {}
   },
   "download": {
-    "method": "github_asset_filter",
+    "method": "construct_url",
     "from_url": "https://api.github.com/repos/raspberrypi/rpi-imager/releases/latest",
     "filter": "$.assets[?(@.name =~ /\\.dmg$/)].browser_download_url",
-    "construct_pattern": "https://github.com/raspberrypi/rpi-imager/releases/download/{TAG}/rpi-imager-{TAG}.dmg",
     "file_type": "dmg",
-    "headers": {}
+    "headers": {},
+    "url": "https://github.com/raspberrypi/rpi-imager/releases/download/v2.0.10/rpi-imager-v2.0.10.dmg"
   },
   "changelog": {
     "method": "github_releases",

@@ -17,10 +17,10 @@
     "headers": {}
   },
   "download": {
-    "method": "github_release_asset",
-    "url_or_pattern": "Filter release assets for .dmg file from https://api.github.com/repos/github/CopilotForXcode/releases/latest/assets",
+    "method": "construct_url",
     "file_type": "dmg",
-    "headers": {}
+    "headers": {},
+    "url": "https://github.com/github/CopilotForXcode/releases/download/0.50.0/GitHubCopilotForXcode.dmg"
   },
   "changelog": {
     "method": "github_release",

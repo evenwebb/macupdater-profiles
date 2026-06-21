@@ -8,7 +8,7 @@
   "min_os": "12",
   "auto_updates": true,
   "version_check": {
-    "method": "sparkle_xml",
+    "method": "sparkle_appcast",
     "url": "https://app.warp.dev/download/appcast.xml?platform=macos&channel=stable",
     "extraction": {
       "type": "sparkle_version",
@@ -18,9 +18,9 @@
   },
   "download": {
     "method": "fixed_url",
-    "url_or_pattern": "https://app.warp.dev/get_warp?package=dmg",
     "file_type": "dmg",
-    "headers": {}
+    "headers": {},
+    "url": "https://app.warp.dev/get_warp?package=dmg"
   },
   "changelog": {
     "method": "fixed_url",

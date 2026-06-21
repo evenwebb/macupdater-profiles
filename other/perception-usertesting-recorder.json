@@ -8,7 +8,7 @@
   "min_os": "12.0",
   "auto_updates": true,
   "version_check": {
-    "method": "app_store_api",
+    "method": "itunes_api",
     "url": "https://itunes.apple.com/lookup?id=1663261199",
     "extraction": {
       "type": "json_path",
@@ -20,8 +20,7 @@
   "download": {
     "method": "app_store_only",
     "url": "https://apps.apple.com/us/app/usertesting-recorder-extension/id1663261199",
-    "file_type": "app_bundle",
-    "note": "Mac App Store exclusive. Bundle ID: com.usertesting.recorder.UserTesting-Recorder-Extension",
+    "file_type": "app",
     "headers": {}
   },
   "changelog": {

@@ -12,7 +12,7 @@
   "min_os": "macOS 12",
   "auto_updates": true,
   "version_check": {
-    "method": "custom_api",
+    "method": "json_api",
     "url": "https://slack.com/api/desktop.latestRelease?redirect=1&variant=pkg&arch=universal",
     "extraction": {
       "type": "http_redirect",
@@ -22,9 +22,9 @@
   },
   "download": {
     "method": "constructed_url",
-    "url_or_pattern": "https://downloads.slack-edge.com/desktop-releases/mac/{arch}/{version}/Slack-{version}-macOS.{ext}",
-    "file_type": "pkg/dmg",
-    "headers": {}
+    "file_type": "pkg",
+    "headers": {},
+    "url": "https://downloads.slack-edge.com/desktop-releases/mac/{arch}/{version}/Slack-{version}-macOS.{ext}"
   },
   "changelog": {
     "method": "scrape",

@@ -8,7 +8,7 @@
   "min_os": "11",
   "auto_updates": true,
   "version_check": {
-    "method": "sparkle",
+    "method": "sparkle_appcast",
     "url": "https://itsycal.s3.amazonaws.com/itsycal.xml",
     "extraction": {
       "type": "xpath",
@@ -17,11 +17,11 @@
     "headers": {}
   },
   "download": {
-    "method": "pattern",
-    "url_or_pattern": "https://s3.amazonaws.com/itsycal/Itsycal-{version}.zip",
+    "method": "construct_url",
     "latest_url": "https://s3.amazonaws.com/itsycal/Itsycal.zip",
     "file_type": "zip",
-    "headers": {}
+    "headers": {},
+    "url": "https://s3.amazonaws.com/itsycal/Itsycal-0.15.12.zip"
   },
   "changelog": {
     "method": "web",

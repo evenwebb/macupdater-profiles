@@ -8,7 +8,7 @@
   "min_os": "macOS 11+ (Big Sur and later)",
   "auto_updates": true,
   "version_check": {
-    "method": "sparkle",
+    "method": "sparkle_appcast",
     "url": "https://plex.tv/downloads/latest/5?channel=8&build=macos-x86_64",
     "extraction": {
       "type": "xpath",
@@ -19,9 +19,9 @@
   },
   "download": {
     "method": "redirect_url",
-    "url_or_pattern": "https://plex.tv/downloads/latest/5?channel=8&build=macos-x86_64 \u2014 follows redirect to versioned DMG URL",
     "file_type": "dmg",
-    "headers": {}
+    "headers": {},
+    "url": "https://plex.tv/downloads/latest/5?channel=8&build=macos-x86_64 \u2014 follows redirect to versioned DMG URL"
   },
   "changelog": {
     "method": "webpage",

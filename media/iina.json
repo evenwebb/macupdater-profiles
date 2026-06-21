@@ -8,7 +8,7 @@
   "min_os": "macOS 11+ (Big Sur and later)",
   "auto_updates": true,
   "version_check": {
-    "method": "sparkle",
+    "method": "sparkle_appcast",
     "url": "https://sparkle.iina.io/appcast.xml",
     "extraction": {
       "type": "xpath",
@@ -18,9 +18,9 @@
   },
   "download": {
     "method": "versioned_url",
-    "url_or_pattern": "https://github.com/iina/iina/releases/download/v{version}/IINA.v{version}.dmg",
     "file_type": "dmg",
-    "headers": {}
+    "headers": {},
+    "url": "https://github.com/iina/iina/releases/download/v{version}/IINA.v{version}.dmg"
   },
   "changelog": {
     "method": "webpage",

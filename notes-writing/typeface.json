@@ -3,7 +3,7 @@
   "url": "https://typefaceapp.com",
   "description": "Font manager for designers",
   "version_check": {
-    "method": "sparkle",
+    "method": "sparkle_appcast",
     "url": "https://dcdn.typefaceapp.com/appcast.xml",
     "version_field": "sparkle:shortVersionString",
     "build_field": "sparkle:version",
@@ -45,5 +45,6 @@
   "category": "notes-writing",
   "license": "paid",
   "skip": false,
-  "last_updated": "2026-06-21"
+  "last_updated": "2026-06-21",
+  "slug": "typeface"
 }

@@ -10,7 +10,7 @@
   "min_os": "macOS 11",
   "auto_updates": true,
   "version_check": {
-    "method": "fwlink_redirect",
+    "method": "redirect_trace",
     "url": "https://go.microsoft.com/fwlink/?linkid=869428",
     "extraction": {
       "type": "http_redirect",
@@ -19,10 +19,10 @@
     "headers": {}
   },
   "download": {
-    "method": "constructed_url",
-    "url_or_pattern": "https://statics.teams.cdn.office.net/production-osx/{version}/MicrosoftTeams.pkg",
+    "method": "construct_url",
     "file_type": "pkg",
-    "headers": {}
+    "headers": {},
+    "url": "https://statics.teams.cdn.office.net/production-osx/enterprise/webview2/lkg/MicrosoftTeams.pkg"
   },
   "changelog": {
     "method": "scrape",

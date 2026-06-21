@@ -19,15 +19,8 @@
     "headers": {}
   },
   "download": {
-    "method": "source_build_only",
-    "url": null,
-    "build_instructions": "git clone https://github.com/pjasicek/OpenClaw.git && cd OpenClaw && mkdir build && cd build && cmake .. -DCMAKE_BUILD_TYPE=Release && make",
-    "dependencies": [
-      "sdl2",
-      "sdl2_mixer",
-      "sdl2_image",
-      "sdl2_ttf"
-    ],
+    "method": "construct_url",
+    "url": "https://github.com/pjasicek/OpenClaw/releases/download/v0.3/OpenClaw_v1.03.zip",
     "file_type": "source",
     "headers": {}
   },

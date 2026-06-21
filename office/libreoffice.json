@@ -8,7 +8,7 @@
   "min_os": "11.0",
   "auto_updates": true,
   "version_check": {
-    "method": "scrape_directory_listing",
+    "method": "scrape_html",
     "url": "https://download.documentfoundation.org/libreoffice/stable/",
     "extraction": {
       "type": "regex_on_directory",
@@ -23,8 +23,8 @@
     "intel_pattern": "https://download.documentfoundation.org/libreoffice/stable/{VERSION}/mac/x86_64/LibreOffice_{VERSION}_MacOS_x86-64.dmg",
     "arm64_pattern": "https://download.documentfoundation.org/libreoffice/stable/{VERSION}/mac/aarch64/LibreOffice_{VERSION}_MacOS_aarch64.dmg",
     "file_type": "dmg",
-    "note": "KEY QUIRK: Intel path uses 'x86_64' in directory but 'x86-64' (hyphen) in filename. ARM uses 'aarch64' consistently.",
-    "headers": {}
+    "headers": {},
+    "pattern": "https://download.documentfoundation.org/libreoffice/stable/{VERSION}/mac/aarch64/LibreOffice_{VERSION}_MacOS_aarch64.dmg"
   },
   "changelog": {
     "method": "construct_url",

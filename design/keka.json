@@ -18,10 +18,10 @@
     "headers": {}
   },
   "download": {
-    "method": "github_release",
-    "url_or_pattern": "https://github.com/aonez/Keka/releases/download/v{version}/Keka-{version}.dmg",
+    "method": "construct_url",
     "file_type": "dmg",
-    "headers": {}
+    "headers": {},
+    "url": "https://github.com/aonez/Keka/releases/download/v1.6.5/Keka-1.6.5.dmg"
   },
   "changelog": {
     "method": "github_api",

@@ -23,7 +23,8 @@
     "method": "construct_url",
     "dmg_pattern": "https://www.publicspace.net/download/ABFAX7_{VERSION}.dmg",
     "file_type": "dmg",
-    "headers": {}
+    "headers": {},
+    "url": "http://www.publicspace.net/download/signedABFA7_24.zip"
   },
   "changelog": {
     "method": "sparkle_release_notes",

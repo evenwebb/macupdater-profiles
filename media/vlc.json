@@ -20,10 +20,8 @@
     "headers": {}
   },
   "download": {
-    "method": "construct_from_sparkle_or_pattern",
+    "method": "construct_url",
     "pattern": "https://get.videolan.org/vlc/{VERSION}/macosx/vlc-{VERSION}-{ARCH}.dmg",
-    "intel_arch": "intel64",
-    "arm_arch": "arm64",
     "file_type": "dmg",
     "headers": {}
   },

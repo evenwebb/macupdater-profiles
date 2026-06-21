@@ -8,7 +8,7 @@
   "min_os": "10.13",
   "auto_updates": true,
   "version_check": {
-    "method": "sparkle_xml",
+    "method": "sparkle_appcast",
     "url": "https://version.cyberduck.io/changelog.rss",
     "extraction": {
       "type": "xpath",
@@ -17,10 +17,10 @@
     "headers": {}
   },
   "download": {
-    "method": "composed_url",
-    "url_or_pattern": "https://update.cyberduck.io/Cyberduck-{version}.zip",
+    "method": "construct_url",
     "file_type": "zip",
-    "headers": {}
+    "headers": {},
+    "url": "https://update.cyberduck.io//Cyberduck-9.5.0.45237.zip"
   },
   "changelog": {
     "method": "fixed_url",

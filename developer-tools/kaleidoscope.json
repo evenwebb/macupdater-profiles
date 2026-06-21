@@ -8,7 +8,7 @@
   "min_os": "13",
   "auto_updates": true,
   "version_check": {
-    "method": "sparkle_xml",
+    "method": "sparkle_appcast",
     "url": "https://updates.kaleidoscope.app/appcast.xml",
     "extraction": {
       "type": "sparkle_version",
@@ -18,9 +18,9 @@
   },
   "download": {
     "method": "fixed_url",
-    "url_or_pattern": "https://cloud.kaleidoscope.app/download/v6",
     "file_type": "dmg",
-    "headers": {}
+    "headers": {},
+    "url": "https://cloud.kaleidoscope.app/download/v6"
   },
   "changelog": {
     "method": "in_app_or_blog",

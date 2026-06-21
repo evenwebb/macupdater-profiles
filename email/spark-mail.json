@@ -8,7 +8,7 @@
   "min_os": "macOS 12+ (Monterey and later)",
   "auto_updates": true,
   "version_check": {
-    "method": "sparkle",
+    "method": "sparkle_appcast",
     "url": "Sparkle SUFeedURL is embedded in the app bundle \u2014 exact URL not publicly documented",
     "extraction": {
       "type": "xpath",
@@ -19,9 +19,9 @@
   },
   "download": {
     "method": "direct_url",
-    "url_or_pattern": "https://sparkmailapp.com/download",
     "file_type": "dmg",
-    "headers": {}
+    "headers": {},
+    "url": "https://sparkmailapp.com/download"
   },
   "changelog": {
     "method": "webpage",

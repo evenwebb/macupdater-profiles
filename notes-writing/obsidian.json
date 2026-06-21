@@ -19,10 +19,10 @@
     "headers": {}
   },
   "download": {
-    "method": "constructed_url",
-    "url_or_pattern": "https://github.com/obsidianmd/obsidian-releases/releases/download/v{version}/Obsidian-{version}.dmg",
+    "method": "construct_url",
     "file_type": "dmg",
-    "headers": {}
+    "headers": {},
+    "url": "https://github.com/obsidianmd/obsidian-releases/releases/download/v1.12.7/Obsidian-1.12.7.dmg"
   },
   "changelog": {
     "method": "github_release",

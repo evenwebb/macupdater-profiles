@@ -22,7 +22,8 @@
   "download": {
     "url_template": "https://s3.amazonaws.com/textsniper.app/Gumroad/TextSniper{VERSION}.dmg",
     "kind": "dmg",
-    "headers": {}
+    "headers": {},
+    "url": "https://s3.amazonaws.com/textsniper.app/Gumroad/TextSniper-latest.dmg"
   },
   "changelog": "https://textsniper.app/release-notes-g",
   "release_date": {

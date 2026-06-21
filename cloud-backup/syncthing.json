@@ -19,10 +19,10 @@
     "headers": {}
   },
   "download": {
-    "method": "pattern",
-    "url_or_pattern": "https://github.com/syncthing/syncthing/releases/download/v{version}/syncthing-macos-universal-v{version}.zip",
+    "method": "construct_url",
     "file_type": "zip",
-    "headers": {}
+    "headers": {},
+    "url": "https://github.com/syncthing/syncthing/releases/download/v2.1.1/syncthing-macos-amd64-v2.1.1.zip"
   },
   "changelog": {
     "method": "github_release",

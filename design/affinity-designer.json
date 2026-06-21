@@ -20,9 +20,9 @@
   },
   "download": {
     "method": "sparkle_enclosure",
-    "url_or_pattern": "https://s3.amazonaws.com/affinity-update/mac/retail/designer/appcast.xml",
     "file_type": "dmg",
-    "headers": {}
+    "headers": {},
+    "url": "https://s3.amazonaws.com/affinity-update/mac/retail/designer/appcast.xml"
   },
   "changelog": {
     "method": "sparkle_appcast",

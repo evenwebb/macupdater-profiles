@@ -8,7 +8,7 @@
   "min_os": "11.0",
   "auto_updates": true,
   "version_check": {
-    "method": "scrape_directory_listing",
+    "method": "scrape_html",
     "url": "https://get.opera.com/pub/opera/desktop/",
     "extraction": {
       "type": "regex_on_html_directory",

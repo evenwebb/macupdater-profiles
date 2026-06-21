@@ -9,7 +9,7 @@
   "min_os": "11",
   "auto_updates": false,
   "version_check": {
-    "method": "scrape",
+    "method": "scrape_html",
     "url": "https://www.amazon.com/gp/feature.html?ie=UTF8&docId=1000765261",
     "extraction": {
       "type": "regex",
@@ -20,10 +20,10 @@
   },
   "download": {
     "method": "scrape",
-    "url_or_pattern": "https://www.amazon.com/gp/feature.html?ie=UTF8&docId=1000765261",
-    "file_type": "pkg_or_dmg",
+    "file_type": "pkg",
     "file_type_note": "UNCERTAINTY: File type varies by release \u2014 historically pkg, but some versions ship as dmg. Approximately 760 MB download size.",
-    "headers": {}
+    "headers": {},
+    "url": "https://www.amazon.com/gp/feature.html?ie=UTF8&docId=1000765261"
   },
   "changelog": {
     "method": "web",

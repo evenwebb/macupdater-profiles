@@ -8,7 +8,7 @@
   "min_os": "13.0",
   "auto_updates": true,
   "version_check": {
-    "method": "app_store_api",
+    "method": "itunes_api",
     "url": "https://itunes.apple.com/lookup?id=1462114288",
     "extraction": {
       "type": "json_path",
@@ -20,8 +20,7 @@
   "download": {
     "method": "app_store_only",
     "url": "https://apps.apple.com/app/grammarly-for-safari/id1462114288",
-    "file_type": "app_bundle",
-    "note": "Mac App Store exclusive. No direct DMG/pkg download available.",
+    "file_type": "app",
     "headers": {}
   },
   "changelog": {

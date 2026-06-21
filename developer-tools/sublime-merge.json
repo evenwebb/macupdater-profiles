@@ -8,7 +8,7 @@
   "min_os": "10.9",
   "auto_updates": true,
   "version_check": {
-    "method": "rest_api_json",
+    "method": "json_api",
     "url": "https://www.sublimemerge.com/updates/stable_update_check",
     "extraction": {
       "type": "json_path",
@@ -18,9 +18,9 @@
   },
   "download": {
     "method": "composed_url",
-    "url_or_pattern": "https://download.sublimetext.com/sublime_merge_osx_{build}.pak.xz",
     "file_type": "pak.xz",
-    "headers": {}
+    "headers": {},
+    "url": "https://download.sublimetext.com/sublime_merge_osx_{build}.pak.xz"
   },
   "changelog": {
     "method": "fixed_url",

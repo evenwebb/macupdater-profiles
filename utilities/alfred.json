@@ -8,7 +8,7 @@
   "min_os": "11.0",
   "auto_updates": true,
   "version_check": {
-    "method": "custom_plist_xml",
+    "method": "sparkle_appcast",
     "url": "https://www.alfredapp.com/app/update5/general.xml",
     "v4_url": "https://www.alfredapp.com/app/update4/general.xml",
     "extraction": {
@@ -20,10 +20,10 @@
     "headers": {}
   },
   "download": {
-    "method": "from_plist_update_xml",
-    "extraction_xpath": "//key[text()='location']/following-sibling::string[1]/text()",
-    "file_type": "tar.gz",
-    "headers": {}
+    "method": "construct_url",
+    "file_type": "zip",
+    "headers": {},
+    "pattern": "not_extractable_remotely"
   },
   "changelog": {
     "method": "web_scrape",

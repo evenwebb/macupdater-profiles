@@ -8,7 +8,7 @@
   "min_os": "12.0",
   "auto_updates": true,
   "version_check": {
-    "method": "github_api_cli_daemon",
+    "method": "github_api",
     "url": "https://api.github.com/repos/Control-D-Inc/ctrld/releases/latest",
     "extraction": {
       "type": "json_path",
@@ -19,13 +19,10 @@
     "headers": {}
   },
   "download": {
-    "method": "static_url_separate_arch",
-    "arm64": "https://assets.controld.com/utility/controld_arm.dmg",
-    "x86_64": "https://assets.controld.com/utility/controld_x86.dmg",
-    "cli_daemon_pattern": "https://github.com/Control-D-Inc/ctrld/releases/download/v{VERSION}/ctrld_{VERSION}_darwin_arm64.tar.gz",
+    "method": "construct_url",
     "file_type": "dmg",
-    "note": "GUI app has no version in URL \u2014 always gives latest per architecture",
-    "headers": {}
+    "headers": {},
+    "url": "https://github.com/Control-D-Inc/ctrld/releases/download/v1.5.2/ctrld_1.5.2_windows_386.zip"
   },
   "changelog": {
     "method": "github_releases",

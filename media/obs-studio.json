@@ -17,10 +17,10 @@
     "headers": {}
   },
   "download": {
-    "method": "github_release_asset",
-    "url_or_pattern": "Filter assets from https://api.github.com/repos/obsproject/obs-studio/releases/latest for macOS .dmg file (pattern: *macos*.dmg or *macOS*.dmg)",
+    "method": "construct_url",
     "file_type": "dmg",
-    "headers": {}
+    "headers": {},
+    "url": "https://github.com/obsproject/obs-studio/releases/download/32.1.2/OBS-Studio-32.1.2-macOS-Apple.dmg"
   },
   "changelog": {
     "method": "webpage",

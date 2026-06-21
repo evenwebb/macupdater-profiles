@@ -22,9 +22,9 @@
   },
   "download": {
     "method": "yaml_field",
-    "url_or_pattern": "https://updates.signal.org/desktop/{filename}",
     "file_type": "dmg",
-    "headers": {}
+    "headers": {},
+    "url": "https://updates.signal.org/desktop/{filename}"
   },
   "changelog": {
     "method": "scrape",

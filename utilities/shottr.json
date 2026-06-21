@@ -20,9 +20,9 @@
   },
   "download": {
     "method": "sparkle_enclosure",
-    "url_or_pattern": "https://shottr.cc/download/Shottr-{version}.dmg",
     "file_type": "dmg",
-    "headers": {}
+    "headers": {},
+    "url": "https://shottr.cc/download/Shottr-{version}.dmg"
   },
   "changelog": {
     "method": "sparkle_appcast",

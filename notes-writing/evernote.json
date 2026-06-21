@@ -19,12 +19,11 @@
     "headers": {}
   },
   "download": {
-    "method": "extract_from_sparkle",
+    "method": "construct_url",
     "xpath": "/rss/channel/item[1]/enclosure/@url",
-    "fallback_direct": "https://mac.desktop.evernote.com/builds/Evernote-latest.dmg",
     "file_type": "dmg",
-    "note": "Sparkle enclosure URLs point to cdn1.evernote.com with .zip; fallback URL always serves latest .dmg",
-    "headers": {}
+    "headers": {},
+    "url": "https://mac.desktop.evernote.com/builds/Evernote-10.107.3-mac-ddl-stage-20240924143738-96c299c10cdc5ead9da17c96f8e4876cd31918a4.zip"
   },
   "changelog": {
     "method": "web_scrape",

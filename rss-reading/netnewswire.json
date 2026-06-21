@@ -8,7 +8,7 @@
   "min_os": "15",
   "auto_updates": true,
   "version_check": {
-    "method": "sparkle",
+    "method": "sparkle_appcast",
     "url": "https://ranchero.com/downloads/netnewswire-release.xml",
     "extraction": {
       "type": "xpath",
@@ -19,11 +19,10 @@
     "headers": {}
   },
   "download": {
-    "method": "direct",
-    "url_or_pattern": "https://netnewswire.com/NetNewsWire.zip",
+    "method": "construct_url",
     "file_type": "zip",
-    "note": "Always points to the latest release. For versioned archives, check GitHub releases.",
-    "headers": {}
+    "headers": {},
+    "url": "https://github.com/Ranchero-Software/NetNewsWire/releases/download/mac-7.0.6/NetNewsWire7.0.6.zip"
   },
   "changelog": {
     "method": "github_releases",

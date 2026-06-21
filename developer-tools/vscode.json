@@ -8,7 +8,7 @@
   "min_os": "10.15",
   "auto_updates": true,
   "version_check": {
-    "method": "rest_api",
+    "method": "json_api",
     "url": "https://update.code.visualstudio.com/api/update/darwin/stable/latest",
     "extraction": {
       "type": "json_path",
@@ -17,10 +17,10 @@
     "headers": {}
   },
   "download": {
-    "method": "json_field",
-    "url_or_pattern": "{url}",
+    "method": "construct_url",
     "file_type": "zip",
-    "headers": {}
+    "headers": {},
+    "url": "https://vscode.download.prss.microsoft.com/dbazure/download/stable/fcf604774b9f2674b473065736ee75077e256353/VSCode-darwin.zip"
   },
   "changelog": {
     "method": "composed_url",

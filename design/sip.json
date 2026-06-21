@@ -22,7 +22,8 @@
     "url_template": "https://sipapp.fra1.digitaloceanspaces.com/updates/v4/sip-{VERSION}.dmg",
     "kind": "dmg",
     "latest_alias": "https://sipapp.fra1.digitaloceanspaces.com/updates/v4/sip.dmg",
-    "headers": {}
+    "headers": {},
+    "url": "https://sipapp.fra1.digitaloceanspaces.com/updates/v4/sip.dmg"
   },
   "changelog": "https://sipapp.io/updates",
   "release_date": {

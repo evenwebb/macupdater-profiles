@@ -3,7 +3,7 @@
   "url": "https://macpaw.com/gemini",
   "description": "Duplicate file finder",
   "version_check": {
-    "method": "sparkle",
+    "method": "sparkle_appcast",
     "platform": "devmate",
     "url": "https://updateinfo.devmate.com/com.macpaw.site.Gemini2/updates.xml",
     "version_field": "sparkle:shortVersionString",
@@ -49,5 +49,6 @@
   "category": "other",
   "license": "free",
   "skip": false,
-  "last_updated": "2026-06-21"
+  "last_updated": "2026-06-21",
+  "slug": "gemini"
 }

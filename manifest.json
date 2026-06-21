@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "updated": "2026-06-21T21:30:22Z",
-  "total_profiles": 178,
+  "updated": "2026-06-21T22:06:24Z",
+  "total_profiles": 171,
   "apps": {
     "1password": {
       "name": "1Password",
@@ -43,14 +43,6 @@
       "path": "vpn-security/adguard.json",
       "skip": false
     },
-    "adium": {
-      "name": "Adium",
-      "bundle_id": null,
-      "category": "messaging",
-      "license": "free",
-      "path": "messaging/adium.json",
-      "skip": true
-    },
     "affinity-designer": {
       "name": "Affinity Designer",
       "bundle_id": null,
@@ -82,14 +74,6 @@
       "license": "free",
       "path": "specialized/aftershoot.json",
       "skip": false
-    },
-    "airport-utility": {
-      "name": "AirPort Utility",
-      "bundle_id": null,
-      "category": "apple-apps",
-      "license": "free",
-      "path": "apple-apps/airport-utility.json",
-      "skip": true
     },
     "alfred": {
       "name": "Alfred",
@@ -339,14 +323,6 @@
       "path": "messaging/discord.json",
       "skip": false
     },
-    "divx": {
-      "name": "DivX",
-      "bundle_id": null,
-      "category": "media",
-      "license": "free",
-      "path": "media/divx.json",
-      "skip": true
-    },
     "docker-desktop": {
       "name": "Docker Desktop",
       "bundle_id": "com.docker.docker",
@@ -373,7 +349,7 @@
     },
     "elephas": {
       "name": "Elephas",
-      "bundle_id": null,
+      "bundle_id": "com.kamban.elephas",
       "category": "utilities",
       "license": "paid",
       "path": "utilities/elephas.json",
@@ -469,7 +445,7 @@
     },
     "gemini": {
       "name": "Gemini",
-      "bundle_id": null,
+      "bundle_id": "com.macpaw.site.Gemini2",
       "category": "other",
       "license": "free",
       "path": "other/gemini.json",
@@ -505,7 +481,7 @@
       "category": "cloud-backup",
       "license": "free",
       "path": "cloud-backup/google-drive.json",
-      "skip": true
+      "skip": false
     },
     "grammarly-desktop": {
       "name": "Grammarly Desktop",
@@ -723,14 +699,6 @@
       "path": "utilities/mactracker.json",
       "skip": false
     },
-    "macupdater": {
-      "name": "MacUpdater",
-      "bundle_id": null,
-      "category": "utilities",
-      "license": "free",
-      "path": "utilities/macupdater.json",
-      "skip": true
-    },
     "magnet": {
       "name": "Magnet",
       "bundle_id": "com.crowdcafe.Magnet",
@@ -803,14 +771,6 @@
       "path": "rss-reading/netnewswire.json",
       "skip": false
     },
-    "nolongerevil": {
-      "name": "NoLongerEvil Installer",
-      "bundle_id": null,
-      "category": "specialized",
-      "license": "free",
-      "path": "specialized/nolongerevil.json",
-      "skip": true
-    },
     "nordvpn": {
       "name": "NordVPN",
       "bundle_id": "com.nordvpn.macos",
@@ -843,17 +803,9 @@
       "path": "notes-writing/obsidian.json",
       "skip": false
     },
-    "off-helper": {
-      "name": "Off Helper",
-      "bundle_id": null,
-      "category": "utilities",
-      "license": "free",
-      "path": "utilities/off-helper.json",
-      "skip": true
-    },
     "one-switch": {
       "name": "One Switch",
-      "bundle_id": null,
+      "bundle_id": "studio.fireball.OneSwitch",
       "category": "utilities",
       "license": "free",
       "path": "utilities/one-switch.json",
@@ -941,7 +893,7 @@
     },
     "permute": {
       "name": "Permute",
-      "bundle_id": null,
+      "bundle_id": "com.charliemonroe.Permute-4",
       "category": "utilities",
       "license": "paid",
       "path": "utilities/permute.json",
@@ -969,7 +921,7 @@
       "category": "cloud-backup",
       "license": "free",
       "path": "cloud-backup/pic-time-uploader.json",
-      "skip": true
+      "skip": false
     },
     "pixelmator-pro": {
       "name": "Pixelmator Pro",
@@ -1178,14 +1130,6 @@
       "license": "free",
       "path": "gaming/steam.json",
       "skip": false
-    },
-    "stuffit-expander": {
-      "name": "StuffIt Expander",
-      "bundle_id": null,
-      "category": "other",
-      "license": "free",
-      "path": "other/stuffit-expander.json",
-      "skip": true
     },
     "sublime-merge": {
       "name": "Sublime Merge",

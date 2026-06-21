@@ -20,9 +20,9 @@
   },
   "download": {
     "method": "sparkle_enclosure",
-    "url_or_pattern": "https://folivora.ai/releases/btt_{version}.zip",
     "file_type": "zip",
-    "headers": {}
+    "headers": {},
+    "url": "https://folivora.ai/releases/btt_{version}.zip"
   },
   "changelog": {
     "method": "sparkle_appcast",

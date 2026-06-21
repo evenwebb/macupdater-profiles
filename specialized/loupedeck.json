@@ -19,9 +19,8 @@
     "headers": {}
   },
   "download": {
-    "method": "extract_from_page_or_construct",
+    "method": "construct_url",
     "pattern": "https://support.loupedeck.com/hubfs/Knowledge%20Base/LD%20Software%20Downloads/{MAJOR}.{MINOR}/LoupedeckInstaller_{FULL_VERSION}.dmg",
-    "note": "Directory uses {MAJOR}.{MINOR} (e.g. 6.3), filename uses full 4-segment build (e.g. 6.3.0.340). Best to extract actual href from the downloads page.",
     "file_type": "dmg",
     "headers": {}
   },

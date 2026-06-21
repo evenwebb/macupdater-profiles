@@ -8,7 +8,7 @@
   "min_os": "13.0",
   "auto_updates": true,
   "version_check": {
-    "method": "json_redirect_trace",
+    "method": "json_api",
     "url": "https://download.parallels.com/website_links/desktop/{MAJOR}/builds-en_US.json",
     "extraction": {
       "type": "regex_on_redirect_location",

@@ -19,9 +19,9 @@
   },
   "download": {
     "method": "mac_app_store",
-    "url_or_pattern": "macappstore://apps.apple.com/app/pixelmator-pro/id1289583905",
     "file_type": "pkg",
-    "headers": {}
+    "headers": {},
+    "url": "macappstore://apps.apple.com/app/pixelmator-pro/id1289583905"
   },
   "changelog": {
     "method": "itunes_api",

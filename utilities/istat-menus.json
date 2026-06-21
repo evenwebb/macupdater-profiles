@@ -8,7 +8,7 @@
   "min_os": "12.0",
   "auto_updates": true,
   "version_check": {
-    "method": "http_redirect_trace",
+    "method": "redirect_trace",
     "url": "https://download.istatmenus.app/istatmenus7/download/",
     "extraction": {
       "type": "regex_on_redirect_filename",

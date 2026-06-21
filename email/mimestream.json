@@ -9,7 +9,7 @@
   "min_os": "12",
   "auto_updates": true,
   "version_check": {
-    "method": "sparkle_and_scrape",
+    "method": "sparkle_appcast",
     "sparkle": {
       "note": "UNCERTAINTY: Sparkle is used (SUFeedURL is embedded in the app bundle), but the exact appcast URL is not publicly documented. The app bundle's Info.plist or Sparkle framework plist would need to be consulted to extract the feed URL."
     },
@@ -25,10 +25,9 @@
   },
   "download": {
     "method": "web_redirect",
-    "url_or_pattern": "https://mimestream.com/download",
     "file_type": "dmg",
-    "note": "UNCERTAINTY: /download redirects to the latest dmg. The redirect target URL may contain the version; this varies between releases.",
-    "headers": {}
+    "headers": {},
+    "url": "https://mimestream.com/download"
   },
   "changelog": {
     "method": "web",

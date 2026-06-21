@@ -8,7 +8,7 @@
   "min_os": "14",
   "auto_updates": true,
   "version_check": {
-    "method": "sparkle",
+    "method": "sparkle_appcast",
     "url": "https://raw.githubusercontent.com/p0deje/Maccy/master/appcast.xml",
     "extraction": {
       "type": "xpath",
@@ -17,10 +17,10 @@
     "headers": {}
   },
   "download": {
-    "method": "pattern",
-    "url_or_pattern": "https://github.com/p0deje/Maccy/releases/download/{version}/Maccy.app.zip",
+    "method": "construct_url",
     "file_type": "zip",
-    "headers": {}
+    "headers": {},
+    "url": "https://github.com/p0deje/Maccy/releases/download/2.6.1/Maccy.app.zip"
   },
   "changelog": {
     "method": "github_releases",

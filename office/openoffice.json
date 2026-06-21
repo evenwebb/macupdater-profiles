@@ -8,7 +8,7 @@
   "min_os": "10.13",
   "auto_updates": false,
   "version_check": {
-    "method": "sourceforge_json_api",
+    "method": "sourceforge_json",
     "url": "https://sourceforge.net/projects/openofficeorg.mirror/best_release.json",
     "extraction": {
       "type": "json_path",

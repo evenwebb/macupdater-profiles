@@ -22,7 +22,8 @@
   "download": {
     "url_template": "https://macitbetter.com/dl/BetterZip-{VERSION}.zip",
     "kind": "zip",
-    "headers": {}
+    "headers": {},
+    "url": "https://macitbetter.com/dl/BetterZip-latest.zip"
   },
   "changelog": "https://macitbetter.com/versionhistory.php",
   "release_date": {

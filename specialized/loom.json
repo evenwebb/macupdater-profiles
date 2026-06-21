@@ -8,7 +8,7 @@
   "min_os": "10.15",
   "auto_updates": true,
   "version_check": {
-    "method": "sparkle_restricted",
+    "method": "sparkle_appcast",
     "sparkle": {
       "note": "UNCERTAINTY: Loom uses Sparkle 2, with the appcast hosted on cdn.loom.com. The feed returns HTTP 403 (Forbidden) without proper authentication headers (User-Agent, Referer, or session token). The exact appcast URL is not publicly documented."
     },
@@ -21,10 +21,9 @@
   },
   "download": {
     "method": "web_redirect",
-    "url_or_pattern": "https://www.loom.com/download",
     "file_type": "dmg",
-    "note": "UNCERTAINTY: /download redirects to the latest dmg. The CDN URL (cdn.loom.com) may require a valid Referer header or session token.",
-    "headers": {}
+    "headers": {},
+    "url": "https://www.loom.com/download"
   },
   "changelog": {
     "method": "web",

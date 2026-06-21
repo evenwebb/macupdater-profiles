@@ -8,7 +8,7 @@
   "min_os": "11.0",
   "auto_updates": false,
   "version_check": {
-    "method": "scrape_support_portal",
+    "method": "scrape_html",
     "url": "https://consumersupport.datacolor.com/",
     "extraction": {
       "type": "javascript_spa_scrape",
@@ -20,11 +20,9 @@
   },
   "download": {
     "method": "dynamic_portal_only",
-    "note": "Download links are generated dynamically by the Zendesk SPA after solving Cloudflare challenge. No static URL pattern. CDN at d2f30h0zqts8b1.cloudfront.net blocks direct access (ECONNREFUSED).",
-    "file_type": "dmg_or_pkg",
-    "redirect_url": "https://goto.datacolor.com/websupportdownloads",
-    "note_2": "This redirect goes to the support portal, not directly to downloads",
-    "headers": {}
+    "file_type": "pkg",
+    "headers": {},
+    "url": "https://goto.datacolor.com/websupportdownloads"
   },
   "changelog": {
     "method": "none_available",

@@ -8,7 +8,7 @@
   "min_os": "10.13",
   "auto_updates": true,
   "version_check": {
-    "method": "custom_xml_api",
+    "method": "sparkle_appcast",
     "url": "https://crystalidea.com/update/fancontrol.xml.gz",
     "extraction": {
       "type": "xpath_on_decompressed_xml",
@@ -20,7 +20,7 @@
     "headers": {}
   },
   "download": {
-    "method": "static_url",
+    "method": "direct_url",
     "url": "https://crystalidea.com/downloads/macsfancontrol.zip",
     "github_pattern": "https://github.com/crystalidea/macs-fan-control/releases/download/v{VERSION}/macsfancontrol.zip",
     "file_type": "zip",

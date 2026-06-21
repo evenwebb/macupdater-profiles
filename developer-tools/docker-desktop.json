@@ -8,7 +8,7 @@
   "min_os": "14.0",
   "auto_updates": true,
   "version_check": {
-    "method": "sparkle_xml",
+    "method": "sparkle_appcast",
     "url": "https://desktop.docker.com/mac/main/arm64/appcast.xml",
     "extraction": {
       "type": "xpath",
@@ -17,10 +17,10 @@
     "headers": {}
   },
   "download": {
-    "method": "composed_url",
-    "url_or_pattern": "https://desktop.docker.com/mac/main/arm64/{build}/Docker.dmg",
+    "method": "construct_url",
     "file_type": "dmg",
-    "headers": {}
+    "headers": {},
+    "url": "https://desktop.docker.com/mac/main/arm64/229452/Docker.dmg"
   },
   "changelog": {
     "method": "fixed_url",

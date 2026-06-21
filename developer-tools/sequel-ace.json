@@ -8,7 +8,7 @@
   "min_os": "12",
   "auto_updates": true,
   "version_check": {
-    "method": "sparkle_xml_github_releases",
+    "method": "sparkle_appcast",
     "url": "https://github.com/Sequel-Ace/Sequel-Ace/releases",
     "extraction": {
       "type": "github_release",
@@ -18,9 +18,9 @@
   },
   "download": {
     "method": "composed_url",
-    "url_or_pattern": "https://github.com/Sequel-Ace/Sequel-Ace/releases/download/production%2F{version}-{build}/Sequel-Ace-{version}.zip",
     "file_type": "zip",
-    "headers": {}
+    "headers": {},
+    "url": "https://github.com/Sequel-Ace/Sequel-Ace/releases/download/production%2F{version}-{build}/Sequel-Ace-{version}.zip"
   },
   "changelog": {
     "method": "fixed_url",

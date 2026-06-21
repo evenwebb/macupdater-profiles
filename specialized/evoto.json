@@ -3,7 +3,7 @@
   "url": "https://www.evoto.ai",
   "description": "AI photo editor",
   "version_check": {
-    "method": "sparkle",
+    "method": "sparkle_appcast",
     "url": "Sparkle SUFeedURL embedded in app bundle (not publicly documented)",
     "version_field": "sparkle:shortVersionString",
     "version_example": "7.1.5-185",
@@ -48,5 +48,6 @@
   "category": "specialized",
   "license": "free",
   "skip": false,
-  "last_updated": "2026-06-21"
+  "last_updated": "2026-06-21",
+  "slug": "evoto"
 }

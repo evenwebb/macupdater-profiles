@@ -8,7 +8,7 @@
   "min_os": "11.0",
   "auto_updates": true,
   "version_check": {
-    "method": "custom_xml_api",
+    "method": "sparkle_appcast",
     "url": "https://update.filezilla-project.org/updatecheck.php?platform=x86_64-apple-darwin20.1.0&version=0.0.0&osversion=11.0&channel=stable",
     "extraction": {
       "type": "xml_xpath",
@@ -25,12 +25,7 @@
   "download": {
     "method": "construct_url",
     "pattern": "https://download.filezilla-project.org/client/mac/{ARCH}/FileZilla_{VERSION}_macos-{ARCH}.app.tar.bz2",
-    "archs": {
-      "x86_64": "x86",
-      "arm64": "arm64"
-    },
-    "file_type": "tar.bz2",
-    "note": "Direct links blocked by anti-bot JS encryption \u2014 returns 12KB dummy files. Use cdn.ftpclient-mirror.org instead.",
+    "file_type": "zip",
     "headers": {}
   },
   "changelog": {

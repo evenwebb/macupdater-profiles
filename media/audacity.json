@@ -21,11 +21,6 @@
   "download": {
     "method": "construct_url",
     "pattern": "https://github.com/audacity/audacity/releases/download/Audacity-{VERSION}/audacity-macOS-{VERSION}-{ARCH}.dmg",
-    "archs": [
-      "arm64",
-      "x86_64",
-      "universal"
-    ],
     "file_type": "dmg",
     "headers": {}
   },

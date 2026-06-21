@@ -3,7 +3,7 @@
   "url": "https://fireball.studio/oneswitch",
   "description": "Menu bar shortcuts",
   "version_check": {
-    "method": "sparkle",
+    "method": "sparkle_appcast",
     "url": "Not publicly documented. Sparkle appcast URL embedded in app.",
     "version_field": "sparkle:shortVersionString (probable)",
     "version_example": "1.35.4",
@@ -14,7 +14,6 @@
   "download": {
     "url": "https://fireball.studio/media/uploads/files/OneSwitchOfficial-{BUILD}.dmg",
     "file_type": "dmg",
-    "note": "Direct download may return 403 without proper referrer headers",
     "headers": {}
   },
   "changelog": {
@@ -44,5 +43,6 @@
   "category": "utilities",
   "license": "free",
   "skip": false,
-  "last_updated": "2026-06-21"
+  "last_updated": "2026-06-21",
+  "slug": "one-switch"
 }

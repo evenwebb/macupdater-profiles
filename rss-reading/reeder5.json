@@ -18,7 +18,6 @@
   },
   "download": {
     "method": "app_store_only",
-    "url_or_pattern": null,
     "file_type": null,
     "headers": {}
   },

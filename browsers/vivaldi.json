@@ -8,7 +8,7 @@
   "min_os": "macOS 11+ (Big Sur and later)",
   "auto_updates": true,
   "version_check": {
-    "method": "sparkle",
+    "method": "sparkle_appcast",
     "url": "https://update.vivaldi.com/update/1.0/public/mac/appcast.xml",
     "extraction": {
       "type": "xpath",
@@ -21,10 +21,10 @@
     "headers": {}
   },
   "download": {
-    "method": "appcast_enclosure",
-    "url_or_pattern": "Enclosure url field from Sparkle appcast item",
-    "file_type": "tar.xz",
-    "headers": {}
+    "method": "construct_url",
+    "file_type": "zip",
+    "headers": {},
+    "url": "https://downloads.vivaldi.com/stable-auto/Vivaldi.8.0.4033.50.universal.tar.xz"
   },
   "changelog": {
     "method": "webpage",

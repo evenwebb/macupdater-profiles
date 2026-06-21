@@ -24,7 +24,7 @@
     "headers": {}
   },
   "download": {
-    "method": "static_url",
+    "method": "direct_url",
     "url": "https://app.dolphin-anty-mirror3.com/anty-app/dolphin-anty-mac-universal-latest.dmg",
     "file_type": "dmg",
     "headers": {}

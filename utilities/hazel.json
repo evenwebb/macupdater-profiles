@@ -20,7 +20,6 @@
   },
   "download": {
     "method": "sparkle_enclosure",
-    "url_or_pattern": null,
     "file_type": "dmg",
     "notes": "Download URL is obfuscated in the Sparkle appcast enclosure. The URL contains placeholder characters (//) that must be resolved at runtime. The enclosure URL in the appcast item is the only authoritative source for the download link.",
     "headers": {}

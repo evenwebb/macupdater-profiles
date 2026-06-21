@@ -16,9 +16,9 @@
   },
   "download": {
     "method": "direct",
-    "url_or_pattern": "https://www.battle.net/download/getInstallerForGame?os=mac&locale=enUS&version=LIVE&gameProgram=BATTLENET_APP",
     "file_type": "dmg",
-    "headers": {}
+    "headers": {},
+    "url": "https://www.battle.net/download/getInstallerForGame?os=mac&locale=enUS&version=LIVE&gameProgram=BATTLENET_APP"
   },
   "changelog": {
     "method": "webpage",

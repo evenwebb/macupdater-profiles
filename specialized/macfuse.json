@@ -20,7 +20,7 @@
     "headers": {}
   },
   "download": {
-    "method": "construct_from_github",
+    "method": "construct_url",
     "pattern": "https://github.com/macfuse/macfuse/releases/download/macfuse-{VERSION}/macfuse-{VERSION}.dmg",
     "file_type": "dmg",
     "headers": {}

@@ -18,10 +18,10 @@
     "headers": {}
   },
   "download": {
-    "method": "pattern",
-    "url_or_pattern": "https://epicgames-download1.akamaized.net/Builds/UnrealEngineLauncher/Installers/Mac/EpicInstaller-{version}.dmg",
+    "method": "construct_url",
     "file_type": "dmg",
-    "headers": {}
+    "headers": {},
+    "url": "https://epicgames-download1.akamaized.net/Builds/UnrealEngineLauncher/Installers/Mac/EpicInstaller-20.1.0.dmg?launcherfilename=EpicInstaller-20.1.0.dmg"
   },
   "changelog": {
     "method": null

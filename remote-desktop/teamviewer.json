@@ -8,7 +8,7 @@
   "min_os": "11.0",
   "auto_updates": true,
   "version_check": {
-    "method": "sparkle_xml",
+    "method": "sparkle_appcast",
     "url": "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=15.0.0&os=macos&osversion=13.7&type=1&channel=1",
     "extraction": {
       "type": "sparkle_xml",
@@ -18,7 +18,7 @@
     "headers": {}
   },
   "download": {
-    "method": "static_redirect_url",
+    "method": "direct_url",
     "url": "https://download.teamviewer.com/download/TeamViewer.dmg",
     "file_type": "dmg",
     "headers": {}

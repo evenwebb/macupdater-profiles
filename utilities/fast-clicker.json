@@ -19,10 +19,9 @@
     "headers": {}
   },
   "download": {
-    "method": "static_url",
+    "method": "direct_url",
     "url": "https://www.murgaa.com/fast-clicker/download/FastClicker.zip",
     "file_type": "zip",
-    "note": "No version in filename \u2014 must download and inspect",
     "headers": {}
   },
   "changelog": {

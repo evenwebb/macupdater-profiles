@@ -8,7 +8,7 @@
   "min_os": "11",
   "auto_updates": true,
   "version_check": {
-    "method": "sparkle_custom_xml",
+    "method": "sparkle_appcast",
     "url": "https://upgrade.scdn.co/upgrade/client/osx-arm64/spotify-autoupdate.xml",
     "extraction": {
       "type": "pattern",
@@ -19,9 +19,9 @@
   },
   "download": {
     "method": "direct",
-    "url_or_pattern": "https://download.scdn.co/Spotify.dmg",
     "file_type": "dmg",
-    "headers": {}
+    "headers": {},
+    "url": "https://download.scdn.co/Spotify.dmg"
   },
   "changelog": {
     "method": "webpage",

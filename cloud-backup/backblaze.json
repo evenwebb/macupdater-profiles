@@ -8,7 +8,7 @@
   "min_os": "11",
   "auto_updates": true,
   "version_check": {
-    "method": "custom_xml",
+    "method": "sparkle_appcast",
     "url": "https://secure.backblaze.com/api/clientversion.xml",
     "extraction": {
       "type": "xpath",
@@ -19,9 +19,9 @@
   },
   "download": {
     "method": "pattern",
-    "url_or_pattern": "https://secure.backblaze.com/api/install_backblaze?file=bzinstall-mac-{version}.dmg",
     "file_type": "dmg",
-    "headers": {}
+    "headers": {},
+    "url": "https://secure.backblaze.com/api/install_backblaze?file=bzinstall-mac-{version}.dmg"
   },
   "changelog": {
     "method": "webpage",

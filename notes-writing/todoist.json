@@ -11,7 +11,7 @@
   "min_os": "macOS 11",
   "auto_updates": true,
   "version_check": {
-    "method": "electron_updater_yaml",
+    "method": "yaml_api",
     "url": "https://electron-dl.todoist.net/mac/latest-mac.yml",
     "extraction": {
       "type": "yaml_key",
@@ -21,9 +21,9 @@
   },
   "download": {
     "method": "constructed_url",
-    "url_or_pattern": "https://electron-dl.todoist.net/mac/Todoist-darwin-{version}-arm64-latest.dmg or -x64-latest.dmg",
     "file_type": "dmg",
-    "headers": {}
+    "headers": {},
+    "url": "https://electron-dl.todoist.net/mac/Todoist-darwin-{version}-arm64-latest.dmg or -x64-latest.dmg"
   },
   "changelog": {
     "method": "scrape",

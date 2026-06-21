@@ -3,7 +3,7 @@
   "url": "https://www.roblox.com",
   "description": "Gaming platform",
   "version_check": {
-    "method": "other",
+    "method": "scrape_html",
     "url": "https://clientsettingscdn.roblox.com/v2/client-version/MacPlayer",
     "extraction": "Custom JSON endpoint",
     "version_field": ".version",
@@ -16,8 +16,8 @@
     "url_arm64": "https://setup.rbxcdn.com/mac/arm64/version-{CLIENTVERSIONUPLOAD}-RobloxPlayer.zip",
     "url_x86_64": "https://setup.rbxcdn.com/mac/version-{CLIENTVERSIONUPLOAD}-RobloxPlayer.zip",
     "file_type": "zip",
-    "note": "Separate builds for arm64 (Apple Silicon) and x86_64 (Intel)",
-    "headers": {}
+    "headers": {},
+    "url": "https://setup.rbxcdn.com/mac/Roblox.dmg"
   },
   "changelog": {
     "url": "https://devforum.roblox.com/c/updates/",
@@ -44,5 +44,6 @@
   "category": "gaming",
   "license": "free",
   "skip": false,
-  "last_updated": "2026-06-21"
+  "last_updated": "2026-06-21",
+  "slug": "roblox"
 }

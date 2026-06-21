@@ -3,7 +3,7 @@
   "url": "https://edovia.com",
   "description": "VNC/remote desktop client",
   "version_check": {
-    "method": "app_store",
+    "method": "itunes_api",
     "url": "https://itunes.apple.com/lookup?id=1663047912",
     "field": "results[0].version",
     "version_example": "5.8.9",
@@ -11,8 +11,7 @@
   },
   "download": {
     "url": "macappstores://apps.apple.com/app/id1663047912",
-    "file_type": "app_store",
-    "note": "Mac App Store EXCLUSIVE \u2014 no standalone download available",
+    "file_type": "app",
     "headers": {}
   },
   "changelog": {
@@ -41,5 +40,6 @@
   "category": "remote-desktop",
   "license": "free",
   "skip": false,
-  "last_updated": "2026-06-21"
+  "last_updated": "2026-06-21",
+  "slug": "screens"
 }

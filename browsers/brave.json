@@ -8,7 +8,7 @@
   "min_os": "macOS 11+ (Big Sur and later)",
   "auto_updates": true,
   "version_check": {
-    "method": "sparkle",
+    "method": "sparkle_appcast",
     "url": "https://updates.bravesoftware.com/sparkle/Brave-Browser/stable/appcast.xml",
     "extraction": {
       "type": "xpath",
@@ -17,10 +17,10 @@
     "headers": {}
   },
   "download": {
-    "method": "appcast_enclosure",
-    "url_or_pattern": "Enclosure url field from Sparkle appcast item",
+    "method": "construct_url",
     "file_type": "dmg",
-    "headers": {}
+    "headers": {},
+    "url": "https://updates-cdn.bravesoftware.com/sparkle/Brave-Browser/stable/191.175/Brave-Browser-x64.dmg"
   },
   "changelog": {
     "method": "webpage",

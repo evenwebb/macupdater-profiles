@@ -16,9 +16,9 @@
   },
   "download": {
     "method": "direct",
-    "url_or_pattern": "https://cdn.cloudflare.steamstatic.com/client/installer/steam.dmg",
     "file_type": "dmg",
-    "headers": {}
+    "headers": {},
+    "url": "https://cdn.cloudflare.steamstatic.com/client/installer/steam.dmg"
   },
   "changelog": {
     "method": "webpage",

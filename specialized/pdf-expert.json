@@ -8,7 +8,7 @@
   "min_os": "12",
   "auto_updates": true,
   "version_check": {
-    "method": "sparkle_or_scrape",
+    "method": "sparkle_appcast",
     "sparkle": {
       "note": "UNCERTAIN: Likely uses Sparkle (SUFeedURL in app bundle), but the exact appcast URL is not publicly documented. The app bundle's SUFeedURL should be consulted."
     },
@@ -20,9 +20,9 @@
   },
   "download": {
     "method": "direct",
-    "url_or_pattern": "https://downloads.pdfexpert.com/pem3/PDFExpert.zip",
     "file_type": "zip",
-    "headers": {}
+    "headers": {},
+    "url": "https://downloads.pdfexpert.com/pem3/PDFExpert.zip"
   },
   "changelog": {
     "method": "web",

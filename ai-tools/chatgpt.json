@@ -20,10 +20,9 @@
     "headers": {}
   },
   "download": {
-    "method": "construct_from_sparkle",
+    "method": "construct_url",
     "pattern": "https://persistent.oaistatic.com/sidekick/public/ChatGPT_Desktop_public_{SHORT_VERSION}_{BUILD}.dmg",
     "file_type": "dmg",
-    "note": "Apple Silicon only (arm64). Delta updates available via Sparkle.",
     "headers": {}
   },
   "changelog": {

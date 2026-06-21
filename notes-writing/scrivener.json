@@ -20,9 +20,9 @@
   },
   "download": {
     "method": "direct_url",
-    "url_or_pattern": "https://scrivener.s3.amazonaws.com/Scrivener.dmg",
-    "file_type": "dmg/zip",
-    "headers": {}
+    "file_type": "zip",
+    "headers": {},
+    "url": "https://scrivener.s3.amazonaws.com/Scrivener.dmg"
   },
   "changelog": {
     "method": "scrape",

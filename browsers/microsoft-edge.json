@@ -19,9 +19,9 @@
   },
   "download": {
     "method": "direct_url",
-    "url_or_pattern": "https://go.microsoft.com/fwlink/?linkid=2069148",
     "file_type": "pkg",
-    "headers": {}
+    "headers": {},
+    "url": "https://go.microsoft.com/fwlink/?linkid=2069148"
   },
   "changelog": {
     "method": "webpage",

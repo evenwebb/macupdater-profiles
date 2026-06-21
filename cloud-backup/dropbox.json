@@ -8,7 +8,7 @@
   "min_os": "11.0",
   "auto_updates": true,
   "version_check": {
-    "method": "http_redirect_trace",
+    "method": "redirect_trace",
     "url": "https://www.dropbox.com/download?plat=mac&full=1",
     "extraction": {
       "type": "regex_on_redirect_location",
@@ -24,12 +24,11 @@
     "headers": {}
   },
   "download": {
-    "method": "construct_url_separate_arch",
-    "x86_64": "https://edge.dropboxstatic.com/dbx-releng/client/Dropbox%20{VERSION}.dmg",
-    "arm64": "https://edge.dropboxstatic.com/dbx-releng/client/Dropbox%20{VERSION}.arm64.dmg",
+    "method": "construct_url",
     "generic_latest": "https://www.dropbox.com/download?plat=mac",
     "file_type": "dmg",
-    "headers": {}
+    "headers": {},
+    "url": "https://edge.dropboxstatic.com/dbx-releng/client/Dropbox%20256.4.3790.dmg"
   },
   "changelog": {
     "method": "web_scrape",

@@ -3,7 +3,7 @@
   "url": "https://cocoatech.io",
   "description": "Advanced dual-pane file manager",
   "version_check": {
-    "method": "sparkle",
+    "method": "sparkle_appcast",
     "url": "https://get.cocoatech.com/releasecast.xml",
     "version_field": "sparkle:shortVersionString",
     "build_field": "sparkle:version",
@@ -40,5 +40,6 @@
   "license": "paid",
   "skip": false,
   "bundle_id": "com.cocoatech.PathFinder",
-  "last_updated": "2026-06-21"
+  "last_updated": "2026-06-21",
+  "slug": "path-finder"
 }

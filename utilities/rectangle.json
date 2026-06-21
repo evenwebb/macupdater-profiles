@@ -19,10 +19,10 @@
     "headers": {}
   },
   "download": {
-    "method": "github_release",
-    "url_or_pattern": "https://github.com/rxhanson/Rectangle/releases/download/v{version}/Rectangle{version}.dmg",
+    "method": "construct_url",
     "file_type": "dmg",
-    "headers": {}
+    "headers": {},
+    "url": "https://github.com/rxhanson/Rectangle/releases/download/v0.96/Rectangle0.96.dmg"
   },
   "changelog": {
     "method": "github_api",

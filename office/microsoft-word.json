@@ -8,7 +8,7 @@
   "min_os": "13.0",
   "auto_updates": true,
   "version_check": {
-    "method": "scrape_version_table",
+    "method": "scrape_html",
     "url": "https://learn.microsoft.com/en-us/officeupdates/update-history-office-for-mac",
     "extraction": {
       "type": "regex_on_html",
@@ -25,7 +25,8 @@
     "suite_installer": "https://go.microsoft.com/fwlink/?linkid=525133",
     "word_updater_pattern": "https://res.public.onecdn.static.microsoft/mro1cdnstorage/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Word_{VERSION}_Updater.pkg",
     "file_type": "pkg",
-    "headers": {}
+    "headers": {},
+    "url": "https://go.microsoft.com/fwlink/?linkid=525133"
   },
   "changelog": {
     "method": "web_scrape",

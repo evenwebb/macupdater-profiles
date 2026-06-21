@@ -3,7 +3,7 @@
   "url": "https://pasteapp.io",
   "description": "Clipboard manager for Mac",
   "version_check": {
-    "method": "http_redirect",
+    "method": "redirect_trace",
     "url": "https://hub.pasteapp.io/downloads/stable/latest",
     "extraction": "Follow 302 redirect, extract version from Location header filename: Paste-{VERSION}.zip",
     "pattern": "Paste-(.+)\\.zip",
@@ -40,5 +40,6 @@
   "license": "paid",
   "skip": false,
   "bundle_id": "com.wiheads.paste",
-  "last_updated": "2026-06-21"
+  "last_updated": "2026-06-21",
+  "slug": "paste"
 }

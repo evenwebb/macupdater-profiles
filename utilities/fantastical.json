@@ -20,9 +20,9 @@
   },
   "download": {
     "method": "sparkle_enclosure",
-    "url_or_pattern": "https://flexibits.com/fantastical/appcast.xml",
     "file_type": "dmg",
-    "headers": {}
+    "headers": {},
+    "url": "https://flexibits.com/fantastical/appcast.xml"
   },
   "changelog": {
     "method": "sparkle_appcast",

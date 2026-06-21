@@ -8,7 +8,7 @@
   "min_os": "13.1",
   "auto_updates": false,
   "version_check": {
-    "method": "scrape",
+    "method": "scrape_html",
     "url": "https://bombich.com/download",
     "extraction": {
       "type": "pattern",
@@ -19,9 +19,9 @@
   },
   "download": {
     "method": "direct",
-    "url_or_pattern": "https://bombich.com/download/get",
     "file_type": "dmg",
-    "headers": {}
+    "headers": {},
+    "url": "https://bombich.com/download/get"
   },
   "changelog": {
     "method": "webpage",

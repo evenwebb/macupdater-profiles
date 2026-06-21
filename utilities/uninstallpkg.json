@@ -27,7 +27,8 @@
     "versioned": "https://www.corecode.io/downloads/uninstallpkg_{VERSION}.zip",
     "latest": "https://www.corecode.io/downloads/uninstallpkg_latest.zip",
     "file_type": "zip",
-    "headers": {}
+    "headers": {},
+    "url": "https://www.corecode.io/downloads/uninstallpkg_1.2.2.zip"
   },
   "changelog": {
     "method": "web_scrape",

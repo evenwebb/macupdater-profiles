@@ -8,7 +8,7 @@
   "min_os": "macOS 12.0",
   "auto_updates": true,
   "version_check": {
-    "method": "custom_json",
+    "method": "json_api",
     "url": "https://desktop.figma.com/mac/RELEASE.json",
     "extraction": {
       "type": "json_path",
@@ -18,10 +18,10 @@
     "headers": {}
   },
   "download": {
-    "method": "direct_url",
-    "url_or_pattern": "https://www.figma.com/download/desktop/mac",
+    "method": "construct_url",
     "file_type": "zip",
-    "headers": {}
+    "headers": {},
+    "url": "https://desktop.figma.com/mac/Figma-126.5.6.zip"
   },
   "changelog": {
     "method": "website",

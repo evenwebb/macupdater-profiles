@@ -18,7 +18,7 @@
     "headers": {}
   },
   "download": {
-    "method": "extract_from_json",
+    "method": "construct_url",
     "pattern": "https://download.gimp.org/gimp/v{MAJOR}.{MINOR}/macos/{FILENAME}",
     "filename_field": "STABLE[0].macos[*].filename (pick x86_64 or arm64)",
     "file_type": "dmg",

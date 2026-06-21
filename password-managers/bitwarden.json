@@ -20,9 +20,9 @@
   },
   "download": {
     "method": "constructed_url",
-    "url_or_pattern": "https://github.com/bitwarden/clients/releases/download/desktop-v{version}/Bitwarden-{version}-universal.dmg",
     "file_type": "dmg",
-    "headers": {}
+    "headers": {},
+    "url": "https://github.com/bitwarden/clients/releases/download/desktop-v{version}/Bitwarden-{version}-universal.dmg"
   },
   "changelog": {
     "method": "github_release",

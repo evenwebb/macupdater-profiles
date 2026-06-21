@@ -23,7 +23,8 @@
     "method": "construct_url",
     "dmg_pattern": "https://www.publicspace.net/download/ABFRX11_{VERSION}.dmg",
     "file_type": "dmg",
-    "headers": {}
+    "headers": {},
+    "url": "http://www.publicspace.net/download/signedABFRX11.zip"
   },
   "changelog": {
     "method": "sparkle_release_notes",

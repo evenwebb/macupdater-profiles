@@ -19,7 +19,7 @@
     "headers": {}
   },
   "download": {
-    "method": "static_url",
+    "method": "direct_url",
     "url": "https://builds.parsec.app/package/parsec-macos.pkg",
     "file_type": "pkg",
     "headers": {}

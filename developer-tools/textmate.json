@@ -20,7 +20,7 @@
     "headers": {}
   },
   "download": {
-    "method": "construct_from_github",
+    "method": "construct_url",
     "pattern": "https://github.com/textmate/textmate/releases/download/v{VERSION}/TextMate_{VERSION}.tbz",
     "file_type": "tbz",
     "headers": {}

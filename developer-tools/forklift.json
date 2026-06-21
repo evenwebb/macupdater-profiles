@@ -20,11 +20,12 @@
     "headers": {}
   },
   "download": {
-    "method": "from_appcast_or_construct",
+    "method": "construct_url",
     "generic_latest": "https://download.binarynights.com/ForkLift/ForkLift4.zip",
     "versioned_pattern": "https://download.binarynights.com/ForkLift/ForkLift{VERSION}.zip",
     "file_type": "zip",
-    "headers": {}
+    "headers": {},
+    "url": "https://download.binarynights.com/ForkLift/ForkLift4.zip"
   },
   "changelog": {
     "method": "construct_from_version",

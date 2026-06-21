@@ -8,7 +8,7 @@
   "min_os": "10.15",
   "auto_updates": false,
   "version_check": {
-    "method": "plaintext",
+    "method": "plain_text_api",
     "url": "https://www.reaper.fm/whatsnew.txt",
     "extraction": {
       "type": "pattern",
@@ -19,9 +19,9 @@
   },
   "download": {
     "method": "pattern",
-    "url_or_pattern": "https://www.reaper.fm/files/7.x/reaper{version}_universal.dmg",
     "file_type": "dmg",
-    "headers": {}
+    "headers": {},
+    "url": "https://www.reaper.fm/files/7.x/reaper{version}_universal.dmg"
   },
   "changelog": {
     "method": "plaintext",

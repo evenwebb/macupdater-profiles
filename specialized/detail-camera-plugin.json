@@ -8,7 +8,7 @@
   "min_os": "13.0",
   "auto_updates": true,
   "version_check": {
-    "method": "app_store_api",
+    "method": "itunes_api",
     "url": "https://itunes.apple.com/lookup?id=6443923358",
     "extraction": {
       "type": "json_path",
@@ -20,8 +20,7 @@
   "download": {
     "method": "app_store_only",
     "url": "https://detail.co/download-macos",
-    "file_type": "app_bundle",
-    "note": "Redirects to Mac App Store. The Camera.plugin is bundled inside Detail Studio \u2014 it is a CoreMediaIO DAL plugin at /Library/CoreMediaIO/Plug-Ins/DAL/. No standalone download.",
+    "file_type": "app",
     "headers": {}
   },
   "changelog": {

@@ -10,7 +10,7 @@
   "min_os": "macOS 11",
   "auto_updates": false,
   "version_check": {
-    "method": "custom_redirect",
+    "method": "redirect_trace",
     "url": "https://web.whatsapp.com/desktop/mac_native/release/?configuration=Release",
     "extraction": {
       "type": "http_redirect",
@@ -20,9 +20,9 @@
   },
   "download": {
     "method": "dynamic_cdn_url",
-    "url_or_pattern": "Dynamic CDN URL (scontent.xx.fbcdn.net) \u2014 time-limited, signed",
     "file_type": "dmg",
-    "headers": {}
+    "headers": {},
+    "url": "Dynamic CDN URL (scontent.xx.fbcdn.net) \u2014 time-limited, signed"
   },
   "changelog": {
     "method": null,

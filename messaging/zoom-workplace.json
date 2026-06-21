@@ -19,7 +19,7 @@
     "headers": {}
   },
   "download": {
-    "method": "static_redirect_url",
+    "method": "direct_url",
     "url": "https://zoom.us/client/latest/Zoom.pkg",
     "file_type": "pkg",
     "headers": {}

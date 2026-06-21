@@ -8,7 +8,7 @@
   "min_os": "12",
   "auto_updates": true,
   "version_check": {
-    "method": "sparkle",
+    "method": "sparkle_appcast",
     "url": "https://downloads.nordcdn.com/apps/macos/generic/NordVPN-OpenVPN/latest/update_pkg.xml",
     "extraction": {
       "type": "xpath",
@@ -18,10 +18,10 @@
     "headers": {}
   },
   "download": {
-    "method": "pattern",
-    "url_or_pattern": "https://downloads.nordcdn.com/apps/macos/generic/NordVPN-OpenVPN/{version}/NordVPN.pkg",
+    "method": "construct_url",
     "file_type": "pkg",
-    "headers": {}
+    "headers": {},
+    "url": "https://downloads.nordcdn.com/apps/macos/generic/NordVPN-OpenVPN/10.4.0/NordVPN.zip"
   },
   "changelog": {
     "method": null

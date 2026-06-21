@@ -3,7 +3,7 @@
   "url": "https://coderunnerapp.com",
   "description": "Lightweight code editor for Mac",
   "version_check": {
-    "method": "sparkle",
+    "method": "sparkle_appcast",
     "url": "https://coderunnerapp.com/appcast.xml",
     "version_field": "sparkle:shortVersionString",
     "build_field": "sparkle:version",
@@ -44,5 +44,6 @@
   "license": "paid",
   "skip": false,
   "bundle_id": "com.krill.CodeRunner",
-  "last_updated": "2026-06-21"
+  "last_updated": "2026-06-21",
+  "slug": "coderunner"
 }

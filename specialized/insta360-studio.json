@@ -21,10 +21,10 @@
     "headers": {}
   },
   "download": {
-    "method": "extract_from_json",
-    "extraction_path": "channels[?(@.channel == 'official')].download_url",
+    "method": "construct_url",
     "file_type": "zip",
-    "headers": {}
+    "headers": {},
+    "pattern": "extracted_from_json"
   },
   "changelog": {
     "method": "extract_from_json",

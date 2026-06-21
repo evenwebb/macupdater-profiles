@@ -8,7 +8,7 @@
   "min_os": "14",
   "auto_updates": true,
   "version_check": {
-    "method": "sparkle",
+    "method": "sparkle_appcast",
     "sparkle": {
       "url": "https://releases.eggerapps.at/postico2/appcast.xml",
       "note": "UNCERTAINTY: This URL is the likely appcast for Postico 2 (stable channel). The exact URL is embedded in the app bundle's SUFeedURL and should be verified by inspecting the bundle. There are two update channels: stable (channel 2) and dev (channel 1)."
@@ -17,10 +17,9 @@
   },
   "download": {
     "method": "web_redirect",
-    "url_or_pattern": "https://releases.eggerapps.at/postico2/download",
     "file_type": "dmg",
-    "note": "UNCERTAINTY: /download redirects to a build-specific dmg URL on releases.eggerapps.at. The redirect target filename typically includes the build number. For the dev channel, use the URL with channel parameter.",
-    "headers": {}
+    "headers": {},
+    "url": "https://releases.eggerapps.at/postico2/download"
   },
   "changelog": {
     "method": "web",

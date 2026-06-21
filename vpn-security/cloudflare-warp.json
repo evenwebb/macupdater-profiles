@@ -8,7 +8,7 @@
   "min_os": "11",
   "auto_updates": true,
   "version_check": {
-    "method": "sparkle",
+    "method": "sparkle_appcast",
     "url": "https://1111-releases.cloudflareclient.com/mac/appcast.xml",
     "extraction": {
       "type": "xpath",
@@ -19,9 +19,9 @@
   },
   "download": {
     "method": "direct",
-    "url_or_pattern": "https://1111-releases.cloudflareclient.com/mac/Cloudflare_WARP.zip",
     "file_type": "zip",
-    "headers": {}
+    "headers": {},
+    "url": "https://1111-releases.cloudflareclient.com/mac/Cloudflare_WARP.zip"
   },
   "changelog": {
     "method": null

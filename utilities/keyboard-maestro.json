@@ -8,7 +8,7 @@
   "min_os": "macOS 11.0",
   "auto_updates": false,
   "version_check": {
-    "method": "scrape_website",
+    "method": "scrape_html",
     "url": "https://www.keyboardmaestro.com/main/",
     "extraction": {
       "type": "pattern",
@@ -19,10 +19,10 @@
   },
   "download": {
     "method": "direct_url",
-    "url_or_pattern": "https://www.keyboardmaestro.com/action/DownloadFile?path=Keyboard+Maestro.zip",
     "file_type": "zip",
     "notes": "Any download path on keyboardmaestro.com serves the app zip. The primary download link uses a server-side script (DownloadFile) with a path parameter. The zip filename in the download link on the main page may include the version number (e.g. 'KeyboardMaestro-11.0.3.zip'), but this pattern may change.",
-    "headers": {}
+    "headers": {},
+    "url": "https://www.keyboardmaestro.com/action/DownloadFile?path=Keyboard+Maestro.zip"
   },
   "changelog": {
     "method": "scrape_wiki",

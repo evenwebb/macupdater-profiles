@@ -24,7 +24,6 @@
     "base": "https://github.com/home-assistant/iOS/releases/download",
     "pattern": "{BASE}/release%2F{VERSION}%2F{BUILD}/home-assistant-mac.zip",
     "file_type": "zip",
-    "note": "URL-encode the slashes in the tag. ~57 MB.",
     "headers": {}
   },
   "changelog": {

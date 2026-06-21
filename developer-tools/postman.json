@@ -8,7 +8,7 @@
   "min_os": "11",
   "auto_updates": true,
   "version_check": {
-    "method": "sparkle_info_plist",
+    "method": "sparkle_appcast",
     "url": "embedded_in_app",
     "extraction": {
       "type": "sparkle_feed",
@@ -18,9 +18,9 @@
   },
   "download": {
     "method": "redirect_url",
-    "url_or_pattern": "https://dl.pstmn.io/download/latest/osx_64",
     "file_type": "zip",
-    "headers": {}
+    "headers": {},
+    "url": "https://dl.pstmn.io/download/latest/osx_64"
   },
   "changelog": {
     "method": "fixed_url",

@@ -8,7 +8,7 @@
   "min_os": "13.0",
   "auto_updates": false,
   "version_check": {
-    "method": "blog_scrape_only",
+    "method": "scrape_html",
     "url": "https://blogs.vmware.com/teamfusion/",
     "fallback_homebrew": "Homebrew cask disabled June 2025 but may still have version in repo history",
     "extraction": {
@@ -23,8 +23,7 @@
     "method": "broadcom_portal_only",
     "url": null,
     "pattern": "https://softwareupdate-prod.broadcom.com/cds/vmw-desktop/fusion/{VERSION}/{BUILD}/universal/core/com.vmware.fusion.zip.tar",
-    "file_type": "zip.tar",
-    "note": "REQUIRES Broadcom account (support.broadcom.com). No public direct download.",
+    "file_type": "zip",
     "headers": {}
   },
   "changelog": {

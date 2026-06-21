@@ -20,7 +20,6 @@
   },
   "download": {
     "method": null,
-    "url_or_pattern": null,
     "file_type": null,
     "headers": {}
   },

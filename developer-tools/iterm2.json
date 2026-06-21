@@ -8,7 +8,7 @@
   "min_os": "12.4",
   "auto_updates": true,
   "version_check": {
-    "method": "sparkle_xml",
+    "method": "sparkle_appcast",
     "url": "https://iterm2.com/appcasts/final.xml",
     "extraction": {
       "type": "xpath",
@@ -17,10 +17,10 @@
     "headers": {}
   },
   "download": {
-    "method": "composed_url",
-    "url_or_pattern": "https://iterm2.com/downloads/stable/iTerm2-{version_underscored}.zip",
+    "method": "construct_url",
     "file_type": "zip",
-    "headers": {}
+    "headers": {},
+    "url": "https://iterm2.com/downloads/stable/iTerm2-2_1_4.zip"
   },
   "changelog": {
     "method": "composed_url",

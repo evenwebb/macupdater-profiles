@@ -19,9 +19,9 @@
   },
   "download": {
     "method": "macappstore",
-    "url_or_pattern": "macappstores://apps.apple.com/app/logic-pro/id634148309",
     "file_type": null,
-    "headers": {}
+    "headers": {},
+    "url": "macappstores://apps.apple.com/app/logic-pro/id634148309"
   },
   "changelog": {
     "method": "webpage",

@@ -3,7 +3,7 @@
   "url": "https://mac.eltima.com/bulk-image-editor.html",
   "description": "Batch image editor",
   "version_check": {
-    "method": "html_scrape",
+    "method": "scrape_html",
     "url": "https://mac.eltima.com/bulk-image-editor.html",
     "primary": {
       "field": "JSON-LD \"softwareVersion\"",
@@ -55,5 +55,6 @@
   "category": "design",
   "license": "paid",
   "skip": false,
-  "last_updated": "2026-06-21"
+  "last_updated": "2026-06-21",
+  "slug": "photobulk"
 }

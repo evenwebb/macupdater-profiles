@@ -20,9 +20,9 @@
   },
   "download": {
     "method": "sparkle_enclosure",
-    "url_or_pattern": "https://daisydiskapp.com/downloads/DaisyDisk.zip",
     "file_type": "zip",
-    "headers": {}
+    "headers": {},
+    "url": "https://daisydiskapp.com/downloads/DaisyDisk.zip"
   },
   "changelog": {
     "method": "sparkle_appcast",

@@ -3,7 +3,7 @@
   "url": "https://software.charliemonroe.net/permute/",
   "description": "Media converter",
   "version_check": {
-    "method": "sparkle",
+    "method": "sparkle_appcast",
     "url": "appcast URL embedded in app bundle (likely https://software.charliemonroe.net/permute/appcast.xml)",
     "version_field": "sparkle:shortVersionString",
     "version_example": "4.0.4",
@@ -15,7 +15,8 @@
     "url_v3_legacy": "https://software.charliemonroe.net/trial/permute/v3/Permute_3_{BUILD}.dmg",
     "url_v3_note": "Legacy branch for macOS 11-14 users",
     "file_type": "dmg",
-    "headers": {}
+    "headers": {},
+    "url": "https://software.charliemonroe.net/permute/Permute.zip"
   },
   "changelog": {
     "url": "https://software.charliemonroe.net/trial/permute/v4/rnotes.html",
@@ -47,5 +48,6 @@
   "category": "utilities",
   "license": "paid",
   "skip": false,
-  "last_updated": "2026-06-21"
+  "last_updated": "2026-06-21",
+  "slug": "permute"
 }

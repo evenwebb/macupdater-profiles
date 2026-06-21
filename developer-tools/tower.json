@@ -8,7 +8,7 @@
   "min_os": "12",
   "auto_updates": true,
   "version_check": {
-    "method": "sparkle_info_plist",
+    "method": "sparkle_appcast",
     "url": "SUFeedURL_in_app_bundle",
     "extraction": {
       "type": "sparkle_feed",
@@ -18,9 +18,9 @@
   },
   "download": {
     "method": "fixed_url",
-    "url_or_pattern": "https://www.git-tower.com/download/mac",
     "file_type": "dmg",
-    "headers": {}
+    "headers": {},
+    "url": "https://www.git-tower.com/download/mac"
   },
   "changelog": {
     "method": "fixed_url",

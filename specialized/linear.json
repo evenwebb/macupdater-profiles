@@ -8,7 +8,7 @@
   "min_os": "macOS 12+ (Monterey and later, Electron-based)",
   "auto_updates": true,
   "version_check": {
-    "method": "electron_updater",
+    "method": "yaml_api",
     "url": "Likely uses electron-updater with auto-update endpoint at https://linear.app/api/update or similar \u2014 exact URL not publicly documented",
     "extraction": {
       "type": "unknown",
@@ -19,9 +19,9 @@
   },
   "download": {
     "method": "direct_url",
-    "url_or_pattern": "https://linear.app/download",
     "file_type": "dmg",
-    "headers": {}
+    "headers": {},
+    "url": "https://linear.app/download"
   },
   "changelog": {
     "method": "webpage",

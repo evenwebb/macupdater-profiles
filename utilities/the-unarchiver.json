@@ -8,7 +8,7 @@
   "min_os": "10.13",
   "auto_updates": false,
   "version_check": {
-    "method": "scrape_homepage",
+    "method": "scrape_html",
     "url": "https://theunarchiver.com",
     "extraction": {
       "type": "regex",
@@ -18,7 +18,7 @@
     "headers": {}
   },
   "download": {
-    "method": "static_url",
+    "method": "direct_url",
     "url": "https://dl.devmate.com/com.macpaw.site.theunarchiver/TheUnarchiver.dmg",
     "file_type": "dmg",
     "headers": {}

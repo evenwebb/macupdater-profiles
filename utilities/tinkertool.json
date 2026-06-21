@@ -19,7 +19,6 @@
   },
   "download": {
     "method": "form_post_with_csrf",
-    "note": "GET download.php page \u2192 extract hidden keys (key1, key2, key3) \u2192 POST to download2.php \u2192 follow meta-refresh to download3.php. Final file always named TinkerTool.dmg. No direct URL possible.",
     "file_type": "dmg",
     "headers": {}
   },
