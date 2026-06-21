@@ -1,0 +1,40 @@
+{
+  "name": "TablePlus",
+  "slug": "tableplus",
+  "description": "Modern, native database GUI client supporting MySQL, PostgreSQL, SQLite, SQL Server, Redis, and more",
+  "website": "https://tableplus.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "macOS 11+ (Big Sur and later)",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle",
+    "url": "Likely Sparkle appcast at https://tableplus.com/release/macos/{version} \u2014 exact feed URL not publicly documented. Common pattern: https://tableplus.com/api/release/macos/latest",
+    "extraction": {
+      "type": "xpath",
+      "pattern": "sparkle:shortVersionString (inferred, exact appcast URL not confirmed)"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "direct_url",
+    "url_or_pattern": "https://tableplus.com/download",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "webpage",
+    "url": "https://tableplus.com/blog/changelog"
+  },
+  "release_date": {
+    "method": "webpage_scrape",
+    "field": "Scrape date from changelog page or pubDate from appcast (if reachable)"
+  },
+  "notes": "Paid application with free trial. Sparkle appcast URL is not publicly documented \u2014 likely at https://tableplus.com/release/macos/{version} or similar pattern. Also available on Mac App Store and Setapp. Universal binary.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "developer-tools",
+  "license": "paid",
+  "skip": false,
+  "bundle_id": "com.tinyapp.TablePlus"
+}

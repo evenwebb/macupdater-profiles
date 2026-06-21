@@ -1,0 +1,44 @@
+{
+  "name": "PDF Expert",
+  "slug": "pdf-expert",
+  "description": "Professional PDF editor for macOS. Supports editing text, images, and links; filling forms; signing documents; annotating; OCR; and merging/splitting PDFs.",
+  "website": "https://pdfexpert.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "12",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle_or_scrape",
+    "sparkle": {
+      "note": "UNCERTAIN: Likely uses Sparkle (SUFeedURL in app bundle), but the exact appcast URL is not publicly documented. The app bundle's SUFeedURL should be consulted."
+    },
+    "scrape": {
+      "url": "https://downloads.pdfexpert.com/pem3/PDFExpert.zip",
+      "note": "UNCERTAIN: May be able to extract version from the zip's Info.plist or from the download server headers (e.g., Last-Modified, Content-Disposition)"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "direct",
+    "url_or_pattern": "https://downloads.pdfexpert.com/pem3/PDFExpert.zip",
+    "file_type": "zip",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "web",
+    "url": "https://pdfexpert.com/whats-new"
+  },
+  "release_date": {
+    "method": "unknown",
+    "field": null,
+    "source": null,
+    "note": "UNCERTAIN: No confirmed machine-readable release date source. The what's-new page may include dates. The Sparkle appcast (if accessible) would provide pubDate."
+  },
+  "notes": "Paid app from Readdle. Also available on the Mac App Store. UNCERTAINTY: Sparkle usage is likely but not confirmed \u2014 the exact Sparkle feed URL is not publicly documented. The direct download zip URL is for PDF Expert 3 (pem3 path component). Version detection without access to the Sparkle feed may require scraping or manual checking.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "specialized",
+  "license": "paid",
+  "skip": false,
+  "bundle_id": "com.readdle.PDFExpert-Mac"
+}

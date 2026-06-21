@@ -1,0 +1,47 @@
+{
+  "name": "Audacity",
+  "slug": "audacity",
+  "description": "Free, open-source audio recording and editing software",
+  "website": "https://audacityteam.org",
+  "platform": "macOS",
+  "architecture": "separate (Intel + Apple Silicon, or universal)",
+  "min_os": "11.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/audacity/audacity/releases/latest",
+    "extraction": {
+      "type": "json_path",
+      "path": "tag_name",
+      "strip_regex": "^Audacity-",
+      "example": "3.8.2"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "construct_url",
+    "pattern": "https://github.com/audacity/audacity/releases/download/Audacity-{VERSION}/audacity-macOS-{VERSION}-{ARCH}.dmg",
+    "archs": [
+      "arm64",
+      "x86_64",
+      "universal"
+    ],
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "web_scrape",
+    "url": "https://support.audacityteam.org/additional-resources/changelog"
+  },
+  "release_date": {
+    "method": "github_api",
+    "field": "published_at (ISO 8601)"
+  },
+  "notes": "Sparkle appcast URLs (audacityteam.org/download/mac/appcast.xml, mac-arm64/appcast.xml) both return 404. The app uses Sparkle internally but endpoints are unreachable. Use GitHub API as the de facto version check.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "media",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "org.audacityteam.audacity"
+}

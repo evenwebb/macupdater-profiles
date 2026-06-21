@@ -1,0 +1,48 @@
+{
+  "name": "Kindle for Mac",
+  "slug": "kindle-for-mac",
+  "description": "Amazon Kindle e-book reader for macOS",
+  "website": "https://www.amazon.com/kindlemacdownload",
+  "platform": "macOS",
+  "architecture": "universal (Catalyst)",
+  "min_os": "12.0",
+  "auto_updates": false,
+  "version_check": {
+    "method": "redirect_trace",
+    "url": "https://www.amazon.com/kindlemacdownload",
+    "extraction": {
+      "type": "regex_on_redirect_location",
+      "pattern": "KindleForMac-installer-([0-9.]+)\\.dmg",
+      "example": "1.40.65626"
+    },
+    "fallback_app_store": {
+      "method": "app_store_api",
+      "url": "https://itunes.apple.com/lookup?id=302584613",
+      "path": "results[0].version"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "follow_redirect",
+    "url": "https://www.amazon.com/kindlemacdownload",
+    "file_type": "dmg",
+    "note": "Redirects to S3: kindleformac.s3.amazonaws.com/{build}/KindleForMac-installer-{version}.{build}.dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "none_available",
+    "url": null,
+    "note": "No dedicated release notes page exists"
+  },
+  "release_date": {
+    "method": "http_last_modified",
+    "url": "Last-Modified header on S3 object",
+    "note": "Native Mac app frozen since March 2023. Catalyst version via App Store API releaseDate."
+  },
+  "notes": "No Sparkle. No public version API. Native Mac app (v1.40) appears frozen since Mar 2023. Amazon shifted to Catalyst Mac App Store version (v7.61, ID 302584613). Two distinct apps: native (com.amazon.Kindle) and Catalyst (com.amazon.Lassen). Must use browser User-Agent to avoid 503 from Amazon.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "office",
+  "license": "free",
+  "skip": false
+}

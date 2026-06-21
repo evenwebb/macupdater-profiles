@@ -1,0 +1,40 @@
+{
+  "name": "Warp",
+  "slug": "warp",
+  "description": "Modern terminal",
+  "website": "https://www.warp.dev",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "12",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle_xml",
+    "url": "https://app.warp.dev/download/appcast.xml?platform=macos&channel=stable",
+    "extraction": {
+      "type": "sparkle_version",
+      "pattern": null
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "fixed_url",
+    "url_or_pattern": "https://app.warp.dev/get_warp?package=dmg",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "fixed_url",
+    "url": "https://www.warp.dev/changelog"
+  },
+  "release_date": {
+    "method": "version_encoded_or_pubDate",
+    "field": "pubDate"
+  },
+  "notes": "Sparkle 2. Appcast behind Cloudflare. Timestamp-based versions. Requires login to use. Date encoded in version string or via pubDate in appcast.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "developer-tools",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "dev.warp.Warp-Stable"
+}

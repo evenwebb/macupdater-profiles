@@ -1,0 +1,41 @@
+{
+  "name": "Plex",
+  "slug": "plex",
+  "description": "Media server and streaming client for organizing, streaming, and sharing your personal media library across devices",
+  "website": "https://plex.tv",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "macOS 11+ (Big Sur and later)",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle",
+    "url": "https://plex.tv/downloads/latest/5?channel=8&build=macos-x86_64",
+    "extraction": {
+      "type": "xpath",
+      "pattern": "Follow redirect to get the versioned download URL, parse version from URL path. Potential Sparkle feed URL not publicly documented.",
+      "notes": "May also be accessible via Homebrew cask version tracking (brew info plex)"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "redirect_url",
+    "url_or_pattern": "https://plex.tv/downloads/latest/5?channel=8&build=macos-x86_64 \u2014 follows redirect to versioned DMG URL",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "webpage",
+    "url": "https://forums.plex.tv/tags/c/plex-media-server/announcements/22/plex-media-server"
+  },
+  "release_date": {
+    "method": "webpage_scrape",
+    "field": "Forum post date from Plex Media Server announcements category"
+  },
+  "notes": "Uses a channel/build redirect pattern for downloads. The URL https://plex.tv/downloads/latest/5?channel=8&build=macos-x86_64 redirects to the latest versioned DMG. Sparkle feed URL is not publicly documented (may be embedded in the app). Also available via Homebrew (plex-media-server). Channel 8 = public stable. Also has Plex HTPC and Plexamp companion apps.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "media",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "tv.plex.desktop"
+}

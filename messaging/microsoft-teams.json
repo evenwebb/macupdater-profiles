@@ -1,0 +1,42 @@
+{
+  "name": "Microsoft Teams",
+  "slug": "microsoft-teams",
+  "description": "Team collaboration and video conferencing",
+  "website": "https://microsoft.com",
+  "platform": "macOS",
+  "architecture": [
+    "universal"
+  ],
+  "min_os": "macOS 11",
+  "auto_updates": true,
+  "version_check": {
+    "method": "fwlink_redirect",
+    "url": "https://go.microsoft.com/fwlink/?linkid=869428",
+    "extraction": {
+      "type": "http_redirect",
+      "pattern": "Extract version from Location path: production-osx/{version}/MicrosoftTeams.pkg"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "constructed_url",
+    "url_or_pattern": "https://statics.teams.cdn.office.net/production-osx/{version}/MicrosoftTeams.pkg",
+    "file_type": "pkg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "scrape",
+    "url": "https://support.microsoft.com/en-us/office/what-s-new-in-microsoft-teams"
+  },
+  "release_date": {
+    "method": "scrape",
+    "field": "changelog/support page"
+  },
+  "notes": "Uses Microsoft AutoUpdate (MAU 2.0). TEAMS10 refers to classic Teams, TEAMS21 refers to new Teams. Version extracted from fwlink redirect path.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "messaging",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "com.microsoft.teams2"
+}

@@ -1,0 +1,39 @@
+{
+  "name": "GitHub Copilot for Xcode",
+  "slug": "github-copilot-xcode",
+  "description": "Xcode extension integrating GitHub Copilot AI code completion and chat into Apple's IDE",
+  "website": "https://github.com/github/CopilotForXcode",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "macOS 12+ (Monterey and later, Xcode extension dependent)",
+  "auto_updates": false,
+  "version_check": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/github/CopilotForXcode/releases/latest",
+    "extraction": {
+      "type": "json_path",
+      "json_path": "tag_name (strip leading 'v' prefix)"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "github_release_asset",
+    "url_or_pattern": "Filter release assets for .dmg file from https://api.github.com/repos/github/CopilotForXcode/releases/latest/assets",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "github_release",
+    "url": "https://api.github.com/repos/github/CopilotForXcode/releases/latest"
+  },
+  "release_date": {
+    "method": "github_api_field",
+    "field": "published_at"
+  },
+  "notes": "Open source project hosted on GitHub. Uses GitHub Releases API for version tracking, download, and changelog. Not a standalone app \u2014 requires Xcode. No auto-update mechanism (manual download and install). Universal binary (Apple Silicon and Intel).",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "developer-tools",
+  "license": "free",
+  "skip": false
+}

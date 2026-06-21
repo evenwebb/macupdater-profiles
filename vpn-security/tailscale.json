@@ -1,0 +1,48 @@
+{
+  "name": "Tailscale",
+  "slug": "tailscale",
+  "description": "Zero-config VPN / mesh networking built on WireGuard",
+  "website": "https://tailscale.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "12.4",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle_appcast",
+    "url": "https://pkgs.tailscale.com/stable/appcast.xml",
+    "extraction": {
+      "type": "sparkle_xml",
+      "version_field": "sparkle:shortVersionString",
+      "example": "1.98.5"
+    },
+    "fallback_scrape": {
+      "method": "regex_on_directory_listing",
+      "url": "https://pkgs.tailscale.com/stable/",
+      "pattern": "Tailscale-([0-9.]+)-macos\\.pkg"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "construct_url",
+    "pattern": "https://pkgs.tailscale.com/stable/Tailscale-{VERSION}-macos.pkg",
+    "latest_redirect": "https://pkgs.tailscale.com/stable/Tailscale-latest-macos.pkg",
+    "file_type": "pkg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "web_scrape",
+    "url": "https://tailscale.com/changelog",
+    "note": "Public changelog page with all versions and release notes"
+  },
+  "release_date": {
+    "method": "sparkle_pub_date",
+    "field": "pubDate in appcast <item>"
+  },
+  "notes": "Most straightforward of the group. Sparkle appcast is single-item per version. Static 'latest' URL always redirects to current version PKG. Also available on Mac App Store and Homebrew (tailscale cask). The pkgs.tailscale.com directory and appcast are both publicly accessible with no authentication.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "vpn-security",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "com.tailscale.ipn.macos"
+}

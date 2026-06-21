@@ -1,0 +1,50 @@
+{
+  "name": "Dropbox",
+  "slug": "dropbox",
+  "description": "Cloud file storage, sync, and sharing",
+  "website": "https://dropbox.com",
+  "platform": "macOS",
+  "architecture": "separate builds (Intel + Apple Silicon)",
+  "min_os": "11.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "http_redirect_trace",
+    "url": "https://www.dropbox.com/download?plat=mac&full=1",
+    "extraction": {
+      "type": "regex_on_redirect_location",
+      "pattern": "Dropbox(?:%20|[._-])v?(\\d+(?:\\.\\d+)+)",
+      "example": "256.4.3790"
+    },
+    "fallback": {
+      "method": "homebrew_cask_api",
+      "url": "https://formulae.brew.sh/api/cask/dropbox.json",
+      "path": "version",
+      "note": "Most reliable programmatic source if redirect tracing fails"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "construct_url_separate_arch",
+    "x86_64": "https://edge.dropboxstatic.com/dbx-releng/client/Dropbox%20{VERSION}.dmg",
+    "arm64": "https://edge.dropboxstatic.com/dbx-releng/client/Dropbox%20{VERSION}.arm64.dmg",
+    "generic_latest": "https://www.dropbox.com/download?plat=mac",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "web_scrape",
+    "url": "https://www.dropbox.com/release_notes",
+    "note": "Release notes page lists build versions and notes"
+  },
+  "release_date": {
+    "method": "homebrew_cask_api",
+    "field": "version (used as proxy \u2014 no date endpoint)"
+  },
+  "notes": "No official public version API. Dropbox has a JSON endpoint at clientupdates.dropboxstatic.com/dbx-releng/client/dropbox-mac.json but it returns 403 without correct User-Agent. Auto-updates itself silently. The Homebrew Cask API is the most reliable automated source.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "cloud-backup",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "com.getdropbox.dropbox"
+}

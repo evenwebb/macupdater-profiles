@@ -1,0 +1,40 @@
+{
+  "name": "Tower",
+  "slug": "tower",
+  "description": "Git client",
+  "website": "https://www.git-tower.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "12",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle_info_plist",
+    "url": "SUFeedURL_in_app_bundle",
+    "extraction": {
+      "type": "sparkle_feed",
+      "pattern": null
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "fixed_url",
+    "url_or_pattern": "https://www.git-tower.com/download/mac",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "fixed_url",
+    "url": "https://www.git-tower.com/release-notes/mac"
+  },
+  "release_date": {
+    "method": "pubDate_or_blog",
+    "field": "pubDate"
+  },
+  "notes": "Sparkle feed URL not publicly documented \u2014 check app's SUFeedURL in Info.plist. Appcast behind Cloudflare or uses generated URL pattern. Subscription/free tier. File may be dmg or zip. Release date via pubDate in appcast or blog post date.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "developer-tools",
+  "license": "paid",
+  "skip": false,
+  "bundle_id": "com.fournova.Tower3"
+}

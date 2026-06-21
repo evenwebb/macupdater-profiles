@@ -1,0 +1,49 @@
+{
+  "name": "ForkLift",
+  "slug": "forklift",
+  "description": "Dual-pane file manager and FTP/SFTP/WebDAV client for macOS",
+  "website": "https://binarynights.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "14.6",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle_appcast",
+    "url": "https://updates.binarynights.com/ForkLift/update.xml",
+    "extraction": {
+      "type": "sparkle_xml",
+      "version_field": "sparkle:shortVersionString",
+      "build_field": "sparkle:version",
+      "xpath_version": "//item[1]/sparkle:shortVersionString",
+      "example": "4.6.4"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "from_appcast_or_construct",
+    "generic_latest": "https://download.binarynights.com/ForkLift/ForkLift4.zip",
+    "versioned_pattern": "https://download.binarynights.com/ForkLift/ForkLift{VERSION}.zip",
+    "file_type": "zip",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "construct_from_version",
+    "pattern": "https://updates.binarynights.com/ForkLift/releaseNotes/{VERSION}.html",
+    "note": "Structured HTML with version, date, and categorized changes (Improvements / Fixes)",
+    "blog": "https://blog.binarynights.com/category/release-notes/"
+  },
+  "release_date": {
+    "method": "custom_xml_namespace",
+    "xpath": "//item[1]/forklift:releaseDate",
+    "namespace": "xmlns:forklift=\"https://binarynights.com\"",
+    "format": "YYYY-MM-DD",
+    "note": "Unique \u2014 uses custom forklift:releaseDate element. Also in HTML release notes header."
+  },
+  "notes": "Uses Sparkle with custom BinaryNights namespace. Custom forklift:releaseDate element is a unique feature \u2014 most apps don't include date in appcast. Minimum macOS 14.6. ForkLift 5 does NOT exist yet (ForkLift5/update.xml returns 403). Legacy ForkLift3 appcast exists but only prompts upgrade.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "developer-tools",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "com.binarynights.ForkLift"
+}

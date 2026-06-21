@@ -1,0 +1,42 @@
+{
+  "name": "Affinity Photo",
+  "slug": "affinity-photo",
+  "description": "Professional photo editing and raster graphics application",
+  "website": "https://affinity.serif.com/en-us/photo/",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "macOS 11.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle_appcast",
+    "url": "https://s3.amazonaws.com/affinity-update/mac/retail/photo/appcast.xml",
+    "extraction": {
+      "type": "xpath",
+      "xpath": "//item/enclosure/@*[local-name()='shortVersionString' or local-name()='sparkle:shortVersionString']",
+      "pattern": null,
+      "notes": "Serif uses Sparkle with custom feeds on s3.amazonaws.com. The /retail/ path is for direct purchases; Mac App Store version uses separate feed at /mas/ path."
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "sparkle_enclosure",
+    "url_or_pattern": "https://s3.amazonaws.com/affinity-update/mac/retail/photo/appcast.xml",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "sparkle_appcast",
+    "url": "https://s3.amazonaws.com/affinity-update/mac/retail/photo/appcast.xml",
+    "notes": "Release notes in <sparkle:releaseNotesLink> or <description> within appcast item."
+  },
+  "release_date": {
+    "method": "sparkle_appcast",
+    "field": "pubDate"
+  },
+  "notes": "Paid app (one-time purchase). Serif uses V2 product line; V1 feeds may differ. The appcast URL pattern is /mac/retail/<product>/appcast.xml on s3.amazonaws.com. Mac App Store version uses /mac/mas/<product>/appcast.xml. Also available on Mac App Store.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "design",
+  "license": "paid",
+  "skip": false
+}

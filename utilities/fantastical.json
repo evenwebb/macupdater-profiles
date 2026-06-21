@@ -1,0 +1,43 @@
+{
+  "name": "Fantastical",
+  "slug": "fantastical",
+  "description": "Calendar and scheduling app with natural language event creation, tasks, and meeting scheduling",
+  "website": "https://flexibits.com/fantastical",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "macOS 12.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle_appcast",
+    "url": "https://flexibits.com/fantastical/appcast.xml",
+    "extraction": {
+      "type": "xpath",
+      "xpath": "//item/enclosure/@*[local-name()='shortVersionString' or local-name()='sparkle:shortVersionString']",
+      "pattern": null,
+      "notes": "Likely Sparkle feed URL. Verify by checking SUFeedURL in the app bundle's Info.plist. Flexibits uses Sparkle for direct downloads. The exact URL may differ (e.g., may include version number or use different path structure)."
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "sparkle_enclosure",
+    "url_or_pattern": "https://flexibits.com/fantastical/appcast.xml",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "sparkle_appcast",
+    "url": "https://flexibits.com/fantastical/appcast.xml",
+    "notes": "Release notes in <sparkle:releaseNotesLink> or <description> within appcast item. Flexibits also publishes release notes on their website."
+  },
+  "release_date": {
+    "method": "sparkle_appcast",
+    "field": "pubDate"
+  },
+  "notes": "Subscription-based app (Flexibits Premium) with limited free tier. Also available on Mac App Store (id1551353775). Flexibits uses Sparkle for the direct-download version. The appcast URL pattern (/fantastical/appcast.xml) is the most likely but should be confirmed from the app bundle's Info.plist. Also part of Setapp. Companion apps for iOS, iPadOS, watchOS, and visionOS.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "utilities",
+  "license": "paid",
+  "skip": false,
+  "bundle_id": "com.flexibits.fantastical2.mac"
+}

@@ -1,0 +1,47 @@
+{
+  "name": "Dolphin Anty",
+  "slug": "dolphin-anty",
+  "description": "Anti-detect browser for managing multiple online accounts and profiles",
+  "website": "https://dolphin-anty.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "10.14",
+  "auto_updates": true,
+  "version_check": {
+    "method": "yaml_api",
+    "url": "https://app.dolphin-anty-mirror3.com/anty-app/latest-mac.yml",
+    "fallback_urls": [
+      "https://app.dolphin-anty-mirror3.net/anty-app/latest-mac.yml",
+      "https://app.dolphin-anty-mirror3.org/anty-app/latest-mac.yml",
+      "https://app.dolphin-anty-mirror2.net/anty-app/latest-mac.yml"
+    ],
+    "extraction": {
+      "type": "yaml_key",
+      "key": "version",
+      "regex": "^version:\\s*(.+)$",
+      "example": "2026.163.233"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "static_url",
+    "url": "https://app.dolphin-anty-mirror3.com/anty-app/dolphin-anty-mac-universal-latest.dmg",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "electron_builder_release_notes",
+    "url": "included in latest-mac.yml as releaseNotes field"
+  },
+  "release_date": {
+    "method": "yaml_field",
+    "url": "https://app.dolphin-anty-mirror3.com/anty-app/latest-mac.yml",
+    "field": "releaseDate in YAML"
+  },
+  "notes": "Version uses date-based scheme YYYY.DDD.BUILD. Website is WordPress+Cloudflare but CDN mirrors have CORS headers and work programmatically. Mirror host resolved at page-load by racing GET requests; mirror3.com usually fastest.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "specialized",
+  "license": "free",
+  "skip": false
+}

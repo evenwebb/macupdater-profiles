@@ -1,0 +1,39 @@
+{
+  "name": "Mactracker",
+  "slug": "mactracker",
+  "description": "Database of every Apple Mac model ever made",
+  "website": "https://mactracker.ca",
+  "platform": "macOS",
+  "architecture": [
+    "x86_64",
+    "arm64"
+  ],
+  "min_os": "11.0",
+  "auto_updates": true,
+  "version_check": {
+    "protocol": "sparkle",
+    "sparkle_version": 2,
+    "appcast_url": "https://update.mactracker.ca/appcast-b.xml",
+    "xpath": "/rss/channel/item/enclosure/@sparkle:version",
+    "xpath_note": "Single-item feed, no shortVersionString",
+    "headers": {}
+  },
+  "download": {
+    "url_template": "https://mactracker.ca/downloads/Mactracker_{VERSION}.zip",
+    "kind": "zip",
+    "headers": {}
+  },
+  "changelog": "https://mactracker.ca/releasenotes-mac.html",
+  "release_date": {
+    "source": "appcast",
+    "field": "pubDate",
+    "format": "RFC 822"
+  },
+  "notes": "Single-item feed. Also on Mac App Store (id430255202). Minimum macOS 11.0.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "utilities",
+  "license": "paid",
+  "skip": false,
+  "bundle_id": "com.mactrackerapp.Mactracker"
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Canva",
+  "slug": "canva",
+  "description": "Online graphic design and visual communication platform desktop app",
+  "website": "https://canva.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "11.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "yaml_api",
+    "url": "https://desktop-release.canva.com/latest-mac.yml",
+    "extraction": {
+      "type": "yaml_key",
+      "key": "version",
+      "example": "1.122.0"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "construct_url",
+    "pattern": "https://desktop-release.canva.com/Canva-{VERSION}-universal.dmg",
+    "alternate_pattern": "https://desktop-release.canva.com/Canva-{VERSION}-universal-mac.zip",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "yaml_release_notes",
+    "url": "https://desktop-release.canva.com/latest-mac.yml",
+    "field": "releaseNotes in YAML",
+    "note": "Electron-builder YAML includes releaseNotes field with each update"
+  },
+  "release_date": {
+    "method": "yaml_field",
+    "field": "releaseDate in latest-mac.yml"
+  },
+  "notes": "Electron-builder auto-update YAML. ZIP variant also available. The YAML is publicly accessible with no auth required.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "design",
+  "license": "free",
+  "skip": false
+}

@@ -1,0 +1,45 @@
+{
+  "name": "Home Assistant",
+  "slug": "home-assistant",
+  "description": "Smart home companion app \u2014 macOS Catalyst port of the iOS app",
+  "website": "https://home-assistant.io",
+  "platform": "macOS",
+  "architecture": "universal (Catalyst)",
+  "min_os": "12.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/home-assistant/iOS/releases/latest",
+    "extraction": {
+      "type": "regex_on_tag",
+      "field": "tag_name",
+      "pattern": "^(?:mac|release)/(\\d+(?:\\.\\d+)+)/(\\d+(?:\\.\\d+)*)",
+      "composite_version": "{1},{2}",
+      "example": "2026.4.1,2026.1904"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "construct_from_github_tag",
+    "base": "https://github.com/home-assistant/iOS/releases/download",
+    "pattern": "{BASE}/release%2F{VERSION}%2F{BUILD}/home-assistant-mac.zip",
+    "file_type": "zip",
+    "note": "URL-encode the slashes in the tag. ~57 MB.",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "github_releases",
+    "url": "https://github.com/home-assistant/iOS/releases",
+    "field": "body in GitHub release JSON"
+  },
+  "release_date": {
+    "method": "github_api",
+    "field": "published_at in GitHub release JSON"
+  },
+  "notes": "Tag naming changed over time: was 'mac/X.Y.Z/build', now 'release/X.Y.Z/build'. Version format uses composite: major_version,build_number. Also available on Mac App Store (lookup with iTunes API). GitHub API rate limits: 60 req/hr unauthenticated, 5000 with token. Use conditional requests (ETag/If-None-Match) to avoid consuming rate limit.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "other",
+  "license": "free",
+  "skip": false
+}

@@ -1,0 +1,40 @@
+{
+  "name": "BetterZip",
+  "slug": "betterzip",
+  "description": "Archive manager with preview and extraction",
+  "website": "https://macitbetter.com",
+  "platform": "macOS",
+  "architecture": [
+    "x86_64",
+    "arm64"
+  ],
+  "min_os": "11.0",
+  "auto_updates": true,
+  "version_check": {
+    "protocol": "sparkle",
+    "sparkle_version": 1,
+    "sparkle_signature_type": "DSA",
+    "appcast_url": "https://macitbetter.com/BetterZip5.rss",
+    "xpath": "//rss/channel/item/sparkle:shortVersionString",
+    "xpath_note": "e.g. 5.4.2; build via sparkle:version (e.g. 260326.2)",
+    "headers": {}
+  },
+  "download": {
+    "url_template": "https://macitbetter.com/dl/BetterZip-{VERSION}.zip",
+    "kind": "zip",
+    "headers": {}
+  },
+  "changelog": "https://macitbetter.com/versionhistory.php",
+  "release_date": {
+    "source": "appcast",
+    "field": "pubDate",
+    "format": "RFC 2822"
+  },
+  "notes": "Single-item feed (latest only). DSA signatures. BetterZip 6 in closed beta. macOS 11+",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "utilities",
+  "license": "paid",
+  "skip": false,
+  "bundle_id": "com.macitbetter.betterzip5"
+}

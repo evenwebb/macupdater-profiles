@@ -1,0 +1,53 @@
+{
+  "name": "AdGuard for Mac",
+  "url": "https://adguard.com",
+  "description": "Ad blocker",
+  "version_check": {
+    "method": "github_releases",
+    "primary_url": "https://github.com/AdguardTeam/AdguardForMac/releases/latest",
+    "version_field": ".tag_name",
+    "version_example": "v2.18.0",
+    "secondary_method": {
+      "method": "sparkle",
+      "url": "embedded in app binary (closed-source, not publicly disclosed)",
+      "version_field": "sparkle:shortVersionString",
+      "note": "Sparkle appcast URL is embedded in the app and not publicly documented"
+    },
+    "headers": {}
+  },
+  "download": {
+    "url_static": "https://static.adguard.com/mac/release/AdGuard-{VERSION}.dmg",
+    "url_github": "https://github.com/AdguardTeam/AdguardForMac/releases/latest",
+    "url_shortcuts": {
+      "release": "https://agrd.io/mac",
+      "beta": "https://agrd.io/mac_beta",
+      "nightly": "https://agrd.io/mac_nightly"
+    },
+    "file_type": "dmg",
+    "note": "DMG contains .pkg installer",
+    "headers": {}
+  },
+  "changelog": {
+    "url": "https://github.com/AdguardTeam/AdguardForMac/releases",
+    "method": "github_releases"
+  },
+  "release_date": {
+    "method": "github_release",
+    "field": "published_at",
+    "format": "ISO 8601"
+  },
+  "sparkle": {
+    "note": "Sparkle is used for in-app auto-updates, but the appcast URL is embedded in the closed-source binary"
+  },
+  "architecture": "universal",
+  "min_os": "12.0",
+  "auto_updates": true,
+  "app_store_only": false,
+  "notes": "NOT open-source \u2014 the GitHub repo is an open bug tracker only. Actual source code is closed. Version 2.18.0 dropped macOS 11 support. Uses multiple launchctl services.",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "vpn-security",
+  "license": "paid",
+  "skip": false,
+  "bundle_id": "com.adguard.mac.adguard",
+  "last_updated": "2026-06-21"
+}

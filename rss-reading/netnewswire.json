@@ -1,0 +1,44 @@
+{
+  "name": "NetNewsWire",
+  "slug": "netnewswire",
+  "description": "NetNewsWire is a free, open source RSS and Atom reader for macOS. It features a clean three-pane interface, smart feeds, iCloud sync, and support for Feedbin, Feedly, and other sync services.",
+  "website": "https://netnewswire.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "15",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle",
+    "url": "https://ranchero.com/downloads/netnewswire-release.xml",
+    "extraction": {
+      "type": "xpath",
+      "xpath": "sparkle:shortVersionString"
+    },
+    "beta_feed": "https://ranchero.com/downloads/netnewswire-beta.xml",
+    "beta_note": "Beta/TestFlight releases are published to a separate Sparkle feed: netnewswire-beta.xml",
+    "headers": {}
+  },
+  "download": {
+    "method": "direct",
+    "url_or_pattern": "https://netnewswire.com/NetNewsWire.zip",
+    "file_type": "zip",
+    "note": "Always points to the latest release. For versioned archives, check GitHub releases.",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "github_releases",
+    "url": "https://github.com/Ranchero-Software/NetNewsWire/releases"
+  },
+  "release_date": {
+    "method": "sparkle_pubDate",
+    "field": "pubDate",
+    "source": "https://ranchero.com/downloads/netnewswire-release.xml"
+  },
+  "notes": "Open source (MIT). Also available on the Mac App Store. The Sparkle appcast is publicly accessible on ranchero.com. The download URL at netnewswire.com always serves the latest release zip. GitHub releases provide structured changelogs and are the authoritative source for release notes. Beta builds have a separate Sparkle feed.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "rss-reading",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "com.ranchero.NetNewsWire-Evergreen"
+}

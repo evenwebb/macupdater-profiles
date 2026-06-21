@@ -1,0 +1,40 @@
+{
+  "name": "Cursor",
+  "slug": "cursor",
+  "description": "AI-first code editor built on VS Code, with integrated AI pair programming, inline editing, and chat capabilities",
+  "website": "https://cursor.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "macOS 11+ (Big Sur and later)",
+  "auto_updates": true,
+  "version_check": {
+    "method": "electron_updater",
+    "url": "https://cursor.com/api/download?platform=darwinUniversal&releaseTrack=stable",
+    "extraction": {
+      "type": "json_path",
+      "json_path": "Electron-updater API \u2014 endpoint is BLOCKED externally. Known pattern: follow redirect on download URL to get versioned filename, or check update API response (returns JSON with version, url, etc.)"
+    },
+    "fallback": "Follow redirect on https://cursor.com/downloads?platform=darwinUniversal to get version from filename pattern",
+    "headers": {}
+  },
+  "download": {
+    "method": "direct_url",
+    "url_or_pattern": "https://cursor.com/downloads",
+    "file_type": "zip",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "webpage",
+    "url": "https://cursor.com/changelog"
+  },
+  "release_date": {
+    "method": "webpage_scrape",
+    "field": "Scrape date from https://cursor.com/changelog entries"
+  },
+  "notes": "Electron-based app using electron-updater. The update API endpoint at cursor.com/api/download is blocked from external access (requires valid User-Agent/referrer). Version can be inferred by following the download redirect and parsing the versioned filename. Also available on Linux and Windows.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "developer-tools",
+  "license": "free",
+  "skip": false
+}

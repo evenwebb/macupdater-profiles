@@ -1,0 +1,41 @@
+{
+  "name": "Maccy",
+  "slug": "maccy",
+  "description": "Maccy is a lightweight, open source clipboard manager for macOS. It keeps your copy history and lets you access it from the menu bar. Searches, pins, and pastes clips with keyboard shortcuts.",
+  "website": "https://maccy.app",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "14",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle",
+    "url": "https://raw.githubusercontent.com/p0deje/Maccy/master/appcast.xml",
+    "extraction": {
+      "type": "xpath",
+      "xpath": "sparkle:shortVersionString"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "pattern",
+    "url_or_pattern": "https://github.com/p0deje/Maccy/releases/download/{version}/Maccy.app.zip",
+    "file_type": "zip",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "github_releases",
+    "url": "https://github.com/p0deje/Maccy/releases"
+  },
+  "release_date": {
+    "method": "sparkle_pubDate",
+    "field": "pubDate",
+    "source": "https://raw.githubusercontent.com/p0deje/Maccy/master/appcast.xml"
+  },
+  "notes": "Open source (MIT). Also installable via Homebrew: 'brew install maccy'. Sparkle appcast is hosted directly from the GitHub raw content CDN, making it reliable and publicly accessible. GitHub releases provide structured changelog and release date data as fallbacks.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "utilities",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "com.sindresorhus.MenuBarCalendar"
+}

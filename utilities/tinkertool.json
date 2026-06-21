@@ -1,0 +1,40 @@
+{
+  "name": "TinkerTool",
+  "slug": "tinkertool",
+  "description": "Access hidden macOS system preferences and settings",
+  "website": "https://www.bresink.com/osx/TinkerTool.html",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "per-build (separate version for each macOS release)",
+  "auto_updates": false,
+  "version_check": {
+    "method": "scrape_html",
+    "url": "https://www.bresink.com/osx/TinkerTool.html",
+    "extraction": {
+      "type": "regex",
+      "pattern": "<h2>Current Version<\\/h2>\\s*<p>(\\d+\\.\\d+) released ([A-Z][a-z]+ \\d{1,2}, \\d{4})<\\/p>",
+      "example": "11.0"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "form_post_with_csrf",
+    "note": "GET download.php page \u2192 extract hidden keys (key1, key2, key3) \u2192 POST to download2.php \u2192 follow meta-refresh to download3.php. Final file always named TinkerTool.dmg. No direct URL possible.",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "web_scrape",
+    "url": "https://www.bresink.com/osx/0TinkerTool/history.html"
+  },
+  "release_date": {
+    "method": "regex_on_main_page",
+    "note": "Captured alongside version: 'X.Y released DATE'"
+  },
+  "notes": "SEPARATE VERSIONS PER macOS RELEASE. TinkerTool 11 for macOS 26 Tahoe, v10 for Ventura/Sonoma/Sequoia, v8 for Big Sur/Monterey, v7 for Mojave/Catalina. No version 9 exists. Download requires CSRF anti-leeching sequence. No Sparkle, no API. File always named TinkerTool.dmg.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "utilities",
+  "license": "free",
+  "skip": false
+}

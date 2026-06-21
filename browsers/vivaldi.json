@@ -1,0 +1,44 @@
+{
+  "name": "Vivaldi",
+  "slug": "vivaldi",
+  "description": "Highly customizable web browser built on Chromium, with built-in mail, calendar, and advanced tab management",
+  "website": "https://vivaldi.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "macOS 11+ (Big Sur and later)",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle",
+    "url": "https://update.vivaldi.com/update/1.0/public/mac/appcast.xml",
+    "extraction": {
+      "type": "xpath",
+      "pattern": "sparkle:shortVersionString"
+    },
+    "fallback": {
+      "method": "plain_text",
+      "url": "https://vivaldi.com/download/version.txt"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "appcast_enclosure",
+    "url_or_pattern": "Enclosure url field from Sparkle appcast item",
+    "file_type": "tar.xz",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "webpage",
+    "url": "https://vivaldi.com/blog/desktop/"
+  },
+  "release_date": {
+    "method": "appcast_field",
+    "field": "pubDate"
+  },
+  "notes": "Open source (Chromium-based). Sparkle appcast is publicly accessible. Plain text version fallback at https://vivaldi.com/download/version.txt. Also available on Linux (rpm/deb) and Windows.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "browsers",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "com.vivaldi.Vivaldi"
+}

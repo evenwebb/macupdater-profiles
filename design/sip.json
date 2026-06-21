@@ -1,0 +1,39 @@
+{
+  "name": "Sip",
+  "slug": "sip",
+  "description": "Color picker and palette manager for designers",
+  "website": "https://sipapp.io",
+  "platform": "macOS",
+  "architecture": [
+    "x86_64",
+    "arm64"
+  ],
+  "min_os": null,
+  "auto_updates": true,
+  "version_check": {
+    "protocol": "sparkle",
+    "sparkle_version": 2,
+    "appcast_url": "https://sipapp.fra1.digitaloceanspaces.com/updates/v4/sip.xml",
+    "xpath": "//rss/channel/item[1]/enclosure/@sparkle:shortVersionString",
+    "xpath_note": "e.g. 4.1.4; build via sparkle:version (e.g. 414)",
+    "headers": {}
+  },
+  "download": {
+    "url_template": "https://sipapp.fra1.digitaloceanspaces.com/updates/v4/sip-{VERSION}.dmg",
+    "kind": "dmg",
+    "latest_alias": "https://sipapp.fra1.digitaloceanspaces.com/updates/v4/sip.dmg",
+    "headers": {}
+  },
+  "changelog": "https://sipapp.io/updates",
+  "release_date": {
+    "source": "appcast",
+    "field": "pubDate",
+    "format": "ISO 8601"
+  },
+  "notes": "DigitalOcean Spaces (Frankfurt). Legacy v2/v3 at same path. Inline release notes in CDATA.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "design",
+  "license": "paid",
+  "skip": false
+}

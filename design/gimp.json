@@ -1,0 +1,42 @@
+{
+  "name": "GIMP",
+  "slug": "gimp",
+  "description": "GNU Image Manipulation Program \u2014 free and open-source image editor",
+  "website": "https://www.gimp.org",
+  "platform": "macOS",
+  "architecture": "separate (Intel + Apple Silicon)",
+  "min_os": "11.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "json_api",
+    "url": "https://www.gimp.org/gimp_versions.json",
+    "extraction": {
+      "type": "json_path",
+      "path": "STABLE[0].version",
+      "example": "2.10.38"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "extract_from_json",
+    "pattern": "https://download.gimp.org/gimp/v{MAJOR}.{MINOR}/macos/{FILENAME}",
+    "filename_field": "STABLE[0].macos[*].filename (pick x86_64 or arm64)",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "construct_url",
+    "pattern": "https://www.gimp.org/release-notes/gimp-{MAJOR}.{MINOR}.html"
+  },
+  "release_date": {
+    "method": "json_api",
+    "field": "STABLE[0].date (YYYY-MM-DD)"
+  },
+  "notes": "No Sparkle. Official JSON API is the mechanism GIMP uses internally. Separate DMG for x86_64 and arm64. SHA256/512 included in JSON. MirrorBrain redirector on download.gimp.org.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "design",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "org.gimp.app"
+}

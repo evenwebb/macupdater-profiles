@@ -1,0 +1,39 @@
+{
+  "name": "Windsurf",
+  "slug": "windsurf",
+  "description": "AI-powered code editor by Codeium with agentic AI capabilities, cascade mode, and deep codebase understanding",
+  "website": "https://codeium.com/windsurf",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "macOS 11+ (Big Sur and later)",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle2",
+    "url": "https://windsurf-stable.codeium.com/api/update/darwin-universal/stable/latest",
+    "extraction": {
+      "type": "json_path",
+      "json_path": ".version"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "json_field",
+    "url_or_pattern": ".url field in the Sparkle 2 JSON response from the update API",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "webpage",
+    "url": "https://codeium.com/changelog"
+  },
+  "release_date": {
+    "method": "json_field",
+    "field": ".pub_date in Sparkle 2 JSON response"
+  },
+  "notes": "Uses Sparkle 2 (JSON-based appcast format, not XML). Update API returns JSON with .version, .url, .pub_date fields. Formerly known as 'Windsurf Editor' by Codeium. Also available on Windows and Linux.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "developer-tools",
+  "license": "free",
+  "skip": false
+}

@@ -1,0 +1,40 @@
+{
+  "name": "Spark Mail",
+  "slug": "spark-mail",
+  "description": "Smart email client with AI-powered inbox, snooze, send later, team collaboration, and unified inbox across accounts",
+  "website": "https://sparkmailapp.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "macOS 12+ (Monterey and later)",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle",
+    "url": "Sparkle SUFeedURL is embedded in the app bundle \u2014 exact URL not publicly documented",
+    "extraction": {
+      "type": "xpath",
+      "pattern": "sparkle:shortVersionString (if appcast URL discovered from app bundle)"
+    },
+    "fallback": "Check Mac App Store listing (id:1176895641), Setapp version, or scrape https://sparkmailapp.com/download for version metadata",
+    "headers": {}
+  },
+  "download": {
+    "method": "direct_url",
+    "url_or_pattern": "https://sparkmailapp.com/download",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "webpage",
+    "url": "https://sparkmailapp.com/blog"
+  },
+  "release_date": {
+    "method": "appcast_field_or_webpage_scrape",
+    "field": "pubDate in Sparkle appcast (if reachable) or scrape from https://sparkmailapp.com/blog"
+  },
+  "notes": "Sparkle SUFeedURL is only visible inside the app bundle's Info.plist or from Sparkle framework internals \u2014 not publicly documented. Also distributed via Mac App Store and Setapp. The website download page may serve the Setapp-managed or standalone version. Developed by Readdle (now Spark Mail Inc.). iOS, Android, and Windows versions also available.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "email",
+  "license": "paid",
+  "skip": false
+}

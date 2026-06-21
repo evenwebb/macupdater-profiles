@@ -1,0 +1,52 @@
+{
+  "name": "Evoto",
+  "url": "https://www.evoto.ai",
+  "description": "AI photo editor",
+  "version_check": {
+    "method": "sparkle",
+    "url": "Sparkle SUFeedURL embedded in app bundle (not publicly documented)",
+    "version_field": "sparkle:shortVersionString",
+    "version_example": "7.1.5-185",
+    "fallback": {
+      "method": "html_scrape",
+      "url": "https://www.evoto.ai/download",
+      "field": "Version text on download page",
+      "note": "Download page shows version and date text (Update Time: YYYY-MM-DD)"
+    },
+    "headers": {}
+  },
+  "download": {
+    "url": "https://www.evoto.ai/download",
+    "url_note": "Download button triggers dynamic JavaScript URL; direct .dmg URL not exposed in page source",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "url": null,
+    "note": "Not publicly documented. Version info only shown on download page."
+  },
+  "release_date": {
+    "method": "html_text",
+    "url": "https://www.evoto.ai/download",
+    "pattern": "Update Time: (\\d{4}-\\d{2}-\\d{2})",
+    "format": "YYYY-MM-DD",
+    "example": "2026-06-10"
+  },
+  "sparkle": {
+    "note": "Sparkle usage probable but not confirmed by direct appcast fetch"
+  },
+  "architecture": "universal",
+  "min_os": "10.13",
+  "auto_updates": true,
+  "app_store_only": false,
+  "distribution": {
+    "direct": true,
+    "ipad_app_store": true
+  },
+  "notes": "AI-powered photo editing with makeup, blemish removal, skin retouching, and background replacement. Download page displays version and date but no detailed release notes. Previous versions available through separate link.",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "specialized",
+  "license": "free",
+  "skip": false,
+  "last_updated": "2026-06-21"
+}

@@ -1,0 +1,43 @@
+{
+  "name": "Rectangle",
+  "slug": "rectangle",
+  "description": "Window manager \u2014 move and resize windows with keyboard shortcuts and snap areas",
+  "website": "https://rectangleapp.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "macOS 11.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle_appcast",
+    "url": "https://github.com/rxhanson/Rectangle/releases/appcast.xml",
+    "extraction": {
+      "type": "xpath",
+      "xpath": "//item/enclosure/@*[local-name()='shortVersionString' or local-name()='sparkle:shortVersionString']",
+      "pattern": null,
+      "notes": "Uses Sparkle 2 with GitHub-hosted appcast.xml. The appcast is generated from GitHub Releases. Also available via GitHub Releases API at https://api.github.com/repos/rxhanson/Rectangle/releases/latest."
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "github_release",
+    "url_or_pattern": "https://github.com/rxhanson/Rectangle/releases/download/v{version}/Rectangle{version}.dmg",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/rxhanson/Rectangle/releases/latest",
+    "notes": "GitHub Release body contains markdown changelog."
+  },
+  "release_date": {
+    "method": "github_api",
+    "field": "published_at"
+  },
+  "notes": "Open source (MIT). Free. Also available on Mac App Store. Uses Sparkle 2 for auto-updates with appcast hosted on GitHub. Download filename pattern: 'Rectangle{version}.dmg' (no version separator in filename). GitHub Releases and appcast are the primary sources of truth.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "utilities",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "com.knollsoft.Rectangle"
+}

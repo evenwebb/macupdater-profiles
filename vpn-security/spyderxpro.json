@@ -1,0 +1,44 @@
+{
+  "name": "SpyderXPro / SpyderEngage / SpyderX Elite",
+  "slug": "spyderxpro",
+  "description": "Datacolor monitor calibration software for SpyderX and Spyder X2 colorimeters",
+  "website": "https://datacolor.com/spyder",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "11.0",
+  "auto_updates": false,
+  "version_check": {
+    "method": "scrape_support_portal",
+    "url": "https://consumersupport.datacolor.com/",
+    "extraction": {
+      "type": "javascript_spa_scrape",
+      "note": "Zendesk-based SPA behind Cloudflare bot detection. Requires headless browser or manual lookup.",
+      "fallback_third_party": "Check MacUpdater, Homebrew, or other tracker databases for SpyderX version",
+      "example": "5.9 (SpyderX), 6.6 (Spyder X2)"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "dynamic_portal_only",
+    "note": "Download links are generated dynamically by the Zendesk SPA after solving Cloudflare challenge. No static URL pattern. CDN at d2f30h0zqts8b1.cloudfront.net blocks direct access (ECONNREFUSED).",
+    "file_type": "dmg_or_pkg",
+    "redirect_url": "https://goto.datacolor.com/websupportdownloads",
+    "note_2": "This redirect goes to the support portal, not directly to downloads",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "none_available",
+    "url": null,
+    "note": "No public changelog or release notes page found"
+  },
+  "release_date": {
+    "method": "third_party_tracker_only",
+    "note": "No programmatic release date available. Check MacUpdater database or other trackers."
+  },
+  "notes": "HARDEST app to track. Datacolor uses aggressive bot protection: Cloudflare on the support portal, CDN blocks direct access, no API, no Sparkle, no Homebrew cask, no Mac App Store. Software is free but requires SpyderX hardware to function. Best approach: monitor third-party databases (MacUpdater, MacInformant) for version changes. Version schemes are inconsistent (SpyderX: ~5.9, Spyder X2: ~6.6).",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "vpn-security",
+  "license": "paid",
+  "skip": false
+}

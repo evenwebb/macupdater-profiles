@@ -1,0 +1,41 @@
+{
+  "name": "Linear",
+  "slug": "linear",
+  "description": "Modern issue tracking and project management tool for software teams, with a fast native desktop app",
+  "website": "https://linear.app",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "macOS 12+ (Monterey and later, Electron-based)",
+  "auto_updates": true,
+  "version_check": {
+    "method": "electron_updater",
+    "url": "Likely uses electron-updater with auto-update endpoint at https://linear.app/api/update or similar \u2014 exact URL not publicly documented",
+    "extraction": {
+      "type": "unknown",
+      "pattern": "BLOCKED or undocumented \u2014 electron-updater endpoint not publicly confirmed"
+    },
+    "fallback": "Scrape https://linear.app/download for version string, or check changelog page",
+    "headers": {}
+  },
+  "download": {
+    "method": "direct_url",
+    "url_or_pattern": "https://linear.app/download",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "webpage",
+    "url": "https://linear.app/changelog"
+  },
+  "release_date": {
+    "method": "webpage_scrape",
+    "field": "Scrape date from https://linear.app/changelog"
+  },
+  "notes": "Electron-based desktop app. Uses electron-updater framework \u2014 update API endpoint is not publicly documented. Version can be inferred from changelog or download page scraping. Universal binary. SaaS product with free and paid team plans.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "specialized",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "com.linear"
+}

@@ -1,0 +1,44 @@
+{
+  "name": "VirtualBox",
+  "slug": "virtualbox",
+  "description": "Free and open-source x86 virtualization hypervisor",
+  "website": "https://virtualbox.org",
+  "platform": "macOS",
+  "architecture": "separate (Intel + Apple Silicon)",
+  "min_os": "11.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "plain_text_api",
+    "url": "https://download.virtualbox.org/virtualbox/LATEST.TXT",
+    "extraction": {
+      "type": "plain_text",
+      "pattern": "^(\\d+\\.\\d+\\.\\d+)$",
+      "example": "7.1.8"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "construct_url",
+    "intel_pattern": "https://download.virtualbox.org/virtualbox/{VERSION}/VirtualBox-{VERSION}-{BUILD}-OSX.dmg",
+    "arm64_pattern": "https://download.virtualbox.org/virtualbox/{VERSION}/VirtualBox-{VERSION}-{BUILD}-macOSArm64.dmg",
+    "file_type": "dmg",
+    "note": "BUILD number not in LATEST.TXT \u2014 must scrape directory listing or SHA256SUMS file",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "construct_url",
+    "pattern": "https://www.virtualbox.org/wiki/Changelog-{MAJOR}.{MINOR}",
+    "note": "Release date in format 'VirtualBox X.Y.Z (released DATE)'"
+  },
+  "release_date": {
+    "method": "scrape_changelog_wiki",
+    "note": "Parse from changelog wiki page near version header"
+  },
+  "notes": "No build in LATEST.TXT \u2014 discover from directory listing at download.virtualbox.org/virtualbox/{version}/ or by reading SHA256SUMS. Intel uses 'OSX' suffix, Apple Silicon uses 'macOSArm64'. Also available: LATEST-STABLE.TXT (same as LATEST.TXT), LATEST-BETA.TXT.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "virtualization",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "org.virtualbox.app.VirtualBoxVM"
+}

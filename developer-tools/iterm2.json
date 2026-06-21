@@ -1,0 +1,40 @@
+{
+  "name": "iTerm2",
+  "slug": "iterm2",
+  "description": "Terminal emulator",
+  "website": "https://iterm2.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "12.4",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle_xml",
+    "url": "https://iterm2.com/appcasts/final.xml",
+    "extraction": {
+      "type": "xpath",
+      "xpath": "sparkle:version"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "composed_url",
+    "url_or_pattern": "https://iterm2.com/downloads/stable/iTerm2-{version_underscored}.zip",
+    "file_type": "zip",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "composed_url",
+    "url": "https://iterm2.com/appcasts/{version}.txt"
+  },
+  "release_date": {
+    "method": "rfc2822",
+    "field": "pubDate"
+  },
+  "notes": "Beta appcast: https://iterm2.com/appcasts/testing.xml. EdDSA signatures. Sparkle 2.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "developer-tools",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "com.googlecode.iterm2"
+}

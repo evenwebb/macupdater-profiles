@@ -1,0 +1,42 @@
+{
+  "name": "Bitwarden",
+  "slug": "bitwarden",
+  "description": "Open-source password manager for individuals and teams",
+  "website": "https://bitwarden.com",
+  "platform": "macOS",
+  "architecture": [
+    "universal"
+  ],
+  "min_os": "macOS 11",
+  "auto_updates": true,
+  "version_check": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/bitwarden/clients/releases?per_page=5",
+    "extraction": {
+      "type": "regex",
+      "pattern": "desktop-v(\\d+\\.\\d+\\.\\d+) from tag_name containing 'desktop-v'"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "constructed_url",
+    "url_or_pattern": "https://github.com/bitwarden/clients/releases/download/desktop-v{version}/Bitwarden-{version}-universal.dmg",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "github_release",
+    "url": "https://api.github.com/repos/bitwarden/clients/releases"
+  },
+  "release_date": {
+    "method": "github_api",
+    "field": "published_at (ISO 8601)"
+  },
+  "notes": "Open source. GitHub Releases must be filtered for tag_name containing 'desktop-v' (vs. cli-v, web-v, etc.). Internal updater uses bitwarden.com endpoint, but GitHub API works for tracking.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "password-managers",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "com.bitwarden.desktop"
+}

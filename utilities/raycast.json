@@ -1,0 +1,41 @@
+{
+  "name": "Raycast",
+  "slug": "raycast",
+  "description": "Blazingly fast, extensible launcher and productivity tool for macOS with app launching, file search, clipboard history, window management, and extensive plugin store",
+  "website": "https://raycast.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "macOS 13+ (Ventura and later)",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle",
+    "url": "Sparkle appcast URL is BLOCKED behind Cloudflare protection \u2014 not publicly accessible",
+    "extraction": {
+      "type": "xpath",
+      "pattern": "sparkle:shortVersionString (appcast not reachable)"
+    },
+    "fallback": "Follow redirect on https://releases.raycast.com/releases/latest/download?build=universal to get versioned download URL, or scrape https://www.raycast.com/changelog",
+    "headers": {}
+  },
+  "download": {
+    "method": "direct_url",
+    "url_or_pattern": "https://releases.raycast.com/releases/latest/download?build=universal",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "webpage",
+    "url": "https://www.raycast.com/changelog"
+  },
+  "release_date": {
+    "method": "webpage_scrape",
+    "field": "Scrape date from https://www.raycast.com/changelog entries"
+  },
+  "notes": "macOS-exclusive application. Sparkle appcast URLs are behind Cloudflare protection and cannot be queried externally. Version tracking relies on following download redirects or scraping the changelog page. Paid Pro features available via subscription. Extensions can be published via the Raycast Store. Also offers Raycast AI as an add-on.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "utilities",
+  "license": "paid",
+  "skip": false,
+  "bundle_id": "com.raycast.macos"
+}

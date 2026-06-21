@@ -1,0 +1,39 @@
+{
+  "name": "Sequel Ace",
+  "slug": "sequel-ace",
+  "description": "MySQL/MariaDB client",
+  "website": "https://github.com/Sequel-Ace/Sequel-Ace",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "12",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle_xml_github_releases",
+    "url": "https://github.com/Sequel-Ace/Sequel-Ace/releases",
+    "extraction": {
+      "type": "github_release",
+      "pattern": null
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "composed_url",
+    "url_or_pattern": "https://github.com/Sequel-Ace/Sequel-Ace/releases/download/production%2F{version}-{build}/Sequel-Ace-{version}.zip",
+    "file_type": "zip",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "fixed_url",
+    "url": "https://github.com/Sequel-Ace/Sequel-Ace/releases"
+  },
+  "release_date": {
+    "method": "github_api_published_at",
+    "field": "published_at"
+  },
+  "notes": "Sparkle 2. Appcast embedded in app (likely raw GitHub Releases URL). Open source (MIT). Also available via Homebrew.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "developer-tools",
+  "license": "free",
+  "skip": false
+}

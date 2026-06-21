@@ -1,0 +1,43 @@
+{
+  "name": "Zoom Workplace",
+  "slug": "zoom-workplace",
+  "description": "Video conferencing, team chat, and collaboration platform",
+  "website": "https://zoom.us",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "11.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "json_api",
+    "url": "https://zoom.us/rest/download?os=mac",
+    "extraction": {
+      "type": "json_path",
+      "path": "result.downloadVO.zoom.version",
+      "display_version_path": "result.downloadVO.zoom.displayVersion",
+      "example": "7.0.5.81138"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "static_redirect_url",
+    "url": "https://zoom.us/client/latest/Zoom.pkg",
+    "file_type": "pkg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "web_scrape",
+    "url": "https://support.zoom.com/hc/en/article?id=zm_kb&sysparm_article=KB0061222"
+  },
+  "release_date": {
+    "method": "http_last_modified",
+    "url": "cdn.zoom.us download URL",
+    "note": "Last-Modified header on CDN download URL"
+  },
+  "notes": "Universal .pkg (arm64+x86_64). JSON API also has displayVersion for human-readable version (e.g., '7.0.5 (81138)'). Arm64 key exists in JSON but currently points to same universal package.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "messaging",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "us.zoom.xos"
+}

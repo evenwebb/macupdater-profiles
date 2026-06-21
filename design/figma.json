@@ -1,0 +1,42 @@
+{
+  "name": "Figma",
+  "slug": "figma",
+  "description": "Collaborative interface design tool with real-time multiplayer editing",
+  "website": "https://www.figma.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "macOS 12.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "custom_json",
+    "url": "https://desktop.figma.com/mac/RELEASE.json",
+    "extraction": {
+      "type": "json_path",
+      "json_path": "$.version",
+      "notes": "Likely endpoint; may be internal. Electron-based auto-updater typically checks /mac/RELEASE.json or /mac/latest.json. The exact URL may differ \u2014 check app bundle or network traffic."
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "direct_url",
+    "url_or_pattern": "https://www.figma.com/download/desktop/mac",
+    "file_type": "zip",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "website",
+    "url": "https://www.figma.com/release-notes/",
+    "notes": "Release notes published on figma.com. May not have machine-readable changelog feed."
+  },
+  "release_date": {
+    "method": "custom_json",
+    "field": "createdAt"
+  },
+  "notes": "Electron-based app with custom updater (not Sparkle). Version check URL uncertain \u2014 https://desktop.figma.com/mac/RELEASE.json is suspected but unconfirmed. Download page at /download/desktop/mac provides the latest installer redirect. Freemium model. Auto-updating via built-in Electron updater mechanism.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "design",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "com.figma.Desktop"
+}

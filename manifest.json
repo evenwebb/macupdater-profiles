@@ -1,0 +1,1431 @@
+{
+  "version": 2,
+  "updated": "2026-06-21T21:30:22Z",
+  "total_profiles": 178,
+  "apps": {
+    "1password": {
+      "name": "1Password",
+      "bundle_id": "com.1password.1password",
+      "category": "password-managers",
+      "license": "paid",
+      "path": "password-managers/1password.json",
+      "skip": false
+    },
+    "a-better-finder-attributes-7": {
+      "name": "A Better Finder Attributes 7",
+      "bundle_id": null,
+      "category": "utilities",
+      "license": "paid",
+      "path": "utilities/a-better-finder-attributes-7.json",
+      "skip": false
+    },
+    "a-better-finder-rename-11": {
+      "name": "A Better Finder Rename 11",
+      "bundle_id": null,
+      "category": "utilities",
+      "license": "paid",
+      "path": "utilities/a-better-finder-rename-11.json",
+      "skip": false
+    },
+    "acorn": {
+      "name": "Acorn",
+      "bundle_id": null,
+      "category": "design",
+      "license": "paid",
+      "path": "design/acorn.json",
+      "skip": false
+    },
+    "adguard": {
+      "name": "AdGuard for Mac",
+      "bundle_id": "com.adguard.mac.adguard",
+      "category": "vpn-security",
+      "license": "paid",
+      "path": "vpn-security/adguard.json",
+      "skip": false
+    },
+    "adium": {
+      "name": "Adium",
+      "bundle_id": null,
+      "category": "messaging",
+      "license": "free",
+      "path": "messaging/adium.json",
+      "skip": true
+    },
+    "affinity-designer": {
+      "name": "Affinity Designer",
+      "bundle_id": null,
+      "category": "design",
+      "license": "paid",
+      "path": "design/affinity-designer.json",
+      "skip": false
+    },
+    "affinity-photo": {
+      "name": "Affinity Photo",
+      "bundle_id": null,
+      "category": "design",
+      "license": "paid",
+      "path": "design/affinity-photo.json",
+      "skip": false
+    },
+    "affinity-publisher": {
+      "name": "Affinity Publisher",
+      "bundle_id": null,
+      "category": "design",
+      "license": "paid",
+      "path": "design/affinity-publisher.json",
+      "skip": false
+    },
+    "aftershoot": {
+      "name": "Aftershoot",
+      "bundle_id": null,
+      "category": "specialized",
+      "license": "free",
+      "path": "specialized/aftershoot.json",
+      "skip": false
+    },
+    "airport-utility": {
+      "name": "AirPort Utility",
+      "bundle_id": null,
+      "category": "apple-apps",
+      "license": "free",
+      "path": "apple-apps/airport-utility.json",
+      "skip": true
+    },
+    "alfred": {
+      "name": "Alfred",
+      "bundle_id": "com.runningwithcrayons.Alfred",
+      "category": "utilities",
+      "license": "paid",
+      "path": "utilities/alfred.json",
+      "skip": false
+    },
+    "amphetamine": {
+      "name": "Amphetamine",
+      "bundle_id": "com.if.Amphetamine",
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/amphetamine.json",
+      "skip": false
+    },
+    "anydesk": {
+      "name": "AnyDesk",
+      "bundle_id": "com.philandro.anydesk",
+      "category": "remote-desktop",
+      "license": "free",
+      "path": "remote-desktop/anydesk.json",
+      "skip": false
+    },
+    "arc": {
+      "name": "Arc",
+      "bundle_id": null,
+      "category": "browsers",
+      "license": "free",
+      "path": "browsers/arc.json",
+      "skip": false
+    },
+    "audacity": {
+      "name": "Audacity",
+      "bundle_id": "org.audacityteam.audacity",
+      "category": "media",
+      "license": "free",
+      "path": "media/audacity.json",
+      "skip": false
+    },
+    "backblaze": {
+      "name": "Backblaze",
+      "bundle_id": "com.backblaze.bzbmenu",
+      "category": "cloud-backup",
+      "license": "free",
+      "path": "cloud-backup/backblaze.json",
+      "skip": false
+    },
+    "balenaetcher": {
+      "name": "BalenaEtcher",
+      "bundle_id": null,
+      "category": "specialized",
+      "license": "free",
+      "path": "specialized/balenaetcher.json",
+      "skip": false
+    },
+    "bartender": {
+      "name": "Bartender",
+      "bundle_id": "com.surteesstudios.Bartender",
+      "category": "utilities",
+      "license": "paid",
+      "path": "utilities/bartender.json",
+      "skip": false
+    },
+    "battle-net": {
+      "name": "Battle.net",
+      "bundle_id": null,
+      "category": "gaming",
+      "license": "free",
+      "path": "gaming/battle-net.json",
+      "skip": false
+    },
+    "bbedit": {
+      "name": "BBEdit",
+      "bundle_id": "com.barebones.bbedit",
+      "category": "developer-tools",
+      "license": "paid",
+      "path": "developer-tools/bbedit.json",
+      "skip": false
+    },
+    "bear": {
+      "name": "Bear",
+      "bundle_id": "net.shinyfrog.bear",
+      "category": "notes-writing",
+      "license": "free",
+      "path": "notes-writing/bear.json",
+      "skip": false
+    },
+    "bettertouchtool": {
+      "name": "BetterTouchTool",
+      "bundle_id": "com.hegenberg.BetterTouchTool",
+      "category": "utilities",
+      "license": "paid",
+      "path": "utilities/bettertouchtool.json",
+      "skip": false
+    },
+    "betterzip": {
+      "name": "BetterZip",
+      "bundle_id": "com.macitbetter.betterzip5",
+      "category": "utilities",
+      "license": "paid",
+      "path": "utilities/betterzip.json",
+      "skip": false
+    },
+    "bitwarden": {
+      "name": "Bitwarden",
+      "bundle_id": "com.bitwarden.desktop",
+      "category": "password-managers",
+      "license": "free",
+      "path": "password-managers/bitwarden.json",
+      "skip": false
+    },
+    "brave": {
+      "name": "Brave",
+      "bundle_id": "com.brave.Browser",
+      "category": "browsers",
+      "license": "free",
+      "path": "browsers/brave.json",
+      "skip": false
+    },
+    "calibre": {
+      "name": "calibre",
+      "bundle_id": "net.kovidgoyal.calibre",
+      "category": "office",
+      "license": "free",
+      "path": "office/calibre.json",
+      "skip": false
+    },
+    "canary-mail": {
+      "name": "Canary Mail",
+      "bundle_id": null,
+      "category": "email",
+      "license": "paid",
+      "path": "email/canary-mail.json",
+      "skip": false
+    },
+    "canva": {
+      "name": "Canva",
+      "bundle_id": null,
+      "category": "design",
+      "license": "free",
+      "path": "design/canva.json",
+      "skip": false
+    },
+    "carbon-copy-cloner": {
+      "name": "Carbon Copy Cloner",
+      "bundle_id": null,
+      "category": "cloud-backup",
+      "license": "paid",
+      "path": "cloud-backup/carbon-copy-cloner.json",
+      "skip": false
+    },
+    "chatgpt": {
+      "name": "ChatGPT",
+      "bundle_id": "com.openai.chat",
+      "category": "ai-tools",
+      "license": "free",
+      "path": "ai-tools/chatgpt.json",
+      "skip": false
+    },
+    "cleanshot-x": {
+      "name": "CleanShot X",
+      "bundle_id": "com.getcleanshot.app",
+      "category": "utilities",
+      "license": "paid",
+      "path": "utilities/cleanshot-x.json",
+      "skip": false
+    },
+    "cloudflare-warp": {
+      "name": "Cloudflare WARP",
+      "bundle_id": "com.cloudflare.1dot1dot1dot1.macos",
+      "category": "vpn-security",
+      "license": "free",
+      "path": "vpn-security/cloudflare-warp.json",
+      "skip": false
+    },
+    "coderunner": {
+      "name": "CodeRunner",
+      "bundle_id": "com.krill.CodeRunner",
+      "category": "developer-tools",
+      "license": "paid",
+      "path": "developer-tools/coderunner.json",
+      "skip": false
+    },
+    "control-d-utility": {
+      "name": "Control D Utility",
+      "bundle_id": null,
+      "category": "vpn-security",
+      "license": "free",
+      "path": "vpn-security/control-d-utility.json",
+      "skip": false
+    },
+    "cursor": {
+      "name": "Cursor",
+      "bundle_id": null,
+      "category": "developer-tools",
+      "license": "free",
+      "path": "developer-tools/cursor.json",
+      "skip": false
+    },
+    "cyberduck": {
+      "name": "Cyberduck",
+      "bundle_id": "ch.sudo.cyberduck",
+      "category": "developer-tools",
+      "license": "free",
+      "path": "developer-tools/cyberduck.json",
+      "skip": false
+    },
+    "daisydisk": {
+      "name": "DaisyDisk",
+      "bundle_id": "com.daisydiskapp.DaisyDisk",
+      "category": "utilities",
+      "license": "paid",
+      "path": "utilities/daisydisk.json",
+      "skip": false
+    },
+    "dash": {
+      "name": "Dash",
+      "bundle_id": "com.kapeli.dashdoc",
+      "category": "developer-tools",
+      "license": "paid",
+      "path": "developer-tools/dash.json",
+      "skip": false
+    },
+    "dbeaver": {
+      "name": "DBeaver",
+      "bundle_id": "org.jkiss.dbeaver",
+      "category": "developer-tools",
+      "license": "free",
+      "path": "developer-tools/dbeaver.json",
+      "skip": false
+    },
+    "detail-camera-plugin": {
+      "name": "Detail Camera.plugin",
+      "bundle_id": null,
+      "category": "specialized",
+      "license": "free",
+      "path": "specialized/detail-camera-plugin.json",
+      "skip": false
+    },
+    "discord": {
+      "name": "Discord",
+      "bundle_id": "com.hnc.Discord",
+      "category": "messaging",
+      "license": "free",
+      "path": "messaging/discord.json",
+      "skip": false
+    },
+    "divx": {
+      "name": "DivX",
+      "bundle_id": null,
+      "category": "media",
+      "license": "free",
+      "path": "media/divx.json",
+      "skip": true
+    },
+    "docker-desktop": {
+      "name": "Docker Desktop",
+      "bundle_id": "com.docker.docker",
+      "category": "developer-tools",
+      "license": "free",
+      "path": "developer-tools/docker-desktop.json",
+      "skip": false
+    },
+    "dolphin-anty": {
+      "name": "Dolphin Anty",
+      "bundle_id": null,
+      "category": "specialized",
+      "license": "free",
+      "path": "specialized/dolphin-anty.json",
+      "skip": false
+    },
+    "dropbox": {
+      "name": "Dropbox",
+      "bundle_id": "com.getdropbox.dropbox",
+      "category": "cloud-backup",
+      "license": "free",
+      "path": "cloud-backup/dropbox.json",
+      "skip": false
+    },
+    "elephas": {
+      "name": "Elephas",
+      "bundle_id": null,
+      "category": "utilities",
+      "license": "paid",
+      "path": "utilities/elephas.json",
+      "skip": false
+    },
+    "elgato-stream-deck": {
+      "name": "Elgato Stream Deck",
+      "bundle_id": null,
+      "category": "specialized",
+      "license": "free",
+      "path": "specialized/elgato-stream-deck.json",
+      "skip": false
+    },
+    "epic-games-launcher": {
+      "name": "Epic Games Launcher",
+      "bundle_id": "com.epicgames.EpicGamesLauncher",
+      "category": "gaming",
+      "license": "free",
+      "path": "gaming/epic-games-launcher.json",
+      "skip": false
+    },
+    "evernote": {
+      "name": "Evernote",
+      "bundle_id": "com.evernote.Evernote",
+      "category": "notes-writing",
+      "license": "free",
+      "path": "notes-writing/evernote.json",
+      "skip": false
+    },
+    "evoto": {
+      "name": "Evoto",
+      "bundle_id": null,
+      "category": "specialized",
+      "license": "free",
+      "path": "specialized/evoto.json",
+      "skip": false
+    },
+    "expressvpn": {
+      "name": "ExpressVPN",
+      "bundle_id": "com.expressvpn.ExpressVPN",
+      "category": "vpn-security",
+      "license": "paid",
+      "path": "vpn-security/expressvpn.json",
+      "skip": false
+    },
+    "fantastical": {
+      "name": "Fantastical",
+      "bundle_id": "com.flexibits.fantastical2.mac",
+      "category": "utilities",
+      "license": "paid",
+      "path": "utilities/fantastical.json",
+      "skip": false
+    },
+    "fast-clicker": {
+      "name": "Fast Clicker",
+      "bundle_id": null,
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/fast-clicker.json",
+      "skip": false
+    },
+    "figma": {
+      "name": "Figma",
+      "bundle_id": "com.figma.Desktop",
+      "category": "design",
+      "license": "free",
+      "path": "design/figma.json",
+      "skip": false
+    },
+    "filezilla": {
+      "name": "FileZilla",
+      "bundle_id": "org.filezilla-project.filezilla",
+      "category": "developer-tools",
+      "license": "free",
+      "path": "developer-tools/filezilla.json",
+      "skip": false
+    },
+    "firefox": {
+      "name": "Firefox",
+      "bundle_id": "org.mozilla.firefox",
+      "category": "browsers",
+      "license": "free",
+      "path": "browsers/firefox.json",
+      "skip": false
+    },
+    "forklift": {
+      "name": "ForkLift",
+      "bundle_id": "com.binarynights.ForkLift",
+      "category": "developer-tools",
+      "license": "free",
+      "path": "developer-tools/forklift.json",
+      "skip": false
+    },
+    "gemini": {
+      "name": "Gemini",
+      "bundle_id": null,
+      "category": "other",
+      "license": "free",
+      "path": "other/gemini.json",
+      "skip": false
+    },
+    "gimp": {
+      "name": "GIMP",
+      "bundle_id": "org.gimp.app",
+      "category": "design",
+      "license": "free",
+      "path": "design/gimp.json",
+      "skip": false
+    },
+    "github-copilot-xcode": {
+      "name": "GitHub Copilot for Xcode",
+      "bundle_id": null,
+      "category": "developer-tools",
+      "license": "free",
+      "path": "developer-tools/github-copilot-xcode.json",
+      "skip": false
+    },
+    "google-chrome": {
+      "name": "Google Chrome",
+      "bundle_id": "com.google.Chrome",
+      "category": "browsers",
+      "license": "free",
+      "path": "browsers/google-chrome.json",
+      "skip": false
+    },
+    "google-drive": {
+      "name": "Google Drive for desktop",
+      "bundle_id": "com.google.drivefs",
+      "category": "cloud-backup",
+      "license": "free",
+      "path": "cloud-backup/google-drive.json",
+      "skip": true
+    },
+    "grammarly-desktop": {
+      "name": "Grammarly Desktop",
+      "bundle_id": null,
+      "category": "notes-writing",
+      "license": "free",
+      "path": "notes-writing/grammarly-desktop.json",
+      "skip": false
+    },
+    "grammarly-for-safari": {
+      "name": "Grammarly for Safari",
+      "bundle_id": null,
+      "category": "email",
+      "license": "free",
+      "path": "email/grammarly-for-safari.json",
+      "skip": false
+    },
+    "hazel": {
+      "name": "Hazel",
+      "bundle_id": null,
+      "category": "utilities",
+      "license": "paid",
+      "path": "utilities/hazel.json",
+      "skip": false
+    },
+    "hidden-bar": {
+      "name": "Hidden Bar",
+      "bundle_id": "com.dwarvesv.minimalbar",
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/hidden-bar.json",
+      "skip": false
+    },
+    "home-assistant": {
+      "name": "Home Assistant",
+      "bundle_id": null,
+      "category": "other",
+      "license": "free",
+      "path": "other/home-assistant.json",
+      "skip": false
+    },
+    "homebrew": {
+      "name": "Homebrew",
+      "bundle_id": null,
+      "category": "developer-tools",
+      "license": "free",
+      "path": "developer-tools/homebrew.json",
+      "skip": false
+    },
+    "ia-writer": {
+      "name": "iA Writer",
+      "bundle_id": null,
+      "category": "notes-writing",
+      "license": "paid",
+      "path": "notes-writing/ia-writer.json",
+      "skip": false
+    },
+    "iina": {
+      "name": "IINA",
+      "bundle_id": "com.colliderli.iina",
+      "category": "media",
+      "license": "free",
+      "path": "media/iina.json",
+      "skip": false
+    },
+    "insta360-studio": {
+      "name": "Insta360 Studio",
+      "bundle_id": null,
+      "category": "specialized",
+      "license": "free",
+      "path": "specialized/insta360-studio.json",
+      "skip": false
+    },
+    "istat-menus": {
+      "name": "iStat Menus",
+      "bundle_id": "com.bjango.istatmenus",
+      "category": "utilities",
+      "license": "paid",
+      "path": "utilities/istat-menus.json",
+      "skip": false
+    },
+    "iterm2": {
+      "name": "iTerm2",
+      "bundle_id": "com.googlecode.iterm2",
+      "category": "developer-tools",
+      "license": "free",
+      "path": "developer-tools/iterm2.json",
+      "skip": false
+    },
+    "itsycal": {
+      "name": "Itsycal",
+      "bundle_id": "com.mowglii.ItsycalApp",
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/itsycal.json",
+      "skip": false
+    },
+    "kaleidoscope": {
+      "name": "Kaleidoscope",
+      "bundle_id": null,
+      "category": "developer-tools",
+      "license": "paid",
+      "path": "developer-tools/kaleidoscope.json",
+      "skip": false
+    },
+    "keka": {
+      "name": "Keka",
+      "bundle_id": null,
+      "category": "design",
+      "license": "free",
+      "path": "design/keka.json",
+      "skip": false
+    },
+    "keyboard-maestro": {
+      "name": "Keyboard Maestro",
+      "bundle_id": "com.stairways.keyboardmaestro.engine",
+      "category": "utilities",
+      "license": "paid",
+      "path": "utilities/keyboard-maestro.json",
+      "skip": false
+    },
+    "kindle-for-mac": {
+      "name": "Kindle for Mac",
+      "bundle_id": null,
+      "category": "office",
+      "license": "free",
+      "path": "office/kindle-for-mac.json",
+      "skip": false
+    },
+    "kindle-previewer": {
+      "name": "Kindle Previewer",
+      "bundle_id": null,
+      "category": "office",
+      "license": "free",
+      "path": "office/kindle-previewer.json",
+      "skip": false
+    },
+    "libreoffice": {
+      "name": "LibreOffice",
+      "bundle_id": "org.libreoffice.script",
+      "category": "office",
+      "license": "free",
+      "path": "office/libreoffice.json",
+      "skip": false
+    },
+    "linear": {
+      "name": "Linear",
+      "bundle_id": "com.linear",
+      "category": "specialized",
+      "license": "free",
+      "path": "specialized/linear.json",
+      "skip": false
+    },
+    "logic-pro": {
+      "name": "Logic Pro",
+      "bundle_id": "com.apple.logic10",
+      "category": "media",
+      "license": "free",
+      "path": "media/logic-pro.json",
+      "skip": false
+    },
+    "logitech-options-plus": {
+      "name": "Logitech Options+",
+      "bundle_id": null,
+      "category": "specialized",
+      "license": "free",
+      "path": "specialized/logitech-options-plus.json",
+      "skip": false
+    },
+    "loom": {
+      "name": "Loom",
+      "bundle_id": "com.loom.desktop",
+      "category": "specialized",
+      "license": "free",
+      "path": "specialized/loom.json",
+      "skip": false
+    },
+    "loupedeck": {
+      "name": "Loupedeck",
+      "bundle_id": null,
+      "category": "specialized",
+      "license": "free",
+      "path": "specialized/loupedeck.json",
+      "skip": false
+    },
+    "maccy": {
+      "name": "Maccy",
+      "bundle_id": "com.sindresorhus.MenuBarCalendar",
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/maccy.json",
+      "skip": false
+    },
+    "macfuse": {
+      "name": "macFUSE",
+      "bundle_id": null,
+      "category": "specialized",
+      "license": "free",
+      "path": "specialized/macfuse.json",
+      "skip": false
+    },
+    "macs-fan-control": {
+      "name": "Macs Fan Control",
+      "bundle_id": "com.crystalidea.MacsFanControl",
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/macs-fan-control.json",
+      "skip": false
+    },
+    "mactracker": {
+      "name": "Mactracker",
+      "bundle_id": "com.mactrackerapp.Mactracker",
+      "category": "utilities",
+      "license": "paid",
+      "path": "utilities/mactracker.json",
+      "skip": false
+    },
+    "macupdater": {
+      "name": "MacUpdater",
+      "bundle_id": null,
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/macupdater.json",
+      "skip": true
+    },
+    "magnet": {
+      "name": "Magnet",
+      "bundle_id": "com.crowdcafe.Magnet",
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/magnet.json",
+      "skip": false
+    },
+    "microsoft-edge": {
+      "name": "Microsoft Edge",
+      "bundle_id": "com.microsoft.edgemac",
+      "category": "browsers",
+      "license": "free",
+      "path": "browsers/microsoft-edge.json",
+      "skip": false
+    },
+    "microsoft-excel": {
+      "name": "Microsoft Excel",
+      "bundle_id": "com.microsoft.Excel",
+      "category": "office",
+      "license": "free",
+      "path": "office/microsoft-excel.json",
+      "skip": false
+    },
+    "microsoft-teams": {
+      "name": "Microsoft Teams",
+      "bundle_id": "com.microsoft.teams2",
+      "category": "messaging",
+      "license": "free",
+      "path": "messaging/microsoft-teams.json",
+      "skip": false
+    },
+    "microsoft-word": {
+      "name": "Microsoft Word",
+      "bundle_id": "com.microsoft.Word",
+      "category": "office",
+      "license": "free",
+      "path": "office/microsoft-word.json",
+      "skip": false
+    },
+    "mimestream": {
+      "name": "Mimestream",
+      "bundle_id": null,
+      "category": "email",
+      "license": "paid",
+      "path": "email/mimestream.json",
+      "skip": false
+    },
+    "monitorcontrol": {
+      "name": "MonitorControl",
+      "bundle_id": "me.guillaumeb.MonitorControl",
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/monitorcontrol.json",
+      "skip": false
+    },
+    "moom": {
+      "name": "Moom",
+      "bundle_id": "com.manytricks.Moom",
+      "category": "utilities",
+      "license": "paid",
+      "path": "utilities/moom.json",
+      "skip": false
+    },
+    "netnewswire": {
+      "name": "NetNewsWire",
+      "bundle_id": "com.ranchero.NetNewsWire-Evergreen",
+      "category": "rss-reading",
+      "license": "free",
+      "path": "rss-reading/netnewswire.json",
+      "skip": false
+    },
+    "nolongerevil": {
+      "name": "NoLongerEvil Installer",
+      "bundle_id": null,
+      "category": "specialized",
+      "license": "free",
+      "path": "specialized/nolongerevil.json",
+      "skip": true
+    },
+    "nordvpn": {
+      "name": "NordVPN",
+      "bundle_id": "com.nordvpn.macos",
+      "category": "vpn-security",
+      "license": "paid",
+      "path": "vpn-security/nordvpn.json",
+      "skip": false
+    },
+    "notion": {
+      "name": "Notion",
+      "bundle_id": "notion.id",
+      "category": "notes-writing",
+      "license": "free",
+      "path": "notes-writing/notion.json",
+      "skip": false
+    },
+    "obs-studio": {
+      "name": "OBS Studio",
+      "bundle_id": null,
+      "category": "media",
+      "license": "free",
+      "path": "media/obs-studio.json",
+      "skip": false
+    },
+    "obsidian": {
+      "name": "Obsidian",
+      "bundle_id": "md.obsidian",
+      "category": "notes-writing",
+      "license": "free",
+      "path": "notes-writing/obsidian.json",
+      "skip": false
+    },
+    "off-helper": {
+      "name": "Off Helper",
+      "bundle_id": null,
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/off-helper.json",
+      "skip": true
+    },
+    "one-switch": {
+      "name": "One Switch",
+      "bundle_id": null,
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/one-switch.json",
+      "skip": false
+    },
+    "onyx": {
+      "name": "OnyX",
+      "bundle_id": "com.titanium.OnyX",
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/onyx.json",
+      "skip": false
+    },
+    "openclaw": {
+      "name": "OpenClaw",
+      "bundle_id": null,
+      "category": "gaming",
+      "license": "free",
+      "path": "gaming/openclaw.json",
+      "skip": false
+    },
+    "openoffice": {
+      "name": "Apache OpenOffice",
+      "bundle_id": "org.openoffice.script",
+      "category": "office",
+      "license": "free",
+      "path": "office/openoffice.json",
+      "skip": false
+    },
+    "opera": {
+      "name": "Opera",
+      "bundle_id": "com.operasoftware.Opera",
+      "category": "browsers",
+      "license": "free",
+      "path": "browsers/opera.json",
+      "skip": false
+    },
+    "parallels-desktop": {
+      "name": "Parallels Desktop",
+      "bundle_id": "com.parallels.Parallels",
+      "category": "virtualization",
+      "license": "paid",
+      "path": "virtualization/parallels-desktop.json",
+      "skip": false
+    },
+    "parsec": {
+      "name": "Parsec",
+      "bundle_id": "tv.parsec.www",
+      "category": "remote-desktop",
+      "license": "free",
+      "path": "remote-desktop/parsec.json",
+      "skip": false
+    },
+    "paste": {
+      "name": "Paste",
+      "bundle_id": "com.wiheads.paste",
+      "category": "utilities",
+      "license": "paid",
+      "path": "utilities/paste.json",
+      "skip": false
+    },
+    "path-finder": {
+      "name": "Path Finder",
+      "bundle_id": "com.cocoatech.PathFinder",
+      "category": "utilities",
+      "license": "paid",
+      "path": "utilities/path-finder.json",
+      "skip": false
+    },
+    "pdf-expert": {
+      "name": "PDF Expert",
+      "bundle_id": "com.readdle.PDFExpert-Mac",
+      "category": "specialized",
+      "license": "paid",
+      "path": "specialized/pdf-expert.json",
+      "skip": false
+    },
+    "perception-usertesting-recorder": {
+      "name": "Perception / UserTesting Recorder",
+      "bundle_id": null,
+      "category": "other",
+      "license": "free",
+      "path": "other/perception-usertesting-recorder.json",
+      "skip": false
+    },
+    "permute": {
+      "name": "Permute",
+      "bundle_id": null,
+      "category": "utilities",
+      "license": "paid",
+      "path": "utilities/permute.json",
+      "skip": false
+    },
+    "photobulk": {
+      "name": "PhotoBulk",
+      "bundle_id": null,
+      "category": "design",
+      "license": "paid",
+      "path": "design/photobulk.json",
+      "skip": false
+    },
+    "pia": {
+      "name": "Private Internet Access",
+      "bundle_id": null,
+      "category": "vpn-security",
+      "license": "paid",
+      "path": "vpn-security/pia.json",
+      "skip": false
+    },
+    "pic-time-uploader": {
+      "name": "Pic-Time Uploader",
+      "bundle_id": null,
+      "category": "cloud-backup",
+      "license": "free",
+      "path": "cloud-backup/pic-time-uploader.json",
+      "skip": true
+    },
+    "pixelmator-pro": {
+      "name": "Pixelmator Pro",
+      "bundle_id": null,
+      "category": "design",
+      "license": "paid",
+      "path": "design/pixelmator-pro.json",
+      "skip": false
+    },
+    "pixelsnap": {
+      "name": "PixelSnap",
+      "bundle_id": null,
+      "category": "design",
+      "license": "paid",
+      "path": "design/pixelsnap.json",
+      "skip": false
+    },
+    "plex": {
+      "name": "Plex",
+      "bundle_id": "tv.plex.desktop",
+      "category": "media",
+      "license": "free",
+      "path": "media/plex.json",
+      "skip": false
+    },
+    "postico": {
+      "name": "Postico",
+      "bundle_id": "at.eggerapps.Postico",
+      "category": "developer-tools",
+      "license": "paid",
+      "path": "developer-tools/postico.json",
+      "skip": false
+    },
+    "postman": {
+      "name": "Postman",
+      "bundle_id": "com.postmanlabs.mac",
+      "category": "developer-tools",
+      "license": "free",
+      "path": "developer-tools/postman.json",
+      "skip": false
+    },
+    "raspberry-pi-imager": {
+      "name": "Raspberry Pi Imager",
+      "bundle_id": null,
+      "category": "specialized",
+      "license": "free",
+      "path": "specialized/raspberry-pi-imager.json",
+      "skip": false
+    },
+    "raycast": {
+      "name": "Raycast",
+      "bundle_id": "com.raycast.macos",
+      "category": "utilities",
+      "license": "paid",
+      "path": "utilities/raycast.json",
+      "skip": false
+    },
+    "reaper": {
+      "name": "Reaper",
+      "bundle_id": "com.cockos.reaper",
+      "category": "media",
+      "license": "paid",
+      "path": "media/reaper.json",
+      "skip": false
+    },
+    "rectangle": {
+      "name": "Rectangle",
+      "bundle_id": "com.knollsoft.Rectangle",
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/rectangle.json",
+      "skip": false
+    },
+    "reeder5": {
+      "name": "Reeder 5",
+      "bundle_id": null,
+      "category": "rss-reading",
+      "license": "free",
+      "path": "rss-reading/reeder5.json",
+      "skip": false
+    },
+    "rescuetime": {
+      "name": "RescueTime",
+      "bundle_id": null,
+      "category": "cloud-backup",
+      "license": "free",
+      "path": "cloud-backup/rescuetime.json",
+      "skip": false
+    },
+    "roblox": {
+      "name": "Roblox",
+      "bundle_id": null,
+      "category": "gaming",
+      "license": "free",
+      "path": "gaming/roblox.json",
+      "skip": false
+    },
+    "screens": {
+      "name": "Screens 5",
+      "bundle_id": null,
+      "category": "remote-desktop",
+      "license": "free",
+      "path": "remote-desktop/screens.json",
+      "skip": false
+    },
+    "scrivener": {
+      "name": "Scrivener",
+      "bundle_id": null,
+      "category": "notes-writing",
+      "license": "paid",
+      "path": "notes-writing/scrivener.json",
+      "skip": false
+    },
+    "sequel-ace": {
+      "name": "Sequel Ace",
+      "bundle_id": null,
+      "category": "developer-tools",
+      "license": "free",
+      "path": "developer-tools/sequel-ace.json",
+      "skip": false
+    },
+    "setapp": {
+      "name": "Setapp",
+      "bundle_id": null,
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/setapp.json",
+      "skip": false
+    },
+    "shottr": {
+      "name": "Shottr",
+      "bundle_id": "cc.shottr.shottr",
+      "category": "utilities",
+      "license": "paid",
+      "path": "utilities/shottr.json",
+      "skip": false
+    },
+    "signal": {
+      "name": "Signal",
+      "bundle_id": "org.whispersystems.signal-desktop",
+      "category": "messaging",
+      "license": "free",
+      "path": "messaging/signal.json",
+      "skip": false
+    },
+    "sip": {
+      "name": "Sip",
+      "bundle_id": null,
+      "category": "design",
+      "license": "paid",
+      "path": "design/sip.json",
+      "skip": false
+    },
+    "sketch": {
+      "name": "Sketch",
+      "bundle_id": "com.bohemiancoding.sketch3",
+      "category": "design",
+      "license": "paid",
+      "path": "design/sketch.json",
+      "skip": false
+    },
+    "skim": {
+      "name": "Skim",
+      "bundle_id": "net.sourceforge.skim-app.skim",
+      "category": "rss-reading",
+      "license": "free",
+      "path": "rss-reading/skim.json",
+      "skip": false
+    },
+    "slack": {
+      "name": "Slack",
+      "bundle_id": "com.tinyspec.Slack",
+      "category": "messaging",
+      "license": "free",
+      "path": "messaging/slack.json",
+      "skip": false
+    },
+    "spark-mail": {
+      "name": "Spark Mail",
+      "bundle_id": null,
+      "category": "email",
+      "license": "paid",
+      "path": "email/spark-mail.json",
+      "skip": false
+    },
+    "spotify": {
+      "name": "Spotify",
+      "bundle_id": "com.spotify.client",
+      "category": "media",
+      "license": "free",
+      "path": "media/spotify.json",
+      "skip": false
+    },
+    "spyderxpro": {
+      "name": "SpyderXPro / SpyderEngage / SpyderX Elite",
+      "bundle_id": null,
+      "category": "vpn-security",
+      "license": "paid",
+      "path": "vpn-security/spyderxpro.json",
+      "skip": false
+    },
+    "steam": {
+      "name": "Steam",
+      "bundle_id": "com.valvesoftware.steam",
+      "category": "gaming",
+      "license": "free",
+      "path": "gaming/steam.json",
+      "skip": false
+    },
+    "stuffit-expander": {
+      "name": "StuffIt Expander",
+      "bundle_id": null,
+      "category": "other",
+      "license": "free",
+      "path": "other/stuffit-expander.json",
+      "skip": true
+    },
+    "sublime-merge": {
+      "name": "Sublime Merge",
+      "bundle_id": "com.sublimemerge",
+      "category": "developer-tools",
+      "license": "paid",
+      "path": "developer-tools/sublime-merge.json",
+      "skip": false
+    },
+    "sublime-text": {
+      "name": "Sublime Text",
+      "bundle_id": "com.sublimetext.4",
+      "category": "developer-tools",
+      "license": "paid",
+      "path": "developer-tools/sublime-text.json",
+      "skip": false
+    },
+    "syncthing": {
+      "name": "Syncthing",
+      "bundle_id": null,
+      "category": "cloud-backup",
+      "license": "free",
+      "path": "cloud-backup/syncthing.json",
+      "skip": false
+    },
+    "tableplus": {
+      "name": "TablePlus",
+      "bundle_id": "com.tinyapp.TablePlus",
+      "category": "developer-tools",
+      "license": "paid",
+      "path": "developer-tools/tableplus.json",
+      "skip": false
+    },
+    "tailscale": {
+      "name": "Tailscale",
+      "bundle_id": "com.tailscale.ipn.macos",
+      "category": "vpn-security",
+      "license": "free",
+      "path": "vpn-security/tailscale.json",
+      "skip": false
+    },
+    "teamviewer": {
+      "name": "TeamViewer",
+      "bundle_id": "com.teamviewer.TeamViewer",
+      "category": "remote-desktop",
+      "license": "free",
+      "path": "remote-desktop/teamviewer.json",
+      "skip": false
+    },
+    "telegram": {
+      "name": "Telegram",
+      "bundle_id": "ru.keepcoder.Telegram",
+      "category": "messaging",
+      "license": "free",
+      "path": "messaging/telegram.json",
+      "skip": false
+    },
+    "textmate": {
+      "name": "TextMate",
+      "bundle_id": "com.macromates.TextMate",
+      "category": "developer-tools",
+      "license": "free",
+      "path": "developer-tools/textmate.json",
+      "skip": false
+    },
+    "textsniper": {
+      "name": "TextSniper",
+      "bundle_id": "com.valerijs.boguckis.TextSniper",
+      "category": "utilities",
+      "license": "paid",
+      "path": "utilities/textsniper.json",
+      "skip": false
+    },
+    "the-unarchiver": {
+      "name": "The Unarchiver",
+      "bundle_id": "com.macpaw.site.theunarchiver",
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/the-unarchiver.json",
+      "skip": false
+    },
+    "things": {
+      "name": "Things",
+      "bundle_id": "com.culturedcode.ThingsMac",
+      "category": "notes-writing",
+      "license": "paid",
+      "path": "notes-writing/things.json",
+      "skip": false
+    },
+    "thunderbird": {
+      "name": "Thunderbird",
+      "bundle_id": "org.mozilla.thunderbird",
+      "category": "email",
+      "license": "free",
+      "path": "email/thunderbird.json",
+      "skip": false
+    },
+    "tinkertool": {
+      "name": "TinkerTool",
+      "bundle_id": null,
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/tinkertool.json",
+      "skip": false
+    },
+    "todoist": {
+      "name": "Todoist",
+      "bundle_id": "com.todoist.mac.Todoist",
+      "category": "notes-writing",
+      "license": "free",
+      "path": "notes-writing/todoist.json",
+      "skip": false
+    },
+    "tower": {
+      "name": "Tower",
+      "bundle_id": "com.fournova.Tower3",
+      "category": "developer-tools",
+      "license": "paid",
+      "path": "developer-tools/tower.json",
+      "skip": false
+    },
+    "transmit": {
+      "name": "Transmit",
+      "bundle_id": "com.panic.Transmit",
+      "category": "developer-tools",
+      "license": "paid",
+      "path": "developer-tools/transmit.json",
+      "skip": false
+    },
+    "typeface": {
+      "name": "Typeface",
+      "bundle_id": null,
+      "category": "notes-writing",
+      "license": "paid",
+      "path": "notes-writing/typeface.json",
+      "skip": false
+    },
+    "ulysses": {
+      "name": "Ulysses",
+      "bundle_id": null,
+      "category": "notes-writing",
+      "license": "paid",
+      "path": "notes-writing/ulysses.json",
+      "skip": false
+    },
+    "uninstallpkg": {
+      "name": "UninstallPKG",
+      "bundle_id": null,
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/uninstallpkg.json",
+      "skip": false
+    },
+    "virtualbox": {
+      "name": "VirtualBox",
+      "bundle_id": "org.virtualbox.app.VirtualBoxVM",
+      "category": "virtualization",
+      "license": "free",
+      "path": "virtualization/virtualbox.json",
+      "skip": false
+    },
+    "vivaldi": {
+      "name": "Vivaldi",
+      "bundle_id": "com.vivaldi.Vivaldi",
+      "category": "browsers",
+      "license": "free",
+      "path": "browsers/vivaldi.json",
+      "skip": false
+    },
+    "vlc": {
+      "name": "VLC Media Player",
+      "bundle_id": "org.videolan.vlc",
+      "category": "media",
+      "license": "free",
+      "path": "media/vlc.json",
+      "skip": false
+    },
+    "vmware-fusion": {
+      "name": "VMware Fusion",
+      "bundle_id": "com.vmware.fusion",
+      "category": "virtualization",
+      "license": "paid",
+      "path": "virtualization/vmware-fusion.json",
+      "skip": false
+    },
+    "vscode": {
+      "name": "Visual Studio Code",
+      "bundle_id": "com.microsoft.VSCode",
+      "category": "developer-tools",
+      "license": "free",
+      "path": "developer-tools/vscode.json",
+      "skip": false
+    },
+    "warp": {
+      "name": "Warp",
+      "bundle_id": "dev.warp.Warp-Stable",
+      "category": "developer-tools",
+      "license": "free",
+      "path": "developer-tools/warp.json",
+      "skip": false
+    },
+    "whatsapp": {
+      "name": "WhatsApp",
+      "bundle_id": "com.facebook.WhatsApp",
+      "category": "messaging",
+      "license": "free",
+      "path": "messaging/whatsapp.json",
+      "skip": false
+    },
+    "windsurf": {
+      "name": "Windsurf",
+      "bundle_id": null,
+      "category": "developer-tools",
+      "license": "free",
+      "path": "developer-tools/windsurf.json",
+      "skip": false
+    },
+    "xld": {
+      "name": "X Lossless Decoder (XLD)",
+      "bundle_id": null,
+      "category": "media",
+      "license": "free",
+      "path": "media/xld.json",
+      "skip": false
+    },
+    "xquartz": {
+      "name": "XQuartz",
+      "bundle_id": null,
+      "category": "developer-tools",
+      "license": "free",
+      "path": "developer-tools/xquartz.json",
+      "skip": false
+    },
+    "zoom-workplace": {
+      "name": "Zoom Workplace",
+      "bundle_id": "us.zoom.xos",
+      "category": "messaging",
+      "license": "free",
+      "path": "messaging/zoom-workplace.json",
+      "skip": false
+    }
+  }
+}

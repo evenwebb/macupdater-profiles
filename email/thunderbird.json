@@ -1,0 +1,41 @@
+{
+  "name": "Thunderbird",
+  "slug": "thunderbird",
+  "description": "Free and open-source email, calendar, and contacts client by Mozilla",
+  "website": "https://thunderbird.net",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "10.15",
+  "auto_updates": true,
+  "version_check": {
+    "method": "json_api",
+    "url": "https://product-details.mozilla.org/1.0/thunderbird_versions.json",
+    "extraction": {
+      "type": "json_path",
+      "path": "LATEST_THUNDERBIRD_VERSION",
+      "example": "140.0"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "redirect_url",
+    "url": "https://download.mozilla.org/?product=thunderbird-latest&os=osx&lang=en-US",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "construct_url",
+    "pattern": "https://www.thunderbird.net/en-US/thunderbird/{VERSION}/releasenotes/"
+  },
+  "release_date": {
+    "method": "scrape_release_notes",
+    "note": "Release notes page contains 'Release Date: Month DD, YYYY'. Not in product-details JSON."
+  },
+  "notes": "In-app updates use Balrog: aus.thunderbird.net/json/1/Thunderbird/{VERSION}/{BUILDID}/... \u2014 requires valid BUILDID. macOS targets: Darwin_x86_64-gcc3-u-i386-x86_64 (Intel), Darwin_aarch64-gcc3 (Apple Silicon). All-locales listing: thunderbird.net/en-US/thunderbird/all/. Also available: LATEST_THUNDERBIRD_DEVEL_VERSION, LATEST_THUNDERBIRD_NIGHTLY_VERSION.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "email",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "org.mozilla.thunderbird"
+}

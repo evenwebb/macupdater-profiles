@@ -1,0 +1,45 @@
+{
+  "name": "NoLongerEvil Installer",
+  "url": "https://nolongerevil.com",
+  "repository": "https://github.com/codykociemba/NoLongerEvil-Thermostat",
+  "description": "Nest thermostat jailbreak tool",
+  "version_check": {
+    "method": "github_releases",
+    "url": "https://api.github.com/repos/codykociemba/NoLongerEvil-Thermostat/releases/latest",
+    "version_field": ".tag_name",
+    "version_example": "v1.0.1",
+    "headers": {}
+  },
+  "download": {
+    "url_arm64": "https://github.com/codykociemba/NoLongerEvil-Thermostat/releases/download/v{VERSION}/nolongerevil-macos-arm64.zip",
+    "url_x64": "https://github.com/codykociemba/NoLongerEvil-Thermostat/releases/download/v{VERSION}/nolongerevil-macos-x64.zip",
+    "file_type": "zip",
+    "note": "Contains Electron-based macOS app, not .dmg/.pkg",
+    "headers": {}
+  },
+  "changelog": {
+    "url": "https://github.com/codykociemba/NoLongerEvil-Thermostat/releases",
+    "method": "github_releases"
+  },
+  "release_date": {
+    "method": "github_release",
+    "field": ".published_at",
+    "format": "ISO 8601",
+    "example": "2026-03-31T09:21:50Z"
+  },
+  "sparkle": null,
+  "architecture": "per_arch",
+  "architectures": [
+    "arm64",
+    "x64"
+  ],
+  "min_os": "11.0",
+  "auto_updates": false,
+  "app_store_only": false,
+  "notes": "NOT a typical macOS installer. This is a Nest thermostat jailbreak tool. The 'installer' is an Electron desktop app providing a post-flash setup wizard. Includes Home Assistant auto-discovery, SSH hardening, and self-hosted server support. v1.0.1 (March 31, 2026) is the latest release.",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "specialized",
+  "license": "free",
+  "skip": true,
+  "last_updated": "2026-06-21"
+}

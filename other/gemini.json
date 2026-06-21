@@ -1,0 +1,53 @@
+{
+  "name": "Gemini",
+  "url": "https://macpaw.com/gemini",
+  "description": "Duplicate file finder",
+  "version_check": {
+    "method": "sparkle",
+    "platform": "devmate",
+    "url": "https://updateinfo.devmate.com/com.macpaw.site.Gemini2/updates.xml",
+    "version_field": "sparkle:shortVersionString",
+    "build_field": "sparkle:version",
+    "version_example": "2.10.1",
+    "build_example": "406",
+    "headers": {}
+  },
+  "download": {
+    "url": "https://dl.devmate.com/com.macpaw.site.Gemini2/{BUILD}/{TIMESTAMP}/Gemini2-{BUILD}.zip",
+    "file_type": "zip",
+    "headers": {}
+  },
+  "changelog": {
+    "url": "https://updates.devmate.com/releasenotes/{BUILD}/com.macpaw.site.Gemini2.html",
+    "method": "web_page",
+    "note": "DevMate-hosted release notes, supports multi-language"
+  },
+  "release_date": {
+    "method": "sparkle_pubdate",
+    "field": "pubDate",
+    "format": "RFC 2822"
+  },
+  "sparkle": {
+    "platform": "DevMate (MacPaw's proprietary Sparkle-compatible distribution platform)",
+    "features": [
+      "delta_patches",
+      "multi_language_release_notes"
+    ]
+  },
+  "architecture": "universal",
+  "min_os": "10.13",
+  "auto_updates": true,
+  "app_store_only": false,
+  "distribution": {
+    "mac_app_store": true,
+    "setapp": true,
+    "direct": true
+  },
+  "bundle_id": "com.macpaw.site.Gemini2",
+  "notes": "Uses DevMate (MacPaw's own distribution platform) which provides Sparkle-compatible appcasts with delta patches. Appcast shows version history from v2.4.7 (2018) through v2.10.1.",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "other",
+  "license": "free",
+  "skip": false,
+  "last_updated": "2026-06-21"
+}

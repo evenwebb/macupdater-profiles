@@ -1,0 +1,43 @@
+{
+  "name": "Shottr",
+  "slug": "shottr",
+  "description": "Screenshot tool optimized for UI/UX designers \u2014 pixel-perfect scrolling capture, OCR, measurements",
+  "website": "https://shottr.cc",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "macOS 12.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle_appcast",
+    "url": "https://shottr.cc/appcast.xml",
+    "extraction": {
+      "type": "xpath",
+      "xpath": "//item/enclosure/@*[local-name()='shortVersionString' or local-name()='sparkle:shortVersionString']",
+      "pattern": null,
+      "notes": "Uses Sparkle 2 with appcast hosted on shottr.cc."
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "sparkle_enclosure",
+    "url_or_pattern": "https://shottr.cc/download/Shottr-{version}.dmg",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "sparkle_appcast",
+    "url": "https://shottr.cc/appcast.xml",
+    "notes": "Release notes in <sparkle:releaseNotesLink> or <description> within appcast item."
+  },
+  "release_date": {
+    "method": "sparkle_appcast",
+    "field": "pubDate"
+  },
+  "notes": "Free with paid extras (one-time purchase unlocks pro features). Well-structured Sparkle 2 appcast. Download filename pattern: 'Shottr-{version}.dmg'. The appcast feed is clean and standard, making version tracking straightforward. The pro license is a one-time purchase that unlocks advanced features like scrolling capture, OCR, and measurements.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "utilities",
+  "license": "paid",
+  "skip": false,
+  "bundle_id": "cc.shottr.shottr"
+}

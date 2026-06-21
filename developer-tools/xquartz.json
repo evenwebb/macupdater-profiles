@@ -1,0 +1,49 @@
+{
+  "name": "XQuartz",
+  "slug": "xquartz",
+  "description": "X Window System server for macOS \u2014 run X11 applications",
+  "website": "https://www.xquartz.org",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "11.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle_appcast",
+    "url": "https://www.xquartz.org/releases/sparkle-r1/rc.xml",
+    "extraction": {
+      "type": "sparkle_xml",
+      "xpath": "/rss/channel/item[1]/title",
+      "strip_prefix": "XQuartz-",
+      "filter": "exclude entries with _beta or _rc in title",
+      "example": "2.8.5"
+    },
+    "fallback_github": {
+      "method": "github_api",
+      "url": "https://api.github.com/repos/XQuartz/XQuartz/releases/latest",
+      "path": "tag_name",
+      "strip_prefix": "XQuartz-"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "construct_from_github",
+    "pattern": "https://github.com/XQuartz/XQuartz/releases/download/XQuartz-{VERSION}/XQuartz-{VERSION}.pkg",
+    "file_type": "pkg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "construct_url",
+    "pattern": "https://www.xquartz.org/releases/bare/XQuartz-{VERSION}.html"
+  },
+  "release_date": {
+    "method": "sparkle_pub_date",
+    "field": "pubDate in appcast (RFC 2822)",
+    "fallback": "published_at from GitHub API"
+  },
+  "notes": "Sparkle-based with EdDSA signatures. RC feed includes both betas and stable \u2014 filter by title. sparkle:version uses encoded numbering (e.g., 2.8.57 for 2.8.5). Universal binary (Intel + ARM64). Was .dmg for 2.8.2 and earlier, now .pkg.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "developer-tools",
+  "license": "free",
+  "skip": false
+}

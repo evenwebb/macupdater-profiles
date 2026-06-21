@@ -1,0 +1,42 @@
+{
+  "name": "Magnet",
+  "slug": "magnet",
+  "description": "Magnet is a window manager for macOS that lets you snap windows into organized tiles by dragging to screen edges or using keyboard shortcuts. Supports halves, quarters, thirds, and custom arrangements.",
+  "website": "https://magnet.crowdcafe.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "10.13",
+  "auto_updates": false,
+  "version_check": {
+    "method": "itunes_api",
+    "url": "https://itunes.apple.com/lookup?id=441258766",
+    "extraction": {
+      "type": "json_path",
+      "json_path": "results[0].version"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "app_store_only",
+    "url_or_pattern": null,
+    "file_type": "app_bundle",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "app_store",
+    "url": "https://apps.apple.com/app/magnet/id441258766",
+    "note": "Release notes are available in the App Store listing under 'What's New'. No separate public changelog page."
+  },
+  "release_date": {
+    "method": "itunes_date",
+    "field": "currentVersionReleaseDate",
+    "source": "https://itunes.apple.com/lookup?id=441258766"
+  },
+  "notes": "Paid app. Mac App Store only \u2014 no direct download available (the developer's website confirms this). No Sparkle. UNCERTAINTY: iTunes API longevity concern \u2014 Apple may deprecate this endpoint in favor of the authenticated App Store Connect API. Version information published by the App Store may lag behind rollout due to Apple's phased release mechanism.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "utilities",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "com.crowdcafe.Magnet"
+}

@@ -1,0 +1,44 @@
+{
+  "name": "Signal",
+  "slug": "signal",
+  "description": "Encrypted messaging and calling app",
+  "website": "https://signal.org",
+  "platform": "macOS",
+  "architecture": [
+    "universal",
+    "arm64",
+    "x64"
+  ],
+  "min_os": "macOS 11",
+  "auto_updates": true,
+  "version_check": {
+    "method": "electron_updater_yaml",
+    "url": "https://updates.signal.org/desktop/latest-mac.yml",
+    "extraction": {
+      "type": "yaml_key",
+      "pattern": "version"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "yaml_field",
+    "url_or_pattern": "https://updates.signal.org/desktop/{filename}",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "scrape",
+    "url": "https://signal.org/blog/"
+  },
+  "release_date": {
+    "method": "yaml_field",
+    "field": "releaseDate (ISO 8601)"
+  },
+  "notes": "Uses Electron updater YAML manifest. Filename extracted from YAML 'files' array \u2014 pick the universal dmg entry. Separate arch builds available (x64, arm64, universal).",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "messaging",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "org.whispersystems.signal-desktop"
+}

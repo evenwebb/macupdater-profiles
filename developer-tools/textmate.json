@@ -1,0 +1,44 @@
+{
+  "name": "TextMate",
+  "slug": "textmate",
+  "description": "Powerful and versatile macOS text editor \u2014 open source",
+  "website": "https://macromates.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "12.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/textmate/textmate/releases/latest",
+    "extraction": {
+      "type": "json_path",
+      "path": "tag_name",
+      "strip_prefix": "v",
+      "filter": "prerelease == false",
+      "example": "2.0.23"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "construct_from_github",
+    "pattern": "https://github.com/textmate/textmate/releases/download/v{VERSION}/TextMate_{VERSION}.tbz",
+    "file_type": "tbz",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "github_releases",
+    "url": "https://github.com/textmate/textmate/releases",
+    "field": "body in GitHub release JSON"
+  },
+  "release_date": {
+    "method": "github_api",
+    "field": "published_at in GitHub release JSON"
+  },
+  "notes": "Open source. Single asset per release (.tbz format). Release frequency is very low \u2014 v2.0.23 was October 2021. GitHub API rate limits apply (60 req/hr unauthenticated, 5000 with token). Use conditional requests to avoid rate limits. Also available via Homebrew (textmate cask).",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "developer-tools",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "com.macromates.TextMate"
+}

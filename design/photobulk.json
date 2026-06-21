@@ -1,0 +1,59 @@
+{
+  "name": "PhotoBulk",
+  "url": "https://mac.eltima.com/bulk-image-editor.html",
+  "description": "Batch image editor",
+  "version_check": {
+    "method": "html_scrape",
+    "url": "https://mac.eltima.com/bulk-image-editor.html",
+    "primary": {
+      "field": "JSON-LD \"softwareVersion\"",
+      "selector": "script[type=\"application/ld+json\"]",
+      "path": "softwareVersion"
+    },
+    "fallback": {
+      "field": "span.softwareVersion text content",
+      "selector": "span.softwareVersion"
+    },
+    "alt_method": {
+      "method": "app_store",
+      "url": "https://itunes.apple.com/lookup?id=537211143",
+      "field": "results[0].version",
+      "note": "Returns only major.minor version"
+    },
+    "version_example": "2.7.344",
+    "headers": {}
+  },
+  "download": {
+    "url": "https://cdn.electronic.us/products/photobulk/mac/download/photobulk.dmg",
+    "url_note": "Static download URL, not versioned",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "url": "https://help.electronic.us/support/solutions/articles/44002288795",
+    "method": "web_page"
+  },
+  "release_date": {
+    "method": "html_text",
+    "pattern": "Released (\\d{1,2} \\w{3}, \\d{4})",
+    "format": "DD Mon, YYYY",
+    "fallback": {
+      "method": "http_last_modified",
+      "source": "Download DMG header"
+    }
+  },
+  "sparkle": {
+    "url": "https://photobulk.com/appcast.xml",
+    "note": "Sparkle appcast EXISTS but is JWT-protected (anti-bot)"
+  },
+  "architecture": "universal",
+  "min_os": "11.0",
+  "auto_updates": true,
+  "app_store_only": false,
+  "notes": "Sparkle appcast at photobulk.com/appcast.xml is JWT-protected against bots. Version extraction requires HTML scraping of eltima.com or electronic.us domains.",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "design",
+  "license": "paid",
+  "skip": false,
+  "last_updated": "2026-06-21"
+}

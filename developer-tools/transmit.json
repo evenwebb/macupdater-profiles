@@ -1,0 +1,40 @@
+{
+  "name": "Transmit",
+  "slug": "transmit",
+  "description": "FTP client",
+  "website": "https://panic.com/transmit",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "13.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle_xml",
+    "url": "https://download.panic.com/transmit/Transmit%205.xml",
+    "extraction": {
+      "type": "sparkle_version",
+      "pattern": null
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "fixed_url",
+    "url_or_pattern": "https://download.panic.com/transmit/Transmit-5-Latest.zip",
+    "file_type": "zip",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "fixed_url",
+    "url": "https://help.panic.com/releasenotes/transmit5"
+  },
+  "release_date": {
+    "method": "pubDate",
+    "field": "pubDate"
+  },
+  "notes": "Sparkle appcast likely at https://download.panic.com/transmit/Transmit%205.xml. CDN (CloudFront-backed) may have anti-bot protection. Paid ($45). PubDate in appcast.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "developer-tools",
+  "license": "paid",
+  "skip": false,
+  "bundle_id": "com.panic.Transmit"
+}

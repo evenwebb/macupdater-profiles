@@ -1,0 +1,44 @@
+{
+  "name": "Path Finder",
+  "url": "https://cocoatech.io",
+  "description": "Advanced dual-pane file manager",
+  "version_check": {
+    "method": "sparkle",
+    "url": "https://get.cocoatech.com/releasecast.xml",
+    "version_field": "sparkle:shortVersionString",
+    "build_field": "sparkle:version",
+    "version_example": "26.1.4",
+    "build_example": "2644",
+    "headers": {}
+  },
+  "download": {
+    "url": "https://get.cocoatech.com/PathFinder.dmg",
+    "url_note": "Static download URL, not versioned",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "url": "https://store.cocoatech.io/updates",
+    "method": "web_page"
+  },
+  "release_date": {
+    "method": "sparkle_pubdate",
+    "field": "pubDate",
+    "format": "RFC 2822"
+  },
+  "sparkle": {
+    "ed_signature": "DSA+EdDSA",
+    "sparkle_version": 2
+  },
+  "architecture": "universal",
+  "min_os": "13.0",
+  "auto_updates": true,
+  "app_store_only": false,
+  "notes": "Version numbering jumped from 10.x to 26.x to match the current year.",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "utilities",
+  "license": "paid",
+  "skip": false,
+  "bundle_id": "com.cocoatech.PathFinder",
+  "last_updated": "2026-06-21"
+}

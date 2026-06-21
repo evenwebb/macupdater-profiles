@@ -1,0 +1,53 @@
+{
+  "name": "Mimestream",
+  "slug": "mimestream",
+  "description": "Mimestream is a native macOS email client designed exclusively for Gmail. It uses the Gmail API (not IMAP), supporting labels, categories, server-side filters, aliases, and Gmail search syntax natively.",
+  "website": "https://mimestream.com",
+  "platform": "macOS",
+  "architecture": "arm64",
+  "arch_note": "Apple Silicon native only \u2014 no Intel binary",
+  "min_os": "12",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle_and_scrape",
+    "sparkle": {
+      "note": "UNCERTAINTY: Sparkle is used (SUFeedURL is embedded in the app bundle), but the exact appcast URL is not publicly documented. The app bundle's Info.plist or Sparkle framework plist would need to be consulted to extract the feed URL."
+    },
+    "scrape": {
+      "url": "https://mimestream.com/releases",
+      "extraction": {
+        "type": "regex",
+        "pattern": "(\\d+\\.\\d+\\.\\d+)\\s*-\\s*(\\w+\\s+\\d{1,2},\\s*\\d{4})",
+        "note": "Matches lines like '1.10.2 - Jun 10, 2026' on the releases page"
+      }
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "web_redirect",
+    "url_or_pattern": "https://mimestream.com/download",
+    "file_type": "dmg",
+    "note": "UNCERTAINTY: /download redirects to the latest dmg. The redirect target URL may contain the version; this varies between releases.",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "web",
+    "url": "https://mimestream.com/releases"
+  },
+  "release_date": {
+    "method": "scrape",
+    "field": null,
+    "source": "https://mimestream.com/releases",
+    "extraction": {
+      "type": "regex",
+      "pattern": "(\\d+\\.\\d+\\.\\d+)\\s*-\\s*(\\w+\\s+\\d{1,2},\\s*\\d{4})",
+      "note": "Extracts version and date from text like '1.10.2 - Jun 10, 2026'. Use group 2 for date."
+    }
+  },
+  "notes": "Gmail only (no IMAP support). Subscription required. Apple Silicon native only \u2014 no Intel support. UNCERTAINTIES: The exact Sparkle feed URL is not publicly documented and must be extracted from the app bundle. Version detection via the releases page is a reliable fallback. The download redirect target may change format.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "email",
+  "license": "paid",
+  "skip": false
+}

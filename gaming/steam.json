@@ -1,0 +1,37 @@
+{
+  "name": "Steam",
+  "slug": "steam",
+  "description": "Game platform",
+  "website": "https://store.steampowered.com",
+  "platform": "macOS",
+  "architecture": "intel",
+  "min_os": "10.15",
+  "auto_updates": true,
+  "version_check": {
+    "method": null,
+    "url": null,
+    "extraction": null,
+    "notes": "NO public version API. Version must be obtained by downloading DMG and reading CFBundleVersion from Info.plist inside the app bundle.",
+    "headers": {}
+  },
+  "download": {
+    "method": "direct",
+    "url_or_pattern": "https://cdn.cloudflare.steamstatic.com/client/installer/steam.dmg",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "webpage",
+    "url": "https://store.steampowered.com/news/app/593110"
+  },
+  "release_date": {
+    "method": null
+  },
+  "notes": "Intel only (requires Rosetta 2 on Apple Silicon). Self-updates on launch \u2014 no version API of any kind exists. Download URL always returns the latest DMG. Version only retrievable from installed app's Info.plist. macOS 10.15 or later.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "gaming",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "com.valvesoftware.steam"
+}

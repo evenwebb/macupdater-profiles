@@ -1,0 +1,41 @@
+{
+  "name": "TeamViewer",
+  "slug": "teamviewer",
+  "description": "Remote desktop, remote support, and online collaboration",
+  "website": "https://teamviewer.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "11.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle_xml",
+    "url": "https://download.teamviewer.com/download/update/macupdates.xml?id=0&lang=en&version=15.0.0&os=macos&osversion=13.7&type=1&channel=1",
+    "extraction": {
+      "type": "sparkle_xml",
+      "version_field": "sparkle:version on enclosure",
+      "example": "15.x"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "static_redirect_url",
+    "url": "https://download.teamviewer.com/download/TeamViewer.dmg",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "web_scrape",
+    "url": "https://community.teamviewer.com/English/categories/change-logs-en/"
+  },
+  "release_date": {
+    "method": "sparkle_pub_date",
+    "field": "pubDate in Sparkle XML (ISO 8601)"
+  },
+  "notes": "Sparkle XML with TeamViewer custom namespace extensions. Website download is DMG (~122 MB), in-app updates use PKG via Sparkle enclosure. The update URL requires query parameters for OS version \u2014 adjust osversion to match current macOS.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "remote-desktop",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "com.teamviewer.TeamViewer"
+}

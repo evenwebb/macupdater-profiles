@@ -1,0 +1,49 @@
+{
+  "name": "OpenClaw",
+  "slug": "openclaw",
+  "description": "Open-source reimplementation of the 1997 game Captain Claw",
+  "website": "https://github.com/pjasicek/OpenClaw",
+  "platform": "macOS (source build only)",
+  "architecture": "x86_64, arm64 (via source build)",
+  "min_os": "11.0 (estimated)",
+  "auto_updates": false,
+  "version_check": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/pjasicek/OpenClaw/releases/latest",
+    "extraction": {
+      "type": "json_path",
+      "path": "tag_name",
+      "strip_prefix": "v",
+      "example": "0.3"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "source_build_only",
+    "url": null,
+    "build_instructions": "git clone https://github.com/pjasicek/OpenClaw.git && cd OpenClaw && mkdir build && cd build && cmake .. -DCMAKE_BUILD_TYPE=Release && make",
+    "dependencies": [
+      "sdl2",
+      "sdl2_mixer",
+      "sdl2_image",
+      "sdl2_ttf"
+    ],
+    "file_type": "source",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "github_releases",
+    "url": "https://github.com/pjasicek/OpenClaw/releases",
+    "field": "body in GitHub release JSON"
+  },
+  "release_date": {
+    "method": "github_api",
+    "field": "published_at in GitHub release JSON"
+  },
+  "notes": "NO macOS binary exists in releases. Latest release (v0.3) has Windows .zip only. Previous release (v0.0) had .deb/.rpm for Linux + Windows .zip. README lists macOS as supported but provides no build instructions. No Homebrew formula. Must build from source with SDL2 deps.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "gaming",
+  "license": "free",
+  "skip": false
+}

@@ -1,0 +1,40 @@
+{
+  "name": "Visual Studio Code",
+  "slug": "vscode",
+  "description": "Code editor",
+  "website": "https://code.visualstudio.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "10.15",
+  "auto_updates": true,
+  "version_check": {
+    "method": "rest_api",
+    "url": "https://update.code.visualstudio.com/api/update/darwin/stable/latest",
+    "extraction": {
+      "type": "json_path",
+      "json_path": "$.name"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "json_field",
+    "url_or_pattern": "{url}",
+    "file_type": "zip",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "composed_url",
+    "url": "https://code.visualstudio.com/updates/v1_{MINOR}"
+  },
+  "release_date": {
+    "method": "json_field_timestamp",
+    "field": "$.timestamp"
+  },
+  "notes": "Supports fast/delta updates via supportsFastUpdate. SHA-256 in JSON. Custom appcast server (NOT static Sparkle XML). Build via $.url commit hash. Product version also at $.productVersion (e.g. \"1.125.1\").",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "developer-tools",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "com.microsoft.VSCode"
+}

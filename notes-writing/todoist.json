@@ -1,0 +1,43 @@
+{
+  "name": "Todoist",
+  "slug": "todoist",
+  "description": "Task manager and to-do list app for individuals and teams",
+  "website": "https://todoist.com",
+  "platform": "macOS",
+  "architecture": [
+    "arm64",
+    "x64"
+  ],
+  "min_os": "macOS 11",
+  "auto_updates": true,
+  "version_check": {
+    "method": "electron_updater_yaml",
+    "url": "https://electron-dl.todoist.net/mac/latest-mac.yml",
+    "extraction": {
+      "type": "yaml_key",
+      "pattern": "version"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "constructed_url",
+    "url_or_pattern": "https://electron-dl.todoist.net/mac/Todoist-darwin-{version}-arm64-latest.dmg or -x64-latest.dmg",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "scrape",
+    "url": "https://todoist.com/changelog"
+  },
+  "release_date": {
+    "method": "scrape",
+    "field": "changelog page (not in YAML)"
+  },
+  "notes": "Uses Electron updater YAML. Separate architecture builds (arm64, x64). No universal binary. Release date not exposed in YAML \u2014 must scrape changelog page.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "notes-writing",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "com.todoist.mac.Todoist"
+}

@@ -1,0 +1,44 @@
+{
+  "name": "Parallels Desktop",
+  "slug": "parallels-desktop",
+  "description": "Virtualization software for running Windows and other OS on Mac",
+  "website": "https://parallels.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "13.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "json_redirect_trace",
+    "url": "https://download.parallels.com/website_links/desktop/{MAJOR}/builds-en_US.json",
+    "extraction": {
+      "type": "regex_on_redirect_location",
+      "note": "JSON catalog contains indirect redirect links. Follow DMG redirect to get versioned URL, then extract version.",
+      "pattern": "ParallelsDesktop-(\\d+\\.\\d+\\.\\d+)-(\\d+)",
+      "example": "26.3.3"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "construct_url",
+    "pattern": "https://download.parallels.com/desktop/v{MAJOR}/{VERSION}-{BUILD}/ParallelsDesktop-{VERSION}-{BUILD}.dmg",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "web_scrape_blog",
+    "pattern": "https://www.parallels.com/blogs/parallels-desktop-{MAJOR}/",
+    "note": "Blog post per major version, not structured changelog"
+  },
+  "release_date": {
+    "method": "scrape_from_blog",
+    "url": "blog post for the major version",
+    "note": "KB article 124223 (system requirements) has a 'Last Review' date"
+  },
+  "notes": "Cloudflare-protected website. Old update.parallels.com XML feeds all return 404. Major version now matches macOS version (e.g., PD 26 for macOS 26 Tahoe). No Sparkle feed \u2014 uses proprietary update mechanism. Auth/entitlement required for full version (trial available). Download links require ?experience=enter_key parameter.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "virtualization",
+  "license": "paid",
+  "skip": false,
+  "bundle_id": "com.parallels.Parallels"
+}

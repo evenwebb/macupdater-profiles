@@ -1,0 +1,43 @@
+{
+  "name": "Setapp",
+  "slug": "setapp",
+  "description": "Mac app subscription service \u2014 desktop client that manages Setapp collections and installs",
+  "website": "https://setapp.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "11.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle_appcast",
+    "url": "https://s3-us-west-2.amazonaws.com/updateinfo.devmate.com/com.setapp.DesktopClient/updates.xml",
+    "extraction": {
+      "type": "sparkle_xml",
+      "version_field": "sparkle:shortVersionString",
+      "build_field": "sparkle:version",
+      "example": "3.53.4"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "construct_from_sparkle_build",
+    "pattern": "https://dl.devmate.com/com.setapp.DesktopClient/{BUILD}/{NUMERIC_ID}/Setapp-{BUILD}.zip",
+    "numeric_id_field": "extract from enclosure URL path segment before filename",
+    "file_type": "zip",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "construct_from_build",
+    "pattern": "https://dl.devmate.com/com.setapp.DesktopClient/releasenotes/{BUILD}/",
+    "note": "Release notes hosted by DevMate CDN per build"
+  },
+  "release_date": {
+    "method": "sparkle_pub_date",
+    "field": "pubDate in appcast <item>"
+  },
+  "notes": "Uses Sparkle via devmate.com CDN. Build number and numeric ID both change per release. The latest-download redirect is: https://go.setapp.com/download/client. Homebrew cask available. DevMate CDN is publicly accessible (S3).",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "utilities",
+  "license": "free",
+  "skip": false
+}

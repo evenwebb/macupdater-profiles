@@ -1,0 +1,42 @@
+{
+  "name": "Acorn",
+  "slug": "acorn",
+  "description": "Raster image editor with layers, filters, vector shapes, and automation",
+  "website": "https://flyingmeat.com/acorn/",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "macOS 12.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle_appcast",
+    "url": "https://flyingmeat.com/acorn/appcast.xml",
+    "extraction": {
+      "type": "xpath",
+      "xpath": "//item/enclosure/@*[local-name()='shortVersionString' or local-name()='sparkle:shortVersionString']",
+      "pattern": null,
+      "notes": "Standard Sparkle appcast feed. Flying Meat (Gus Mueller) uses Sparkle for updates."
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "direct_url",
+    "url_or_pattern": "https://flyingmeat.com/download/Acorn.zip",
+    "file_type": "zip",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "sparkle_appcast",
+    "url": "https://flyingmeat.com/acorn/appcast.xml",
+    "notes": "Release notes in <sparkle:releaseNotesLink> or <description> within each appcast item."
+  },
+  "release_date": {
+    "method": "sparkle_appcast",
+    "field": "pubDate"
+  },
+  "notes": "Paid app (one-time purchase with free trial). Direct download from flyingmeat.com. Uses standard Sparkle appcast for version checking and updates. Download URL is static (Acorn.zip) and always serves the latest version. Also available on Mac App Store.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "design",
+  "license": "paid",
+  "skip": false
+}

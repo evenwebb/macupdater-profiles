@@ -1,0 +1,48 @@
+{
+  "name": "Microsoft Excel",
+  "slug": "microsoft-excel",
+  "description": "Spreadsheet application, part of Microsoft 365 / Office for Mac suite",
+  "website": "https://microsoft.com/mac",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "13.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "scrape_version_table",
+    "url": "https://learn.microsoft.com/en-us/officeupdates/update-history-office-for-mac",
+    "extraction": {
+      "type": "regex_on_html",
+      "pattern": "Version (\\d+\\.\\d+)\\s+\\([Bb]uild\\s+(\\d+)\\)",
+      "version": "{1}",
+      "build": "{2}",
+      "note": "Scrape the first table row (latest version). Excel and Word share the same version number.",
+      "example": "16.110"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "construct_url_or_suite",
+    "suite_installer": "https://go.microsoft.com/fwlink/?linkid=525133",
+    "excel_updater_pattern": "https://res.public.onecdn.static.microsoft/mro1cdnstorage/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Excel_{VERSION}_Updater.pkg",
+    "file_type": "pkg",
+    "note": "Suite fwlink redirects to latest full PKG. Individual updater PKGs are smaller \u2014 check if app is already installed.",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "web_scrape",
+    "url": "https://learn.microsoft.com/en-us/officeupdates/update-history-office-for-mac",
+    "note": "Page contains full version history table with dates and build numbers. SHA-256 hashes published for each update."
+  },
+  "release_date": {
+    "method": "scrape_from_table",
+    "url": "https://learn.microsoft.com/en-us/officeupdates/update-history-office-for-mac",
+    "note": "First column of the version history table is release date"
+  },
+  "notes": "Version shared across all Office for Mac apps (Excel, Word, PowerPoint, Outlook, OneNote). Microsoft AutoUpdate (MAU) handles in-app updates. The GUID in the CDN URL path is shared across all Office for Mac apps. Office 2021 (non-subscription) uses different fwlink: https://go.microsoft.com/fwlink/?linkid=820886.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "office",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "com.microsoft.Excel"
+}

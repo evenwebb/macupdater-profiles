@@ -1,0 +1,41 @@
+{
+  "name": "Keka",
+  "slug": "keka",
+  "description": "File archiver and extractor \u2014 supports 7z, Zip, Tar, RAR and many more formats",
+  "website": "https://www.keka.io",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "macOS 10.13",
+  "auto_updates": false,
+  "version_check": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/aonez/Keka/releases/latest",
+    "extraction": {
+      "type": "json_path",
+      "json_path": "$.tag_name",
+      "notes": "GitHub tag_name includes 'v' prefix (e.g. 'v1.4.2'). Strip prefix for raw version. Open source under GPLv3."
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "github_release",
+    "url_or_pattern": "https://github.com/aonez/Keka/releases/download/v{version}/Keka-{version}.dmg",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/aonez/Keka/releases/latest",
+    "notes": "Release body contains markdown changelog."
+  },
+  "release_date": {
+    "method": "github_api",
+    "field": "published_at"
+  },
+  "notes": "Open source (GPLv3). Also available on Mac App Store (paid, id470158793) to support development; direct download is free. Released via GitHub Releases with predictable download URL pattern. No built-in auto-update mechanism in the free version.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "design",
+  "license": "free",
+  "skip": false
+}

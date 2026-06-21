@@ -1,0 +1,39 @@
+{
+  "name": "Cloudflare WARP",
+  "slug": "cloudflare-warp",
+  "description": "VPN and DNS (1.1.1.1)",
+  "website": "https://1.1.1.1",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "11",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle",
+    "url": "https://1111-releases.cloudflareclient.com/mac/appcast.xml",
+    "extraction": {
+      "type": "xpath",
+      "xpath": "sparkle:shortVersionString",
+      "notes": "Standard Sparkle appcast. May require proper User-Agent or session cookies to avoid 403. Beta channel at /mac/beta/appcast.xml."
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "direct",
+    "url_or_pattern": "https://1111-releases.cloudflareclient.com/mac/Cloudflare_WARP.zip",
+    "file_type": "zip",
+    "headers": {}
+  },
+  "changelog": {
+    "method": null
+  },
+  "release_date": {
+    "method": null
+  },
+  "notes": "Standard Sparkle framework for version checking. Beta feed available. Also available via Homebrew cask. Universal build. Always-latest download URL is a zip.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "vpn-security",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "com.cloudflare.1dot1dot1dot1.macos"
+}

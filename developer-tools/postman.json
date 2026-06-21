@@ -1,0 +1,40 @@
+{
+  "name": "Postman",
+  "slug": "postman",
+  "description": "API client",
+  "website": "https://www.postman.com",
+  "platform": "macOS",
+  "architecture": "separate_per_arch",
+  "min_os": "11",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle_info_plist",
+    "url": "embedded_in_app",
+    "extraction": {
+      "type": "sparkle_feed",
+      "pattern": null
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "redirect_url",
+    "url_or_pattern": "https://dl.pstmn.io/download/latest/osx_64",
+    "file_type": "zip",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "fixed_url",
+    "url": "https://www.postman.com/release-notes/postman-app/"
+  },
+  "release_date": {
+    "method": "pubDate",
+    "field": "pubDate"
+  },
+  "notes": "Sparkle feed URL embedded in Info.plist. Separate arch downloads: Intel at https://dl.pstmn.io/download/latest/darwin_64, ARM at https://dl.pstmn.io/download/latest/darwin_arm64. Latest universal redirect at ...osx_64. Electron-based. PubDate in appcast.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "developer-tools",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "com.postmanlabs.mac"
+}

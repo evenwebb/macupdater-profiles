@@ -1,0 +1,43 @@
+{
+  "name": "macFUSE",
+  "slug": "macfuse",
+  "description": "Extends macOS file system handling with third-party file systems (SSHFS, NTFS, etc.)",
+  "website": "https://macfuse.io",
+  "platform": "macOS",
+  "architecture": "universal (Intel + Apple Silicon)",
+  "min_os": "12.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/macfuse/macfuse/releases/latest",
+    "extraction": {
+      "type": "json_path",
+      "path": "tag_name",
+      "strip_regex": "^macfuse-",
+      "filter": "prerelease == false",
+      "example": "5.2.0"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "construct_from_github",
+    "pattern": "https://github.com/macfuse/macfuse/releases/download/macfuse-{VERSION}/macfuse-{VERSION}.dmg",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "github_releases",
+    "url": "https://github.com/macfuse/macfuse/releases/tag/macfuse-{VERSION}",
+    "field": "body (Markdown)"
+  },
+  "release_date": {
+    "method": "github_api",
+    "field": "published_at (ISO 8601)"
+  },
+  "notes": "Old Sparkle appcast at osxfuse.github.io/appcast.xml is dead (302 to homepage). GitHub Releases API is the canonical source. Name history: OSXFUSE \u2192 FUSE for macOS \u2192 macFUSE. Old repo osxfuse/osxfuse redirects to macfuse/macfuse. Checksum file: macfuse-{VERSION}.sha256.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "specialized",
+  "license": "free",
+  "skip": false
+}

@@ -1,0 +1,49 @@
+{
+  "name": "Typeface",
+  "url": "https://typefaceapp.com",
+  "description": "Font manager for designers",
+  "version_check": {
+    "method": "sparkle",
+    "url": "https://dcdn.typefaceapp.com/appcast.xml",
+    "version_field": "sparkle:shortVersionString",
+    "build_field": "sparkle:version",
+    "version_example": "4.3.1",
+    "build_example": "5064",
+    "headers": {}
+  },
+  "download": {
+    "url": "https://dcdn.typefaceapp.com/Typeface-{VERSION}-{BUILD}/Typeface-{VERSION}-{BUILD}.dmg",
+    "url_alt": "https://dist.typefaceapp.com/latest",
+    "url_alt_note": "302 redirect to latest versioned dmg",
+    "url_beta": "https://dist.typefaceapp.com/beta/latest",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "url": "https://typefaceapp.com/changelog",
+    "method": "web_page"
+  },
+  "release_date": {
+    "method": "sparkle_pubdate",
+    "field": "pubDate",
+    "format": "ISO 8601"
+  },
+  "sparkle": {
+    "ed_signature": "EdDSA",
+    "sparkle_version": 2
+  },
+  "beta_channel": {
+    "url": "https://dist.typefaceapp.com/beta/latest",
+    "note": "Beta channel at dist.typefaceapp.com/beta/latest"
+  },
+  "architecture": "universal",
+  "min_os": null,
+  "auto_updates": true,
+  "app_store_only": false,
+  "notes": "",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "notes-writing",
+  "license": "paid",
+  "skip": false,
+  "last_updated": "2026-06-21"
+}

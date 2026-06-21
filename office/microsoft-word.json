@@ -1,0 +1,47 @@
+{
+  "name": "Microsoft Word",
+  "slug": "microsoft-word",
+  "description": "Word processor, part of Microsoft 365 / Office for Mac suite",
+  "website": "https://microsoft.com/mac",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "13.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "scrape_version_table",
+    "url": "https://learn.microsoft.com/en-us/officeupdates/update-history-office-for-mac",
+    "extraction": {
+      "type": "regex_on_html",
+      "pattern": "Version (\\d+\\.\\d+)\\s+\\([Bb]uild\\s+(\\d+)\\)",
+      "version": "{1}",
+      "build": "{2}",
+      "note": "Shared version with all Office for Mac apps",
+      "example": "16.110"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "construct_url_or_suite",
+    "suite_installer": "https://go.microsoft.com/fwlink/?linkid=525133",
+    "word_updater_pattern": "https://res.public.onecdn.static.microsoft/mro1cdnstorage/C1297A47-86C4-4C1F-97FA-950631F94777/MacAutoupdate/Microsoft_Word_{VERSION}_Updater.pkg",
+    "file_type": "pkg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "web_scrape",
+    "url": "https://learn.microsoft.com/en-us/officeupdates/update-history-office-for-mac",
+    "note": "Same page as Excel \u2014 shared Office for Mac version history with dates, builds, and SHA-256 hashes"
+  },
+  "release_date": {
+    "method": "scrape_from_table",
+    "url": "https://learn.microsoft.com/en-us/officeupdates/update-history-office-for-mac",
+    "note": "First column of version history table is release date"
+  },
+  "notes": "Shares version check page and version number with Excel and all other Office for Mac apps. Individual updater PKGs follow predictable naming: Microsoft_Word_{VERSION}_Updater.pkg. The fwlink ID 525133 redirects to the full Office suite installer.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "office",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "com.microsoft.Word"
+}

@@ -1,0 +1,48 @@
+{
+  "name": "One Switch",
+  "url": "https://fireball.studio/oneswitch",
+  "description": "Menu bar shortcuts",
+  "version_check": {
+    "method": "sparkle",
+    "url": "Not publicly documented. Sparkle appcast URL embedded in app.",
+    "version_field": "sparkle:shortVersionString (probable)",
+    "version_example": "1.35.4",
+    "build_example": "440",
+    "note": "Version extraction method assumed to be Sparkle based on macOS app conventions, but not confirmed via public documentation",
+    "headers": {}
+  },
+  "download": {
+    "url": "https://fireball.studio/media/uploads/files/OneSwitchOfficial-{BUILD}.dmg",
+    "file_type": "dmg",
+    "note": "Direct download may return 403 without proper referrer headers",
+    "headers": {}
+  },
+  "changelog": {
+    "url": null,
+    "note": "Not publicly documented. Possibly in-app release notes only."
+  },
+  "release_date": {
+    "method": "sparkle_pubdate",
+    "note": "Assumed if Sparkle is the update mechanism"
+  },
+  "sparkle": {
+    "note": "Probable Sparkle usage but not confirmed by public documentation"
+  },
+  "architecture": "universal",
+  "min_os": "12.0",
+  "min_os_note": "Marketing page has conflicting info: both 'macOS 12+' and 'macOS 11+' stated",
+  "auto_updates": false,
+  "auto_updates_note": "Homebrew cask shows auto_updates: null",
+  "app_store_only": false,
+  "distribution": {
+    "direct": true,
+    "setapp": true
+  },
+  "bundle_id": "studio.fireball.OneSwitch",
+  "notes": "Consolidates various system toggles into a single menu bar interface. Download URL returns 403 from fireball.studio without referrer.",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "utilities",
+  "license": "free",
+  "skip": false,
+  "last_updated": "2026-06-21"
+}

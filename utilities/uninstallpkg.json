@@ -1,0 +1,48 @@
+{
+  "name": "UninstallPKG",
+  "slug": "uninstallpkg",
+  "description": "Tool for cleanly uninstalling .pkg-installed software from macOS \u2014 removes all files installed by a package",
+  "website": "https://corecode.io/uninstallpkg",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "10.14",
+  "auto_updates": false,
+  "version_check": {
+    "method": "sparkle_appcast",
+    "url": "https://www.corecode.io/uninstallpkg/uninstallpkg.xml",
+    "extraction": {
+      "type": "sparkle_xml",
+      "version_field": "sparkle:shortVersionString",
+      "example": "1.2.2"
+    },
+    "fallback_scrape": {
+      "method": "regex_on_product_page",
+      "url": "https://www.corecode.io/uninstallpkg/",
+      "pattern": "<h2>UninstallPKG (\\d+\\.\\d+\\.\\d+)</h2>"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "construct_url",
+    "versioned": "https://www.corecode.io/downloads/uninstallpkg_{VERSION}.zip",
+    "latest": "https://www.corecode.io/downloads/uninstallpkg_latest.zip",
+    "file_type": "zip",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "web_scrape",
+    "url": "https://www.corecode.io/uninstallpkg/history.html",
+    "note": "Full HTML page listing all 47 releases back to 2013, with dates and changes"
+  },
+  "release_date": {
+    "method": "web_scrape",
+    "url": "https://www.corecode.io/uninstallpkg/history.html",
+    "note": "Each version entry includes release date"
+  },
+  "notes": "Public Sparkle feed available. Product page also displays version prominently. Free app from CoreCode (same developer as MacUpdater). 'Technical support no longer available.' Last release: November 2024 (infrequent updates). Homebrew cask available.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "utilities",
+  "license": "free",
+  "skip": false
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Telegram",
+  "slug": "telegram",
+  "description": "Cloud-based mobile and desktop messaging app",
+  "website": "https://telegram.org",
+  "platform": "macOS",
+  "architecture": [
+    "universal"
+  ],
+  "min_os": "macOS 11",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle_xml",
+    "url": "https://osx.telegram.org/updates/versions.xml",
+    "extraction": {
+      "type": "xpath",
+      "xpath": "sparkle:shortVersionString (display version), sparkle:version (build number)"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "constructed_url",
+    "url_or_pattern": "https://osx.telegram.org/updates/Telegram-{shortVersion}.{buildVersion}.app.zip",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "scrape",
+    "url": "https://desktop.telegram.org/changelog"
+  },
+  "release_date": {
+    "method": "xml_field",
+    "field": "pubDate"
+  },
+  "notes": "Universal single binary. Sparkle appcast XML. Files are stored as .zip on the server but Sparkle renames them to .dmg for installation.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "messaging",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "ru.keepcoder.Telegram"
+}

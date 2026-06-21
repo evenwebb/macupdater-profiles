@@ -1,0 +1,40 @@
+{
+  "name": "BBEdit",
+  "slug": "bbedit",
+  "description": "Text editor",
+  "website": "https://www.barebones.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "14.0.1",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle_xml",
+    "url": "https://versioncheck.barebones.com/BBEdit.xml",
+    "extraction": {
+      "type": "xpath",
+      "xpath": "sparkle:shortVersionString"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "composed_url",
+    "url_or_pattern": "https://s3.amazonaws.com/BBSW-download/BBEdit_{version}.dmg",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "composed_url",
+    "url": "https://www.barebones.com/support/bbedit/notes-{major.minor}.html"
+  },
+  "release_date": {
+    "method": "pubDate",
+    "field": "pubDate"
+  },
+  "notes": "Sparkle 2. Build version via sparkle:version (e.g. \"450000058\"). Extensive version history spanning 10+ years in feed. S3-hosted downloads.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "developer-tools",
+  "license": "paid",
+  "skip": false,
+  "bundle_id": "com.barebones.bbedit"
+}

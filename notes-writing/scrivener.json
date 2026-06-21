@@ -1,0 +1,41 @@
+{
+  "name": "Scrivener",
+  "slug": "scrivener",
+  "description": "Long-form writing and project management tool for authors",
+  "website": "https://www.literatureandlatte.com",
+  "platform": "macOS",
+  "architecture": [
+    "universal"
+  ],
+  "min_os": "macOS 11",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle_appcast",
+    "url": "https://scrivener.s3.amazonaws.com/Scrivener3Appcast.xml",
+    "extraction": {
+      "type": "sparkle",
+      "pattern": "shortVersionString or version from XML enclosure"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "direct_url",
+    "url_or_pattern": "https://scrivener.s3.amazonaws.com/Scrivener.dmg",
+    "file_type": "dmg/zip",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "scrape",
+    "url": "https://www.literatureandlatte.com/scrivener/releasenotes"
+  },
+  "release_date": {
+    "method": "sparkle_xml",
+    "field": "pubDate"
+  },
+  "notes": "Sparkle appcast hosted on S3. S3 returns 403 without a referrer header \u2014 must set Referer header on requests. Also available on Mac App Store.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "notes-writing",
+  "license": "paid",
+  "skip": false
+}

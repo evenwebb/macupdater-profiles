@@ -1,0 +1,48 @@
+{
+  "name": "Roblox",
+  "url": "https://www.roblox.com",
+  "description": "Gaming platform",
+  "version_check": {
+    "method": "other",
+    "url": "https://clientsettingscdn.roblox.com/v2/client-version/MacPlayer",
+    "extraction": "Custom JSON endpoint",
+    "version_field": ".version",
+    "build_field": ".clientVersionUpload",
+    "version_example": "0.726.0.7261140",
+    "build_example": "version-d9748b94acff4b5d",
+    "headers": {}
+  },
+  "download": {
+    "url_arm64": "https://setup.rbxcdn.com/mac/arm64/version-{CLIENTVERSIONUPLOAD}-RobloxPlayer.zip",
+    "url_x86_64": "https://setup.rbxcdn.com/mac/version-{CLIENTVERSIONUPLOAD}-RobloxPlayer.zip",
+    "file_type": "zip",
+    "note": "Separate builds for arm64 (Apple Silicon) and x86_64 (Intel)",
+    "headers": {}
+  },
+  "changelog": {
+    "url": "https://devforum.roblox.com/c/updates/",
+    "method": "web_page",
+    "note": "Developer release notes forum"
+  },
+  "release_date": {
+    "method": "http_last_modified",
+    "field": "last-modified",
+    "source": "CDN artifact upload date"
+  },
+  "sparkle": null,
+  "architecture": "per_arch",
+  "architectures": [
+    "arm64",
+    "x86_64"
+  ],
+  "min_os": "10.15",
+  "auto_updates": true,
+  "auto_update_mechanism": "Custom built-in updater polling clientsettingscdn.roblox.com, not Sparkle",
+  "app_store_only": false,
+  "notes": "Uses a custom JSON version endpoint on clientsettingscdn.roblox.com. The clientVersionUpload hash is required to construct CDN download paths. App auto-updates on launch.",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "gaming",
+  "license": "free",
+  "skip": false,
+  "last_updated": "2026-06-21"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Skim",
+  "slug": "skim",
+  "description": "Skim is a free, open source PDF reader and note-taker for macOS. It supports reading and annotating scientific papers in PDF format, but is also suitable for viewing any PDF file.",
+  "website": "https://skim-app.sourceforge.io",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "10.10",
+  "auto_updates": true,
+  "version_check": {
+    "method": "rss",
+    "url": "https://sourceforge.net/projects/skim-app/rss?path=/Skim",
+    "extraction": {
+      "type": "regex",
+      "pattern": "Skim-([\\d.]+)",
+      "field": "title"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "pattern",
+    "url_or_pattern": "https://sourceforge.net/projects/skim-app/files/Skim/Skim-{version}/Skim-{version}.dmg/download",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "web",
+    "url": "https://skim-app.sourceforge.io/relnotes.html"
+  },
+  "release_date": {
+    "method": "rss_pubDate",
+    "field": "pubDate",
+    "source": "https://sourceforge.net/projects/skim-app/rss?path=/Skim"
+  },
+  "notes": "Open source (BSD-style license). Uses Sparkle for in-app updates (SUFeedURL in app bundle), but the Sparkle feed URL is not publicly documented \u2014 SourceForge RSS is the reliable public endpoint. UNCERTAINTY: The regex pattern for extracting version from RSS item titles may need adjustment if SourceForge changes their naming convention.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "rss-reading",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "net.sourceforge.skim-app.skim"
+}

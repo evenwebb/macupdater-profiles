@@ -1,0 +1,43 @@
+{
+  "name": "Itsycal",
+  "slug": "itsycal",
+  "description": "Itsycal is a tiny menu bar calendar for macOS. It displays a monthly calendar with event dots, integrates with the Mac calendar, and offers date/time formatting options.",
+  "website": "https://www.mowglii.com/itsycal",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "11",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle",
+    "url": "https://itsycal.s3.amazonaws.com/itsycal.xml",
+    "extraction": {
+      "type": "xpath",
+      "xpath": "sparkle:shortVersionString"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "pattern",
+    "url_or_pattern": "https://s3.amazonaws.com/itsycal/Itsycal-{version}.zip",
+    "latest_url": "https://s3.amazonaws.com/itsycal/Itsycal.zip",
+    "file_type": "zip",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "web",
+    "url": "https://www.mowglii.com/itsycal/versionhistory.html",
+    "alt_url": "https://itsycal.s3.amazonaws.com/releasenotes.html"
+  },
+  "release_date": {
+    "method": "sparkle_pubDate",
+    "field": "pubDate",
+    "source": "https://itsycal.s3.amazonaws.com/itsycal.xml"
+  },
+  "notes": "Uses Sparkle 2 with EdDSA (ed25519) signature verification. The direct S3 download URLs work reliably. The latest zip (Itsycal.zip) always points to the current version; the versioned zip (Itsycal-{version}.zip) is available for historical releases.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "utilities",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "com.mowglii.ItsycalApp"
+}

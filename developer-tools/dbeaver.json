@@ -1,0 +1,46 @@
+{
+  "name": "DBeaver",
+  "slug": "dbeaver",
+  "description": "DBeaver is a free, open source universal database tool and SQL client. Supports all popular databases (MySQL, PostgreSQL, SQLite, Oracle, SQL Server, and many more) through a unified interface.",
+  "website": "https://dbeaver.io",
+  "platform": "macOS",
+  "architecture": "separate",
+  "arch_note": "Separate downloads for Apple Silicon (aarch64) and Intel (x86_64)",
+  "min_os": "10.14",
+  "auto_updates": false,
+  "version_check": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/dbeaver/dbeaver/releases/latest",
+    "extraction": {
+      "type": "json_path",
+      "json_path": "tag_name",
+      "note": "tag_name has no 'v' prefix, e.g. '26.1.1'"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "pattern_arch_specific",
+    "url_or_pattern": {
+      "arm64": "https://dbeaver.io/files/dbeaver-ce-latest-macos-aarch64.dmg",
+      "x86_64": "https://dbeaver.io/files/dbeaver-ce-latest-macos-x86_64.dmg"
+    },
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "github_releases",
+    "url": "https://github.com/dbeaver/dbeaver/releases"
+  },
+  "release_date": {
+    "method": "github_api",
+    "field": "published_at",
+    "source": "https://api.github.com/repos/dbeaver/dbeaver/releases/latest"
+  },
+  "notes": "Open source (Apache 2.0). Java-based (Eclipse RCP platform). No Sparkle \u2014 uses Eclipse P2 update mechanism for in-app updates. The download URL pattern above points to the 'latest' redirect; for pinned/archived versions, use GitHub release assets. Checkers must handle separate architecture-specific downloads. UNCERTAINTY: The 'latest' redirect URLs may change. For robust version pinning, use the GitHub release assets API instead.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "developer-tools",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "org.jkiss.dbeaver"
+}

@@ -1,0 +1,39 @@
+{
+  "name": "Epic Games Launcher",
+  "slug": "epic-games-launcher",
+  "description": "Game platform",
+  "website": "https://www.epicgames.com",
+  "platform": "macOS",
+  "architecture": "intel",
+  "min_os": "13",
+  "auto_updates": true,
+  "version_check": {
+    "method": "redirect_trace",
+    "url": "https://launcher-public-service-prod06.ol.epicgames.com/launcher/api/installer/download/EpicGamesLauncher.dmg",
+    "extraction": {
+      "type": "pattern",
+      "pattern": "EpicInstaller-(\\d+\\.\\d+\\.\\d+)\\.dmg",
+      "notes": "Inspect Location header from redirect to extract version from filename, e.g. 'EpicInstaller-15.6.1.dmg'."
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "pattern",
+    "url_or_pattern": "https://epicgames-download1.akamaized.net/Builds/UnrealEngineLauncher/Installers/Mac/EpicInstaller-{version}.dmg",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": null
+  },
+  "release_date": {
+    "method": null
+  },
+  "notes": "Intel only (requires Rosetta 2 on Apple Silicon). Self-updating. Version obtained by following CDN redirect and parsing Location header. Epic-hosted CDN hostname may change over time. macOS 13 or later.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "gaming",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "com.epicgames.EpicGamesLauncher"
+}

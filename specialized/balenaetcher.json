@@ -1,0 +1,41 @@
+{
+  "name": "BalenaEtcher",
+  "slug": "balenaetcher",
+  "description": "Bootable USB creator",
+  "website": "https://etcher.balena.io",
+  "platform": "macOS",
+  "architecture": "arm64",
+  "min_os": "11",
+  "auto_updates": false,
+  "version_check": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/balena-io/etcher/releases/latest",
+    "extraction": {
+      "type": "json_path",
+      "json_path": "tag_name",
+      "pattern": "^v?(.+)$",
+      "notes": "Strip leading 'v' from tag_name, e.g. 'v2.1.6' \u2192 '2.1.6'."
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "pattern",
+    "url_or_pattern": "https://github.com/balena-io/etcher/releases/download/v{version}/balenaEtcher-{version}-arm64.dmg",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "github_release",
+    "url": "https://api.github.com/repos/balena-io/etcher/releases/latest"
+  },
+  "release_date": {
+    "method": "json_field",
+    "field": "published_at"
+  },
+  "notes": "Open source (Apache-2.0). Separate architecture builds (arm64 and x64) \u2014 no universal build. GitHub releases API for version, download, and changelog. Changelog from GitHub release body. Default download is arm64 DMG.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "specialized",
+  "license": "free",
+  "skip": false
+}

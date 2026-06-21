@@ -1,0 +1,39 @@
+{
+  "name": "NordVPN",
+  "slug": "nordvpn",
+  "description": "VPN service",
+  "website": "https://www.nordvpn.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "12",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle",
+    "url": "https://downloads.nordcdn.com/apps/macos/generic/NordVPN-OpenVPN/latest/update_pkg.xml",
+    "extraction": {
+      "type": "xpath",
+      "xpath": "sparkle:shortVersionString",
+      "notes": "Standard Sparkle appcast. Version string e.g. '10.4.0'."
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "pattern",
+    "url_or_pattern": "https://downloads.nordcdn.com/apps/macos/generic/NordVPN-OpenVPN/{version}/NordVPN.pkg",
+    "file_type": "pkg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": null
+  },
+  "release_date": {
+    "method": null
+  },
+  "notes": "Sparkle framework confirmed for update checking. Download is a PKG installer (not DMG). Universal build. macOS 12 or later.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "vpn-security",
+  "license": "paid",
+  "skip": false,
+  "bundle_id": "com.nordvpn.macos"
+}

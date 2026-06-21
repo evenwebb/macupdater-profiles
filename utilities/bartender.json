@@ -1,0 +1,43 @@
+{
+  "name": "Bartender",
+  "slug": "bartender",
+  "description": "Menu bar manager \u2014 hide, rearrange, and organize menu bar icons",
+  "website": "https://www.macbartender.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "macOS 13.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle_appcast",
+    "url": "https://www.macbartender.com/Bartender5/appcast.xml",
+    "extraction": {
+      "type": "xpath",
+      "xpath": "//item/enclosure/@*[local-name()='shortVersionString' or local-name()='sparkle:shortVersionString']",
+      "pattern": null,
+      "notes": "Likely Sparkle feed URL for Bartender 5. The exact URL may differ; verify by checking SUFeedURL in app bundle's Info.plist. Older versions (Bartender 4) may use different feed path."
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "sparkle_enclosure",
+    "url_or_pattern": "https://www.macbartender.com/Bartender5/appcast.xml",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "sparkle_appcast",
+    "url": "https://www.macbartender.com/Bartender5/appcast.xml",
+    "notes": "Release notes in <sparkle:releaseNotesLink> or <description> within appcast item."
+  },
+  "release_date": {
+    "method": "sparkle_appcast",
+    "field": "pubDate"
+  },
+  "notes": "Paid app (Bartender 5 is the current version). Uses Sparkle for auto-updates. Also available via Mac App Store. Note: Bartender changed ownership in 2024 and underwent security scrutiny \u2014 users should verify the authenticity of updates. The appcast URL pattern assumes Bartender5 directory; older versions (Bartender 4, Bartender 3) used different paths.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "utilities",
+  "license": "paid",
+  "skip": false,
+  "bundle_id": "com.surteesstudios.Bartender"
+}

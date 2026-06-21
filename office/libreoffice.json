@@ -1,0 +1,45 @@
+{
+  "name": "LibreOffice",
+  "slug": "libreoffice",
+  "description": "Free and open-source office suite (word processor, spreadsheet, presentations, etc.)",
+  "website": "https://libreoffice.org",
+  "platform": "macOS",
+  "architecture": "separate (Intel + Apple Silicon)",
+  "min_os": "11.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "scrape_directory_listing",
+    "url": "https://download.documentfoundation.org/libreoffice/stable/",
+    "extraction": {
+      "type": "regex_on_directory",
+      "pattern": "\\d+\\.\\d+\\.\\d+",
+      "sort": "semver descending",
+      "example": "25.2.4"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "construct_url",
+    "intel_pattern": "https://download.documentfoundation.org/libreoffice/stable/{VERSION}/mac/x86_64/LibreOffice_{VERSION}_MacOS_x86-64.dmg",
+    "arm64_pattern": "https://download.documentfoundation.org/libreoffice/stable/{VERSION}/mac/aarch64/LibreOffice_{VERSION}_MacOS_aarch64.dmg",
+    "file_type": "dmg",
+    "note": "KEY QUIRK: Intel path uses 'x86_64' in directory but 'x86-64' (hyphen) in filename. ARM uses 'aarch64' consistently.",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "construct_url",
+    "pattern": "https://wiki.documentfoundation.org/Special:MyLanguage/ReleaseNotes/{MAJOR}.{MINOR}"
+  },
+  "release_date": {
+    "method": "directory_listing_last_modified",
+    "url": "https://download.documentfoundation.org/libreoffice/stable/",
+    "note": "Last-Modified column in Apache directory listing. Also at libreoffice.org/release-notes/"
+  },
+  "notes": "Two active release trains \u2014 take highest semver. No version.txt or latest.txt file available. GPG signatures (.asc) alongside each DMG. update.libreoffice.org/check.php is gated to LibreOffice User-Agent strings only. Intel directory vs filename uses underscore vs hyphen for x86.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "office",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "org.libreoffice.script"
+}

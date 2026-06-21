@@ -1,0 +1,42 @@
+{
+  "name": "Apache OpenOffice",
+  "slug": "openoffice",
+  "description": "Free and open-source office productivity suite",
+  "website": "https://openoffice.org",
+  "platform": "macOS",
+  "architecture": "x86_64 only (no native arm64)",
+  "min_os": "10.13",
+  "auto_updates": false,
+  "version_check": {
+    "method": "sourceforge_json_api",
+    "url": "https://sourceforge.net/projects/openofficeorg.mirror/best_release.json",
+    "extraction": {
+      "type": "json_path",
+      "path": "platform_releases.mac.filename",
+      "regex": "(\\d+\\.\\d+\\.\\d+)",
+      "example": "4.1.15"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "construct_url",
+    "pattern": "https://sourceforge.net/projects/openofficeorg.mirror/files/{VERSION}/binaries/en-US/Apache_OpenOffice_{VERSION}_MacOS_x86-64_install_en-US.dmg/download",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "construct_url",
+    "pattern": "https://cwiki.apache.org/confluence/display/OOOUSERS/AOO+{VERSION}+Release+Notes"
+  },
+  "release_date": {
+    "method": "sourceforge_json",
+    "field": "platform_releases.mac.date"
+  },
+  "notes": "No Sparkle. Built-in 'Check for Updates' is broken (bouncer service dead). x86-64 only, no native Apple Silicon. SourceForge 'latest' redirect points to OOo 3.3.0 from 2012 \u2014 do NOT use it. Very slow release cadence (~1 per year).",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "office",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "org.openoffice.script"
+}

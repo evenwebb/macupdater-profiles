@@ -1,0 +1,41 @@
+{
+  "name": "Logic Pro",
+  "slug": "logic-pro",
+  "description": "Digital audio workstation",
+  "website": "https://www.apple.com/logic-pro",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "10.7",
+  "auto_updates": false,
+  "version_check": {
+    "method": "itunes_api",
+    "url": "https://itunes.apple.com/lookup?id=634148309",
+    "extraction": {
+      "type": "json_path",
+      "json_path": "results[0].version",
+      "notes": "Apple iTunes Lookup API. App ID 634148309. Returns current App Store version."
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "macappstore",
+    "url_or_pattern": "macappstores://apps.apple.com/app/logic-pro/id634148309",
+    "file_type": null,
+    "headers": {}
+  },
+  "changelog": {
+    "method": "webpage",
+    "url": "https://support.apple.com/en-us/HT203184"
+  },
+  "release_date": {
+    "method": "json_field",
+    "field": "currentVersionReleaseDate"
+  },
+  "notes": "Mac App Store ONLY. No direct download. Universal native since macOS 10.7. Version and release date available via iTunes Lookup API. Apple proprietary \u2014 no Sparkle, no public JSON/XML feeds.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "media",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "com.apple.logic10"
+}

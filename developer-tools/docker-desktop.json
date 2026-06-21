@@ -1,0 +1,40 @@
+{
+  "name": "Docker Desktop",
+  "slug": "docker-desktop",
+  "description": "Container platform",
+  "website": "https://docker.com",
+  "platform": "macOS",
+  "architecture": "separate_per_arch",
+  "min_os": "14.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle_xml",
+    "url": "https://desktop.docker.com/mac/main/arm64/appcast.xml",
+    "extraction": {
+      "type": "xpath",
+      "xpath": "sparkle:shortVersionString"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "composed_url",
+    "url_or_pattern": "https://desktop.docker.com/mac/main/arm64/{build}/Docker.dmg",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "fixed_url",
+    "url": "https://docs.docker.com/desktop/release-notes/"
+  },
+  "release_date": {
+    "method": "pubDate_iso8601",
+    "field": "pubDate"
+  },
+  "notes": "Separate per-arch appcasts: arm64 (Apple Silicon) at .../arm64/appcast.xml, amd64 for Intel at .../amd64/appcast.xml. Build version via sparkle:version (e.g. \"229452\"). Phased rollout via visibility element. PubDate format e.g. \"2026-06-15T09:47:21Z\".",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "developer-tools",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "com.docker.docker"
+}

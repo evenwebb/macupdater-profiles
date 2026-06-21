@@ -1,0 +1,45 @@
+{
+  "name": "Screens 5",
+  "url": "https://edovia.com",
+  "description": "VNC/remote desktop client",
+  "version_check": {
+    "method": "app_store",
+    "url": "https://itunes.apple.com/lookup?id=1663047912",
+    "field": "results[0].version",
+    "version_example": "5.8.9",
+    "headers": {}
+  },
+  "download": {
+    "url": "macappstores://apps.apple.com/app/id1663047912",
+    "file_type": "app_store",
+    "note": "Mac App Store EXCLUSIVE \u2014 no standalone download available",
+    "headers": {}
+  },
+  "changelog": {
+    "url": "https://help.edovia.com/en/screens-5/faq/release-notes",
+    "method": "web_page"
+  },
+  "release_date": {
+    "method": "app_store",
+    "field": "results[0].currentVersionReleaseDate",
+    "format": "ISO 8601"
+  },
+  "sparkle": null,
+  "architecture": "universal",
+  "min_os": null,
+  "auto_updates": false,
+  "app_store_only": true,
+  "companion_apps": [
+    {
+      "name": "Screens Connect",
+      "update_method": "sparkle",
+      "note": "Companion utility has Sparkle-based updates, but Screens 5 itself does not"
+    }
+  ],
+  "notes": "App Store only. Companion utility Screens Connect has Sparkle but Screens 5 does not.",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "remote-desktop",
+  "license": "free",
+  "skip": false,
+  "last_updated": "2026-06-21"
+}

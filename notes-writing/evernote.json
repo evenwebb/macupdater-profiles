@@ -1,0 +1,46 @@
+{
+  "name": "Evernote",
+  "slug": "evernote",
+  "description": "Note-taking and task management application",
+  "website": "https://evernote.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "11.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle_appcast",
+    "url": "https://update.evernote.com/public/ENMacSMD/EvernoteMacUpdate.xml",
+    "extraction": {
+      "type": "sparkle_xml",
+      "version_field": "sparkle:shortVersionString",
+      "build_field": "sparkle:version",
+      "example": "10.107.3"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "extract_from_sparkle",
+    "xpath": "/rss/channel/item[1]/enclosure/@url",
+    "fallback_direct": "https://mac.desktop.evernote.com/builds/Evernote-latest.dmg",
+    "file_type": "dmg",
+    "note": "Sparkle enclosure URLs point to cdn1.evernote.com with .zip; fallback URL always serves latest .dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "web_scrape",
+    "url": "https://evernote.com/release-notes",
+    "note": "Public page with versioned release notes for all platforms"
+  },
+  "release_date": {
+    "method": "sparkle_pub_date",
+    "field": "pubDate in appcast <item>",
+    "note": "pubDate can be stale \u2014 prefer shortVersionString to determine actual latest"
+  },
+  "notes": "Two distribution channels: direct download (Sparkle feed) and Mac App Store. Sparkle feed is the canonical source for direct-download versions.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "notes-writing",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "com.evernote.Evernote"
+}

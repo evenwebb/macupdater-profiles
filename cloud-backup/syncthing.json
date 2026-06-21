@@ -1,0 +1,41 @@
+{
+  "name": "Syncthing",
+  "slug": "syncthing",
+  "description": "File sync",
+  "website": "https://syncthing.net",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "11",
+  "auto_updates": false,
+  "version_check": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/syncthing/syncthing/releases/latest",
+    "extraction": {
+      "type": "json_path",
+      "json_path": "tag_name",
+      "pattern": "^v?(.+)$",
+      "notes": "Strip leading 'v' from tag_name, e.g. 'v2.1.1' \u2192 '2.1.1'."
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "pattern",
+    "url_or_pattern": "https://github.com/syncthing/syncthing/releases/download/v{version}/syncthing-macos-universal-v{version}.zip",
+    "file_type": "zip",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "github_release",
+    "url": "https://api.github.com/repos/syncthing/syncthing/releases/latest"
+  },
+  "release_date": {
+    "method": "json_field",
+    "field": "published_at"
+  },
+  "notes": "Open source (MPL-2.0). Universal build available. Separate AMD64 and ARM64 builds also available. GitHub releases API for version, download, and changelog. Changelog from GitHub release body. macOS 11 or later.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "cloud-backup",
+  "license": "free",
+  "skip": false
+}

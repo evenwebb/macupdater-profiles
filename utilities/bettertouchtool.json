@@ -1,0 +1,43 @@
+{
+  "name": "BetterTouchTool",
+  "slug": "bettertouchtool",
+  "description": "Customize input devices \u2014 trackpad, mouse, keyboard, Touch Bar, and more",
+  "website": "https://folivora.ai",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "macOS 11.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle_appcast",
+    "url": "https://folivora.ai/releases/appcast.xml",
+    "extraction": {
+      "type": "xpath",
+      "xpath": "//item/enclosure/@*[local-name()='shortVersionString' or local-name()='sparkle:shortVersionString']",
+      "pattern": null,
+      "notes": "Standard Sparkle appcast feed hosted on folivora.ai. Also available via legacy domain: https://bettertouchtool.net/releases/appcast.xml (may redirect to folivora.ai)."
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "sparkle_enclosure",
+    "url_or_pattern": "https://folivora.ai/releases/btt_{version}.zip",
+    "file_type": "zip",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "sparkle_appcast",
+    "url": "https://folivora.ai/releases/appcast.xml",
+    "notes": "Release notes in <sparkle:releaseNotesLink> or <description> within appcast item."
+  },
+  "release_date": {
+    "method": "sparkle_appcast",
+    "field": "pubDate"
+  },
+  "notes": "Paid app (one-time purchase with free trial). Very actively maintained by Andreas Hegenberg. Uses standard Sparkle appcast. Download filename pattern: 'btt_{version}.zip' with underscore separator. The download URL in the Sparkle enclosure may be the authoritative source; the pattern here is the most likely format.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "utilities",
+  "license": "paid",
+  "skip": false,
+  "bundle_id": "com.hegenberg.BetterTouchTool"
+}

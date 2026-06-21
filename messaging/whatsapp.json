@@ -1,0 +1,42 @@
+{
+  "name": "WhatsApp",
+  "slug": "whatsapp",
+  "description": "Cross-platform encrypted messaging app",
+  "website": "https://whatsapp.com",
+  "platform": "macOS",
+  "architecture": [
+    "universal"
+  ],
+  "min_os": "macOS 11",
+  "auto_updates": false,
+  "version_check": {
+    "method": "custom_redirect",
+    "url": "https://web.whatsapp.com/desktop/mac_native/release/?configuration=Release",
+    "extraction": {
+      "type": "http_redirect",
+      "pattern": "Extract version from Location header filename pattern WhatsApp-2.{version}.dmg"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "dynamic_cdn_url",
+    "url_or_pattern": "Dynamic CDN URL (scontent.xx.fbcdn.net) \u2014 time-limited, signed",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": null,
+    "url": null
+  },
+  "release_date": {
+    "method": null,
+    "field": "not exposed"
+  },
+  "notes": "Universal Catalyst app. No Sparkle, no Electron updater. CDN download tokens expire quickly \u2014 redirect URL must be used immediately. No public changelog or release date endpoint.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "messaging",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "com.facebook.WhatsApp"
+}

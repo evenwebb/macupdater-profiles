@@ -1,0 +1,51 @@
+{
+  "name": "Permute",
+  "url": "https://software.charliemonroe.net/permute/",
+  "description": "Media converter",
+  "version_check": {
+    "method": "sparkle",
+    "url": "appcast URL embedded in app bundle (likely https://software.charliemonroe.net/permute/appcast.xml)",
+    "version_field": "sparkle:shortVersionString",
+    "version_example": "4.0.4",
+    "build_example": "4129",
+    "headers": {}
+  },
+  "download": {
+    "url_v4": "https://software.charliemonroe.net/trial/permute/v4/Permute_4_{BUILD}.dmg",
+    "url_v3_legacy": "https://software.charliemonroe.net/trial/permute/v3/Permute_3_{BUILD}.dmg",
+    "url_v3_note": "Legacy branch for macOS 11-14 users",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "url": "https://software.charliemonroe.net/trial/permute/v4/rnotes.html",
+    "method": "web_page"
+  },
+  "release_date": {
+    "method": "sparkle_pubdate",
+    "field": "pubDate"
+  },
+  "sparkle": {
+    "note": "Appcast URL embedded in app bundle, not publicly browsable"
+  },
+  "architecture": "arm64",
+  "architecture_v4": "arm64 (Apple Silicon required)",
+  "architecture_v3": "universal (x86_64 + arm64)",
+  "min_os": "14.0",
+  "min_os_v4": "14.0 (Sonoma)",
+  "min_os_v3": "11.0 (Big Sur)",
+  "auto_updates": true,
+  "app_store_only": false,
+  "distribution": {
+    "direct": true,
+    "setapp": true
+  },
+  "bundle_id": "com.charliemonroe.Permute-4",
+  "bundle_id_v3": "com.charliemonroe.Permute-3",
+  "notes": "Permute v4 (released May 2026) is a major redesign requiring Apple Silicon and macOS 14+. Intel Macs receive v3.14.8 as the final legacy release. Paid license with upgrade pricing.",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "utilities",
+  "license": "paid",
+  "skip": false,
+  "last_updated": "2026-06-21"
+}

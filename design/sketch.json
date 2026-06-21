@@ -1,0 +1,43 @@
+{
+  "name": "Sketch",
+  "slug": "sketch",
+  "description": "Vector design tool for UI/UX designers \u2014 symbols, shared styles, prototyping",
+  "website": "https://www.sketch.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "macOS 12.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle_appcast",
+    "url": "https://update.sketch.com/appcast.xml",
+    "extraction": {
+      "type": "xpath",
+      "xpath": "//item/enclosure/@*[local-name()='shortVersionString' or local-name()='sparkle:shortVersionString']",
+      "pattern": null,
+      "notes": "Primary feed URL from SUFeedURL in app bundle. Also available on Mac App Store (id402476602) via iTunes API (https://itunes.apple.com/lookup?id=402476602)."
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "sparkle_enclosure",
+    "url_or_pattern": "https://update.sketch.com/appcast.xml",
+    "file_type": "zip",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "sparkle_appcast",
+    "url": "https://update.sketch.com/appcast.xml",
+    "notes": "Release notes in <description> or <sparkle:releaseNotesLink> elements within appcast item."
+  },
+  "release_date": {
+    "method": "sparkle_appcast",
+    "field": "pubDate"
+  },
+  "notes": "Mac App Store + direct download. Website download uses Sparkle auto-updater. Subscription model (paid). Appcast feed at update.sketch.com may require user agent header. Download URL obtained from Sparkle enclosure element in appcast.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "design",
+  "license": "paid",
+  "skip": false,
+  "bundle_id": "com.bohemiancoding.sketch3"
+}

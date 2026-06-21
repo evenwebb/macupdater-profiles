@@ -1,0 +1,43 @@
+{
+  "name": "Google Chrome",
+  "slug": "google-chrome",
+  "description": "Google Chrome web browser",
+  "website": "https://google.com/chrome",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "11.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "json_api",
+    "url": "https://versionhistory.googleapis.com/v1/chrome/platforms/mac/channels/stable/versions?page_size=1",
+    "extraction": {
+      "type": "json_path",
+      "path": "versions[0].version",
+      "example": "150.0.7871.24"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "static_url",
+    "url": "https://dl.google.com/chrome/mac/universal/stable/GGRO/googlechrome.dmg",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "web_scrape",
+    "url": "https://chromereleases.googleblog.com/",
+    "note": "Google Chrome Releases blog with detailed version release notes. Also: https://chromium.googlesource.com/chromium/src/+log for raw commit history."
+  },
+  "release_date": {
+    "method": "json_api_field",
+    "url": "https://versionhistory.googleapis.com/v1/chrome/platforms/mac/channels/stable/versions?page_size=1",
+    "field": "versions[0].time (ISO 8601 timestamp)"
+  },
+  "notes": "Official Google API, no API key required. The omahaproxy endpoint is defunct. DMG URL is static and always gives the latest stable universal build. Version history API also provides fractional rollout info.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "browsers",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "com.google.Chrome"
+}

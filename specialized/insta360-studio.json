@@ -1,0 +1,45 @@
+{
+  "name": "Insta360 Studio",
+  "slug": "insta360-studio",
+  "description": "Desktop editing software for Insta360 camera footage",
+  "website": "https://insta360.com/download/insta360-studio",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "12.0",
+  "auto_updates": false,
+  "version_check": {
+    "method": "json_api",
+    "url": "https://openapi.insta360.com/app/appDownload/getGroupApp?group=insta360-go2&X-Language=en-us",
+    "extraction": {
+      "type": "json_path_filtered",
+      "filter": "$.data.apps[?(@.app_id == 38)]",
+      "items_path": "items[?(@.platform == 'mac')]",
+      "sort_by": "version",
+      "version_field": "version",
+      "example": "5.9.10"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "extract_from_json",
+    "extraction_path": "channels[?(@.channel == 'official')].download_url",
+    "file_type": "zip",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "extract_from_json",
+    "url": "same as version_check URL",
+    "field": "release_note in items JSON (HTML formatted changelog per version)"
+  },
+  "release_date": {
+    "method": "extract_from_json",
+    "url": "same as version_check URL",
+    "field": "publish_date in items JSON"
+  },
+  "notes": "Main download page is Cloudflare-protected (403 to automated fetchers). The openapi.insta360.com API works fine programmatically with no protection. app_id=38 identifies Insta360 Studio within the legacy 'insta360-go2' group endpoint. Since v5.7.0 downloads use wassets.insta360.com with .zip format; older versions used file.insta360.com with .pkg.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "specialized",
+  "license": "free",
+  "skip": false
+}

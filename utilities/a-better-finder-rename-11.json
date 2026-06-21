@@ -1,0 +1,43 @@
+{
+  "name": "A Better Finder Rename 11",
+  "slug": "a-better-finder-rename-11",
+  "description": "Sophisticated batch file renamer for macOS",
+  "website": "https://publicspace.net/ABetterFinderRename/",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "11.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle_appcast",
+    "url": "https://www.publicspace.net/app/signed_abfr11.xml",
+    "extraction": {
+      "type": "sparkle_xml",
+      "version_field": "sparkle:version on enclosure",
+      "xpath": "/rss/channel/item[1]/enclosure/@sparkle:version",
+      "note": "No sparkle:shortVersionString \u2014 only sparkle:version attribute on enclosure",
+      "example": "11.62"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "construct_url",
+    "dmg_pattern": "https://www.publicspace.net/download/ABFRX11_{VERSION}.dmg",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "sparkle_release_notes",
+    "url": "https://www.publicspace.net/app/signed_abfr11.html",
+    "fallback": "https://publicspace.net/ABetterFinderRename/version.html"
+  },
+  "release_date": {
+    "method": "sparkle_pub_date",
+    "field": "pubDate in appcast <item> (RFC 822 format)"
+  },
+  "notes": "Identical pattern to ABFA7. sparkle:version attribute on enclosure (not shortVersionString). CDN: CloudFront. DMG download uses underscore version in filename (ABFRX11_{version}.dmg). Also has a generic latest at ABFRX.dmg.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "utilities",
+  "license": "paid",
+  "skip": false
+}

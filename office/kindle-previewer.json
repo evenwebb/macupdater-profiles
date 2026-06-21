@@ -1,0 +1,44 @@
+{
+  "name": "Kindle Previewer",
+  "slug": "kindle-previewer",
+  "description": "Kindle Previewer is a free desktop application from Amazon that enables authors, publishers, and eBook creators to preview how their eBooks will appear on Kindle devices and apps. Supports EPUB, HTML, DOCX, and other formats.",
+  "website": "https://www.amazon.com/gp/feature.html?ie=UTF8&docId=1000765261",
+  "platform": "macOS",
+  "architecture": "universal",
+  "arch_note": "Universal via Rosetta 2; likely x86_64 binary",
+  "min_os": "11",
+  "auto_updates": false,
+  "version_check": {
+    "method": "scrape",
+    "url": "https://www.amazon.com/gp/feature.html?ie=UTF8&docId=1000765261",
+    "extraction": {
+      "type": "regex",
+      "pattern": "UNCERTAIN",
+      "note": "UNCERTAINTY: No structured version endpoint exists. Attempt to scrape the download page for a version string (e.g., 'Kindle Previewer X.Y.Z'). Amazon may block automated HTTP requests (bot detection). Version may also be available in the filename of the downloaded package or its Info.plist."
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "scrape",
+    "url_or_pattern": "https://www.amazon.com/gp/feature.html?ie=UTF8&docId=1000765261",
+    "file_type": "pkg_or_dmg",
+    "file_type_note": "UNCERTAINTY: File type varies by release \u2014 historically pkg, but some versions ship as dmg. Approximately 760 MB download size.",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "web",
+    "url": "https://kdp.amazon.com/en_US/help/topic/G202154130"
+  },
+  "release_date": {
+    "method": "unknown",
+    "field": null,
+    "source": null,
+    "note": "UNCERTAINTY: No machine-readable release date source. Amazon does not provide a feed, API, or structured version page. The changelog page may list release dates for each version. The only reliable method is to manually check the download page and changelog, or monitor for HTTP Last-Modified changes on the download URL."
+  },
+  "notes": "Free tool from Amazon. No Sparkle, no auto-update mechanism. Amazon actively blocks automated HTTP fetching (bot detection, CAPTCHAs). Any automated checker attempting to scrape the download page will likely fail without browser automation or custom headers. UNCERTAINTIES: Version detection is highly unreliable \u2014 requires scraping an Amazon page that may block bots. File type (pkg vs dmg) varies per release. Download URL may change or be behind signed redirects. This is one of the hardest apps to automate update checking for.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "office",
+  "license": "free",
+  "skip": false
+}

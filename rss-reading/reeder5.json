@@ -1,0 +1,41 @@
+{
+  "name": "Reeder 5",
+  "slug": "reeder5",
+  "description": "Reeder 5 is a polished RSS reader and read-later client for macOS. It supports iCloud syncing, Feedbin, Feedly, Instapaper, Pocket, and more, with a focus on a clean reading experience and Bionic Reading mode.",
+  "website": "https://reederapp.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "14",
+  "auto_updates": false,
+  "version_check": {
+    "method": "itunes_api",
+    "url": "https://itunes.apple.com/lookup?id=6475002485",
+    "extraction": {
+      "type": "json_path",
+      "json_path": "results[0].version"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "app_store_only",
+    "url_or_pattern": null,
+    "file_type": null,
+    "headers": {}
+  },
+  "changelog": {
+    "method": "none_public",
+    "url": null,
+    "note": "No publicly accessible changelog page. Release notes are only visible in the App Store listing under 'What's New'. The developer does not maintain a separate changelog or release notes URL."
+  },
+  "release_date": {
+    "method": "itunes_date",
+    "field": "currentVersionReleaseDate",
+    "source": "https://itunes.apple.com/lookup?id=6475002485"
+  },
+  "notes": "Paid app. Mac App Store only \u2014 no direct download, no Sparkle. App Store ID 6475002485 is for Reeder 5 specifically (the current major version). UNCERTAINTIES: iTunes API longevity concern \u2014 Apple may deprecate this endpoint. If Reeder 6 is released, it will have a different App Store ID. The lack of a public changelog means understanding what changed in each version requires reading the App Store listing or relying on third-party sources.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "rss-reading",
+  "license": "free",
+  "skip": false
+}

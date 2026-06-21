@@ -1,0 +1,41 @@
+{
+  "name": "AirPort Utility",
+  "slug": "airport-utility",
+  "description": "Apple utility for configuring AirPort Wi-Fi base stations",
+  "website": "https://support.apple.com/airport",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "bundled with macOS; varies",
+  "auto_updates": false,
+  "version_check": {
+    "method": "read_local_plist_only",
+    "note": "No remote version-check API. Updates with macOS system updates. Version is keyed to macOS build.",
+    "extraction": {
+      "type": "local_plist_buddy",
+      "command": "/usr/libexec/PlistBuddy -c \"Print :CFBundleShortVersionString\" \"/System/Library/CoreServices/Applications/AirPort Utility.app/Contents/Info.plist\"",
+      "example": "6.3.9"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "software_update_only",
+    "url": null,
+    "note": "Distributed via macOS Software Update (softwareupdate CLI or System Settings). Historic standalone DMGs from support.apple.com/kb/DL1817 may be rotated/404'd.",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "apple_security_notes",
+    "url": "https://support.apple.com/en-us/HT201222",
+    "note": "Search 'AirPort' in Apple security release notes. No dedicated changelog."
+  },
+  "release_date": {
+    "method": "macos_release_mapping",
+    "note": "Version mapping: macOS 14/15 ships 6.3.9. Version only changes with macOS point releases."
+  },
+  "notes": "AirPort hardware discontinued April 2018. On macOS Ventura (13)+, AirPort Utility is no longer pre-installed \u2014 must download via System Settings > General > Software Update. No standalone download URL. NOT on Mac App Store for macOS (iOS listing ID 427276530 is the iOS version). This app is impractical to track remotely \u2014 the profile exists for reporting on currently-installed version only.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "apple-apps",
+  "license": "free",
+  "skip": true
+}

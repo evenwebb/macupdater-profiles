@@ -1,0 +1,39 @@
+{
+  "name": "OBS Studio",
+  "slug": "obs-studio",
+  "description": "Free and open-source software for video recording and live streaming, widely used by content creators and streamers",
+  "website": "https://obsproject.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "macOS 11+ (Big Sur and later)",
+  "auto_updates": true,
+  "version_check": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/obsproject/obs-studio/releases/latest",
+    "extraction": {
+      "type": "json_path",
+      "json_path": "tag_name"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "github_release_asset",
+    "url_or_pattern": "Filter assets from https://api.github.com/repos/obsproject/obs-studio/releases/latest for macOS .dmg file (pattern: *macos*.dmg or *macOS*.dmg)",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "webpage",
+    "url": "https://github.com/obsproject/obs-studio/releases"
+  },
+  "release_date": {
+    "method": "github_api_field",
+    "field": "published_at"
+  },
+  "notes": "Open source (GPLv2). Native Apple Silicon support since v28.0. Uses GitHub Releases for distribution. Has a built-in updater (Sparkle-based in older versions, may have migrated). Also available on Windows and Linux. GitHub Releases page includes detailed release notes. Assets for macOS include both .dmg and sometimes .pkg installers.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "media",
+  "license": "free",
+  "skip": false
+}

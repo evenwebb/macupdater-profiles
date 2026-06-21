@@ -1,0 +1,42 @@
+{
+  "name": "Affinity Designer",
+  "slug": "affinity-designer",
+  "description": "Professional vector graphic design and illustration application",
+  "website": "https://affinity.serif.com/en-us/designer/",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "macOS 11.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle_appcast",
+    "url": "https://s3.amazonaws.com/affinity-update/mac/retail/designer/appcast.xml",
+    "extraction": {
+      "type": "xpath",
+      "xpath": "//item/enclosure/@*[local-name()='shortVersionString' or local-name()='sparkle:shortVersionString']",
+      "pattern": null,
+      "notes": "Serif uses Sparkle with custom feeds on s3.amazonaws.com. Same pattern as Affinity Photo, different product path segment (/designer/)."
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "sparkle_enclosure",
+    "url_or_pattern": "https://s3.amazonaws.com/affinity-update/mac/retail/designer/appcast.xml",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "sparkle_appcast",
+    "url": "https://s3.amazonaws.com/affinity-update/mac/retail/designer/appcast.xml",
+    "notes": "Release notes in <sparkle:releaseNotesLink> or <description> within appcast item."
+  },
+  "release_date": {
+    "method": "sparkle_appcast",
+    "field": "pubDate"
+  },
+  "notes": "Paid app (one-time purchase). Same Serif/Affinity V2 product line as Photo and Publisher. All three share the same appcast URL pattern on s3.amazonaws.com. Mac App Store version uses /mac/mas/<product>/ path. Also available on Mac App Store.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "design",
+  "license": "paid",
+  "skip": false
+}

@@ -1,0 +1,36 @@
+{
+  "name": "Battle.net",
+  "slug": "battle-net",
+  "description": "Game launcher",
+  "website": "https://www.blizzard.com",
+  "platform": "macOS",
+  "architecture": "intel",
+  "min_os": "10.15",
+  "auto_updates": true,
+  "version_check": {
+    "method": null,
+    "url": null,
+    "extraction": null,
+    "notes": "NO public HTTP endpoint. Uses proprietary TCP protocol on us.patch.battle.net:1119. Agent-based (Battle.net Agent.app) with SQLite DBs. Not REST-based.",
+    "headers": {}
+  },
+  "download": {
+    "method": "direct",
+    "url_or_pattern": "https://www.battle.net/download/getInstallerForGame?os=mac&locale=enUS&version=LIVE&gameProgram=BATTLENET_APP",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "webpage",
+    "url": "https://news.blizzard.com/en-us/battle-net"
+  },
+  "release_date": {
+    "method": null
+  },
+  "notes": "Intel only (requires Rosetta 2 on Apple Silicon). Custom Blizzard Agent with SQLite DBs. Self-updating. No public version API exists. Download URL always returns latest installer.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "gaming",
+  "license": "free",
+  "skip": false
+}

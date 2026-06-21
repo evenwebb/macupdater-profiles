@@ -1,0 +1,42 @@
+{
+  "name": "Hidden Bar",
+  "slug": "hidden-bar",
+  "description": "Hide menu bar icons to keep your Mac menu bar looking clean",
+  "website": "https://github.com/dwarvesf/hidden",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "macOS 11.0",
+  "auto_updates": false,
+  "version_check": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/dwarvesf/hidden/releases/latest",
+    "extraction": {
+      "type": "json_path",
+      "json_path": "$.tag_name",
+      "notes": "GitHub tag_name includes 'v' prefix. Strip prefix for raw version."
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "github_release",
+    "url_or_pattern": "https://github.com/dwarvesf/hidden/releases/download/v{version}/Hidden.Bar.{version}.dmg",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/dwarvesf/hidden/releases/latest",
+    "notes": "Release body contains markdown changelog."
+  },
+  "release_date": {
+    "method": "github_api",
+    "field": "published_at"
+  },
+  "notes": "Open source (MIT). Free. Also available on Mac App Store (id1452453066). GitHub Releases with predictable download URL pattern using 'Hidden.Bar.{version}.dmg' format. No built-in auto-update mechanism; versions are fetched manually or via Homebrew (brew install hiddenbar).",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "utilities",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "com.dwarvesv.minimalbar"
+}

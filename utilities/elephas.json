@@ -1,0 +1,40 @@
+{
+  "name": "Elephas",
+  "url": "https://elephas.app",
+  "description": "AI writing assistant for Mac",
+  "version_check": {
+    "method": "sparkle",
+    "url": "appcast URL embedded in app (probable: https://elephas.app/appcast.xml or https://assets.elephas.app/appcast.xml \u2014 blocked/404 when probed externally)",
+    "version_field": "sparkle:shortVersionString",
+    "version_example": "11.7008",
+    "headers": {}
+  },
+  "download": {
+    "url": "https://assets.elephas.app/Elephas_{VERSION}.dmg",
+    "url_generic": "https://elephas.app",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "url": "https://elephas.app/blog/",
+    "method": "web_page"
+  },
+  "release_date": {
+    "method": "sparkle_pubdate",
+    "field": "pubDate"
+  },
+  "sparkle": {
+    "note": "Appcast URL blocked externally; may require referrer/user-agent"
+  },
+  "architecture": "universal",
+  "min_os": "13.0",
+  "auto_updates": true,
+  "app_store_only": false,
+  "bundle_id": "com.kamban.elephas",
+  "notes": "AI writing assistant powered by OpenAI GPT models. Bundle ID: com.kamban.elephas. Conflicts with elephas@beta cask.",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "utilities",
+  "license": "paid",
+  "skip": false,
+  "last_updated": "2026-06-21"
+}

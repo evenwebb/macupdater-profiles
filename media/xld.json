@@ -1,0 +1,44 @@
+{
+  "name": "X Lossless Decoder (XLD)",
+  "url": "https://sourceforge.net/projects/xld/",
+  "url_alt": "https://tmkk.undo.jp/xld/index_e.html",
+  "repository": "https://github.com/tmkk/xld",
+  "description": "Audio transcoding tool",
+  "version_check": {
+    "method": "html_scrape",
+    "url": "https://sourceforge.net/projects/xld/rss?limit=20",
+    "extraction": "Regex from filename in RSS feed",
+    "pattern": "xld-(\\d+)\\.dmg",
+    "version_format": "YYYYMMDD",
+    "version_example": "20250302",
+    "headers": {}
+  },
+  "download": {
+    "url": "https://sourceforge.net/projects/xld/files/xld-{VERSION}.dmg/download",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "url": "https://sourceforge.net/projects/xld/files/",
+    "method": "rss_feed",
+    "note": "Release notes in file descriptions"
+  },
+  "release_date": {
+    "method": "rss_pubdate",
+    "field": "pubDate",
+    "format": "RFC 2822",
+    "example": "Sun, 02 Mar 2025 05:39:51 UT"
+  },
+  "sparkle": null,
+  "architecture": "x86_64",
+  "architecture_note": "Intel only; Apple Silicon support status unclear (may use Rosetta 2)",
+  "min_os": "10.4",
+  "auto_updates": false,
+  "app_store_only": false,
+  "notes": "Date-based version format (YYYYMMDD). Latest version: 20250302 (March 2, 2025). Open-source by tmkk. Supports FLAC, APE, WAV, ALAC, and many other formats. Can split audio using cue sheets. GitHub repo exists but releases primarily on SourceForge.",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "media",
+  "license": "free",
+  "skip": false,
+  "last_updated": "2026-06-21"
+}

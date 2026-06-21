@@ -1,0 +1,42 @@
+{
+  "name": "The Unarchiver",
+  "slug": "the-unarchiver",
+  "description": "Archive extraction utility supporting dozens of formats (ZIP, RAR, 7z, etc.)",
+  "website": "https://theunarchiver.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "10.13",
+  "auto_updates": false,
+  "version_check": {
+    "method": "scrape_homepage",
+    "url": "https://theunarchiver.com",
+    "extraction": {
+      "type": "regex",
+      "pattern": "(\\d+\\.\\d+\\.\\d+) \\((\\d{1,2} [A-Z][a-z]{2} \\d{4})\\)",
+      "example": "4.3.9"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "static_url",
+    "url": "https://dl.devmate.com/com.macpaw.site.theunarchiver/TheUnarchiver.dmg",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "none_available",
+    "url": null,
+    "note": "No release notes page or changelog found"
+  },
+  "release_date": {
+    "method": "regex_on_homepage",
+    "note": "Date embedded alongside version on homepage: 'X.Y.Z (DD Mon YYYY)'"
+  },
+  "notes": "Owned by MacPaw, distributed via DevMate CDN. No Sparkle appcast publicly exposed (all known URLs return 404). GitHub is archived with no recent binaries. Manual homepage scraping only. Also on Mac App Store.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "utilities",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "com.macpaw.site.theunarchiver"
+}

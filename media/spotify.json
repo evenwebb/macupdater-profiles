@@ -1,0 +1,42 @@
+{
+  "name": "Spotify",
+  "slug": "spotify",
+  "description": "Music streaming",
+  "website": "https://www.spotify.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "11",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle_custom_xml",
+    "url": "https://upgrade.scdn.co/upgrade/client/osx-arm64/spotify-autoupdate.xml",
+    "extraction": {
+      "type": "pattern",
+      "pattern": null,
+      "notes": "Custom Sparkle-style XML. Version is an attribute 'version' on the first <item> element, e.g. '1.2.49.g12345678'. Separate feeds per architecture: osx-arm64 and osx-x86_64. 403 Cloudflare block without proper User-Agent."
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "direct",
+    "url_or_pattern": "https://download.scdn.co/Spotify.dmg",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "webpage",
+    "url": "https://community.spotify.com/t5/Desktop-Linux-Windows-Web-Player/bd-p/desktop_linux_web"
+  },
+  "release_date": {
+    "method": "xml_field",
+    "field": "pubDate",
+    "notes": "pubDate present in the XML feed items (if populated)."
+  },
+  "notes": "Custom Sparkle-style XML feed (not standard Sparkle namespace). Separate version-check feeds per architecture, but download DMG is universal and always latest. Requires proper User-Agent to avoid Cloudflare 403. macOS 11 or later.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "media",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "com.spotify.client"
+}

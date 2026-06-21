@@ -1,0 +1,43 @@
+{
+  "name": "DaisyDisk",
+  "slug": "daisydisk",
+  "description": "Disk space analyzer \u2014 visual sunburst map of storage usage with fast scanning",
+  "website": "https://daisydiskapp.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "macOS 11.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle_appcast",
+    "url": "https://daisydiskapp.com/appcast.xml",
+    "extraction": {
+      "type": "xpath",
+      "xpath": "//item/enclosure/@*[local-name()='shortVersionString' or local-name()='sparkle:shortVersionString']",
+      "pattern": null,
+      "notes": "Likely Sparkle feed URL. Verify by checking SUFeedURL in the app bundle's Info.plist. The exact URL may differ slightly (e.g. /appcast.xml or /appcast.php)."
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "sparkle_enclosure",
+    "url_or_pattern": "https://daisydiskapp.com/downloads/DaisyDisk.zip",
+    "file_type": "zip",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "sparkle_appcast",
+    "url": "https://daisydiskapp.com/appcast.xml",
+    "notes": "Release notes in <sparkle:releaseNotesLink> or <description> within appcast item."
+  },
+  "release_date": {
+    "method": "sparkle_appcast",
+    "field": "pubDate"
+  },
+  "notes": "Paid app (one-time purchase with free trial). Also available on Mac App Store (id411643860). Uses Sparkle for auto-updates in the direct download version. The static download URL at /downloads/DaisyDisk.zip always serves the latest version. Appcast URL is the most likely pattern but should be confirmed from the app bundle.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "utilities",
+  "license": "paid",
+  "skip": false,
+  "bundle_id": "com.daisydiskapp.DaisyDisk"
+}

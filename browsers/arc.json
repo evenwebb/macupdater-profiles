@@ -1,0 +1,40 @@
+{
+  "name": "Arc",
+  "slug": "arc",
+  "description": "Innovative web browser from The Browser Company with vertical tabs, spaces, and modern design",
+  "website": "https://arc.net",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "macOS 13+ (Ventura and later)",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle",
+    "url": "Sparkle appcast URL is BLOCKED/protected \u2014 not publicly accessible",
+    "extraction": {
+      "type": "xpath",
+      "pattern": "sparkle:shortVersionString (appcast not reachable)"
+    },
+    "fallback": "Check HTTP Last-Modified header on https://releases.arc.net/release/Arc-latest.dmg or scrape https://arc.net/blog for release announcements",
+    "headers": {}
+  },
+  "download": {
+    "method": "direct_url",
+    "url_or_pattern": "https://releases.arc.net/release/Arc-latest.dmg",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "webpage",
+    "url": "https://arc.net/blog"
+  },
+  "release_date": {
+    "method": "webpage_scrape",
+    "field": "Scrape blog post date from https://arc.net/blog or use HTTP Last-Modified of download URL"
+  },
+  "notes": "Developed by The Browser Company. Sparkle appcast URL is behind authentication/Cloudflare protection and not publicly accessible. Version and release date must be inferred from download metadata or blog scraping. Arc also has a Windows version (not covered by this profile).",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "browsers",
+  "license": "free",
+  "skip": false
+}

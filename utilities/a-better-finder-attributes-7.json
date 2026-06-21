@@ -1,0 +1,43 @@
+{
+  "name": "A Better Finder Attributes 7",
+  "slug": "a-better-finder-attributes-7",
+  "description": "Change Mac file attributes (dates, permissions, Finder flags) in batch",
+  "website": "https://publicspace.net/ABetterFinderAttributes/",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "11.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle_appcast",
+    "url": "https://www.publicspace.net/app/signed_abfa7.xml",
+    "extraction": {
+      "type": "sparkle_xml",
+      "version_field": "sparkle:version on enclosure",
+      "xpath": "/rss/channel/item[1]/enclosure/@sparkle:version",
+      "note": "No sparkle:shortVersionString \u2014 only sparkle:version attribute on enclosure",
+      "example": "7.42"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "construct_url",
+    "dmg_pattern": "https://www.publicspace.net/download/ABFAX7_{VERSION}.dmg",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "sparkle_release_notes",
+    "url": "https://www.publicspace.net/app/signed_abfa7.html",
+    "fallback": "https://publicspace.net/ABetterFinderAttributes/version.html"
+  },
+  "release_date": {
+    "method": "sparkle_pub_date",
+    "field": "pubDate in appcast <item>"
+  },
+  "notes": "Same developer as A Better Finder Rename 11 \u2014 identical Sparkle pattern. Version extracted from sparkle:version attribute on first item's enclosure. CDN behind CloudFront (d3k6s0oeufjjjn.cloudfront.net).",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "utilities",
+  "license": "paid",
+  "skip": false
+}

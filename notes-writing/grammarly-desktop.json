@@ -1,0 +1,43 @@
+{
+  "name": "Grammarly Desktop",
+  "slug": "grammarly-desktop",
+  "description": "AI writing assistant desktop application",
+  "website": "https://grammarly.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "11.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle_appcast",
+    "url": "https://download-mac.grammarly.com/appcast.xml",
+    "extraction": {
+      "type": "sparkle_xml",
+      "version_field": "sparkle:shortVersionString",
+      "build_field": "sparkle:version",
+      "example": "1.170.1"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "construct_from_sparkle_build",
+    "pattern": "https://download-mac.grammarly.com/versions/{BUILD}/Grammarly.dmg",
+    "build_format": "sparkle:version (4-segment, e.g. 1.170.1.0)",
+    "file_type": "dmg",
+    "note": "DMG contains 'Grammarly Installer.app', not Grammarly directly",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "sparkle_release_notes",
+    "url": "included in appcast item's sparkle:releaseNotesLink field"
+  },
+  "release_date": {
+    "method": "sparkle_pub_date",
+    "field": "pubDate in appcast <item>"
+  },
+  "notes": "Distinct from Grammarly for Safari (Mac App Store exclusive). Uses phased rollouts (phasedRolloutInterval=25200 seconds = 7 hours). Feed typically contains 2 items. Use first item's enclosure URL.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "notes-writing",
+  "license": "free",
+  "skip": false
+}

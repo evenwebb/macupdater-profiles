@@ -1,0 +1,43 @@
+{
+  "name": "CleanShot X",
+  "slug": "cleanshot-x",
+  "description": "Screenshot and screen recording tool \u2014 annotation, scrolling capture, OCR, and cloud upload",
+  "website": "https://cleanshot.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "macOS 12.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle_appcast",
+    "url": "https://updates.cleanshot.com/v3/appcast.xml",
+    "extraction": {
+      "type": "xpath",
+      "xpath": "//item/enclosure/@*[local-name()='shortVersionString' or local-name()='sparkle:shortVersionString']",
+      "pattern": null,
+      "notes": "Uses Sparkle 2 with appcast hosted at updates.cleanshot.com. The /v3/ path corresponds to CleanShot X version 3.x series. Older /v2/ path may exist for legacy versions."
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "sparkle_enclosure",
+    "url_or_pattern": "https://updates.cleanshot.com/v3/CleanShot-X-{version}.dmg",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "sparkle_appcast",
+    "url": "https://updates.cleanshot.com/v3/appcast.xml",
+    "notes": "Release notes in <sparkle:releaseNotesLink> within appcast item, typically linking to cleanshot.com changelog page."
+  },
+  "release_date": {
+    "method": "sparkle_appcast",
+    "field": "pubDate"
+  },
+  "notes": "Paid app (one-time purchase or Setapp subscription). Well-structured Sparkle 2 appcast. Download filename pattern: 'CleanShot-X-{version}.dmg' with dashes. The /v3/ path segment is for version 3.x; if a major version 4 is released, the path may change. The appcast provides release notes links to the cleanshot.com website. Also available via Setapp.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "utilities",
+  "license": "paid",
+  "skip": false,
+  "bundle_id": "com.getcleanshot.app"
+}

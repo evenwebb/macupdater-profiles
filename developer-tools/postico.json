@@ -1,0 +1,42 @@
+{
+  "name": "Postico",
+  "slug": "postico",
+  "description": "Postico is a modern, native PostgreSQL client for macOS. It provides a clean interface for browsing tables, running queries, editing data, and managing database schemas with support for multiple connections.",
+  "website": "https://eggerapps.at/postico",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "14",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle",
+    "sparkle": {
+      "url": "https://releases.eggerapps.at/postico2/appcast.xml",
+      "note": "UNCERTAINTY: This URL is the likely appcast for Postico 2 (stable channel). The exact URL is embedded in the app bundle's SUFeedURL and should be verified by inspecting the bundle. There are two update channels: stable (channel 2) and dev (channel 1)."
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "web_redirect",
+    "url_or_pattern": "https://releases.eggerapps.at/postico2/download",
+    "file_type": "dmg",
+    "note": "UNCERTAINTY: /download redirects to a build-specific dmg URL on releases.eggerapps.at. The redirect target filename typically includes the build number. For the dev channel, use the URL with channel parameter.",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "web",
+    "url": "https://releases.eggerapps.at/postico2/changelog?update_channel=2",
+    "channel_note": "Stable channel uses update_channel=2. Dev channel uses update_channel=1."
+  },
+  "release_date": {
+    "method": "scrape",
+    "source": "https://releases.eggerapps.at/postico2/changelog?update_channel=2",
+    "note": "UNCERTAINTY: The changelog page lists per-version release dates (e.g., 'Version X.Y.Z - Month Day, Year'). Date must be scraped from the HTML. The Sparkle appcast pubDate (if accessible) is a cleaner source."
+  },
+  "notes": "Paid app. Two update channels: stable (channel ID 2) and dev/pre-release (channel ID 1). UNCERTAINTIES: The appcast URL is likely but not confirmed \u2014 if Postico uses a different host or path, this will need adjustment. The download URL redirect pattern may require a specific User-Agent. The changelog page format could change. Inspecting the app bundle's SUFeedURL is the definitive way to confirm the Sparkle feed URL.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "developer-tools",
+  "license": "paid",
+  "skip": false,
+  "bundle_id": "at.eggerapps.Postico"
+}

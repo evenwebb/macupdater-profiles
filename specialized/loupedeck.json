@@ -1,0 +1,44 @@
+{
+  "name": "Loupedeck",
+  "slug": "loupedeck",
+  "description": "Custom console/stream deck configuration software (now under Logitech)",
+  "website": "https://loupedeck.com/downloads",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "10.15",
+  "auto_updates": false,
+  "version_check": {
+    "method": "scrape_html",
+    "url": "https://loupedeck.com/downloads/",
+    "extraction": {
+      "type": "regex",
+      "pattern": "/href=.*?LoupedeckInstaller(?:[._\\s-]|%20)+v?(\\d+(?:\\.\\d+)+)\\.dmg/i",
+      "fallback_regex": "Software version\\s+(\\d+(?:\\.\\d+)+)\\s+for macOS",
+      "example": "6.3.0"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "extract_from_page_or_construct",
+    "pattern": "https://support.loupedeck.com/hubfs/Knowledge%20Base/LD%20Software%20Downloads/{MAJOR}.{MINOR}/LoupedeckInstaller_{FULL_VERSION}.dmg",
+    "note": "Directory uses {MAJOR}.{MINOR} (e.g. 6.3), filename uses full 4-segment build (e.g. 6.3.0.340). Best to extract actual href from the downloads page.",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "web_scrape",
+    "url": "https://loupedeck.com/downloads/",
+    "note": "Release notes embedded in the downloads page content \u2014 no separate changelog URL"
+  },
+  "release_date": {
+    "method": "http_last_modified",
+    "url": "https://loupedeck.com/downloads/",
+    "note": "Last-Modified header on downloads page is best proxy \u2014 no explicit dates on page"
+  },
+  "notes": "Acquired by Logitech in 2023. End-of-sales announced, but software still available. Hosted on HubSpot (support.loupedeck.com). Clean HTML, no Cloudflare. Two version formats: display (6.3.0) and full build (6.3.0.340). Supports CT, Live, Live S, Loupedeck+, Razer Stream Controller.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "specialized",
+  "license": "free",
+  "skip": false
+}

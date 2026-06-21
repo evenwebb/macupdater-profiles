@@ -1,0 +1,39 @@
+{
+  "name": "Carbon Copy Cloner",
+  "slug": "carbon-copy-cloner",
+  "description": "Drive cloning and backup",
+  "website": "https://bombich.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "13.1",
+  "auto_updates": false,
+  "version_check": {
+    "method": "scrape",
+    "url": "https://bombich.com/download",
+    "extraction": {
+      "type": "pattern",
+      "pattern": "CCC (\\d+\\.\\d+\\.\\d+)",
+      "notes": "Scrape page for version text, e.g. 'CCC 7.1.5'."
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "direct",
+    "url_or_pattern": "https://bombich.com/download/get",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "webpage",
+    "url": "https://bombich.com/blog"
+  },
+  "release_date": {
+    "method": null
+  },
+  "notes": "No version API (no Sparkle, no JSON, no XML). Must scrape download page for version string. Download URL always redirects to latest CCC 7. Paid software with upgrade pricing. Changelog is blog-based.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "cloud-backup",
+  "license": "paid",
+  "skip": false
+}

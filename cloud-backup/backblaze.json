@@ -1,0 +1,40 @@
+{
+  "name": "Backblaze",
+  "slug": "backblaze",
+  "description": "Cloud backup",
+  "website": "https://www.backblaze.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "11",
+  "auto_updates": true,
+  "version_check": {
+    "method": "custom_xml",
+    "url": "https://secure.backblaze.com/api/clientversion.xml",
+    "extraction": {
+      "type": "xpath",
+      "xpath": "//release/@mac_version",
+      "notes": "Single XML attribute on <release> element, e.g. '10.0.2.1048'."
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "pattern",
+    "url_or_pattern": "https://secure.backblaze.com/api/install_backblaze?file=bzinstall-mac-{version}.dmg",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "webpage",
+    "url": "https://www.backblaze.com/help-backblaze-release-notes.html"
+  },
+  "release_date": {
+    "method": null
+  },
+  "notes": "Custom XML polling endpoint (not Sparkle). Uses clientversion.xml for version detection. Universal build. Auto-updates. macOS 11 or later.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "cloud-backup",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "com.backblaze.bzbmenu"
+}

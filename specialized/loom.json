@@ -1,0 +1,48 @@
+{
+  "name": "Loom",
+  "slug": "loom",
+  "description": "Loom is a screen and video recording tool that lets you capture your screen, camera, and microphone together. Used for async video messaging, demos, and team communication.",
+  "website": "https://www.loom.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "10.15",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle_restricted",
+    "sparkle": {
+      "note": "UNCERTAINTY: Loom uses Sparkle 2, with the appcast hosted on cdn.loom.com. The feed returns HTTP 403 (Forbidden) without proper authentication headers (User-Agent, Referer, or session token). The exact appcast URL is not publicly documented."
+    },
+    "fallback": {
+      "method": "scrape_download_page",
+      "url": "https://www.loom.com/download",
+      "note": "UNCERTAINTY: May be possible to extract version from the download page or the HTTP redirect URL. The DMG filename may contain the version."
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "web_redirect",
+    "url_or_pattern": "https://www.loom.com/download",
+    "file_type": "dmg",
+    "note": "UNCERTAINTY: /download redirects to the latest dmg. The CDN URL (cdn.loom.com) may require a valid Referer header or session token.",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "web",
+    "url": "https://www.loom.com/changelog",
+    "alt_url": "https://blog.loom.com",
+    "note": "UNCERTAINTY: Changelog may be in-app only. Blog posts at blog.loom.com may cover new releases."
+  },
+  "release_date": {
+    "method": "sparkle_pubDate",
+    "field": "pubDate",
+    "source": "Sparkle appcast (cdn.loom.com)",
+    "note": "UNCERTAINTY: Not accessible publicly due to 403 on appcast feed."
+  },
+  "notes": "Atlassian-acquired (2023). Uses Sparkle 2. The Sparkle appcast on cdn.loom.com is access-restricted \u2014 returns HTTP 403 without proper referrer/auth headers. Automated version checking is unreliable without reverse-engineering the CDN access requirements. The download page redirect pattern may be a more reliable (but indirect) method. UNCERTAINTIES: Exact appcast URL unknown. CDN access restrictions may change. In-app update checking may be the only fully reliable method.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "specialized",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "com.loom.desktop"
+}

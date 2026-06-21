@@ -1,0 +1,39 @@
+{
+  "name": "Homebrew",
+  "slug": "homebrew",
+  "description": "Package manager",
+  "website": "https://brew.sh",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "13",
+  "auto_updates": true,
+  "version_check": {
+    "method": "git_ls_remote",
+    "url": "https://github.com/Homebrew/brew.git",
+    "extraction": {
+      "type": "git_ref",
+      "pattern": "refs/heads/master"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "git_pull",
+    "url_or_pattern": "N/A",
+    "file_type": null,
+    "headers": {}
+  },
+  "changelog": {
+    "method": "fixed_url",
+    "url": "https://github.com/Homebrew/brew/releases"
+  },
+  "release_date": {
+    "method": "git_log",
+    "field": "%cI"
+  },
+  "notes": "NOT a Sparkle/binary update mechanism. Git-based self-update. Version = git commit SHA. Auto-updates every 300 seconds (5 min). Profile is metadata about the package manager itself. Update via 'git ls-remote https://github.com/Homebrew/brew.git refs/heads/master' for version, 'git log -1 --format=%cI' for date.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "developer-tools",
+  "license": "free",
+  "skip": false
+}

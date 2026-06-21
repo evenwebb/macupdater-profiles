@@ -1,0 +1,40 @@
+{
+  "name": "Cyberduck",
+  "slug": "cyberduck",
+  "description": "File transfer client",
+  "website": "https://cyberduck.io",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "10.13",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle_xml",
+    "url": "https://version.cyberduck.io/sparkle/changelog.rss",
+    "extraction": {
+      "type": "xpath",
+      "xpath": "sparkle:version"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "composed_url",
+    "url_or_pattern": "https://update.cyberduck.io/Cyberduck-{version}.zip",
+    "file_type": "zip",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "fixed_url",
+    "url": "https://version.cyberduck.io/changelog.html"
+  },
+  "release_date": {
+    "method": "pubDate",
+    "field": "pubDate"
+  },
+  "notes": "Sparkle + RSS hybrid. Stable channel appcast at changelog.rss. Version format e.g. \"9.5.0.45237\". Open source (GPL). Also available on Mac App Store.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "developer-tools",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "ch.sudo.cyberduck"
+}

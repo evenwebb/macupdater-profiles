@@ -1,0 +1,44 @@
+{
+  "name": "Alfred",
+  "slug": "alfred",
+  "description": "Productivity app launcher and automation tool for macOS",
+  "website": "https://alfredapp.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "11.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "custom_plist_xml",
+    "url": "https://www.alfredapp.com/app/update5/general.xml",
+    "v4_url": "https://www.alfredapp.com/app/update4/general.xml",
+    "extraction": {
+      "type": "plist_xpath",
+      "version_xpath": "//key[text()='version']/following-sibling::string[1]/text()",
+      "build_xpath": "//key[text()='build']/following-sibling::integer[1]/text()",
+      "example": "5.6"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "from_plist_update_xml",
+    "extraction_xpath": "//key[text()='location']/following-sibling::string[1]/text()",
+    "file_type": "tar.gz",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "web_scrape",
+    "url": "https://www.alfredapp.com/changelog/"
+  },
+  "release_date": {
+    "method": "web_scrape",
+    "url": "https://www.alfredapp.com/changelog/",
+    "note": "Format: 'Build {build}, {day_name} {ordinal} {month} {year}'. Not in plist as machine-readable date."
+  },
+  "notes": "Not Sparkle \u2014 custom Apple plist format. Keys: version (string), build (integer), location (download URL), fingerprint (checksum), changelogdata (embedded markdown). Alfred 4 and 3 use /update4/ and /update/ paths respectively.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "utilities",
+  "license": "paid",
+  "skip": false,
+  "bundle_id": "com.runningwithcrayons.Alfred"
+}

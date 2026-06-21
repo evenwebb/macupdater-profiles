@@ -1,0 +1,44 @@
+{
+  "name": "ChatGPT",
+  "slug": "chatgpt",
+  "description": "OpenAI's ChatGPT desktop application for macOS",
+  "website": "https://openai.com/chat",
+  "platform": "macOS",
+  "architecture": "arm64",
+  "min_os": "14.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle_appcast",
+    "url": "https://persistent.oaistatic.com/sidekick/public/sparkle_public_appcast.xml",
+    "extraction": {
+      "type": "sparkle_xml",
+      "version_field": "sparkle:shortVersionString",
+      "build_field": "sparkle:version",
+      "note": "Items NOT in chronological order \u2014 must compare all sparkle:version values to find highest",
+      "example": "1.2026.153"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "construct_from_sparkle",
+    "pattern": "https://persistent.oaistatic.com/sidekick/public/ChatGPT_Desktop_public_{SHORT_VERSION}_{BUILD}.dmg",
+    "file_type": "dmg",
+    "note": "Apple Silicon only (arm64). Delta updates available via Sparkle.",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "sparkle_release_notes",
+    "url": "included in sparkle:releaseNotesLink field of appcast item"
+  },
+  "release_date": {
+    "method": "sparkle_pub_date",
+    "field": "pubDate in appcast <item>"
+  },
+  "notes": "Uses Sparkle framework with criticalUpdate markers. Build number is a Unix timestamp integer. Requires hardware arm64 (Apple Silicon). No Intel build available.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "ai-tools",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "com.openai.chat"
+}

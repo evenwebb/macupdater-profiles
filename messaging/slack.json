@@ -1,0 +1,44 @@
+{
+  "name": "Slack",
+  "slug": "slack",
+  "description": "Team messaging and collaboration platform",
+  "website": "https://slack.com",
+  "platform": "macOS",
+  "architecture": [
+    "universal",
+    "arm64",
+    "x64"
+  ],
+  "min_os": "macOS 12",
+  "auto_updates": true,
+  "version_check": {
+    "method": "custom_api",
+    "url": "https://slack.com/api/desktop.latestRelease?redirect=1&variant=pkg&arch=universal",
+    "extraction": {
+      "type": "http_redirect",
+      "pattern": "7th slash-separated field from Location header path"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "constructed_url",
+    "url_or_pattern": "https://downloads.slack-edge.com/desktop-releases/mac/{arch}/{version}/Slack-{version}-macOS.{ext}",
+    "file_type": "pkg/dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "scrape",
+    "url": "https://slack.com/release-notes/mac"
+  },
+  "release_date": {
+    "method": "scrape",
+    "field": "changelog page"
+  },
+  "notes": "Also available on Mac App Store (id 803453959). Universal variant uses pkg; arm64/x64 use dmg. Version extracted from HTTP redirect Location header.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "messaging",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "com.tinyspec.Slack"
+}

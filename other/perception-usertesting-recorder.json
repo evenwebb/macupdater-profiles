@@ -1,0 +1,42 @@
+{
+  "name": "Perception / UserTesting Recorder",
+  "slug": "perception-usertesting-recorder",
+  "description": "Screen and audio recorder for UserTesting.com research sessions (formerly branded as Perception by UserZoom/Boltmade)",
+  "website": "https://app.usertesting.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "12.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "app_store_api",
+    "url": "https://itunes.apple.com/lookup?id=1663261199",
+    "extraction": {
+      "type": "json_path",
+      "path": "results[0].version",
+      "example": "1.1.42"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "app_store_only",
+    "url": "https://apps.apple.com/us/app/usertesting-recorder-extension/id1663261199",
+    "file_type": "app_bundle",
+    "note": "Mac App Store exclusive. Bundle ID: com.usertesting.recorder.UserTesting-Recorder-Extension",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "app_store_release_notes",
+    "url": "https://itunes.apple.com/lookup?id=1663261199",
+    "field": "results[0].releaseNotes in iTunes API JSON"
+  },
+  "release_date": {
+    "method": "app_store_api",
+    "field": "results[0].currentVersionReleaseDate in iTunes API JSON"
+  },
+  "notes": "Perception was the original branding (by UserZoom/Boltmade). UserTesting acquired it and renamed to 'UserTesting Recorder Extension.' Login required to access from the dashboard at app.usertesting.com. Help center at help.usertesting.com is behind Cloudflare bot protection (403 to WebFetch). No direct download URL \u2014 App Store only.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "other",
+  "license": "free",
+  "skip": false
+}

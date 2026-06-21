@@ -1,0 +1,41 @@
+{
+  "name": "Microsoft Edge",
+  "slug": "microsoft-edge",
+  "description": "Chromium-based web browser from Microsoft with AI-powered Copilot, enterprise features, and deep OS integration",
+  "website": "https://microsoft.com/edge",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "macOS 11+ (Big Sur and later)",
+  "auto_updates": true,
+  "version_check": {
+    "method": "microsoft_autoupdate",
+    "url": "https://msedge.api.cdp.microsoft.com/fetch/update/?target={GUID}",
+    "extraction": {
+      "type": "json_path",
+      "json_path": "Microsoft AutoUpdate (MAU) proprietary protocol \u2014 returns update manifest with version, download URL, and metadata"
+    },
+    "notes": "Requires product GUID for Edge macOS stable. MAU protocol is proprietary \u2014 endpoint returns XML/JSON manifest with version and download info.",
+    "headers": {}
+  },
+  "download": {
+    "method": "direct_url",
+    "url_or_pattern": "https://go.microsoft.com/fwlink/?linkid=2069148",
+    "file_type": "pkg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "webpage",
+    "url": "https://learn.microsoft.com/en-us/deployedge/microsoft-edge-relnote-stable-channel"
+  },
+  "release_date": {
+    "method": "http_header",
+    "field": "Last-Modified of the PKG download at https://go.microsoft.com/fwlink/?linkid=2069148"
+  },
+  "notes": "Uses Microsoft AutoUpdate (MAU) framework, not Sparkle. The generic PKG download redirects to the latest stable version. MAU GUID for Edge macOS stable is required for the update API call. Generic download link may not always point to the latest version immediately after release. ",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "browsers",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "com.microsoft.edgemac"
+}

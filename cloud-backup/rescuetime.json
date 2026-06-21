@@ -1,0 +1,42 @@
+{
+  "name": "RescueTime",
+  "slug": "rescuetime",
+  "description": "Automatic time tracking and productivity analytics",
+  "website": "https://rescuetime.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "11.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle_appcast",
+    "url": "https://www.rescuetime.com/installers/appcast/rtx",
+    "extraction": {
+      "type": "sparkle_xml",
+      "version_field": "sparkle:shortVersionString",
+      "build_field": "sparkle:version",
+      "example": "3.2.12.3"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "construct_from_sparkle",
+    "pattern": "https://assets.rescuetime.com/installers/RescueTimeInstaller_{VERSION}.app.zip",
+    "file_type": "app_zip",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "sparkle_release_notes",
+    "url": "included in appcast item's sparkle:releaseNotesLink field"
+  },
+  "release_date": {
+    "method": "sparkle_pub_date",
+    "field": "pubDate in appcast <item>",
+    "note": "Latest release: April 28, 2026"
+  },
+  "notes": "Uses Sparkle framework with publicly accessible appcast. Homebrew cask available (livecheck strategy: :sparkle). Assets hosted on rescuetime.com CDN (CloudFront). One of the easiest apps to track programmatically.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "cloud-backup",
+  "license": "free",
+  "skip": false
+}

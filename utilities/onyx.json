@@ -1,0 +1,55 @@
+{
+  "name": "OnyX",
+  "slug": "onyx",
+  "description": "Multi-function system maintenance and optimization tool for macOS",
+  "website": "https://www.titanium-software.fr/en/onyx.html",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "varies by build (version is per-macOS-release)",
+  "auto_updates": false,
+  "version_check": {
+    "method": "scrape_html",
+    "url": "https://www.titanium-software.fr/en/onyx.html",
+    "extraction": {
+      "type": "regex",
+      "pattern": "OnyX\\s+(\\d+\\.\\d+\\.\\d+)",
+      "note": "Version is per macOS release \u2014 each macOS version has its own OnyX build. Extract the version for the latest macOS listed."
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "construct_per_macos",
+    "pattern": "https://www.titanium-software.fr/download/{MACOS}/OnyX.dmg",
+    "macos_versions": {
+      "27": "27 (Golden Gate)",
+      "26": "26 (Tahoe)",
+      "15": "15 (Sequoia)",
+      "14": "14 (Sonoma)",
+      "13": "13 (Ventura)",
+      "12": "12 (Monterey)",
+      "11": "11 (Big Sur)",
+      "1015": "10.15 (Catalina)",
+      "1014": "10.14 (Mojave)",
+      "1013": "10.13 (High Sierra)"
+    },
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "web_scrape",
+    "url": "https://www.titanium-software.fr/en/onyx_release.html",
+    "note": "Lists changes per version but without dates \u2014 just bullet points"
+  },
+  "release_date": {
+    "method": "scrape_from_main_page",
+    "url": "https://www.titanium-software.fr/en/onyx.html",
+    "note": "Date in plain text near version number (e.g. 'June 15, 2026'). No structured date. Not on release page."
+  },
+  "notes": "No Sparkle feed, no API, no XML/JSON endpoints. Pure HTML scraping only. Version is strictly coupled to macOS release \u2014 never use OnyX built for a different macOS version. App is NOT notarized (requires right-click Open). No Cloudflare protection.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "utilities",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "com.titanium.OnyX"
+}

@@ -1,0 +1,45 @@
+{
+  "name": "Control D Utility",
+  "slug": "control-d-utility",
+  "description": "DNS/network control utility GUI app \u2014 companion to ctrld CLI daemon",
+  "website": "https://controld.com",
+  "platform": "macOS",
+  "architecture": "universal (separate builds)",
+  "min_os": "12.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "github_api_cli_daemon",
+    "url": "https://api.github.com/repos/Control-D-Inc/ctrld/releases/latest",
+    "extraction": {
+      "type": "json_path",
+      "path": "tag_name",
+      "strip_prefix": "v",
+      "example": "1.5.2"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "static_url_separate_arch",
+    "arm64": "https://assets.controld.com/utility/controld_arm.dmg",
+    "x86_64": "https://assets.controld.com/utility/controld_x86.dmg",
+    "cli_daemon_pattern": "https://github.com/Control-D-Inc/ctrld/releases/download/v{VERSION}/ctrld_{VERSION}_darwin_arm64.tar.gz",
+    "file_type": "dmg",
+    "note": "GUI app has no version in URL \u2014 always gives latest per architecture",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "github_releases",
+    "url": "https://github.com/Control-D-Inc/ctrld/releases",
+    "note": "Changelog from CLI daemon releases on GitHub"
+  },
+  "release_date": {
+    "method": "github_api",
+    "field": "published_at in GitHub release JSON"
+  },
+  "notes": "The GUI app auto-updates with no public Sparkle feed or version endpoint. The controld.com website is Cloudflare-protected (404 to automated fetchers). No Mac App Store \u2014 web-only distribution. The CLI daemon (ctrld) is open-source on GitHub with proper release versioning. Mapping GUI version to CLI version is approximate.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "vpn-security",
+  "license": "free",
+  "skip": false
+}

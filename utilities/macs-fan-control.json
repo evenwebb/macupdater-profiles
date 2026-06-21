@@ -1,0 +1,44 @@
+{
+  "name": "Macs Fan Control",
+  "slug": "macs-fan-control",
+  "description": "Monitor and control Mac fan speeds and temperature sensors",
+  "website": "https://crystalidea.com/macs-fan-control",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "10.13",
+  "auto_updates": true,
+  "version_check": {
+    "method": "custom_xml_api",
+    "url": "https://crystalidea.com/update/fancontrol.xml.gz",
+    "extraction": {
+      "type": "xpath_on_decompressed_xml",
+      "xpath": "/app/history/version[1]/@name",
+      "date_xpath": "/app/history/version[1]/@date",
+      "date_format": "DD.MM.YYYY",
+      "example": "1.6.0"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "static_url",
+    "url": "https://crystalidea.com/downloads/macsfancontrol.zip",
+    "github_pattern": "https://github.com/crystalidea/macs-fan-control/releases/download/v{VERSION}/macsfancontrol.zip",
+    "file_type": "zip",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "web_scrape",
+    "url": "https://crystalidea.com/macs-fan-control/release-notes"
+  },
+  "release_date": {
+    "method": "xml_attribute",
+    "field": "/app/history/version[1]/@date in fancontrol.xml.gz"
+  },
+  "notes": "Custom gzip-compressed XML (NOT Sparkle format). Also available on GitHub releases. Static download URL always gives latest.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "utilities",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "com.crystalidea.MacsFanControl"
+}

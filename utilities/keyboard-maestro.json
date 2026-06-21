@@ -1,0 +1,44 @@
+{
+  "name": "Keyboard Maestro",
+  "slug": "keyboard-maestro",
+  "description": "Macro and workflow automation \u2014 trigger actions by hotkey, typed string, or application event",
+  "website": "https://www.keyboardmaestro.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "macOS 11.0",
+  "auto_updates": false,
+  "version_check": {
+    "method": "scrape_website",
+    "url": "https://www.keyboardmaestro.com/main/",
+    "extraction": {
+      "type": "pattern",
+      "pattern": "Version (\\\\d+\\\\.\\\\d+\\\\.\\\\d+)",
+      "notes": "NO Sparkle feed, NO version API, NO GitHub Releases. The only way to determine latest version is to scrape the main website (https://www.keyboardmaestro.com/main/) for the version string in the download link text, or download the zip and read CFBundleShortVersionString from Info.plist inside the app bundle."
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "direct_url",
+    "url_or_pattern": "https://www.keyboardmaestro.com/action/DownloadFile?path=Keyboard+Maestro.zip",
+    "file_type": "zip",
+    "notes": "Any download path on keyboardmaestro.com serves the app zip. The primary download link uses a server-side script (DownloadFile) with a path parameter. The zip filename in the download link on the main page may include the version number (e.g. 'KeyboardMaestro-11.0.3.zip'), but this pattern may change.",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "scrape_wiki",
+    "url": "https://wiki.keyboardmaestro.com/change_log",
+    "notes": "Changelog published on the Keyboard Maestro wiki. Must scrape the wiki page to extract version history and release notes. The page lists versions with dates and bullet-point changes."
+  },
+  "release_date": {
+    "method": "scrape_wiki",
+    "field": null,
+    "notes": "Release dates listed on the wiki changelog page alongside version numbers. Must be extracted via scraping."
+  },
+  "notes": "Paid app (one-time purchase with free trial). One of the most challenging apps to track for updates \u2014 has no programmatic version API, no Sparkle feed, and no structured release data source. The download URL does not contain the version number. The only reliable version check method is: (1) scrape the main page for the version string, (2) download the zip, or (3) check the wiki changelog. The wiki at wiki.keyboardmaestro.com/change_log is the most reliable machine-parseable source for version history.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "utilities",
+  "license": "paid",
+  "skip": false,
+  "bundle_id": "com.stairways.keyboardmaestro.engine"
+}

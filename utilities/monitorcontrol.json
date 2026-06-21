@@ -1,0 +1,44 @@
+{
+  "name": "MonitorControl",
+  "slug": "monitorcontrol",
+  "description": "MonitorControl is an open source utility that lets you control your external display brightness, contrast, and volume directly from macOS \u2014 using keyboard shortcuts or a menu bar slider. Works with DDC/CI compatible monitors and Apple displays.",
+  "website": "https://monitorcontrol.app",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "11",
+  "auto_updates": true,
+  "version_check": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/MonitorControl/MonitorControl/releases/latest",
+    "extraction": {
+      "type": "json_path",
+      "json_path": "tag_name",
+      "post_process": "strip_prefix_v"
+    },
+    "alt_method": "sparkle",
+    "alt_sparkle_note": "Also uses Sparkle (SUFeedURL in app bundle), but the GitHub API is the more reliable public endpoint.",
+    "headers": {}
+  },
+  "download": {
+    "method": "pattern",
+    "url_or_pattern": "https://github.com/MonitorControl/MonitorControl/releases/download/v{version}/MonitorControl.{version}.dmg",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "github_releases",
+    "url": "https://github.com/MonitorControl/MonitorControl/releases"
+  },
+  "release_date": {
+    "method": "github_api",
+    "field": "published_at",
+    "source": "https://api.github.com/repos/MonitorControl/MonitorControl/releases/latest"
+  },
+  "notes": "Open source (MIT). IMPORTANT: v4.2.0 will not auto-update on macOS Sequoia (macOS 15) due to a known issue with the Sparkle framework and Sequoia's security changes. Users on Sequoia must manually download and install v4.2.0+. Subsequent versions should auto-update normally once v4.2.0 is installed. The GitHub API provides structured, machine-readable version and release data, making it the preferred version check method.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "utilities",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "me.guillaumeb.MonitorControl"
+}

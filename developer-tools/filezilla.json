@@ -1,0 +1,52 @@
+{
+  "name": "FileZilla",
+  "slug": "filezilla",
+  "description": "Free FTP, FTPS, and SFTP client",
+  "website": "https://filezilla-project.org",
+  "platform": "macOS",
+  "architecture": "separate (Intel + Apple Silicon)",
+  "min_os": "11.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "custom_xml_api",
+    "url": "https://update.filezilla-project.org/updatecheck.php?platform=x86_64-apple-darwin20.1.0&version=0.0.0&osversion=11.0&channel=stable",
+    "extraction": {
+      "type": "xml_xpath",
+      "path": "/update/available/@version",
+      "example": "3.68.0"
+    },
+    "fallback_json": {
+      "method": "json_api",
+      "url": "https://cdn.ftpclient-mirror.org/latest.json",
+      "note": "Community mirror that bypasses JS encryption"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "construct_url",
+    "pattern": "https://download.filezilla-project.org/client/mac/{ARCH}/FileZilla_{VERSION}_macos-{ARCH}.app.tar.bz2",
+    "archs": {
+      "x86_64": "x86",
+      "arm64": "arm64"
+    },
+    "file_type": "tar.bz2",
+    "note": "Direct links blocked by anti-bot JS encryption \u2014 returns 12KB dummy files. Use cdn.ftpclient-mirror.org instead.",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "embedded_in_xml",
+    "url": "in updatecheck.php XML <changelog> block",
+    "fallback": "https://filezilla-project.org/versions.php (JS-encrypted)"
+  },
+  "release_date": {
+    "method": "xml_attribute",
+    "field": "timestamp attribute on <available> element (YYYY-MM-DD)"
+  },
+  "notes": "Custom updater, NOT Sparkle. Direct downloads blocked by JS encryption (window.crypto.subtle.decrypt()). Platform param uses Rust/LLVM target triple, not simple 'macos'. Community mirror at cdn.ftpclient-mirror.org bypasses JS encryption.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "developer-tools",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "org.filezilla-project.filezilla"
+}

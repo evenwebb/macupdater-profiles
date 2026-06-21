@@ -1,0 +1,42 @@
+{
+  "name": "Grammarly for Safari",
+  "slug": "grammarly-for-safari",
+  "description": "Grammarly Safari browser extension for macOS",
+  "website": "https://grammarly.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "13.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "app_store_api",
+    "url": "https://itunes.apple.com/lookup?id=1462114288",
+    "extraction": {
+      "type": "json_path",
+      "path": "results[0].version",
+      "example": "9.98.0"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "app_store_only",
+    "url": "https://apps.apple.com/app/grammarly-for-safari/id1462114288",
+    "file_type": "app_bundle",
+    "note": "Mac App Store exclusive. No direct DMG/pkg download available.",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "app_store_release_notes",
+    "url": "https://itunes.apple.com/lookup?id=1462114288",
+    "field": "results[0].releaseNotes in iTunes API JSON"
+  },
+  "release_date": {
+    "method": "app_store_api",
+    "field": "results[0].currentVersionReleaseDate in iTunes API JSON"
+  },
+  "notes": "Separate from Grammarly Desktop which has a direct-download DMG. This is the Safari extension version, distributed exclusively through the Mac App Store. iTunes Lookup API is free and requires no auth.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "email",
+  "license": "free",
+  "skip": false
+}

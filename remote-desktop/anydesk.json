@@ -1,0 +1,47 @@
+{
+  "name": "AnyDesk",
+  "slug": "anydesk",
+  "description": "Remote desktop application",
+  "website": "https://anydesk.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "10.13",
+  "auto_updates": true,
+  "version_check": {
+    "method": "scrape_plaintext",
+    "url": "https://download.anydesk.com/changelog.txt",
+    "extraction": {
+      "type": "regex",
+      "pattern": "v?(\\d+(?:\\.\\d+)+)\\s+\\(macOS\\)",
+      "flags": [
+        "i"
+      ],
+      "note": "Find the first line matching '(macOS)', capture the version number before it",
+      "example": "9.7.1"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "static_url",
+    "url": "https://download.anydesk.com/anydesk.dmg",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "same_as_version_file",
+    "url": "https://download.anydesk.com/changelog.txt",
+    "note": "Plain text changelog grouped by version number. Lists all OS changes interspersed \u2014 filter lines between version headers for macOS-specific changes."
+  },
+  "release_date": {
+    "method": "http_last_modified",
+    "url": "https://download.anydesk.com/changelog.txt",
+    "note": "Last-Modified header is the best date proxy \u2014 changelog text does not include dates"
+  },
+  "notes": "anydesk.com main site is behind Cloudflare anti-bot protection. The changelog.txt endpoint is NOT protected and is the only reliable programmatic source for version info. DMG URL is a static redirect to latest; no version in URL path.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "remote-desktop",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "com.philandro.anydesk"
+}

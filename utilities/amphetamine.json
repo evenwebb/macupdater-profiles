@@ -1,0 +1,42 @@
+{
+  "name": "Amphetamine",
+  "slug": "amphetamine",
+  "description": "Amphetamine is a free keep-awake utility for macOS. It can keep your Mac and optionally its display(s) awake through a simple on/off switch, or automatically through easy-to-configure triggers.",
+  "website": "https://apps.apple.com/app/amphetamine/id937984704",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "10.13",
+  "auto_updates": false,
+  "version_check": {
+    "method": "itunes_api",
+    "url": "https://itunes.apple.com/lookup?id=937984704",
+    "extraction": {
+      "type": "json_path",
+      "json_path": "results[0].version"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "app_store_only",
+    "url_or_pattern": null,
+    "file_type": null,
+    "headers": {}
+  },
+  "changelog": {
+    "method": "web",
+    "url": "https://apps.apple.com/app/amphetamine/id937984704",
+    "note": "Release notes are available in the App Store listing under 'What's New'. No separate changelog page."
+  },
+  "release_date": {
+    "method": "itunes_date",
+    "field": "currentVersionReleaseDate",
+    "source": "https://itunes.apple.com/lookup?id=937984704"
+  },
+  "notes": "Free. Mac App Store only \u2014 no direct download, no Sparkle. UNCERTAINTY: iTunes API may eventually be deprecated in favor of the App Store Connect API, which requires authentication. The lookup endpoint still works but Apple has not committed to its long-term availability.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "utilities",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "com.if.Amphetamine"
+}

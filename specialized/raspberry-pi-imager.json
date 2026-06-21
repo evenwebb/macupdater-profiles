@@ -1,0 +1,44 @@
+{
+  "name": "Raspberry Pi Imager",
+  "slug": "raspberry-pi-imager",
+  "description": "SD card imaging utility for Raspberry Pi OS and other operating systems",
+  "website": "https://www.raspberrypi.com/software/",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "13.0",
+  "auto_updates": false,
+  "version_check": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/raspberrypi/rpi-imager/releases/latest",
+    "extraction": {
+      "type": "json_path",
+      "path": "tag_name",
+      "strip_prefix": "v",
+      "example": "2.0.10"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "github_asset_filter",
+    "from_url": "https://api.github.com/repos/raspberrypi/rpi-imager/releases/latest",
+    "filter": "$.assets[?(@.name =~ /\\.dmg$/)].browser_download_url",
+    "construct_pattern": "https://github.com/raspberrypi/rpi-imager/releases/download/{TAG}/rpi-imager-{TAG}.dmg",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "github_releases",
+    "url": "https://github.com/raspberrypi/rpi-imager/releases",
+    "field": "body in GitHub release JSON"
+  },
+  "release_date": {
+    "method": "github_api",
+    "field": "published_at in GitHub release JSON"
+  },
+  "notes": "Also available via brew install --cask raspberry-pi-imager. GitHub API is the most reliable source (no auth needed, 60 req/hr unauthenticated, 5000 with token). Use conditional requests (ETag/If-None-Match) to avoid consuming rate limit.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "specialized",
+  "license": "free",
+  "skip": false
+}

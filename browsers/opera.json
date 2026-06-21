@@ -1,0 +1,44 @@
+{
+  "name": "Opera",
+  "slug": "opera",
+  "description": "Opera web browser",
+  "website": "https://opera.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "11.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "scrape_directory_listing",
+    "url": "https://get.opera.com/pub/opera/desktop/",
+    "extraction": {
+      "type": "regex_on_html_directory",
+      "pattern": "\\d+\\.\\d+\\.\\d+\\.\\d+",
+      "sort": "semver descending",
+      "example": "132.0.5905.73"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "construct_url",
+    "pattern": "https://get.opera.com/pub/opera/desktop/{VERSION}/mac/Opera_{VERSION}_Setup.dmg",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "construct_url",
+    "pattern": "https://blogs.opera.com/desktop/changelog-for-{MAJOR}/",
+    "note": "Uses major version only (e.g., /changelog-for-132/)"
+  },
+  "release_date": {
+    "method": "rss_feed",
+    "url": "https://blogs.opera.com/desktop/feed/",
+    "note": "Parse pubDate from matching item in RSS feed"
+  },
+  "notes": "4-segment version (e.g., 132.0.5905.73). Single universal DMG for both Intel and Apple Silicon. opera.com/download uses a gateway redirect \u2014 use get.opera.com CDN for direct access. Each DMG has a .sha256sum companion file.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "browsers",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "com.operasoftware.Opera"
+}

@@ -1,0 +1,38 @@
+{
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "name": "",
+  "slug": "",
+  "bundle_id": "",
+  "category": "",
+  "license": "free",
+  "description": "",
+  "website": "",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "12.0",
+  "auto_updates": false,
+  "skip": false,
+  "version_check": {
+    "method": "",
+    "url": "",
+    "extraction": {},
+    "headers": {},
+    "rate_limit": ""
+  },
+  "download": {
+    "method": "",
+    "url": "",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "",
+    "url": ""
+  },
+  "release_date": {
+    "method": "",
+    "field": ""
+  },
+  "notes": "",
+  "last_updated": ""
+}

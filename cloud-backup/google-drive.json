@@ -1,0 +1,37 @@
+{
+  "name": "Google Drive for desktop",
+  "slug": "google-drive",
+  "description": "File sync and cloud storage",
+  "website": "https://www.google.com/drive",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "13",
+  "auto_updates": true,
+  "version_check": {
+    "method": null,
+    "url": null,
+    "extraction": null,
+    "notes": "Google Keystone updater (proprietary). NO public version API. To detect version, download DMG and read Info.plist CFBundleShortVersionString.",
+    "headers": {}
+  },
+  "download": {
+    "method": "direct",
+    "url_or_pattern": "https://dl.google.com/drive-file-stream/GoogleDrive.dmg",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "webpage",
+    "url": "https://support.google.com/a/answer/7577057"
+  },
+  "release_date": {
+    "method": null
+  },
+  "notes": "Uses Google Keystone updater (same framework as Chrome). Auto-updates silently in the background. No public version API exists. Version only available by inspecting the installed DMG's Info.plist. macOS 13 or later.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "cloud-backup",
+  "license": "free",
+  "skip": true,
+  "bundle_id": "com.google.drivefs"
+}

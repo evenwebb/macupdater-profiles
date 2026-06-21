@@ -1,0 +1,41 @@
+{
+  "name": "iA Writer",
+  "slug": "ia-writer",
+  "description": "Distraction-free writing app with syntax highlighting",
+  "website": "https://ia.net/writer",
+  "platform": "macOS",
+  "architecture": [
+    "universal"
+  ],
+  "min_os": "macOS 12",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle_appcast",
+    "url": "https://updates.ia.net/writers/ia-writer_mac_{major}.xml",
+    "extraction": {
+      "type": "sparkle",
+      "pattern": "SUFeedURL from Info.plist provides the appcast URL"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "sparkle_enclosure",
+    "url_or_pattern": "Sparkle enclosure URL from appcast XML",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "scrape",
+    "url": "https://ia.net/writer/support"
+  },
+  "release_date": {
+    "method": "sparkle_or_appstore",
+    "field": "pubDate in Sparkle XML, or iTunes API results[0].currentVersionReleaseDate"
+  },
+  "notes": "Available on Mac App Store (id 775737590) and as direct download. Direct download uses Sparkle (SUFeedURL in Info.plist). Appcast URL contains major version number. Paid-once pricing model.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "notes-writing",
+  "license": "paid",
+  "skip": false
+}

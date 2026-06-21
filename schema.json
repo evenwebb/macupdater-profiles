@@ -1,0 +1,156 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "type": "object",
+  "required": [
+    "name",
+    "slug",
+    "category",
+    "license",
+    "version_check",
+    "download"
+  ],
+  "properties": {
+    "name": {
+      "type": "string"
+    },
+    "slug": {
+      "type": "string",
+      "pattern": "^[a-z0-9-]+$"
+    },
+    "bundle_id": {
+      "type": "string"
+    },
+    "category": {
+      "type": "string",
+      "enum": [
+        "ai-tools",
+        "apple-apps",
+        "browsers",
+        "cloud-backup",
+        "design",
+        "developer-tools",
+        "email",
+        "gaming",
+        "media",
+        "messaging",
+        "notes-writing",
+        "office",
+        "password-managers",
+        "remote-desktop",
+        "rss-reading",
+        "specialized",
+        "utilities",
+        "virtualization",
+        "vpn-security"
+      ]
+    },
+    "license": {
+      "type": "string",
+      "enum": [
+        "free",
+        "paid"
+      ]
+    },
+    "skip": {
+      "type": "boolean",
+      "default": false
+    },
+    "description": {
+      "type": "string"
+    },
+    "website": {
+      "type": "string",
+      "format": "uri"
+    },
+    "platform": {
+      "type": "string"
+    },
+    "architecture": {
+      "type": "string"
+    },
+    "min_os": {
+      "type": "string"
+    },
+    "auto_updates": {
+      "type": "boolean"
+    },
+    "version_check": {
+      "type": "object",
+      "required": [
+        "method",
+        "url",
+        "extraction"
+      ],
+      "properties": {
+        "method": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "extraction": {
+          "type": "object"
+        },
+        "headers": {
+          "type": "object"
+        },
+        "rate_limit": {
+          "type": "string"
+        }
+      }
+    },
+    "download": {
+      "type": "object",
+      "required": [
+        "method",
+        "file_type"
+      ],
+      "properties": {
+        "method": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        },
+        "pattern": {
+          "type": "string"
+        },
+        "file_type": {
+          "type": "string"
+        },
+        "headers": {
+          "type": "object"
+        }
+      }
+    },
+    "changelog": {
+      "type": "object",
+      "properties": {
+        "method": {
+          "type": "string"
+        },
+        "url": {
+          "type": "string"
+        }
+      }
+    },
+    "release_date": {
+      "type": "object",
+      "properties": {
+        "method": {
+          "type": "string"
+        },
+        "field": {
+          "type": "string"
+        }
+      }
+    },
+    "notes": {
+      "type": "string"
+    },
+    "last_updated": {
+      "type": "string",
+      "format": "date"
+    }
+  }
+}

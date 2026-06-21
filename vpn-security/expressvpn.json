@@ -1,0 +1,40 @@
+{
+  "name": "ExpressVPN",
+  "slug": "expressvpn",
+  "description": "VPN service",
+  "website": "https://www.expressvpn.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "11",
+  "auto_updates": true,
+  "version_check": {
+    "method": "json_api",
+    "url": "https://main-kp-site-gateway-http.prodv2.pac.xvservice.net/api/v2/installers",
+    "extraction": {
+      "type": "json_path",
+      "json_path": "installers.mac_qt.locations.default",
+      "pattern": "expressvpn[._-]macos[._-]universal[._-]v?(\\d+\\.\\d+\\.\\d+)[._-]release\\.zip",
+      "notes": "Navigate JSON: installers \u2192 mac_qt \u2192 locations \u2192 default, then regex extract version from filename."
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "pattern",
+    "url_or_pattern": "https://www.expressvpn.works/clients/mac/expressvpn-macos-universal-{version}_release.zip",
+    "file_type": "zip",
+    "headers": {}
+  },
+  "changelog": {
+    "method": null
+  },
+  "release_date": {
+    "method": null
+  },
+  "notes": "JSON API for version detection. Multiple legacy branches (mac11, mac7, etc.) \u2014 current branch is mac_qt. Download is a zip containing 'ExpressVPN Installer.app'. Requires sudo for installation. macOS 11 or later.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "vpn-security",
+  "license": "paid",
+  "skip": false,
+  "bundle_id": "com.expressvpn.ExpressVPN"
+}

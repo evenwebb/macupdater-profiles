@@ -1,0 +1,40 @@
+{
+  "name": "Brave",
+  "slug": "brave",
+  "description": "Privacy-focused web browser with built-in ad and tracker blocking, Tor integration, and Web3 support",
+  "website": "https://brave.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "macOS 11+ (Big Sur and later)",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle",
+    "url": "https://updates.bravesoftware.com/sparkle/Brave-Browser/stable/appcast.xml",
+    "extraction": {
+      "type": "xpath",
+      "pattern": "sparkle:shortVersionString"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "appcast_enclosure",
+    "url_or_pattern": "Enclosure url field from Sparkle appcast item",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "webpage",
+    "url": "https://brave.com/latest/"
+  },
+  "release_date": {
+    "method": "appcast_field",
+    "field": "pubDate"
+  },
+  "notes": "Available on Brave Software's Sparkle appcast. Universal binary. Open source (Chromium-based). Also available via Homebrew (brave-browser).",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "browsers",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "com.brave.Browser"
+}

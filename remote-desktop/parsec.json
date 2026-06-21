@@ -1,0 +1,44 @@
+{
+  "name": "Parsec",
+  "slug": "parsec",
+  "description": "Low-latency remote desktop and game streaming application",
+  "website": "https://parsec.app",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "11.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "json_api",
+    "url": "https://builds.parsec.app/channel/release/appdata/macos/latest",
+    "extraction": {
+      "type": "json_path_with_regex",
+      "path": "so_name",
+      "regex": "parsecd[._-]v?(\\d+(?:[.-]\\d+)+[a-z]*)\\.dylib",
+      "example": "150-103a"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "static_url",
+    "url": "https://builds.parsec.app/package/parsec-macos.pkg",
+    "file_type": "pkg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "web_scrape",
+    "url": "https://parsec.app/changelog",
+    "note": "Public changelog page with versioned release notes"
+  },
+  "release_date": {
+    "method": "http_last_modified",
+    "url": "https://builds.parsec.app/channel/release/appdata/macos/latest",
+    "note": "Use Last-Modified header on appdata JSON as proxy \u2014 no explicit date in JSON"
+  },
+  "notes": "Version format uses dash separator (e.g. 150-103a), not dots. JSON also contains entry_symbol and hash fields. Download is a .pkg installer, not .dmg. Static URL always gives latest.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "remote-desktop",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "tv.parsec.www"
+}

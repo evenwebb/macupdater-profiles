@@ -1,0 +1,48 @@
+{
+  "name": "CodeRunner",
+  "url": "https://coderunnerapp.com",
+  "description": "Lightweight code editor for Mac",
+  "version_check": {
+    "method": "sparkle",
+    "url": "https://coderunnerapp.com/appcast.xml",
+    "version_field": "sparkle:shortVersionString",
+    "build_field": "sparkle:version",
+    "version_example": "4.5",
+    "build_example": "67850",
+    "headers": {}
+  },
+  "download": {
+    "url": "https://coderunnerapp.com/download/update/CodeRunner-{VERSION}.zip",
+    "file_type": "zip",
+    "headers": {}
+  },
+  "changelog": {
+    "url": "https://coderunnerapp.com/blog/releasenotes/{VERSION}/",
+    "method": "web_page"
+  },
+  "release_date": {
+    "method": "sparkle_pubdate",
+    "field": "pubDate",
+    "format": "RFC 2822"
+  },
+  "sparkle": {
+    "ed_signature": "DSA+EdDSA",
+    "sparkle_version": null
+  },
+  "architecture": "universal",
+  "min_os": null,
+  "auto_updates": true,
+  "app_store_only": false,
+  "distribution": {
+    "mac_app_store": true,
+    "setapp": true,
+    "direct": true
+  },
+  "notes": "Also available on Mac App Store and Setapp.",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "developer-tools",
+  "license": "paid",
+  "skip": false,
+  "bundle_id": "com.krill.CodeRunner",
+  "last_updated": "2026-06-21"
+}

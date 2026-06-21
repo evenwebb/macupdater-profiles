@@ -1,0 +1,43 @@
+{
+  "name": "Pic-Time Uploader",
+  "slug": "pic-time-uploader",
+  "description": "Photo uploader desktop app for Pic-Time photographer galleries",
+  "website": "https://pic-time.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "11.0",
+  "auto_updates": false,
+  "version_check": {
+    "method": "url_checksum_only",
+    "url": "https://uploaderconfigcdn.pic-time.com/pictures/clientupdate/osx/pic-time.pkg",
+    "extraction": {
+      "type": "http_headers_checksum",
+      "note": "No version in URL or headers. Only method: download PKG, extract receipt, read version. Use ETag or Last-Modified comparison to detect changes.",
+      "fallback": "https://demo.pic-time.com/pic-time.pkg?beta=yes (redirects to CDN)"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "static_redirect_url",
+    "url": "https://demo.pic-time.com/pic-time.pkg?beta=yes",
+    "cdn_target": "https://uploaderconfigcdn.pic-time.com/pictures/clientupdate/osx/pic-time.pkg",
+    "file_type": "pkg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "none_available",
+    "url": null,
+    "note": "No public changelog, release notes, or version history found"
+  },
+  "release_date": {
+    "method": "http_last_modified",
+    "url": "https://uploaderconfigcdn.pic-time.com/pictures/clientupdate/osx/pic-time.pkg",
+    "note": "Use Last-Modified header on CDN PKG as proxy for release date"
+  },
+  "notes": "Auth-gated \u2014 the uploader is only accessible to logged-in Pic-Time users. The download page is behind the account dashboard. No Homebrew cask. No known Sparkle appcast or version endpoint. CDN directory listing is disabled. Version tracking requires downloading the PKG or monitoring modification time/checksum.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "cloud-backup",
+  "license": "free",
+  "skip": true
+}

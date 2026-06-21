@@ -1,0 +1,41 @@
+{
+  "name": "Ulysses",
+  "slug": "ulysses",
+  "description": "Writing app for focused, distraction-free composition",
+  "website": "https://ulysses.app",
+  "platform": "macOS",
+  "architecture": [
+    "universal"
+  ],
+  "min_os": "macOS 12",
+  "auto_updates": true,
+  "version_check": {
+    "method": "itunes_api",
+    "url": "https://itunes.apple.com/lookup?id=1225570693",
+    "extraction": {
+      "type": "json_path",
+      "json_path": "results[0].version"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": null,
+    "url_or_pattern": null,
+    "file_type": null,
+    "headers": {}
+  },
+  "changelog": {
+    "method": "scrape",
+    "url": "https://ulysses.app/en/releases/"
+  },
+  "release_date": {
+    "method": "itunes_api",
+    "field": "results[0].currentVersionReleaseDate"
+  },
+  "notes": "Mac App Store only (id 1225570693). No direct download available. app_store_only: true. Subscription-based.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "notes-writing",
+  "license": "paid",
+  "skip": false
+}

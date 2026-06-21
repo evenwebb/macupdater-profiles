@@ -1,0 +1,43 @@
+{
+  "name": "Discord",
+  "slug": "discord",
+  "description": "Voice, video, and text chat platform",
+  "website": "https://discord.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "11.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "json_api",
+    "url": "https://discord.com/api/updates?platform=osx",
+    "extraction": {
+      "type": "json_path",
+      "path": "name",
+      "example": "0.0.395"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "construct_url",
+    "pattern": "https://dl.discordapp.net/apps/osx/{VERSION}/Discord.dmg",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "web_scrape",
+    "url": "https://discord.com/blog",
+    "note": "No dedicated version changelog. Blog posts announce major features. For patch-level changes, use the pub_date from the API as a signal."
+  },
+  "release_date": {
+    "method": "json_api_field",
+    "url": "https://discord.com/api/updates?platform=osx",
+    "field": "pub_date in JSON response"
+  },
+  "notes": "The /api/updates endpoint returns JSON with name, pub_date, url, and notes fields. Can also use HEAD request to /api/download/stable?platform=osx and extract version from Location header.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "messaging",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "com.hnc.Discord"
+}

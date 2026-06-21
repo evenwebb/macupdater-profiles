@@ -1,0 +1,45 @@
+{
+  "name": "VLC Media Player",
+  "slug": "vlc",
+  "description": "Free and open-source cross-platform multimedia player",
+  "website": "https://videolan.org",
+  "platform": "macOS",
+  "architecture": "separate (Intel + Apple Silicon)",
+  "min_os": "10.7",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle_appcast",
+    "url": "https://update.videolan.org/vlc/sparkle/vlc-intel64.xml",
+    "arm64_url": "https://update.videolan.org/vlc/sparkle/vlc-arm64.xml",
+    "extraction": {
+      "type": "sparkle_xml",
+      "version_field": "sparkle:version",
+      "xpath": "//item[1]/enclosure/@sparkle:version",
+      "example": "3.0.23"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "construct_from_sparkle_or_pattern",
+    "pattern": "https://get.videolan.org/vlc/{VERSION}/macosx/vlc-{VERSION}-{ARCH}.dmg",
+    "intel_arch": "intel64",
+    "arm_arch": "arm64",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "construct_from_version",
+    "pattern": "https://update.videolan.org/vlc/sparkle/vlc/rnotes-{VERSION}.html"
+  },
+  "release_date": {
+    "method": "sparkle_pub_date",
+    "field": "pubDate in appcast <item> (RFC 2822 format)"
+  },
+  "notes": "Sparkle feed is publicly accessible with no auth. DSA signature present for integrity verification. Also available: legacy VLC 3.x-only feed at vlc-intel64.3.xml. Minimum system version in sparkle:minimumSystemVersion field.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "media",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "org.videolan.vlc"
+}

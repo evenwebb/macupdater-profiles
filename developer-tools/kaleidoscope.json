@@ -1,0 +1,39 @@
+{
+  "name": "Kaleidoscope",
+  "slug": "kaleidoscope",
+  "description": "Diff/merge tool",
+  "website": "https://kaleidoscope.app",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "13",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle_xml",
+    "url": "https://updates.kaleidoscope.app/appcast.xml",
+    "extraction": {
+      "type": "sparkle_version",
+      "pattern": null
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "fixed_url",
+    "url_or_pattern": "https://cloud.kaleidoscope.app/download/v6",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "in_app_or_blog",
+    "url": null
+  },
+  "release_date": {
+    "method": "pubDate",
+    "field": "pubDate"
+  },
+  "notes": "Sparkle 2. Appcast URL returns HTTP 403 due to Cloudflare protection. Subscription ($8/mo). Acquired by Leitmotif. Changelog in-app or blog. File likely dmg or zip.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "developer-tools",
+  "license": "paid",
+  "skip": false
+}

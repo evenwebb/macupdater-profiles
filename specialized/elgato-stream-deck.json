@@ -1,0 +1,43 @@
+{
+  "name": "Elgato Stream Deck",
+  "slug": "elgato-stream-deck",
+  "description": "Configuration software for Elgato Stream Deck hardware control surfaces",
+  "website": "https://elgato.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "13.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "json_api",
+    "url": "https://gc-updates.elgato.com/mac/sd-update/final/app-version-check.json",
+    "extraction": {
+      "type": "json_path",
+      "path": "Manual.Version",
+      "note": "Both Automatic and Manual blocks contain the same Version field",
+      "example": "7.4.2.22730"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "construct_url",
+    "pattern": "https://edge.elgato.com/egc/macos/sd/Stream_Deck_{VERSION}.pkg",
+    "file_type": "pkg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "construct_url",
+    "pattern": "https://edge.elgato.com/egc/sd_content/releasenotes/{SHORT_VERSION}.html",
+    "short_version_regex": "(\\d+\\.\\d+\\.\\d+)"
+  },
+  "release_date": {
+    "method": "last_modified_header",
+    "url": "same as version_check URL",
+    "note": "Use HTTP Last-Modified header on app-version-check.json as proxy"
+  },
+  "notes": "JSON version endpoint works without authentication. Separate automatic and manual update channels, but versions are identical. Also has app-download-automatic.php and app-download-manual.php redirect endpoints.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "specialized",
+  "license": "free",
+  "skip": false
+}

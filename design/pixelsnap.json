@@ -1,0 +1,38 @@
+{
+  "name": "PixelSnap",
+  "slug": "pixelsnap",
+  "description": "Screen measurement tool for designers",
+  "website": "https://pixelsnap.com",
+  "platform": "macOS",
+  "architecture": [
+    "x86_64",
+    "arm64"
+  ],
+  "min_os": null,
+  "auto_updates": true,
+  "version_check": {
+    "protocol": "sparkle",
+    "sparkle_version": 2,
+    "appcast_url": "https://updates.getpixelsnap.com/v2/appcast.xml",
+    "xpath": "//rss/channel/item[1]/sparkle:shortVersionString",
+    "xpath_note": "e.g. 2.6.3",
+    "headers": {}
+  },
+  "download": {
+    "url_template": "https://updates.getpixelsnap.com/v2/PixelSnap-2-{VERSION}.dmg",
+    "kind": "dmg",
+    "headers": {}
+  },
+  "changelog": "https://pixelsnap.com/changelog",
+  "release_date": {
+    "source": "appcast",
+    "field": "pubDate",
+    "format": "RFC 2822"
+  },
+  "notes": "CloudFront from S3. Domain changed from getpixelsnap.com to pixelsnap.com. Old v1 appcast redirects to broken URL.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "design",
+  "license": "paid",
+  "skip": false
+}

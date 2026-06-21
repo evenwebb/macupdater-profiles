@@ -1,0 +1,44 @@
+{
+  "name": "Private Internet Access",
+  "url": "https://www.privateinternetaccess.com",
+  "description": "VPN client",
+  "version_check": {
+    "method": "sparkle",
+    "url": "https://www.privateinternetaccess.com/installer/sparkle/appcast.xml",
+    "version_field": "sparkle:shortVersionString",
+    "version_example": "3.7.2-08420",
+    "note": "Appcast URL may be access-restricted (redirects to helpdesk when probed without proper headers)",
+    "headers": {}
+  },
+  "download": {
+    "url": "https://installers.privateinternetaccess.com/download/pia-macos-{VERSION}.zip",
+    "url_static": "https://installers.privateinternetaccess.com/download/pia-macos-latest.zip",
+    "file_type": "zip",
+    "note": "Contains .pkg installer",
+    "headers": {}
+  },
+  "changelog": {
+    "url": "https://www.privateinternetaccess.com/blog/",
+    "method": "web_page",
+    "note": "Release announcements on blog"
+  },
+  "release_date": {
+    "method": "sparkle_pubdate",
+    "field": "pubDate"
+  },
+  "sparkle": {
+    "ed_signature": "EdDSA",
+    "sparkle_version": null,
+    "note": "Appcast may have referrer/user-agent restrictions"
+  },
+  "architecture": "universal",
+  "min_os": "10.15",
+  "auto_updates": true,
+  "app_store_only": false,
+  "notes": "Bundle includes split tunneling, kill switch, multi-hop. Also offers standalone WireGuard configs.",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "vpn-security",
+  "license": "paid",
+  "skip": false,
+  "last_updated": "2026-06-21"
+}

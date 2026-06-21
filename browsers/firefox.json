@@ -1,0 +1,43 @@
+{
+  "name": "Firefox",
+  "slug": "firefox",
+  "description": "Mozilla Firefox web browser",
+  "website": "https://mozilla.org/firefox",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "11.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "json_api",
+    "url": "https://product-details.mozilla.org/1.0/firefox_versions.json",
+    "extraction": {
+      "type": "json_path",
+      "path": "LATEST_FIREFOX_VERSION",
+      "example": "152.0.1"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "redirect_url",
+    "url": "https://download.mozilla.org/?product=firefox-latest-ssl&os=osx&lang=en-US",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "web_scrape",
+    "url": "https://www.mozilla.org/en-US/firefox/{VERSION}/releasenotes/",
+    "note": "Release notes page per version. Also provides ESR, DevEdition, Nightly versions."
+  },
+  "release_date": {
+    "method": "json_api",
+    "url": "https://product-details.mozilla.org/1.0/firefox_versions.json",
+    "note": "No date field in API \u2014 use Release Management calendar or Mozilla FTP directory listing dates"
+  },
+  "notes": "Mozilla's product-details API is well-documented and stable. Also provides FIREFOX_ESR, FIREFOX_DEVEDITION, FIREFOX_NIGHTLY. Download URL redirects through download-installer.cdn.mozilla.net.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "browsers",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "org.mozilla.firefox"
+}

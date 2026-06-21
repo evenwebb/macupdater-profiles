@@ -1,0 +1,41 @@
+{
+  "name": "Pixelmator Pro",
+  "slug": "pixelmator-pro",
+  "description": "Professional image editing application with machine learning-powered tools",
+  "website": "https://www.pixelmator.com/pro/",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "macOS 12.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "itunes_api",
+    "url": "https://itunes.apple.com/lookup?id=1289583905",
+    "extraction": {
+      "type": "json_path",
+      "json_path": "$.results[0].version",
+      "notes": "Mac App Store only. No direct download. iTunes Search API returns latest version string and release notes in $.results[0].releaseNotes."
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "mac_app_store",
+    "url_or_pattern": "macappstore://apps.apple.com/app/pixelmator-pro/id1289583905",
+    "file_type": "pkg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "itunes_api",
+    "url": "https://itunes.apple.com/lookup?id=1289583905",
+    "notes": "Release notes in $.results[0].releaseNotes field of iTunes API response."
+  },
+  "release_date": {
+    "method": "itunes_api",
+    "field": "currentVersionReleaseDate"
+  },
+  "notes": "Mac App Store exclusive (id1289583905). No direct download or Sparkle feed available. Acquired by Apple (announced November 2024), so no longer sold but existing users continue to receive updates. Version data only retrievable via iTunes Search API. Paid app (one-time purchase).",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "design",
+  "license": "paid",
+  "skip": false
+}

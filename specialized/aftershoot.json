@@ -1,0 +1,39 @@
+{
+  "name": "Aftershoot",
+  "url": "https://aftershoot.com",
+  "description": "Photo culling and editing",
+  "version_check": {
+    "method": "sparkle",
+    "url": "appcast URL embedded in app (probable: https://updates.aftershoot.com/appcast/mac/stable/appcast.xml \u2014 connection refused when probed; may be IP-restricted)",
+    "version_field": "sparkle:shortVersionString",
+    "version_example": "2.3.0",
+    "headers": {}
+  },
+  "download": {
+    "url": "https://aftershoot.com/downloads/",
+    "url_note": "Website blocks automated fetching (403). Download URL likely in form https://downloads.aftershoot.com/mac/Aftershoot-{VERSION}.dmg",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "url": "https://aftershoot.com/blog/",
+    "method": "web_page"
+  },
+  "release_date": {
+    "method": "sparkle_pubdate",
+    "field": "pubDate"
+  },
+  "sparkle": {
+    "note": "Appcast endpoint refused connection \u2014 may be IP-restricted or use a different path"
+  },
+  "architecture": "universal",
+  "min_os": "12.0",
+  "auto_updates": true,
+  "app_store_only": false,
+  "notes": "AI-powered photo culling and editing tool for photographers. Features AI Culling 3.0. Company blocks automated web fetching of downloads page (403). Integrates with Lightroom. Free tier with limits.",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "specialized",
+  "license": "free",
+  "skip": false,
+  "last_updated": "2026-06-21"
+}

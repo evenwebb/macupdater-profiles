@@ -1,0 +1,40 @@
+{
+  "name": "Logitech Options+",
+  "slug": "logitech-options-plus",
+  "description": "Configuration software for Logitech mice, keyboards, and presentation remotes",
+  "website": "https://www.logitech.com/options-plus",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "varies (Sonoma+ for current, older macOS get capped versions)",
+  "auto_updates": true,
+  "version_check": {
+    "method": "json_api",
+    "url": "https://updates.optionsplus.logitechg.com/pipeline/v2/update/optionsplus5/osx/public/update.json",
+    "extraction": {
+      "type": "json_path",
+      "path": "version",
+      "example": "2.4.x"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "static_url",
+    "url": "https://download01.logi.com/web/ftp/pub/techsupport/optionsplus/logioptionsplus_installer.zip",
+    "file_type": "zip",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "web_scrape",
+    "url": "https://support.logi.com/hc/en-us/articles/1500005516462-Logi-Options-Release-Notes"
+  },
+  "release_date": {
+    "method": "json_api",
+    "field": "lastModified (ISO 8601, e.g., 2026-06-09T15:44:02Z)"
+  },
+  "notes": "No public Sparkle (internal only, 403-blocked). appId incremented per macOS version (optionsplus3\u21925). Requires sudo to install. Unversioned download URL is canonical; versioned URLs return 404 for current versions.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "specialized",
+  "license": "free",
+  "skip": false
+}

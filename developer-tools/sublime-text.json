@@ -1,0 +1,40 @@
+{
+  "name": "Sublime Text",
+  "slug": "sublime-text",
+  "description": "Text editor",
+  "website": "https://www.sublimetext.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "10.9",
+  "auto_updates": true,
+  "version_check": {
+    "method": "rest_api_json",
+    "url": "https://www.sublimetext.com/updates/4/stable_update_check",
+    "extraction": {
+      "type": "json_path",
+      "json_path": "$.latest_version"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "composed_url",
+    "url_or_pattern": "https://download.sublimetext.com/sublime_text_osx_{build}.pak.xz",
+    "file_type": "pak.xz",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "scrape_blog",
+    "url": "https://www.sublimetext.com/blog/"
+  },
+  "release_date": {
+    "method": "blog_scrape",
+    "field": null
+  },
+  "notes": "NOT Sparkle. Custom JSON update check. $.latest_version is integer (e.g. 4200). Incremental .pak.xz downloads; initial install uses .dmg. Unique update system with manifest files. Release date not in JSON \u2014 scrape blog.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "developer-tools",
+  "license": "paid",
+  "skip": false,
+  "bundle_id": "com.sublimetext.4"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Bear",
+  "slug": "bear",
+  "description": "Markdown notes and writing app with rich formatting",
+  "website": "https://bear.app",
+  "platform": "macOS",
+  "architecture": [
+    "universal"
+  ],
+  "min_os": "macOS 12",
+  "auto_updates": true,
+  "version_check": {
+    "method": "itunes_api",
+    "url": "https://itunes.apple.com/lookup?id=1091189122",
+    "extraction": {
+      "type": "json_path",
+      "json_path": "results[0].version"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": null,
+    "url_or_pattern": null,
+    "file_type": null,
+    "headers": {}
+  },
+  "changelog": {
+    "method": "scrape",
+    "url": "https://bear.app/faq/whats-new-in-bear-2/"
+  },
+  "release_date": {
+    "method": "itunes_api",
+    "field": "results[0].currentVersionReleaseDate"
+  },
+  "notes": "Mac App Store only (id 1091189122). No direct download available. app_store_only: true.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "notes-writing",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "net.shinyfrog.bear"
+}

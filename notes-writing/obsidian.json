@@ -1,0 +1,42 @@
+{
+  "name": "Obsidian",
+  "slug": "obsidian",
+  "description": "Knowledge base and note-taking app with linked thought",
+  "website": "https://obsidian.md",
+  "platform": "macOS",
+  "architecture": [
+    "universal"
+  ],
+  "min_os": "macOS 12",
+  "auto_updates": true,
+  "version_check": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/obsidianmd/obsidian-releases/releases/latest",
+    "extraction": {
+      "type": "json_path",
+      "json_path": "tag_name (strip leading 'v')"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "constructed_url",
+    "url_or_pattern": "https://github.com/obsidianmd/obsidian-releases/releases/download/v{version}/Obsidian-{version}.dmg",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "github_release",
+    "url": "https://api.github.com/repos/obsidianmd/obsidian-releases/releases/latest"
+  },
+  "release_date": {
+    "method": "github_api",
+    "field": "published_at (ISO 8601)"
+  },
+  "notes": "App's internal updater uses obsidian.md service. GitHub API works reliably for version tracking. GitHub release body serves as changelog.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "notes-writing",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "md.obsidian"
+}

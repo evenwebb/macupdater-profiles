@@ -1,0 +1,51 @@
+{
+  "name": "calibre",
+  "slug": "calibre",
+  "description": "E-book library management, conversion, and reading application",
+  "website": "https://calibre-ebook.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "11.0",
+  "auto_updates": true,
+  "version_check": {
+    "method": "plain_text_api",
+    "url": "https://calibre-ebook.com/latest-version",
+    "extraction": {
+      "type": "plain_text",
+      "pattern": "^(\\d+\\.\\d+\\.\\d+)$",
+      "note": "Response is just the version string (e.g. '9.9.0'). Strip whitespace. No parsing needed.",
+      "example": "9.9.0"
+    },
+    "fallback_github": {
+      "method": "github_api",
+      "url": "https://api.github.com/repos/kovidgoyal/calibre/releases/latest",
+      "path": "tag_name",
+      "strip_prefix": "v"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "construct_url",
+    "pattern": "https://github.com/kovidgoyal/calibre/releases/download/v{VERSION}/calibre-{VERSION}.dmg",
+    "redirect_url": "https://calibre-ebook.com/dist/osx",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "web_scrape",
+    "url": "https://calibre-ebook.com/whats-new",
+    "note": "Release headings follow pattern: 'Release: X.Y [DD Mon, YYYY]'"
+  },
+  "release_date": {
+    "method": "github_api",
+    "field": "published_at in GitHub release JSON (ISO 8601)",
+    "fallback_scrape": "Changelog page headings contain dates"
+  },
+  "notes": "Primary version URL: https://code.calibre-ebook.com/latest (SSL issues with some clients). Fallback at calibre-ebook.com/latest-version is reliable. Calibre checks for updates every 24h via GET with custom headers (X-Calibre-Version, X-Calibre-OS, X-Calibre-Install-UUID). No Cloudflare. No auth. Open source.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "office",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "net.kovidgoyal.calibre"
+}

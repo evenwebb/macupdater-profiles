@@ -1,0 +1,40 @@
+{
+  "name": "IINA",
+  "slug": "iina",
+  "description": "Modern, open-source media player for macOS built on mpv, with native Cocoa interface and extensive format support",
+  "website": "https://iina.io",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "macOS 11+ (Big Sur and later)",
+  "auto_updates": true,
+  "version_check": {
+    "method": "sparkle",
+    "url": "https://sparkle.iina.io/appcast.xml",
+    "extraction": {
+      "type": "xpath",
+      "pattern": "sparkle:shortVersionString"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "versioned_url",
+    "url_or_pattern": "https://github.com/iina/iina/releases/download/v{version}/IINA.v{version}.dmg",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "webpage",
+    "url": "https://iina.io/release-note/"
+  },
+  "release_date": {
+    "method": "appcast_field",
+    "field": "pubDate"
+  },
+  "notes": "Open source (GPLv3). Hosted on GitHub at https://github.com/iina/iina. Sparkle appcast is publicly accessible at sparkle.iina.io. Also available via Homebrew (iina). Universal binary supporting Apple Silicon and Intel. mpv-based player with modern macOS-native UI.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "media",
+  "license": "free",
+  "skip": false,
+  "bundle_id": "com.colliderli.iina"
+}

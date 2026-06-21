@@ -1,0 +1,42 @@
+{
+  "name": "Reaper",
+  "slug": "reaper",
+  "description": "Digital audio workstation",
+  "website": "https://www.reaper.fm",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "10.15",
+  "auto_updates": false,
+  "version_check": {
+    "method": "plaintext",
+    "url": "https://www.reaper.fm/whatsnew.txt",
+    "extraction": {
+      "type": "pattern",
+      "pattern": "v?(\\d+\\.\\d+)",
+      "notes": "First line of whatsnew.txt, e.g. 'v7.74 - June 17 2025'. Regex captures version number after optional 'v'."
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "pattern",
+    "url_or_pattern": "https://www.reaper.fm/files/7.x/reaper{version}_universal.dmg",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "plaintext",
+    "url": "https://www.reaper.fm/whatsnew.txt"
+  },
+  "release_date": {
+    "method": "pattern",
+    "field": "first_line",
+    "notes": "First line format: 'vX.XX - Month DD YYYY'."
+  },
+  "notes": "Plaintext whatsnew.txt for both version and changelog. Version parsed from first line. Universal build (macOS 10.15+). Also available via Homebrew cask. No Sparkle, no REST API. Legacy _x86_64.dmg also available.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "media",
+  "license": "paid",
+  "skip": false,
+  "bundle_id": "com.cockos.reaper"
+}

@@ -1,0 +1,42 @@
+{
+  "name": "Things",
+  "slug": "things",
+  "description": "Elegant personal task manager with focus on simplicity",
+  "website": "https://culturedcode.com/things",
+  "platform": "macOS",
+  "architecture": [
+    "universal"
+  ],
+  "min_os": "macOS 12",
+  "auto_updates": true,
+  "version_check": {
+    "method": "itunes_api",
+    "url": "https://itunes.apple.com/lookup?id=904280696",
+    "extraction": {
+      "type": "json_path",
+      "json_path": "results[0].version"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "direct_url",
+    "url_or_pattern": "https://static.culturedcode.com/things/Things3.zip",
+    "file_type": "zip",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "scrape",
+    "url": "https://culturedcode.com/things/whats-new/"
+  },
+  "release_date": {
+    "method": "itunes_api",
+    "field": "results[0].currentVersionReleaseDate"
+  },
+  "notes": "Mac App Store (id 904280696) and direct download. Direct download URL is static (no version in URL). No Sparkle, no version API. Must open Info.plist inside the .app bundle to determine version of direct download.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "notes-writing",
+  "license": "paid",
+  "skip": false,
+  "bundle_id": "com.culturedcode.ThingsMac"
+}

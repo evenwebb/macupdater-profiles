@@ -1,0 +1,45 @@
+{
+  "name": "Fast Clicker",
+  "slug": "fast-clicker",
+  "description": "Auto-clicker utility by MurGaa.com \u2014 automates mouse clicking for games and repetitive tasks",
+  "website": "https://www.murgaa.com/fast-clicker/",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "10.11",
+  "auto_updates": false,
+  "version_check": {
+    "method": "download_and_parse_plist",
+    "url": "https://www.murgaa.com/fast-clicker/download/FastClicker.zip",
+    "extraction": {
+      "type": "info_plist_key",
+      "key": "CFBundleShortVersionString",
+      "build_key": "CFBundleVersion",
+      "example": "18.92"
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "static_url",
+    "url": "https://www.murgaa.com/fast-clicker/download/FastClicker.zip",
+    "file_type": "zip",
+    "note": "No version in filename \u2014 must download and inspect",
+    "headers": {}
+  },
+  "changelog": {
+    "method": "web_scrape_product_page",
+    "url": "https://www.murgaa.com/fast-clicker/",
+    "extraction": "Look for 'What\\'s new' or 'Version history' section on product page",
+    "note": "No dedicated changelog page or structured feed"
+  },
+  "release_date": {
+    "method": "http_last_modified",
+    "url": "https://www.murgaa.com/fast-clicker/download/FastClicker.zip",
+    "note": "Last-Modified header on ZIP is the only date signal. As of 2026-06: Sat, 07 Sep 2024 09:29:51 GMT \u2014 hasn't been updated in years."
+  },
+  "notes": "Extremely basic distribution. No Sparkle, no API, no versioned URLs, no Mac App Store. Hosted on Amazon S3 via CloudFront. The only way to detect version is download+extract Info.plist. To avoid downloading every check, compare Last-Modified or Content-Length headers first.",
+  "last_updated": "2026-06-21",
+  "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
+  "category": "utilities",
+  "license": "free",
+  "skip": false
+}
