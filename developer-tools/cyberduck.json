@@ -9,7 +9,7 @@
   "auto_updates": true,
   "version_check": {
     "method": "sparkle_xml",
-    "url": "https://version.cyberduck.io/sparkle/changelog.rss",
+    "url": "https://version.cyberduck.io/changelog.rss",
     "extraction": {
       "type": "xpath",
       "xpath": "sparkle:version"

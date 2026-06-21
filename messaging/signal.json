@@ -12,7 +12,7 @@
   "min_os": "macOS 11",
   "auto_updates": true,
   "version_check": {
-    "method": "electron_updater_yaml",
+    "method": "yaml_api",
     "url": "https://updates.signal.org/desktop/latest-mac.yml",
     "extraction": {
       "type": "yaml_key",

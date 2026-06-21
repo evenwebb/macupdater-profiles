@@ -11,7 +11,7 @@
   "min_os": "macOS 11",
   "auto_updates": true,
   "version_check": {
-    "method": "electron_updater_yaml",
+    "method": "yaml_api",
     "url": "https://desktop-release.notion-static.com/latest-mac.yml",
     "extraction": {
       "type": "yaml_key",

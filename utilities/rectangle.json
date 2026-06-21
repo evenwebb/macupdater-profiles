@@ -9,7 +9,7 @@
   "auto_updates": true,
   "version_check": {
     "method": "sparkle_appcast",
-    "url": "https://github.com/rxhanson/Rectangle/releases/appcast.xml",
+    "url": "https://rectangleapp.com/downloads/updates.xml",
     "extraction": {
       "type": "xpath",
       "xpath": "//item/enclosure/@*[local-name()='shortVersionString' or local-name()='sparkle:shortVersionString']",
