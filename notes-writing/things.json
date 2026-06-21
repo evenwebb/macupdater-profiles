@@ -4,9 +4,7 @@
   "description": "Elegant personal task manager with focus on simplicity",
   "website": "https://culturedcode.com/things",
   "platform": "macOS",
-  "architecture": [
-    "universal"
-  ],
+  "architecture": "universal",
   "min_os": "macOS 12",
   "auto_updates": true,
   "version_check": {

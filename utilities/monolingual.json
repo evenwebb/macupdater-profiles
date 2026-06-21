@@ -1,0 +1,34 @@
+{
+  "name": "Monolingual",
+  "slug": "monolingual",
+  "bundle_id": "com.github.IngmarStein.Monolingual",
+  "category": "utilities",
+  "license": "free",
+  "description": "Monolingual is a free utility for macOS that removes unnecessary language resources from the operating system and applications to reclaim disk space.",
+  "website": "https://ingmarstein.github.io",
+  "platform": "macOS",
+  "architecture": "x86_64",
+  "min_os": "10.13",
+  "auto_updates": true,
+  "skip": false,
+  "version_check": {
+    "method": "sparkle_appcast",
+    "url": "https://ingmarstein.github.io/Monolingual/appcast.xml",
+    "extraction": "sparkle:version"
+  },
+  "download": {
+    "method": "construct_url",
+    "url": null,
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "url": "https://github.com/IngmarStein/Monolingual/releases"
+  },
+  "release_date": {
+    "method": "github",
+    "field": "published_at"
+  },
+  "notes": "Intel-only (x86_64) app. Uses Sparkle for updates. Hosted on GitHub pages.",
+  "last_updated": "2026-06-21"
+}

@@ -4,7 +4,7 @@
   "description": "Free and open-source office productivity suite",
   "website": "https://openoffice.org",
   "platform": "macOS",
-  "architecture": "x86_64 only (no native arm64)",
+  "architecture": "x86_64",
   "min_os": "10.13",
   "auto_updates": false,
   "version_check": {

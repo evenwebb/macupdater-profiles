@@ -19,7 +19,7 @@
     "headers": {}
   },
   "download": {
-    "method": "pattern",
+    "method": "construct_url",
     "file_type": "zip",
     "headers": {},
     "url": "https://www.expressvpn.works/clients/mac/expressvpn-macos-universal-{version}_release.zip"

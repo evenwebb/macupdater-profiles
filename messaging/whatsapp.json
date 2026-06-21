@@ -4,9 +4,7 @@
   "description": "Cross-platform encrypted messaging app",
   "website": "https://whatsapp.com",
   "platform": "macOS",
-  "architecture": [
-    "universal"
-  ],
+  "architecture": "universal",
   "min_os": "macOS 11",
   "auto_updates": false,
   "version_check": {

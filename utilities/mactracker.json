@@ -4,10 +4,7 @@
   "description": "Database of every Apple Mac model ever made",
   "website": "https://mactracker.ca",
   "platform": "macOS",
-  "architecture": [
-    "x86_64",
-    "arm64"
-  ],
+  "architecture": "separate",
   "min_os": "11.0",
   "auto_updates": true,
   "version_check": {
@@ -16,12 +13,16 @@
     "appcast_url": "https://update.mactracker.ca/appcast-b.xml",
     "xpath": "/rss/channel/item/enclosure/@sparkle:version",
     "xpath_note": "Single-item feed, no shortVersionString",
-    "headers": {}
+    "headers": {},
+    "method": "sparkle_appcast",
+    "url": "https://update.mactracker.ca/appcast-b.xml"
   },
   "download": {
     "url_template": "https://mactracker.ca/downloads/Mactracker_{VERSION}.zip",
     "kind": "zip",
-    "headers": {}
+    "headers": {},
+    "url": "https://mactracker.ca/downloads/Mactracker_latest.zip",
+    "file_type": "dmg"
   },
   "changelog": "https://mactracker.ca/releasenotes-mac.html",
   "release_date": {
@@ -35,5 +36,6 @@
   "category": "utilities",
   "license": "paid",
   "skip": false,
-  "bundle_id": "com.mactrackerapp.Mactracker"
+  "bundle_id": "com.mactrackerapp.Mactracker",
+  "file_type": "zip"
 }

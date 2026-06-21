@@ -18,7 +18,7 @@
     "headers": {}
   },
   "download": {
-    "method": "pattern",
+    "method": "construct_url",
     "file_type": "dmg",
     "headers": {},
     "url": "https://sourceforge.net/projects/skim-app/files/Skim/Skim-{version}/Skim-{version}.dmg/download"

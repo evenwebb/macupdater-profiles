@@ -18,7 +18,7 @@
     "headers": {}
   },
   "download": {
-    "method": "direct",
+    "method": "direct_url",
     "file_type": "zip",
     "headers": {},
     "url": "https://1111-releases.cloudflareclient.com/mac/Cloudflare_WARP.zip"

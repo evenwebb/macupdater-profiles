@@ -4,9 +4,7 @@
   "description": "Team collaboration and video conferencing",
   "website": "https://microsoft.com",
   "platform": "macOS",
-  "architecture": [
-    "universal"
-  ],
+  "architecture": "universal",
   "min_os": "macOS 11",
   "auto_updates": true,
   "version_check": {

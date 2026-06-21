@@ -4,7 +4,7 @@
   "description": "GNU Image Manipulation Program \u2014 free and open-source image editor",
   "website": "https://www.gimp.org",
   "platform": "macOS",
-  "architecture": "separate (Intel + Apple Silicon)",
+  "architecture": "separate",
   "min_os": "11.0",
   "auto_updates": true,
   "version_check": {

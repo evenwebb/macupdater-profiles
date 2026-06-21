@@ -4,7 +4,7 @@
   "description": "DNS/network control utility GUI app \u2014 companion to ctrld CLI daemon",
   "website": "https://controld.com",
   "platform": "macOS",
-  "architecture": "universal (separate builds)",
+  "architecture": "separate",
   "min_os": "12.0",
   "auto_updates": true,
   "version_check": {

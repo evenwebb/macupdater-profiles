@@ -4,9 +4,7 @@
   "description": "Open-source password manager for individuals and teams",
   "website": "https://bitwarden.com",
   "platform": "macOS",
-  "architecture": [
-    "universal"
-  ],
+  "architecture": "universal",
   "min_os": "macOS 11",
   "auto_updates": true,
   "version_check": {

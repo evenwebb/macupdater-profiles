@@ -1,0 +1,34 @@
+{
+  "name": "Burn",
+  "slug": "burn",
+  "bundle_id": null,
+  "category": "utilities",
+  "license": "free",
+  "description": "Burn is a free open-source application for macOS that allows you to burn data, audio, and video discs, as well as create and burn disc images.",
+  "website": "https://burn-osx.sourceforge.io",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "10.11",
+  "auto_updates": false,
+  "skip": false,
+  "version_check": {
+    "method": "scrape_html",
+    "url": "https://burn-osx.sourceforge.io/Pages/English/home.html",
+    "extraction": null
+  },
+  "download": {
+    "method": "scrape",
+    "url": "https://burn-osx.sourceforge.io/Pages/English/download.html",
+    "file_type": "zip",
+    "headers": {}
+  },
+  "changelog": {
+    "url": "https://burn-osx.sourceforge.io/Pages/English/news.html"
+  },
+  "release_date": {
+    "method": "none",
+    "field": null
+  },
+  "notes": "Hosted on SourceForge. May have infrequent updates. No auto-updater. Version and download URL must be scraped. File may be dmg or zip.",
+  "last_updated": "2026-06-21"
+}

@@ -4,9 +4,7 @@
   "description": "Knowledge base and note-taking app with linked thought",
   "website": "https://obsidian.md",
   "platform": "macOS",
-  "architecture": [
-    "universal"
-  ],
+  "architecture": "universal",
   "min_os": "macOS 12",
   "auto_updates": true,
   "version_check": {

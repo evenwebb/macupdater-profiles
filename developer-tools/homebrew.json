@@ -8,8 +8,8 @@
   "min_os": "13",
   "auto_updates": true,
   "version_check": {
-    "method": "git_self_update",
-    "url": "https://github.com/Homebrew/brew.git",
+    "method": "github_api",
+    "url": "https://api.github.com/repos/Homebrew/brew/releases/latest",
     "extraction": {
       "type": "git_ref",
       "pattern": "refs/heads/master"
@@ -18,7 +18,7 @@
   },
   "download": {
     "method": "git_pull",
-    "file_type": null,
+    "file_type": "dmg",
     "headers": {},
     "url": "N/A"
   },
@@ -35,5 +35,6 @@
   "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
   "category": "developer-tools",
   "license": "free",
-  "skip": false
+  "skip": false,
+  "file_type": "n/a"
 }

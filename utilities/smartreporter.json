@@ -1,0 +1,34 @@
+{
+  "name": "SMARTReporter",
+  "slug": "smartreporter",
+  "bundle_id": null,
+  "category": "utilities",
+  "license": "free",
+  "description": "SMARTReporter monitors hard disk drives and solid-state drives by periodically checking their built-in S.M.A.R.T. status and performing I/O checks to predict drive failures.",
+  "website": "https://www.corecode.io/smartreporter/",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "10.13",
+  "auto_updates": false,
+  "skip": false,
+  "version_check": {
+    "method": "scrape_html",
+    "url": "https://www.corecode.io/smartreporter/",
+    "extraction": null
+  },
+  "download": {
+    "method": "scrape",
+    "url": "https://www.corecode.io/smartreporter/",
+    "file_type": "zip",
+    "headers": {}
+  },
+  "changelog": {
+    "url": "https://www.corecode.io/smartreporter/history.html"
+  },
+  "release_date": {
+    "method": "none",
+    "field": null
+  },
+  "notes": "No public version API or Sparkle feed. Version and download URL must be scraped from the product page.",
+  "last_updated": "2026-06-21"
+}

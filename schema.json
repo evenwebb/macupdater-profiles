@@ -151,6 +151,10 @@
     "last_updated": {
       "type": "string",
       "format": "date"
+    },
+    "schema_version": {
+      "type": "integer",
+      "description": "Profile schema version (currently 2)"
     }
   }
 }

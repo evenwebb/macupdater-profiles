@@ -4,10 +4,7 @@
   "description": "All-in-one workspace for notes, wikis, and databases",
   "website": "https://notion.so",
   "platform": "macOS",
-  "architecture": [
-    "arm64",
-    "x64"
-  ],
+  "architecture": "separate",
   "min_os": "macOS 11",
   "auto_updates": true,
   "version_check": {

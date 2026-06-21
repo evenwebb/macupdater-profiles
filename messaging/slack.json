@@ -4,11 +4,7 @@
   "description": "Team messaging and collaboration platform",
   "website": "https://slack.com",
   "platform": "macOS",
-  "architecture": [
-    "universal",
-    "arm64",
-    "x64"
-  ],
+  "architecture": "universal",
   "min_os": "macOS 12",
   "auto_updates": true,
   "version_check": {

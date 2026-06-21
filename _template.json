@@ -1,38 +1,42 @@
 {
   "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
-  "name": "",
-  "slug": "",
-  "bundle_id": "",
-  "category": "",
+  "name": "App Name",
+  "slug": "app-slug",
+  "bundle_id": "com.example.app",
+  "category": "utilities",
   "license": "free",
-  "description": "",
-  "website": "",
+  "description": "What the app does — one sentence",
+  "website": "https://example.com",
   "platform": "macOS",
   "architecture": "universal",
   "min_os": "12.0",
   "auto_updates": false,
   "skip": false,
   "version_check": {
-    "method": "",
-    "url": "",
-    "extraction": {},
+    "method": "sparkle_appcast",
+    "url": "https://example.com/appcast.xml",
+    "extraction": {
+      "type": "sparkle_xml",
+      "version_field": "sparkle:shortVersionString"
+    },
     "headers": {},
     "rate_limit": ""
   },
   "download": {
-    "method": "",
-    "url": "",
+    "method": "direct_url",
+    "url": "https://example.com/download/App-{VERSION}.dmg",
     "file_type": "dmg",
-    "headers": {}
+    "headers": {},
+    "note": "For separate arch downloads, use {ARCH} in URL (resolves to arm64 or x86_64 at runtime)"
   },
   "changelog": {
-    "method": "",
-    "url": ""
+    "method": "web_scrape",
+    "url": "https://example.com/release-notes"
   },
   "release_date": {
-    "method": "",
-    "field": ""
+    "method": "sparkle_pub_date",
+    "field": "pubDate in appcast"
   },
-  "notes": "",
-  "last_updated": ""
+  "notes": "Any quirks, Cloudflare issues, auth requirements, etc.",
+  "last_updated": "2026-06-21"
 }

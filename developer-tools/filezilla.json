@@ -4,7 +4,7 @@
   "description": "Free FTP, FTPS, and SFTP client",
   "website": "https://filezilla-project.org",
   "platform": "macOS",
-  "architecture": "separate (Intel + Apple Silicon)",
+  "architecture": "separate",
   "min_os": "11.0",
   "auto_updates": true,
   "version_check": {

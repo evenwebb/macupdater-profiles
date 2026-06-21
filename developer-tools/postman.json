@@ -4,7 +4,7 @@
   "description": "API client",
   "website": "https://www.postman.com",
   "platform": "macOS",
-  "architecture": "separate_per_arch",
+  "architecture": "separate",
   "min_os": "11",
   "auto_updates": true,
   "version_check": {

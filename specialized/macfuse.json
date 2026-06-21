@@ -4,7 +4,7 @@
   "description": "Extends macOS file system handling with third-party file systems (SSHFS, NTFS, etc.)",
   "website": "https://macfuse.io",
   "platform": "macOS",
-  "architecture": "universal (Intel + Apple Silicon)",
+  "architecture": "universal",
   "min_os": "12.0",
   "auto_updates": true,
   "version_check": {

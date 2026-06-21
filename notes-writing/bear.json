@@ -4,9 +4,7 @@
   "description": "Markdown notes and writing app with rich formatting",
   "website": "https://bear.app",
   "platform": "macOS",
-  "architecture": [
-    "universal"
-  ],
+  "architecture": "universal",
   "min_os": "macOS 12",
   "auto_updates": true,
   "version_check": {
@@ -20,7 +18,7 @@
   },
   "download": {
     "method": null,
-    "file_type": null,
+    "file_type": "dmg",
     "headers": {}
   },
   "changelog": {
@@ -37,5 +35,6 @@
   "category": "notes-writing",
   "license": "free",
   "skip": false,
-  "bundle_id": "net.shinyfrog.bear"
+  "bundle_id": "net.shinyfrog.bear",
+  "file_type": "app"
 }

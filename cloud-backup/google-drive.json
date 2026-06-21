@@ -8,14 +8,14 @@
   "min_os": "13",
   "auto_updates": true,
   "version_check": {
-    "method": null,
-    "url": null,
+    "method": "redirect_trace",
+    "url": "https://dl.google.com/drive-file-stream/GoogleDrive.dmg",
     "extraction": null,
     "notes": "Google Keystone updater (proprietary). NO public version API. To detect version, download DMG and read Info.plist CFBundleShortVersionString.",
     "headers": {}
   },
   "download": {
-    "method": "direct",
+    "method": "direct_url",
     "file_type": "dmg",
     "headers": {},
     "url": "https://dl.google.com/drive-file-stream/GoogleDrive.dmg"
@@ -33,5 +33,6 @@
   "category": "cloud-backup",
   "license": "free",
   "skip": false,
-  "bundle_id": "com.google.drivefs"
+  "bundle_id": "com.google.drivefs",
+  "file_type": "dmg"
 }

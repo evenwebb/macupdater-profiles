@@ -1,0 +1,34 @@
+{
+  "name": "SeaMonkey",
+  "slug": "seamonkey",
+  "bundle_id": "org.mozilla.seamonkey",
+  "category": "browsers",
+  "license": "free",
+  "description": "SeaMonkey is an all-in-one internet application suite including a web browser, email client, newsgroup client, IRC chat client, and HTML editor.",
+  "website": "https://www.seamonkey-project.org",
+  "platform": "macOS",
+  "architecture": "x86_64",
+  "min_os": "10.11",
+  "auto_updates": true,
+  "skip": false,
+  "version_check": {
+    "method": "scrape_html",
+    "url": "https://www.seamonkey-project.org/releases/",
+    "extraction": "regex:seamonkey-(\\d+\\.\\d+\\.\\d+)\\.en-US\\.mac\\.dmg"
+  },
+  "download": {
+    "method": "direct_url",
+    "url": "https://archive.seamonkey-project.org/releases/{VERSION}/mac/en-US/seamonkey-{VERSION}.en-US.mac.dmg",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "url": "https://www.seamonkey-project.org/releases/"
+  },
+  "release_date": {
+    "method": "none",
+    "field": null
+  },
+  "notes": "Continuation of the original Mozilla Application Suite. Intel-only (x86_64).",
+  "last_updated": "2026-06-21"
+}

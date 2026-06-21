@@ -27,7 +27,7 @@
   },
   "sparkle": null,
   "architecture": "universal",
-  "min_os": null,
+  "min_os": "11.0",
   "auto_updates": false,
   "app_store_only": false,
   "infrastructure": {

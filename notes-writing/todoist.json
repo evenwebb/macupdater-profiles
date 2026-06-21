@@ -4,10 +4,7 @@
   "description": "Task manager and to-do list app for individuals and teams",
   "website": "https://todoist.com",
   "platform": "macOS",
-  "architecture": [
-    "arm64",
-    "x64"
-  ],
+  "architecture": "separate",
   "min_os": "macOS 11",
   "auto_updates": true,
   "version_check": {

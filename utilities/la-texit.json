@@ -1,0 +1,34 @@
+{
+  "name": "LaTeXiT",
+  "slug": "la-texit",
+  "bundle_id": "fr.chachatelier.pierre.LaTeXiT",
+  "category": "utilities",
+  "license": "free",
+  "description": "LaTeXiT is a small utility that allows you to quickly typeset LaTeX equations and export them as images (PDF, PNG, SVG, etc.) for use in other applications.",
+  "website": "https://www.chachatelier.fr/latexit/",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "10.15",
+  "auto_updates": true,
+  "skip": false,
+  "version_check": {
+    "method": "sparkle_appcast",
+    "url": "https://www.chachatelier.fr/latexit/appcast.xml",
+    "extraction": "sparkle:version"
+  },
+  "download": {
+    "method": "direct_url",
+    "url": "https://www.chachatelier.fr/latexit/downloads/LaTeXiT-latest.dmg",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "url": "https://www.chachatelier.fr/latexit/changelog.php"
+  },
+  "release_date": {
+    "method": "none",
+    "field": null
+  },
+  "notes": "Requires a LaTeX distribution (MacTeX or BasicTeX) to be installed. Uses Sparkle for updates.",
+  "last_updated": "2026-06-21"
+}

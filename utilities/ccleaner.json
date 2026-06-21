@@ -1,0 +1,34 @@
+{
+  "name": "CCleaner",
+  "slug": "ccleaner",
+  "bundle_id": "com.piriform.ccleaner",
+  "category": "utilities",
+  "license": "free",
+  "description": "CCleaner is a system optimization and cleaning tool that removes unused files, browser caches, and junk data from your Mac to free up space and protect privacy.",
+  "website": "https://www.ccleaner.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "10.12",
+  "auto_updates": true,
+  "skip": false,
+  "version_check": {
+    "method": "scrape_html",
+    "url": "https://www.ccleaner.com/ccleaner-mac/download",
+    "extraction": "regex:version"
+  },
+  "download": {
+    "method": "scrape",
+    "url": "https://www.ccleaner.com/ccleaner-mac/download",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "url": "https://www.ccleaner.com/ccleaner/version-history"
+  },
+  "release_date": {
+    "method": "none",
+    "field": null
+  },
+  "notes": "Uses internal auto-updater. Version and download URL must be scraped from download page. May use download redirects.",
+  "last_updated": "2026-06-21"
+}

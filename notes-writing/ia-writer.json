@@ -4,9 +4,7 @@
   "description": "Distraction-free writing app with syntax highlighting",
   "website": "https://ia.net/writer",
   "platform": "macOS",
-  "architecture": [
-    "universal"
-  ],
+  "architecture": "universal",
   "min_os": "macOS 12",
   "auto_updates": true,
   "version_check": {

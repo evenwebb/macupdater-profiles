@@ -1,0 +1,34 @@
+{
+  "name": "Google Earth Pro",
+  "slug": "google-earth-pro",
+  "bundle_id": "com.google.GoogleEarthPro",
+  "category": "utilities",
+  "license": "free",
+  "description": "Google Earth Pro is a geospatial tool that lets you view satellite imagery, maps, terrain, and 3D buildings. Previously a paid product, now free for all users.",
+  "website": "https://www.google.com/earth/",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "10.15",
+  "auto_updates": true,
+  "skip": false,
+  "version_check": {
+    "method": "redirect_trace",
+    "url": "https://www.google.com/earth/versions/",
+    "extraction": null
+  },
+  "download": {
+    "method": "redirect_url",
+    "url": "https://www.google.com/earth/versions/",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "url": "https://support.google.com/earth/answer/40901"
+  },
+  "release_date": {
+    "method": "none",
+    "field": null
+  },
+  "notes": "Uses Google's internal auto-updater (Keystone). No public version API. Version page redirects to download.",
+  "last_updated": "2026-06-21"
+}

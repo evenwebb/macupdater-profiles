@@ -4,10 +4,7 @@
   "description": "Archive manager with preview and extraction",
   "website": "https://macitbetter.com",
   "platform": "macOS",
-  "architecture": [
-    "x86_64",
-    "arm64"
-  ],
+  "architecture": "separate",
   "min_os": "11.0",
   "auto_updates": true,
   "version_check": {
@@ -17,13 +14,16 @@
     "appcast_url": "https://macitbetter.com/BetterZip5.rss",
     "xpath": "//rss/channel/item/sparkle:shortVersionString",
     "xpath_note": "e.g. 5.4.2; build via sparkle:version (e.g. 260326.2)",
-    "headers": {}
+    "headers": {},
+    "method": "sparkle_appcast",
+    "url": "https://macitbetter.com/BetterZip5.rss"
   },
   "download": {
     "url_template": "https://macitbetter.com/dl/BetterZip-{VERSION}.zip",
     "kind": "zip",
     "headers": {},
-    "url": "https://macitbetter.com/dl/BetterZip-latest.zip"
+    "url": "https://macitbetter.com/dl/BetterZip-latest.zip",
+    "file_type": "dmg"
   },
   "changelog": "https://macitbetter.com/versionhistory.php",
   "release_date": {
@@ -37,5 +37,6 @@
   "category": "utilities",
   "license": "paid",
   "skip": false,
-  "bundle_id": "com.macitbetter.betterzip5"
+  "bundle_id": "com.macitbetter.betterzip5",
+  "file_type": "zip"
 }

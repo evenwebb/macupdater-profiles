@@ -4,9 +4,7 @@
   "description": "Writing app for focused, distraction-free composition",
   "website": "https://ulysses.app",
   "platform": "macOS",
-  "architecture": [
-    "universal"
-  ],
+  "architecture": "universal",
   "min_os": "macOS 12",
   "auto_updates": true,
   "version_check": {
@@ -20,7 +18,7 @@
   },
   "download": {
     "method": null,
-    "file_type": null,
+    "file_type": "dmg",
     "headers": {}
   },
   "changelog": {
@@ -36,5 +34,6 @@
   "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
   "category": "notes-writing",
   "license": "paid",
-  "skip": false
+  "skip": false,
+  "file_type": "app"
 }

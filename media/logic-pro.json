@@ -19,7 +19,7 @@
   },
   "download": {
     "method": "macappstore",
-    "file_type": null,
+    "file_type": "dmg",
     "headers": {},
     "url": "macappstores://apps.apple.com/app/logic-pro/id634148309"
   },
@@ -37,5 +37,6 @@
   "category": "media",
   "license": "free",
   "skip": false,
-  "bundle_id": "com.apple.logic10"
+  "bundle_id": "com.apple.logic10",
+  "file_type": "app"
 }

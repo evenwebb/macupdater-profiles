@@ -1,0 +1,34 @@
+{
+  "name": "ExpanDrive",
+  "slug": "expandrive",
+  "bundle_id": "com.expandrive.ExpanDrive",
+  "category": "utilities",
+  "license": "free",
+  "description": "ExpanDrive maps cloud storage as a network drive in Finder, allowing you to access, edit, and manage files on cloud services like Dropbox, Google Drive, S3, and more as if they were local.",
+  "website": "https://www.expandrive.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "11",
+  "auto_updates": true,
+  "skip": false,
+  "version_check": {
+    "method": "sparkle_appcast",
+    "url": "https://updates.expandrive.com/apps/expandrive.xml",
+    "extraction": "sparkle:version"
+  },
+  "download": {
+    "method": "redirect_url",
+    "url": "https://www.expandrive.com/api/download/expandrive?platform=macos",
+    "file_type": "zip",
+    "headers": {}
+  },
+  "changelog": {
+    "url": "https://www.expandrive.com/changelog/"
+  },
+  "release_date": {
+    "method": "none",
+    "field": null
+  },
+  "notes": "Free for personal use since 2025. Uses Sparkle for updates. Download API redirects to latest version.",
+  "last_updated": "2026-06-21"
+}

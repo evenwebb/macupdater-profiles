@@ -4,7 +4,7 @@
   "description": "Free, open-source audio recording and editing software",
   "website": "https://audacityteam.org",
   "platform": "macOS",
-  "architecture": "separate (Intel + Apple Silicon, or universal)",
+  "architecture": "separate",
   "min_os": "11.0",
   "auto_updates": true,
   "version_check": {

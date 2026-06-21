@@ -1,0 +1,34 @@
+{
+  "name": "Tor Browser",
+  "slug": "tor-browser",
+  "bundle_id": "org.torproject.torbrowser",
+  "category": "browsers",
+  "license": "free",
+  "description": "Tor Browser isolates each website you visit so third-party trackers and ads can't follow you. Any cookies automatically clear when you're done browsing.",
+  "website": "https://www.torproject.org",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "10.15",
+  "auto_updates": true,
+  "skip": false,
+  "version_check": {
+    "method": "json_api",
+    "url": "https://aus1.torproject.org/torbrowser/update_3/release/download-macos.json",
+    "extraction": "$.version"
+  },
+  "download": {
+    "method": "direct_url",
+    "url": "https://www.torproject.org/dist/torbrowser/{VERSION}/tor-browser-macos-{VERSION}.dmg",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "url": "https://blog.torproject.org/category/applications/"
+  },
+  "release_date": {
+    "method": "none",
+    "field": null
+  },
+  "notes": "Privacy-focused browser based on Firefox ESR. Routes traffic through the Tor network.",
+  "last_updated": "2026-06-21"
+}

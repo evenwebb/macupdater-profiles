@@ -82,6 +82,8 @@ manifest_path = REPO / "manifest.json"
 if manifest_path.exists():
     try:
         manifest = json.loads(manifest_path.read_text())
+        if manifest.get("schema_version", 0) < 2:
+            print(f"WARNING: manifest schema_version {manifest.get('schema_version', 0)} is outdated")
         if manifest.get("total_profiles", 0) != count:
             print(f"FAIL manifest.json: total_profiles={manifest['total_profiles']} but found {count}")
             errors += 1

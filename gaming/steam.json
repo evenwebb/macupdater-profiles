@@ -4,18 +4,18 @@
   "description": "Game platform",
   "website": "https://store.steampowered.com",
   "platform": "macOS",
-  "architecture": "intel",
+  "architecture": "x86_64",
   "min_os": "10.15",
   "auto_updates": true,
   "version_check": {
-    "method": null,
-    "url": null,
+    "method": "scrape_html",
+    "url": "https://store.steampowered.com/news/app/593110",
     "extraction": null,
     "notes": "NO public version API. Version must be obtained by downloading DMG and reading CFBundleVersion from Info.plist inside the app bundle.",
     "headers": {}
   },
   "download": {
-    "method": "direct",
+    "method": "direct_url",
     "file_type": "dmg",
     "headers": {},
     "url": "https://cdn.cloudflare.steamstatic.com/client/installer/steam.dmg"
@@ -33,5 +33,6 @@
   "category": "gaming",
   "license": "free",
   "skip": false,
-  "bundle_id": "com.valvesoftware.steam"
+  "bundle_id": "com.valvesoftware.steam",
+  "file_type": "dmg"
 }

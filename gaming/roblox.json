@@ -30,7 +30,7 @@
     "source": "CDN artifact upload date"
   },
   "sparkle": null,
-  "architecture": "per_arch",
+  "architecture": "separate",
   "architectures": [
     "arm64",
     "x86_64"

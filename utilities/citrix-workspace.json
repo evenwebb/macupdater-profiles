@@ -1,0 +1,34 @@
+{
+  "name": "Citrix Workspace",
+  "slug": "citrix-workspace",
+  "bundle_id": null,
+  "category": "utilities",
+  "license": "free",
+  "description": "Citrix Workspace app provides access to virtual apps, desktops, and files from any device. It integrates with Citrix Virtual Apps and Desktops infrastructure for remote work.",
+  "website": "https://www.citrix.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "11",
+  "auto_updates": true,
+  "skip": false,
+  "version_check": {
+    "method": "scrape_html",
+    "url": "https://www.citrix.com/downloads/workspace-app/mac/workspace-app-for-mac-latest.html",
+    "extraction": null
+  },
+  "download": {
+    "method": "scrape",
+    "url": "https://www.citrix.com/downloads/workspace-app/mac/workspace-app-for-mac-latest.html",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "url": "https://docs.citrix.com/en-us/citrix-workspace-app-for-mac/about.html"
+  },
+  "release_date": {
+    "method": "none",
+    "field": null
+  },
+  "notes": "Uses internal auto-updater. No public version API. Download page requires user interaction; actual download URL may use CDN redirects. Download page URL is uncertain \u2014 verify before use.",
+  "last_updated": "2026-06-21"
+}

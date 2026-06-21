@@ -1,7 +1,7 @@
 {
   "version": 2,
-  "updated": "2026-06-21T22:26:52Z",
-  "total_profiles": 177,
+  "updated": "2026-06-21T23:45:46Z",
+  "total_profiles": 220,
   "apps": {
     "1password": {
       "name": "1Password",
@@ -83,6 +83,14 @@
       "path": "utilities/alfred.json",
       "skip": false
     },
+    "amazon-music": {
+      "name": "Amazon Music",
+      "bundle_id": null,
+      "category": "media",
+      "license": "free",
+      "path": "media/amazon-music.json",
+      "skip": false
+    },
     "amphetamine": {
       "name": "Amphetamine",
       "bundle_id": "com.if.Amphetamine",
@@ -147,6 +155,14 @@
       "path": "utilities/bartender.json",
       "skip": false
     },
+    "batchmod": {
+      "name": "BatChmod",
+      "bundle_id": null,
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/batchmod.json",
+      "skip": false
+    },
     "battle-net": {
       "name": "Battle.net",
       "bundle_id": null,
@@ -195,12 +211,36 @@
       "path": "password-managers/bitwarden.json",
       "skip": false
     },
+    "blender": {
+      "name": "Blender",
+      "bundle_id": "org.blenderfoundation.blender",
+      "category": "media",
+      "license": "free",
+      "path": "media/blender.json",
+      "skip": false
+    },
     "brave": {
       "name": "Brave",
       "bundle_id": "com.brave.Browser",
       "category": "browsers",
       "license": "free",
       "path": "browsers/brave.json",
+      "skip": false
+    },
+    "burn": {
+      "name": "Burn",
+      "bundle_id": null,
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/burn.json",
+      "skip": false
+    },
+    "caffeine": {
+      "name": "Caffeine",
+      "bundle_id": null,
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/caffeine.json",
       "skip": false
     },
     "calibre": {
@@ -235,12 +275,36 @@
       "path": "cloud-backup/carbon-copy-cloner.json",
       "skip": false
     },
+    "ccleaner": {
+      "name": "CCleaner",
+      "bundle_id": "com.piriform.ccleaner",
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/ccleaner.json",
+      "skip": false
+    },
     "chatgpt": {
       "name": "ChatGPT",
       "bundle_id": "com.openai.chat",
       "category": "ai-tools",
       "license": "free",
       "path": "ai-tools/chatgpt.json",
+      "skip": false
+    },
+    "chromium": {
+      "name": "Chromium",
+      "bundle_id": null,
+      "category": "browsers",
+      "license": "free",
+      "path": "browsers/chromium.json",
+      "skip": false
+    },
+    "citrix-workspace": {
+      "name": "Citrix Workspace",
+      "bundle_id": null,
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/citrix-workspace.json",
       "skip": false
     },
     "cleanshot-x": {
@@ -257,6 +321,14 @@
       "category": "vpn-security",
       "license": "free",
       "path": "vpn-security/cloudflare-warp.json",
+      "skip": false
+    },
+    "coconutbattery": {
+      "name": "coconutBattery",
+      "bundle_id": "com.coconut-flavour.coconutBattery-Menu",
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/coconutbattery.json",
       "skip": false
     },
     "coderunner": {
@@ -355,6 +427,14 @@
       "path": "cloud-backup/dropbox.json",
       "skip": false
     },
+    "easyfind": {
+      "name": "EasyFind",
+      "bundle_id": "org.grunenberg.EasyFind",
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/easyfind.json",
+      "skip": false
+    },
     "elephas": {
       "name": "Elephas",
       "bundle_id": "com.kamban.elephas",
@@ -393,6 +473,14 @@
       "category": "specialized",
       "license": "free",
       "path": "specialized/evoto.json",
+      "skip": false
+    },
+    "expandrive": {
+      "name": "ExpanDrive",
+      "bundle_id": "com.expandrive.ExpanDrive",
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/expandrive.json",
       "skip": false
     },
     "expressvpn": {
@@ -443,12 +531,28 @@
       "path": "browsers/firefox.json",
       "skip": false
     },
+    "flux": {
+      "name": "f.lux",
+      "bundle_id": "org.herf.Flux",
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/flux.json",
+      "skip": false
+    },
     "forklift": {
       "name": "ForkLift",
       "bundle_id": "com.binarynights.ForkLift",
       "category": "developer-tools",
       "license": "free",
       "path": "developer-tools/forklift.json",
+      "skip": false
+    },
+    "garmin-express": {
+      "name": "Garmin Express",
+      "bundle_id": "com.garmin.renu",
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/garmin-express.json",
       "skip": false
     },
     "gemini": {
@@ -497,6 +601,14 @@
       "category": "cloud-backup",
       "license": "free",
       "path": "cloud-backup/google-drive.json",
+      "skip": false
+    },
+    "google-earth-pro": {
+      "name": "Google Earth Pro",
+      "bundle_id": "com.google.GoogleEarthPro",
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/google-earth-pro.json",
       "skip": false
     },
     "grammarly-desktop": {
@@ -563,12 +675,36 @@
       "path": "media/iina.json",
       "skip": false
     },
+    "imageoptim": {
+      "name": "ImageOptim",
+      "bundle_id": "net.pornel.ImageOptim",
+      "category": "media",
+      "license": "free",
+      "path": "media/imageoptim.json",
+      "skip": false
+    },
+    "inkscape": {
+      "name": "Inkscape",
+      "bundle_id": "org.inkscape.Inkscape",
+      "category": "media",
+      "license": "free",
+      "path": "media/inkscape.json",
+      "skip": false
+    },
     "insta360-studio": {
       "name": "Insta360 Studio",
       "bundle_id": null,
       "category": "specialized",
       "license": "free",
       "path": "specialized/insta360-studio.json",
+      "skip": false
+    },
+    "ip-scanner": {
+      "name": "IP Scanner",
+      "bundle_id": null,
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/ip-scanner.json",
       "skip": false
     },
     "istat-menus": {
@@ -611,6 +747,14 @@
       "path": "design/keka.json",
       "skip": false
     },
+    "keybase": {
+      "name": "Keybase",
+      "bundle_id": "com.keybase.Keybase",
+      "category": "developer-tools",
+      "license": "free",
+      "path": "developer-tools/keybase.json",
+      "skip": false
+    },
     "keyboard-maestro": {
       "name": "Keyboard Maestro",
       "bundle_id": "com.stairways.keyboardmaestro.engine",
@@ -633,6 +777,30 @@
       "category": "office",
       "license": "free",
       "path": "office/kindle-previewer.json",
+      "skip": false
+    },
+    "kodi": {
+      "name": "Kodi",
+      "bundle_id": "org.xbmc.kodi",
+      "category": "media",
+      "license": "free",
+      "path": "media/kodi.json",
+      "skip": false
+    },
+    "krita": {
+      "name": "Krita",
+      "bundle_id": "org.kde.krita",
+      "category": "media",
+      "license": "free",
+      "path": "media/krita.json",
+      "skip": false
+    },
+    "la-texit": {
+      "name": "LaTeXiT",
+      "bundle_id": "fr.chachatelier.pierre.LaTeXiT",
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/la-texit.json",
       "skip": false
     },
     "libreoffice": {
@@ -707,6 +875,14 @@
       "path": "specialized/macfuse.json",
       "skip": false
     },
+    "macpar-deluxe": {
+      "name": "MacPAR deLuxe",
+      "bundle_id": null,
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/macpar-deluxe.json",
+      "skip": false
+    },
     "macs-fan-control": {
       "name": "Macs Fan Control",
       "bundle_id": "com.crystalidea.MacsFanControl",
@@ -729,6 +905,14 @@
       "category": "utilities",
       "license": "free",
       "path": "utilities/magnet.json",
+      "skip": false
+    },
+    "mamp": {
+      "name": "MAMP",
+      "bundle_id": "de.appsolute.MAMP",
+      "category": "developer-tools",
+      "license": "free",
+      "path": "developer-tools/mamp.json",
       "skip": false
     },
     "microsoft-edge": {
@@ -771,6 +955,14 @@
       "path": "email/mimestream.json",
       "skip": false
     },
+    "mkvtoolnix": {
+      "name": "MKVToolNix",
+      "bundle_id": "org.bunkus.mkvtoolnix-gui",
+      "category": "media",
+      "license": "free",
+      "path": "media/mkvtoolnix.json",
+      "skip": false
+    },
     "monitorcontrol": {
       "name": "MonitorControl",
       "bundle_id": "me.guillaumeb.MonitorControl",
@@ -779,12 +971,28 @@
       "path": "utilities/monitorcontrol.json",
       "skip": false
     },
+    "monolingual": {
+      "name": "Monolingual",
+      "bundle_id": "com.github.IngmarStein.Monolingual",
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/monolingual.json",
+      "skip": false
+    },
     "moom": {
       "name": "Moom",
       "bundle_id": "com.manytricks.Moom",
       "category": "utilities",
       "license": "paid",
       "path": "utilities/moom.json",
+      "skip": false
+    },
+    "mysql-workbench": {
+      "name": "MySQL Workbench",
+      "bundle_id": "com.oracle.mysql.workbench",
+      "category": "developer-tools",
+      "license": "free",
+      "path": "developer-tools/mysql-workbench.json",
       "skip": false
     },
     "netnewswire": {
@@ -827,6 +1035,14 @@
       "path": "notes-writing/obsidian.json",
       "skip": false
     },
+    "omnidisksweeper": {
+      "name": "OmniDiskSweeper",
+      "bundle_id": "com.omnigroup.OmniDiskSweeper",
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/omnidisksweeper.json",
+      "skip": false
+    },
     "one-switch": {
       "name": "One Switch",
       "bundle_id": "studio.fireball.OneSwitch",
@@ -849,6 +1065,14 @@
       "category": "gaming",
       "license": "free",
       "path": "gaming/openclaw.json",
+      "skip": false
+    },
+    "opencore-legacy-patcher": {
+      "name": "OpenCore Legacy Patcher",
+      "bundle_id": null,
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/opencore-patcher.json",
       "skip": false
     },
     "openoffice": {
@@ -979,6 +1203,14 @@
       "path": "media/plex.json",
       "skip": false
     },
+    "poedit": {
+      "name": "Poedit",
+      "bundle_id": "com.agilebits.Poedit",
+      "category": "developer-tools",
+      "license": "free",
+      "path": "developer-tools/poedit.json",
+      "skip": false
+    },
     "postico": {
       "name": "Postico",
       "bundle_id": "at.eggerapps.Postico",
@@ -993,6 +1225,22 @@
       "category": "developer-tools",
       "license": "free",
       "path": "developer-tools/postman.json",
+      "skip": false
+    },
+    "python": {
+      "name": "Python",
+      "bundle_id": null,
+      "category": "developer-tools",
+      "license": "free",
+      "path": "developer-tools/python.json",
+      "skip": false
+    },
+    "quicksilver": {
+      "name": "Quicksilver",
+      "bundle_id": "com.blacktree.Quicksilver",
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/quicksilver.json",
       "skip": false
     },
     "raindrop-io": {
@@ -1075,6 +1323,14 @@
       "path": "notes-writing/scrivener.json",
       "skip": false
     },
+    "seamonkey": {
+      "name": "SeaMonkey",
+      "bundle_id": "org.mozilla.seamonkey",
+      "category": "browsers",
+      "license": "free",
+      "path": "browsers/seamonkey.json",
+      "skip": false
+    },
     "sequel-ace": {
       "name": "Sequel Ace",
       "bundle_id": null,
@@ -1139,6 +1395,22 @@
       "path": "messaging/slack.json",
       "skip": false
     },
+    "smartreporter": {
+      "name": "SMARTReporter",
+      "bundle_id": null,
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/smartreporter.json",
+      "skip": false
+    },
+    "sourcetree": {
+      "name": "SourceTree",
+      "bundle_id": "com.torusknot.SourceTreeNotMAS",
+      "category": "developer-tools",
+      "license": "free",
+      "path": "developer-tools/sourcetree.json",
+      "skip": false
+    },
     "spark-mail": {
       "name": "Spark Mail",
       "bundle_id": null,
@@ -1177,6 +1449,14 @@
       "category": "gaming",
       "license": "free",
       "path": "gaming/steam.json",
+      "skip": false
+    },
+    "stellarium": {
+      "name": "Stellarium",
+      "bundle_id": null,
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/stellarium.json",
       "skip": false
     },
     "sublime-merge": {
@@ -1235,6 +1515,14 @@
       "path": "messaging/telegram.json",
       "skip": false
     },
+    "texshop": {
+      "name": "TeXShop",
+      "bundle_id": null,
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/texshop.json",
+      "skip": false
+    },
     "textmate": {
       "name": "TextMate",
       "bundle_id": "com.macromates.TextMate",
@@ -1275,6 +1563,14 @@
       "path": "email/thunderbird.json",
       "skip": false
     },
+    "timemachineeditor": {
+      "name": "TimeMachineEditor",
+      "bundle_id": "com.tclementdev.timemachineeditor.application",
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/timemachineeditor.json",
+      "skip": false
+    },
     "tinkertool": {
       "name": "TinkerTool",
       "bundle_id": null,
@@ -1291,6 +1587,14 @@
       "path": "notes-writing/todoist.json",
       "skip": false
     },
+    "tor-browser": {
+      "name": "Tor Browser",
+      "bundle_id": "org.torproject.torbrowser",
+      "category": "browsers",
+      "license": "free",
+      "path": "browsers/tor-browser.json",
+      "skip": false
+    },
     "tower": {
       "name": "Tower",
       "bundle_id": "com.fournova.Tower3",
@@ -1305,6 +1609,14 @@
       "category": "developer-tools",
       "license": "paid",
       "path": "developer-tools/transmit.json",
+      "skip": false
+    },
+    "tunnelblick": {
+      "name": "Tunnelblick",
+      "bundle_id": "net.tunnelblick.tunnelblick",
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/tunnelblick.json",
       "skip": false
     },
     "typeface": {
@@ -1329,6 +1641,14 @@
       "category": "utilities",
       "license": "free",
       "path": "utilities/uninstallpkg.json",
+      "skip": false
+    },
+    "viber": {
+      "name": "Viber",
+      "bundle_id": "com.viber.osx",
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/viber.json",
       "skip": false
     },
     "virtualbox": {
@@ -1371,6 +1691,14 @@
       "path": "developer-tools/vscode.json",
       "skip": false
     },
+    "wacom-tablet-driver": {
+      "name": "Wacom Tablet Driver",
+      "bundle_id": "com.wacom.WacomTabletDriver",
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/wacom-tablet-driver.json",
+      "skip": false
+    },
     "warp": {
       "name": "Warp",
       "bundle_id": "dev.warp.Warp-Stable",
@@ -1393,6 +1721,22 @@
       "category": "developer-tools",
       "license": "free",
       "path": "developer-tools/windsurf.json",
+      "skip": false
+    },
+    "wine": {
+      "name": "Wine",
+      "bundle_id": null,
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/wine.json",
+      "skip": false
+    },
+    "wireshark": {
+      "name": "WireShark",
+      "bundle_id": "org.wireshark.Wireshark",
+      "category": "developer-tools",
+      "license": "free",
+      "path": "developer-tools/wireshark.json",
       "skip": false
     },
     "xld": {

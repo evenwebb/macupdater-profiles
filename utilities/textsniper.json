@@ -4,10 +4,7 @@
   "description": "OCR text extraction from screen captures",
   "website": "https://textsniper.app",
   "platform": "macOS",
-  "architecture": [
-    "x86_64",
-    "arm64"
-  ],
+  "architecture": "separate",
   "min_os": "10.15",
   "auto_updates": true,
   "version_check": {
@@ -17,13 +14,16 @@
     "appcast_url": "https://textsniper.app/appcast.xml",
     "xpath": "//rss/channel/item[1]/sparkle:shortVersionString",
     "xpath_note": "e.g. 1.12.1",
-    "headers": {}
+    "headers": {},
+    "method": "sparkle_appcast",
+    "url": "https://textsniper.app/appcast.xml"
   },
   "download": {
     "url_template": "https://s3.amazonaws.com/textsniper.app/Gumroad/TextSniper{VERSION}.dmg",
     "kind": "dmg",
     "headers": {},
-    "url": "https://s3.amazonaws.com/textsniper.app/Gumroad/TextSniper-latest.dmg"
+    "url": "https://s3.amazonaws.com/textsniper.app/Gumroad/TextSniper-latest.dmg",
+    "file_type": "dmg"
   },
   "changelog": "https://textsniper.app/release-notes-g",
   "release_date": {
@@ -37,5 +37,6 @@
   "category": "utilities",
   "license": "paid",
   "skip": false,
-  "bundle_id": "com.valerijs.boguckis.TextSniper"
+  "bundle_id": "com.valerijs.boguckis.TextSniper",
+  "file_type": "dmg"
 }

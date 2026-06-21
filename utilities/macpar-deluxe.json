@@ -1,0 +1,34 @@
+{
+  "name": "MacPAR deLuxe",
+  "slug": "macpar-deluxe",
+  "bundle_id": null,
+  "category": "utilities",
+  "license": "free",
+  "description": "MacPAR deLuxe is a Mac utility for processing Usenet PAR and PAR2 files. It can verify, repair, and extract files from Usenet binary posts.",
+  "website": "https://www.xbinary.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "10.13",
+  "auto_updates": false,
+  "skip": false,
+  "version_check": {
+    "method": "scrape_html",
+    "url": "https://www.xbinary.com",
+    "extraction": null
+  },
+  "download": {
+    "method": "direct_url",
+    "url": "https://www.xbinary.com/download",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "url": null
+  },
+  "release_date": {
+    "method": "none",
+    "field": null
+  },
+  "notes": "Very niche utility. May be abandoned \u2014 no recent updates. Version must be manually verified. Download URL likely static.",
+  "last_updated": "2026-06-21"
+}

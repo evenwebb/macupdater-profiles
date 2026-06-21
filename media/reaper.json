@@ -18,7 +18,7 @@
     "headers": {}
   },
   "download": {
-    "method": "pattern",
+    "method": "construct_url",
     "file_type": "dmg",
     "headers": {},
     "url": "https://www.reaper.fm/files/7.x/reaper{version}_universal.dmg"

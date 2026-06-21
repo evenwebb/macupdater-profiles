@@ -1,0 +1,34 @@
+{
+  "name": "Amazon Music",
+  "slug": "amazon-music",
+  "bundle_id": null,
+  "category": "media",
+  "license": "free",
+  "description": "Amazon Music is a music streaming platform. The desktop app allows you to stream and download millions of songs, podcasts, and playlists.",
+  "website": "https://www.amazon.com/music",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "10.14",
+  "auto_updates": true,
+  "skip": false,
+  "version_check": {
+    "method": "redirect_trace",
+    "url": "https://www.amazon.com/gp/dmusic/desktop/downloadPlayer",
+    "extraction": null
+  },
+  "download": {
+    "method": "redirect_url",
+    "url": "https://www.amazon.com/gp/dmusic/desktop/downloadPlayer",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "url": "https://www.amazon.com/gp/help/customer/display.html?nodeId=G7B5L2T8F7TH8S6S"
+  },
+  "release_date": {
+    "method": "none",
+    "field": null
+  },
+  "notes": "Uses internal auto-updater. No public version API. Download page redirects to latest version.",
+  "last_updated": "2026-06-21"
+}

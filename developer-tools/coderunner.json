@@ -30,7 +30,7 @@
     "sparkle_version": null
   },
   "architecture": "universal",
-  "min_os": null,
+  "min_os": "11.0",
   "auto_updates": true,
   "app_store_only": false,
   "distribution": {

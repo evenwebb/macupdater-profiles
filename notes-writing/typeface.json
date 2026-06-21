@@ -37,7 +37,7 @@
     "note": "Beta channel at dist.typefaceapp.com/beta/latest"
   },
   "architecture": "universal",
-  "min_os": null,
+  "min_os": "11.0",
   "auto_updates": true,
   "app_store_only": false,
   "notes": "",

@@ -1,0 +1,34 @@
+{
+  "name": "OmniDiskSweeper",
+  "slug": "omnidisksweeper",
+  "bundle_id": "com.omnigroup.OmniDiskSweeper",
+  "category": "utilities",
+  "license": "free",
+  "description": "OmniDiskSweeper is a free utility by The Omni Group that shows you exactly what's taking up space on your drives, recursively showing sizes of all folders.",
+  "website": "https://www.omnigroup.com/more",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "11.0",
+  "auto_updates": true,
+  "skip": false,
+  "version_check": {
+    "method": "sparkle_appcast",
+    "url": "https://update.omnigroup.com/appcast/com.omnigroup.OmniDiskSweeper",
+    "extraction": "sparkle:version"
+  },
+  "download": {
+    "method": "direct_url",
+    "url": "https://downloads.omnigroup.com/software/macOS/11/OmniDiskSweeper-{VERSION}.dmg",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "url": "https://www.omnigroup.com/releasenotes/omnidisksweeper"
+  },
+  "release_date": {
+    "method": "none",
+    "field": null
+  },
+  "notes": "Free utility from The Omni Group. Uses OmniGroup Sparkle fork for updates.",
+  "last_updated": "2026-06-21"
+}

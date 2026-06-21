@@ -18,7 +18,7 @@
     "headers": {}
   },
   "download": {
-    "method": "pattern",
+    "method": "construct_url",
     "file_type": "dmg",
     "headers": {},
     "url": "https://secure.backblaze.com/api/install_backblaze?file=bzinstall-mac-{version}.dmg"

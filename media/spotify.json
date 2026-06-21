@@ -18,7 +18,7 @@
     "headers": {}
   },
   "download": {
-    "method": "direct",
+    "method": "direct_url",
     "file_type": "dmg",
     "headers": {},
     "url": "https://download.scdn.co/Spotify.dmg"

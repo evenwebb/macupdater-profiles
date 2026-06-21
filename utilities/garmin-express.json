@@ -1,0 +1,34 @@
+{
+  "name": "Garmin Express",
+  "slug": "garmin-express",
+  "bundle_id": "com.garmin.renu",
+  "category": "utilities",
+  "license": "free",
+  "description": "Garmin Express is a desktop application for managing your Garmin devices. It updates maps, syncs fitness data, registers devices, and installs software updates.",
+  "website": "https://www.garmin.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "11",
+  "auto_updates": true,
+  "skip": false,
+  "version_check": {
+    "method": "sparkle_appcast",
+    "url": null,
+    "extraction": "sparkle:version"
+  },
+  "download": {
+    "method": "direct_url",
+    "url": "https://download.garmin.com/omt/express/GarminExpress.dmg",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "url": "https://www8.garmin.com/support/download_details.jsp?id=4607"
+  },
+  "release_date": {
+    "method": "none",
+    "field": null
+  },
+  "notes": "DMG contains PKG installer. Sparkle feed not publicly accessible (404 externally). Uses internal Sparkle for self-updates. Download URL is static (always latest).",
+  "last_updated": "2026-06-21"
+}

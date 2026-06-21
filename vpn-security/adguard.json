@@ -13,7 +13,8 @@
       "version_field": "sparkle:shortVersionString",
       "note": "Sparkle appcast URL is embedded in the app and not publicly documented"
     },
-    "headers": {}
+    "headers": {},
+    "url": "https://api.github.com/repos/AdguardTeam/AdGuardForMac/releases/latest"
   },
   "download": {
     "url_static": "https://static.adguard.com/mac/release/AdGuard-{VERSION}.dmg",

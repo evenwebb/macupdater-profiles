@@ -4,11 +4,8 @@
   "description": "Screen measurement tool for designers",
   "website": "https://pixelsnap.com",
   "platform": "macOS",
-  "architecture": [
-    "x86_64",
-    "arm64"
-  ],
-  "min_os": null,
+  "architecture": "separate",
+  "min_os": "14.0",
   "auto_updates": true,
   "version_check": {
     "protocol": "sparkle",
@@ -16,13 +13,16 @@
     "appcast_url": "https://updates.getpixelsnap.com/v2/appcast.xml",
     "xpath": "//rss/channel/item[1]/sparkle:shortVersionString",
     "xpath_note": "e.g. 2.6.3",
-    "headers": {}
+    "headers": {},
+    "method": "sparkle_appcast",
+    "url": "https://updates.getpixelsnap.com/v2/appcast.xml"
   },
   "download": {
     "url_template": "https://updates.getpixelsnap.com/v2/PixelSnap-2-{VERSION}.dmg",
     "kind": "dmg",
     "headers": {},
-    "url": "https://updates.getpixelsnap.com/v2/PixelSnap-latest.dmg"
+    "url": "https://updates.getpixelsnap.com/v2/PixelSnap-latest.dmg",
+    "file_type": "dmg"
   },
   "changelog": "https://pixelsnap.com/changelog",
   "release_date": {
@@ -35,5 +35,6 @@
   "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
   "category": "design",
   "license": "paid",
-  "skip": false
+  "skip": false,
+  "file_type": "dmg"
 }

@@ -17,7 +17,8 @@
       "url": "https://www.loom.com/download",
       "note": "UNCERTAINTY: May be possible to extract version from the download page or the HTTP redirect URL. The DMG filename may contain the version."
     },
-    "headers": {}
+    "headers": {},
+    "url": "https://www.loom.com"
   },
   "download": {
     "method": "web_redirect",

@@ -1,0 +1,34 @@
+{
+  "name": "OpenCore Legacy Patcher",
+  "slug": "opencore-legacy-patcher",
+  "bundle_id": null,
+  "category": "utilities",
+  "license": "free",
+  "description": "OpenCore Legacy Patcher is a tool that allows you to run newer versions of macOS on officially unsupported Mac hardware by patching system files and drivers.",
+  "website": "https://github.com/dortania/OpenCore-Legacy-Patcher",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "10.14",
+  "auto_updates": true,
+  "skip": false,
+  "version_check": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/dortania/OpenCore-Legacy-Patcher/releases/latest",
+    "extraction": "tag_name"
+  },
+  "download": {
+    "method": "construct_url",
+    "url": null,
+    "file_type": "pkg",
+    "headers": {}
+  },
+  "changelog": {
+    "url": "https://github.com/dortania/OpenCore-Legacy-Patcher/releases"
+  },
+  "release_date": {
+    "method": "github",
+    "field": "published_at"
+  },
+  "notes": "GitHub-hosted project. Distributed as PKG installer. Uses internal updater for patch notifications. Strip 'v' prefix from tag. Critical tool for unsupported Mac models.",
+  "last_updated": "2026-06-21"
+}

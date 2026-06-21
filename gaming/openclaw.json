@@ -4,7 +4,7 @@
   "description": "Open-source reimplementation of the 1997 game Captain Claw",
   "website": "https://github.com/pjasicek/OpenClaw",
   "platform": "macOS (source build only)",
-  "architecture": "x86_64, arm64 (via source build)",
+  "architecture": "x86_64",
   "min_os": "11.0 (estimated)",
   "auto_updates": false,
   "version_check": {

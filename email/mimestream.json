@@ -9,7 +9,7 @@
   "min_os": "12",
   "auto_updates": true,
   "version_check": {
-    "method": "sparkle_appcast",
+    "method": "scrape_html",
     "sparkle": {
       "note": "UNCERTAINTY: Sparkle is used (SUFeedURL is embedded in the app bundle), but the exact appcast URL is not publicly documented. The app bundle's Info.plist or Sparkle framework plist would need to be consulted to extract the feed URL."
     },
@@ -21,7 +21,8 @@
         "note": "Matches lines like '1.10.2 - Jun 10, 2026' on the releases page"
       }
     },
-    "headers": {}
+    "headers": {},
+    "url": "https://mimestream.com/releases"
   },
   "download": {
     "method": "web_redirect",

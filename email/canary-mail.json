@@ -18,7 +18,7 @@
   },
   "download": {
     "method": "app_store_only",
-    "file_type": null,
+    "file_type": "app",
     "headers": {}
   },
   "changelog": {
@@ -35,5 +35,6 @@
   "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
   "category": "email",
   "license": "paid",
-  "skip": false
+  "skip": false,
+  "file_type": "app"
 }

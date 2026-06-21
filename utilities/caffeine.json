@@ -1,0 +1,34 @@
+{
+  "name": "Caffeine",
+  "slug": "caffeine",
+  "bundle_id": null,
+  "category": "utilities",
+  "license": "free",
+  "description": "Caffeine is a small utility that prevents your Mac from automatically going to sleep, dimming the screen, or starting screen savers with a single click in the menu bar.",
+  "website": "https://intelliscapesolutions.com/apps/caffeine",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "10.11",
+  "auto_updates": false,
+  "skip": false,
+  "version_check": {
+    "method": "github_api",
+    "url": null,
+    "extraction": "tag_name"
+  },
+  "download": {
+    "method": "direct_url",
+    "url": "https://intelliscapesolutions.com/apps/caffeine",
+    "file_type": "zip",
+    "headers": {}
+  },
+  "changelog": {
+    "url": null
+  },
+  "release_date": {
+    "method": "none",
+    "field": null
+  },
+  "notes": "Minimal utility. Original version by Lighthead Software; newer versions may be from different maintainers. Also available on Mac App Store. Download URL uncertain \u2014 verify. No auto-updater.",
+  "last_updated": "2026-06-21"
+}

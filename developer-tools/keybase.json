@@ -1,0 +1,34 @@
+{
+  "name": "Keybase",
+  "slug": "keybase",
+  "bundle_id": "com.keybase.Keybase",
+  "category": "developer-tools",
+  "license": "free",
+  "description": "Keybase is a key directory that maps social media identities to encryption keys in a publicly auditable manner. Also provides encrypted chat, file sharing, and git.",
+  "website": "https://keybase.io",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "10.13",
+  "auto_updates": true,
+  "skip": false,
+  "version_check": {
+    "method": "sparkle_appcast",
+    "url": "https://prerelease.keybase.io/Keybase/appcast.xml",
+    "extraction": "sparkle:version"
+  },
+  "download": {
+    "method": "direct_url",
+    "url": "https://prerelease.keybase.io/Keybase.dmg",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "url": "https://github.com/keybase/client/releases"
+  },
+  "release_date": {
+    "method": "none",
+    "field": null
+  },
+  "notes": "Project acquired by Zoom in 2020. Active development may be limited. Sparkle feed is public. Uses internal auto-updater.",
+  "last_updated": "2026-06-21"
+}

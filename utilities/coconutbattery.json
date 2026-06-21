@@ -1,0 +1,34 @@
+{
+  "name": "coconutBattery",
+  "slug": "coconutbattery",
+  "bundle_id": "com.coconut-flavour.coconutBattery-Menu",
+  "category": "utilities",
+  "license": "free",
+  "description": "coconutBattery shows live information about your Mac's battery, including current charge, maximum capacity, cycle count, and battery health for your Mac, iPhone, and iPad.",
+  "website": "https://www.coconut-flavour.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "12.4",
+  "auto_updates": true,
+  "skip": false,
+  "version_check": {
+    "method": "sparkle_appcast",
+    "url": "https://www.coconut-flavour.com/updates/coconutBattery_4.xml",
+    "extraction": "sparkle:shortVersionString"
+  },
+  "download": {
+    "method": "direct_url",
+    "url": "https://www.coconut-flavour.com/downloads/coconutBattery_4_latest.zip",
+    "file_type": "zip",
+    "headers": {}
+  },
+  "changelog": {
+    "url": "https://www.coconut-flavour.com/coconutbattery/"
+  },
+  "release_date": {
+    "method": "none",
+    "field": null
+  },
+  "notes": "Sparkle-based updates. Filter out beta versions from appcast. Latest download URL uses 'coconutBattery_4_latest.zip'.",
+  "last_updated": "2026-06-21"
+}

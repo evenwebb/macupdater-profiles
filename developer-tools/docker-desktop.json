@@ -4,7 +4,7 @@
   "description": "Container platform",
   "website": "https://docker.com",
   "platform": "macOS",
-  "architecture": "separate_per_arch",
+  "architecture": "separate",
   "min_os": "14.0",
   "auto_updates": true,
   "version_check": {

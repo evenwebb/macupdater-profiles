@@ -1,0 +1,34 @@
+{
+  "name": "MKVToolNix",
+  "slug": "mkvtoolnix",
+  "bundle_id": "org.bunkus.mkvtoolnix-gui",
+  "category": "media",
+  "license": "free",
+  "description": "MKVToolNix is a set of tools to create, alter, and inspect Matroska (MKV) files. The GUI provides an easy-to-use interface for muxing, splitting, and editing MKV files.",
+  "website": "https://mkvtoolnix.download",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "10.15",
+  "auto_updates": false,
+  "skip": false,
+  "version_check": {
+    "method": "scrape_html",
+    "url": "https://mkvtoolnix.download/macos/",
+    "extraction": null
+  },
+  "download": {
+    "method": "direct_url",
+    "url": "https://mkvtoolnix.download/macos/MKVToolNix-{VERSION}.dmg",
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "url": "https://mkvtoolnix.download/doc/NEWS.md"
+  },
+  "release_date": {
+    "method": "none",
+    "field": null
+  },
+  "notes": "Version extracted from the macOS download page. No Sparkle or auto-updater.",
+  "last_updated": "2026-06-21"
+}

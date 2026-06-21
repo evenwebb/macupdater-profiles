@@ -1,0 +1,34 @@
+{
+  "name": "Python",
+  "slug": "python",
+  "bundle_id": null,
+  "category": "developer-tools",
+  "license": "free",
+  "description": "Python is a high-level, general-purpose programming language. The macOS installer provides the official Python distribution from python.org.",
+  "website": "https://www.python.org",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "11",
+  "auto_updates": false,
+  "skip": false,
+  "version_check": {
+    "method": "scrape_html",
+    "url": "https://www.python.org/downloads/",
+    "extraction": "regex:Python (\\d+\\.\\d+\\.\\d+)"
+  },
+  "download": {
+    "method": "direct_url",
+    "url": "https://www.python.org/ftp/python/{VERSION}/python-{VERSION}-macos11.pkg",
+    "file_type": "pkg",
+    "headers": {}
+  },
+  "changelog": {
+    "url": "https://docs.python.org/release/{VERSION}/whatsnew/changelog.html"
+  },
+  "release_date": {
+    "method": "none",
+    "field": null
+  },
+  "notes": "Not an .app \u2014 system PKG installer. Installs to /Library/Frameworks/Python.framework. No built-in auto-updater.",
+  "last_updated": "2026-06-21"
+}

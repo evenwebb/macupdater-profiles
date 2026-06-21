@@ -4,7 +4,7 @@
   "description": "Free and open-source x86 virtualization hypervisor",
   "website": "https://virtualbox.org",
   "platform": "macOS",
-  "architecture": "separate (Intel + Apple Silicon)",
+  "architecture": "separate",
   "min_os": "11.0",
   "auto_updates": true,
   "version_check": {

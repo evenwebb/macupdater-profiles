@@ -4,11 +4,8 @@
   "description": "Color picker and palette manager for designers",
   "website": "https://sipapp.io",
   "platform": "macOS",
-  "architecture": [
-    "x86_64",
-    "arm64"
-  ],
-  "min_os": null,
+  "architecture": "separate",
+  "min_os": "13.0",
   "auto_updates": true,
   "version_check": {
     "protocol": "sparkle",
@@ -16,14 +13,17 @@
     "appcast_url": "https://sipapp.fra1.digitaloceanspaces.com/updates/v4/sip.xml",
     "xpath": "//rss/channel/item[1]/enclosure/@sparkle:shortVersionString",
     "xpath_note": "e.g. 4.1.4; build via sparkle:version (e.g. 414)",
-    "headers": {}
+    "headers": {},
+    "method": "sparkle_appcast",
+    "url": "https://sipapp.fra1.digitaloceanspaces.com/updates/v4/sip.xml"
   },
   "download": {
     "url_template": "https://sipapp.fra1.digitaloceanspaces.com/updates/v4/sip-{VERSION}.dmg",
     "kind": "dmg",
     "latest_alias": "https://sipapp.fra1.digitaloceanspaces.com/updates/v4/sip.dmg",
     "headers": {},
-    "url": "https://sipapp.fra1.digitaloceanspaces.com/updates/v4/sip.dmg"
+    "url": "https://sipapp.fra1.digitaloceanspaces.com/updates/v4/sip.dmg",
+    "file_type": "dmg"
   },
   "changelog": "https://sipapp.io/updates",
   "release_date": {
@@ -36,5 +36,6 @@
   "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
   "category": "design",
   "license": "paid",
-  "skip": false
+  "skip": false,
+  "file_type": "dmg"
 }

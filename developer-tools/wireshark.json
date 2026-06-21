@@ -1,0 +1,34 @@
+{
+  "name": "WireShark",
+  "slug": "wireshark",
+  "bundle_id": "org.wireshark.Wireshark",
+  "category": "developer-tools",
+  "license": "free",
+  "description": "WireShark is the world's foremost and widely-used network protocol analyzer. It lets you see what's happening on your network at a microscopic level.",
+  "website": "https://www.wireshark.org",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "12.0",
+  "auto_updates": true,
+  "skip": false,
+  "version_check": {
+    "method": "sparkle_appcast",
+    "url": "https://www.wireshark.org/update/0/Wireshark/0.0.0/macOS/{ARCH}/en-US/stable.xml",
+    "extraction": "sparkle:version"
+  },
+  "download": {
+    "method": "sparkle_enclosure",
+    "url": null,
+    "file_type": "dmg",
+    "headers": {}
+  },
+  "changelog": {
+    "url": "https://www.wireshark.org/update/relnotes/wireshark-{VERSION}.html"
+  },
+  "release_date": {
+    "method": "none",
+    "field": null
+  },
+  "notes": "ARch-specific Sparkle feed. Download URL resolved from Sparkle enclosure.",
+  "last_updated": "2026-06-21"
+}

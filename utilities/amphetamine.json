@@ -18,7 +18,7 @@
   },
   "download": {
     "method": "app_store_only",
-    "file_type": null,
+    "file_type": "dmg",
     "headers": {}
   },
   "changelog": {
@@ -37,5 +37,6 @@
   "category": "utilities",
   "license": "free",
   "skip": false,
-  "bundle_id": "com.if.Amphetamine"
+  "bundle_id": "com.if.Amphetamine",
+  "file_type": "app"
 }

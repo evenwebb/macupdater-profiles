@@ -1,0 +1,34 @@
+{
+  "name": "TimeMachineEditor",
+  "slug": "timemachineeditor",
+  "bundle_id": "com.tclementdev.timemachineeditor.application",
+  "category": "utilities",
+  "license": "free",
+  "description": "TimeMachineEditor lets you change the default one-hour backup interval of Time Machine. You can configure a custom interval or schedule backups at specific times.",
+  "website": "https://tclementdev.com/timemachineeditor/",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "10.13",
+  "auto_updates": false,
+  "skip": false,
+  "version_check": {
+    "method": "scrape_html",
+    "url": "https://tclementdev.com/timemachineeditor/",
+    "extraction": "regex:version"
+  },
+  "download": {
+    "method": "direct_url",
+    "url": "https://tclementdev.com/timemachineeditor/TimeMachineEditor.pkg",
+    "file_type": "pkg",
+    "headers": {}
+  },
+  "changelog": {
+    "url": "https://tclementdev.com/timemachineeditor/"
+  },
+  "release_date": {
+    "method": "none",
+    "field": null
+  },
+  "notes": "Distributed as PKG installer, not .app bundle. No Sparkle or auto-updater. Version scraped from homepage.",
+  "last_updated": "2026-06-21"
+}

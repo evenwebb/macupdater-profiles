@@ -16,10 +16,11 @@
       "url": "https://downloads.pdfexpert.com/pem3/PDFExpert.zip",
       "note": "UNCERTAIN: May be able to extract version from the zip's Info.plist or from the download server headers (e.g., Last-Modified, Content-Disposition)"
     },
-    "headers": {}
+    "headers": {},
+    "url": "https://pdfexpert.com"
   },
   "download": {
-    "method": "direct",
+    "method": "direct_url",
     "file_type": "zip",
     "headers": {},
     "url": "https://downloads.pdfexpert.com/pem3/PDFExpert.zip"

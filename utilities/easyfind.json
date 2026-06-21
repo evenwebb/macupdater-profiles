@@ -1,0 +1,34 @@
+{
+  "name": "EasyFind",
+  "slug": "easyfind",
+  "bundle_id": "org.grunenberg.EasyFind",
+  "category": "utilities",
+  "license": "free",
+  "description": "EasyFind is a free file search tool for macOS by DEVONtechnologies. It finds files and folders by name, content, or tags \u2014 including in system files and packages that Spotlight ignores.",
+  "website": "https://www.devontechnologies.com/apps/freeware",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "10.11",
+  "auto_updates": true,
+  "skip": false,
+  "version_check": {
+    "method": "download_and_parse_plist",
+    "url": "https://api.devontechnologies.com/1/apps/updates.plist.php?product=EasyFind&version=5.0.2",
+    "extraction": "product"
+  },
+  "download": {
+    "method": "direct_url",
+    "url": "https://download.devontechnologies.com/download/freeware/easyfind/{VERSION}/EasyFind.app.zip",
+    "file_type": "zip",
+    "headers": {}
+  },
+  "changelog": {
+    "url": "https://www.devontechnologies.com/apps/freeware"
+  },
+  "release_date": {
+    "method": "none",
+    "field": null
+  },
+  "notes": "Custom plist-based update check via DEVONtechnologies API. Uses built-in updater from DEVONtechnologies framework.",
+  "last_updated": "2026-06-21"
+}

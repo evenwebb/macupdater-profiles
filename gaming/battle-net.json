@@ -4,18 +4,18 @@
   "description": "Game launcher",
   "website": "https://www.blizzard.com",
   "platform": "macOS",
-  "architecture": "intel",
+  "architecture": "x86_64",
   "min_os": "10.15",
   "auto_updates": true,
   "version_check": {
-    "method": null,
-    "url": null,
+    "method": "scrape_html",
+    "url": "https://news.blizzard.com/en-us/battle-net",
     "extraction": null,
     "notes": "NO public HTTP endpoint. Uses proprietary TCP protocol on us.patch.battle.net:1119. Agent-based (Battle.net Agent.app) with SQLite DBs. Not REST-based.",
     "headers": {}
   },
   "download": {
-    "method": "direct",
+    "method": "direct_url",
     "file_type": "dmg",
     "headers": {},
     "url": "https://www.battle.net/download/getInstallerForGame?os=mac&locale=enUS&version=LIVE&gameProgram=BATTLENET_APP"
@@ -32,5 +32,6 @@
   "$schema": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/schema.json",
   "category": "gaming",
   "license": "free",
-  "skip": false
+  "skip": false,
+  "file_type": "dmg"
 }

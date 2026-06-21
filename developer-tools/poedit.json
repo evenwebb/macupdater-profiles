@@ -1,0 +1,34 @@
+{
+  "name": "Poedit",
+  "slug": "poedit",
+  "bundle_id": "com.agilebits.Poedit",
+  "category": "developer-tools",
+  "license": "free",
+  "description": "Poedit is a cross-platform translations editor for gettext (PO files). It helps you translate apps and websites, and manage translation files easily.",
+  "website": "https://poedit.net",
+  "platform": "macOS",
+  "architecture": "universal",
+  "min_os": "10.15",
+  "auto_updates": true,
+  "skip": false,
+  "version_check": {
+    "method": "sparkle_appcast",
+    "url": "https://poedit.net/appcast",
+    "extraction": "sparkle:version"
+  },
+  "download": {
+    "method": "direct_url",
+    "url": "https://download.poeedit.com/Poedit-{VERSION}.zip",
+    "file_type": "zip",
+    "headers": {}
+  },
+  "changelog": {
+    "url": "https://poedit.net/changelog"
+  },
+  "release_date": {
+    "method": "none",
+    "field": null
+  },
+  "notes": "Gettext translations editor. Bundle ID may be com.agilebits.Poedit or net.poedit.Poedit.",
+  "last_updated": "2026-06-21"
+}

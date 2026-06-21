@@ -4,9 +4,7 @@
   "description": "Long-form writing and project management tool for authors",
   "website": "https://www.literatureandlatte.com",
   "platform": "macOS",
-  "architecture": [
-    "universal"
-  ],
+  "architecture": "universal",
   "min_os": "macOS 11",
   "auto_updates": true,
   "version_check": {
