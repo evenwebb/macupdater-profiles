@@ -5,18 +5,18 @@
   "website": "https://www.obdev.at/products/littlesnitch",
   "platform": "macOS",
   "architecture": "universal",
-  "bundle_id": "at.obdev.LittleSnitch",
+  "bundle_id": "at.obdev.LittleSnitch6",
   "category": "vpn-security",
   "license": "paid",
-  "min_os": "macOS 11.0",
+  "min_os": "macOS 14.0",
   "auto_updates": true,
   "skip": false,
   "version_check": {
-    "method": "sparkle_appcast",
-    "url": "https://www.obdev.at/products/littlesnitch/releasenotes.html",
+    "method": "download_and_parse_plist",
+    "url": "https://sw-update.obdev.at/update-feeds/littlesnitch6.plist",
     "extraction": {
-      "type": "regex",
-      "pattern": "Little\\s+Snitch\\s+(\\d+\\.\\d+(?:\\.\\d+)?)"
+      "type": "plist_key",
+      "key": "CFBundleShortVersionString"
     }
   },
   "download": {
@@ -28,5 +28,6 @@
     "method": "web_scrape",
     "url": "https://www.obdev.at/products/littlesnitch/releasenotes.html"
   },
-  "last_updated": "2026-06-22"
+  "last_updated": "2026-06-22",
+  "notes": "Uses custom plist-based update feed from sw-update.obdev.at. Version plist at https://sw-update.obdev.at/update-feeds/littlesnitch6.plist"
 }

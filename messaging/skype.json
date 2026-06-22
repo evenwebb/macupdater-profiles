@@ -10,23 +10,23 @@
   "license": "free",
   "min_os": "macOS 11.0",
   "auto_updates": true,
-  "skip": false,
+  "skip": true,
   "version_check": {
-    "method": "redirect_trace",
-    "url": "https://get.skype.com/go/getskype-skypeformac",
+    "method": "none",
+    "url": "",
     "extraction": {
-      "type": "regex",
-      "pattern": "Skype[_-](\\d+\\.\\d+(?:\\.\\d+)?)"
+      "type": "none"
     }
   },
   "download": {
     "method": "direct_url",
-    "url": "https://www.skype.com/en/get-skype",
+    "url": "",
     "file_type": "dmg"
   },
   "changelog": {
     "method": "web_scrape",
     "url": "https://support.microsoft.com/en-us/skype/skype-for-mac-release-notes"
   },
-  "last_updated": "2026-06-22"
+  "last_updated": "2026-06-22",
+  "notes": "DISCONTINUED \u2014 Skype was retired May 5, 2025 and replaced by Microsoft Teams. No further updates will be released."
 }

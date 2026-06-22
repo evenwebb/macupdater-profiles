@@ -8,12 +8,12 @@
   "bundle_id": "com.rogueamoeba.audiohijack",
   "category": "media",
   "license": "paid",
-  "min_os": "macOS 11.0",
+  "min_os": "macOS 14.4",
   "auto_updates": true,
   "skip": false,
   "version_check": {
     "method": "sparkle_appcast",
-    "url": "https://rogueamoeba.com/appcast/audiohijack.xml",
+    "url": "https://rogueamoeba.net/ping/versionCheck.cgi?format=sparkle&bundleid=com.rogueamoeba.audiohijack&system=OSX&version=0",
     "extraction": {
       "type": "xpath",
       "xpath": "//item/enclosure/@*[local-name()='shortVersionString' or local-name()='sparkle:shortVersionString']"

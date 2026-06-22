@@ -5,15 +5,15 @@
   "website": "https://www.devontechnologies.com/apps/devonthink",
   "platform": "macOS",
   "architecture": "universal",
-  "bundle_id": "com.devon-technologies.think3",
+  "bundle_id": "com.devon-technologies.think4",
   "category": "office",
   "license": "paid",
-  "min_os": "macOS 11.0",
+  "min_os": "macOS 13.0",
   "auto_updates": true,
   "skip": false,
   "version_check": {
     "method": "sparkle_appcast",
-    "url": "https://www.devontechnologies.com/appcast/devonthink3.xml",
+    "url": "https://api.devontechnologies.com/1/apps/sparkle/sparkle.php?id=300900000",
     "extraction": {
       "type": "xpath",
       "xpath": "//item/enclosure/@*[local-name()='shortVersionString' or local-name()='sparkle:shortVersionString']"

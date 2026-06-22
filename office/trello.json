@@ -5,23 +5,23 @@
   "website": "https://trello.com",
   "platform": "macOS",
   "architecture": "universal",
-  "bundle_id": "com.atlassian.trello",
+  "bundle_id": "com.trello.Trello",
   "category": "office",
   "license": "free",
-  "min_os": "macOS 11.0",
+  "min_os": "macOS 12.0",
   "auto_updates": true,
   "skip": false,
   "version_check": {
-    "method": "yaml_api",
-    "url": "https://trello.com/desktop-app/update/mac/latest-mac.yml",
+    "method": "itunes_api",
+    "url": "https://itunes.apple.com/lookup?id=1278508951",
     "extraction": {
-      "type": "yaml_key",
-      "key": "version"
+      "type": "json_path",
+      "path": "results.0.version"
     }
   },
   "download": {
     "method": "direct_url",
-    "url": "https://trello.com/platforms",
+    "url": "https://apps.apple.com/app/trello/id1278508951",
     "file_type": "dmg"
   },
   "changelog": {

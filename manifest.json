@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "version": 2,
-  "updated": "2026-06-22T10:34:52Z",
+  "updated": "2026-06-22T10:36:40Z",
   "total_profiles": 270,
   "apps": {
     "1password": {
@@ -78,7 +78,7 @@
     },
     "airtable": {
       "name": "Airtable",
-      "bundle_id": "com.formaairtable.airtable",
+      "bundle_id": "com.FormaGrid.Airtable",
       "category": "office",
       "license": "free",
       "path": "office/airtable.json",
@@ -414,7 +414,7 @@
     },
     "craft": {
       "name": "Craft",
-      "bundle_id": "com.lukilabs.lukiapp",
+      "bundle_id": "com.lukilabs.lukiapp.Craft",
       "category": "notes-writing",
       "license": "free",
       "path": "notes-writing/craft.json",
@@ -478,7 +478,7 @@
     },
     "devonthink": {
       "name": "DEVONthink",
-      "bundle_id": "com.devon-technologies.think3",
+      "bundle_id": "com.devon-technologies.think4",
       "category": "office",
       "license": "paid",
       "path": "office/devonthink.json",
@@ -1022,7 +1022,7 @@
     },
     "littlesnitch": {
       "name": "Little Snitch",
-      "bundle_id": "at.obdev.LittleSnitch",
+      "bundle_id": "at.obdev.LittleSnitch6",
       "category": "vpn-security",
       "license": "paid",
       "path": "vpn-security/littlesnitch.json",
@@ -1134,7 +1134,7 @@
     },
     "malwarebytes": {
       "name": "Malwarebytes",
-      "bundle_id": "com.malwarebytes.malwarebytes",
+      "bundle_id": "com.malwarebytes.mbam.frontend.agent",
       "category": "vpn-security",
       "license": "free",
       "path": "vpn-security/malwarebytes.json",
@@ -1706,7 +1706,7 @@
       "category": "messaging",
       "license": "free",
       "path": "messaging/skype.json",
-      "skip": false
+      "skip": true
     },
     "slack": {
       "name": "Slack",
@@ -1958,7 +1958,7 @@
     },
     "trello": {
       "name": "Trello",
-      "bundle_id": "com.atlassian.trello",
+      "bundle_id": "com.trello.Trello",
       "category": "office",
       "license": "free",
       "path": "office/trello.json",
