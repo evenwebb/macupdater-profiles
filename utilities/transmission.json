@@ -32,5 +32,9 @@
     "method": "github_api",
     "field": "published_at"
   },
-  "last_updated": "2026-06-22"
+  "last_updated": "2026-06-22",
+  "cf_bundle_version": "14718.1.299",
+  "icons": {
+    "direct_url": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/icons/transmission.png"
+  }
 }

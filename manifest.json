@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "version": 2,
-  "updated": "2026-06-22T18:15:32Z",
+  "updated": "2026-06-22T18:49:00Z",
   "total_profiles": 302,
   "apps": {
     "1password": {
@@ -206,9 +206,11 @@
     },
     "appcleaner": {
       "name": "AppCleaner",
-      "bundle_id": "com.freemacsoft.AppCleaner",
+      "bundle_id": "net.freemacsoft.AppCleaner",
       "alternate_bundle_ids": [],
-      "icons": {},
+      "icons": {
+        "direct_url": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/icons/appcleaner.png"
+      },
       "category": "utilities",
       "license": "free",
       "path": "utilities/appcleaner.json",
@@ -598,9 +600,11 @@
     },
     "craft": {
       "name": "Craft",
-      "bundle_id": "com.lukilabs.lukiapp.Craft",
+      "bundle_id": "com.lukilabs.lukiapp",
       "alternate_bundle_ids": [],
-      "icons": {},
+      "icons": {
+        "direct_url": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/icons/craft.png"
+      },
       "category": "notes-writing",
       "license": "free",
       "path": "notes-writing/craft.json",
@@ -800,7 +804,9 @@
       "name": "Element",
       "bundle_id": "im.riot.app",
       "alternate_bundle_ids": [],
-      "icons": {},
+      "icons": {
+        "direct_url": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/icons/element.png"
+      },
       "category": "messaging",
       "license": "free",
       "path": "messaging/element.json",
@@ -1248,9 +1254,11 @@
     },
     "ip-scanner": {
       "name": "IP Scanner",
-      "bundle_id": "com.10base-t.Interactive.iPScanner",
+      "bundle_id": "com.10baseT.IPScannerMacNMAS",
       "alternate_bundle_ids": [],
-      "icons": {},
+      "icons": {
+        "direct_url": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/icons/ip-scanner.png"
+      },
       "category": "utilities",
       "license": "free",
       "path": "utilities/ip-scanner.json",
@@ -1370,9 +1378,11 @@
     },
     "keybase": {
       "name": "Keybase",
-      "bundle_id": "com.keybase.Keybase",
+      "bundle_id": "keybase.Electron",
       "alternate_bundle_ids": [],
-      "icons": {},
+      "icons": {
+        "direct_url": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/icons/keybase.png"
+      },
       "category": "developer-tools",
       "license": "free",
       "path": "developer-tools/keybase.json",
@@ -1380,7 +1390,7 @@
     },
     "keyboard-maestro": {
       "name": "Keyboard Maestro",
-      "bundle_id": "com.stairways.keyboardmaestro.engine",
+      "bundle_id": "com.stairways.keyboardmaestro.editor",
       "alternate_bundle_ids": [],
       "icons": {},
       "category": "utilities",
@@ -1496,7 +1506,9 @@
       "name": "Linear",
       "bundle_id": "com.linear",
       "alternate_bundle_ids": [],
-      "icons": {},
+      "icons": {
+        "direct_url": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/icons/linear.png"
+      },
       "category": "specialized",
       "license": "free",
       "path": "specialized/linear.json",
@@ -1892,9 +1904,11 @@
     },
     "nextcloud": {
       "name": "Nextcloud Desktop",
-      "bundle_id": "com.nextcloud.desktopclient",
+      "bundle_id": "com.nextcloud.talk.mac",
       "alternate_bundle_ids": [],
-      "icons": {},
+      "icons": {
+        "direct_url": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/icons/nextcloud.png"
+      },
       "category": "cloud-backup",
       "license": "free",
       "path": "cloud-backup/nextcloud.json",
@@ -2344,9 +2358,11 @@
     },
     "roblox": {
       "name": "Roblox",
-      "bundle_id": "com.roblox.RobloxPlayer",
+      "bundle_id": "com.roblox.RobloxPlayerInstaller",
       "alternate_bundle_ids": [],
-      "icons": {},
+      "icons": {
+        "direct_url": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/icons/roblox.png"
+      },
       "category": "gaming",
       "license": "free",
       "path": "gaming/roblox.json",
@@ -2356,7 +2372,9 @@
       "name": "RStudio",
       "bundle_id": "com.rstudio.desktop",
       "alternate_bundle_ids": [],
-      "icons": {},
+      "icons": {
+        "direct_url": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/icons/rstudio.png"
+      },
       "category": "developer-tools",
       "license": "free",
       "path": "developer-tools/rstudio.json",
@@ -2448,9 +2466,11 @@
     },
     "shotcut": {
       "name": "Shotcut",
-      "bundle_id": "org.shotcut.Shotcut",
+      "bundle_id": "com.Meltytech.Shotcut",
       "alternate_bundle_ids": [],
-      "icons": {},
+      "icons": {
+        "direct_url": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/icons/shotcut.png"
+      },
       "category": "media",
       "license": "free",
       "path": "media/shotcut.json",
@@ -2542,7 +2562,9 @@
       "name": "SMARTReporter",
       "bundle_id": "com.corecode.SMARTReporter",
       "alternate_bundle_ids": [],
-      "icons": {},
+      "icons": {
+        "direct_url": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/icons/smartreporter.png"
+      },
       "category": "utilities",
       "license": "free",
       "path": "utilities/smartreporter.json",
@@ -2604,7 +2626,9 @@
       "name": "Standard Notes",
       "bundle_id": "org.standardnotes.standardnotes",
       "alternate_bundle_ids": [],
-      "icons": {},
+      "icons": {
+        "direct_url": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/icons/standard-notes.png"
+      },
       "category": "notes-writing",
       "license": "free",
       "path": "notes-writing/standard-notes.json",
@@ -2706,9 +2730,11 @@
     },
     "teamviewer": {
       "name": "TeamViewer",
-      "bundle_id": "com.teamviewer.TeamViewer",
+      "bundle_id": "com.teamviewer.fullinstallerwrapper",
       "alternate_bundle_ids": [],
-      "icons": {},
+      "icons": {
+        "direct_url": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/icons/teamviewer.png"
+      },
       "category": "remote-desktop",
       "license": "free",
       "path": "remote-desktop/teamviewer.json",
@@ -2846,7 +2872,9 @@
       "name": "Transmission",
       "bundle_id": "org.m0k.transmission",
       "alternate_bundle_ids": [],
-      "icons": {},
+      "icons": {
+        "direct_url": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/icons/transmission.png"
+      },
       "category": "utilities",
       "license": "free",
       "path": "utilities/transmission.json",
@@ -2928,7 +2956,9 @@
       "name": "Viber",
       "bundle_id": "com.viber.osx",
       "alternate_bundle_ids": [],
-      "icons": {},
+      "icons": {
+        "direct_url": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/icons/viber.png"
+      },
       "category": "utilities",
       "license": "free",
       "path": "utilities/viber.json",
@@ -3132,9 +3162,11 @@
     },
     "zen-browser": {
       "name": "Zen Browser",
-      "bundle_id": "org.mozilla.community.zen",
+      "bundle_id": "app.zen-browser.zen",
       "alternate_bundle_ids": [],
-      "icons": {},
+      "icons": {
+        "direct_url": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/icons/zen-browser.png"
+      },
       "category": "browsers",
       "license": "free",
       "path": "browsers/zen-browser.json",

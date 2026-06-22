@@ -5,7 +5,7 @@
   "website": "https://freemacsoft.net/appcleaner",
   "platform": "macOS",
   "architecture": "universal",
-  "bundle_id": "com.freemacsoft.AppCleaner",
+  "bundle_id": "net.freemacsoft.AppCleaner",
   "category": "utilities",
   "license": "free",
   "min_os": "macOS 10.14",
@@ -29,5 +29,9 @@
     "url": "https://freemacsoft.net/appcleaner"
   },
   "last_updated": "2026-06-22",
-  "notes": "No Sparkle appcast , version must be scraped from the download page HTML. Download URL uses version in filename: AppCleaner_X.X.X.zip"
+  "notes": "No Sparkle appcast , version must be scraped from the download page HTML. Download URL uses version in filename: AppCleaner_X.X.X.zip",
+  "cf_bundle_version": "4332",
+  "icons": {
+    "direct_url": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/icons/appcleaner.png"
+  }
 }

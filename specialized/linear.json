@@ -37,5 +37,10 @@
   "category": "specialized",
   "license": "free",
   "skip": false,
-  "bundle_id": "com.linear"
+  "bundle_id": "com.linear",
+  "cf_bundle_version": "1.31.0",
+  "uses_electron": true,
+  "icons": {
+    "direct_url": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/icons/linear.png"
+  }
 }

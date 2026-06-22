@@ -5,10 +5,10 @@
   "website": "https://shotcut.org",
   "platform": "macOS",
   "architecture": "universal",
-  "bundle_id": "org.shotcut.Shotcut",
+  "bundle_id": "com.Meltytech.Shotcut",
   "category": "media",
   "license": "free",
-  "min_os": "macOS 11.0",
+  "min_os": "macOS 12.0.0",
   "auto_updates": false,
   "skip": false,
   "version_check": {
@@ -32,5 +32,9 @@
     "method": "github_api",
     "field": "published_at"
   },
-  "last_updated": "2026-06-22"
+  "last_updated": "2026-06-22",
+  "cf_bundle_version": "26.4.30",
+  "icons": {
+    "direct_url": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/icons/shotcut.png"
+  }
 }

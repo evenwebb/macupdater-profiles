@@ -5,7 +5,7 @@
   "website": "https://www.keyboardmaestro.com",
   "platform": "macOS",
   "architecture": "universal",
-  "min_os": "macOS 11.0",
+  "min_os": "macOS 10.13",
   "auto_updates": false,
   "version_check": {
     "method": "scrape_html",
@@ -40,5 +40,6 @@
   "category": "utilities",
   "license": "paid",
   "skip": false,
-  "bundle_id": "com.stairways.keyboardmaestro.engine"
+  "bundle_id": "com.stairways.keyboardmaestro.editor",
+  "cf_bundle_version": "11.0.4"
 }

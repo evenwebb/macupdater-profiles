@@ -5,10 +5,10 @@
   "website": "https://zen-browser.app",
   "platform": "macOS",
   "architecture": "universal",
-  "bundle_id": "org.mozilla.community.zen",
+  "bundle_id": "app.zen-browser.zen",
   "category": "browsers",
   "license": "free",
-  "min_os": "macOS 11.0",
+  "min_os": "macOS 10.15.0",
   "auto_updates": true,
   "skip": false,
   "version_check": {
@@ -32,5 +32,9 @@
     "method": "github_api",
     "field": "published_at"
   },
-  "last_updated": "2026-06-22"
+  "last_updated": "2026-06-22",
+  "cf_bundle_version": "126.6.18",
+  "icons": {
+    "direct_url": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/icons/zen-browser.png"
+  }
 }

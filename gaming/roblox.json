@@ -35,7 +35,7 @@
     "arm64",
     "x86_64"
   ],
-  "min_os": "10.15",
+  "min_os": "macOS 10.13",
   "auto_updates": true,
   "auto_update_mechanism": "Custom built-in updater polling clientsettingscdn.roblox.com, not Sparkle",
   "app_store_only": false,
@@ -46,5 +46,9 @@
   "skip": false,
   "last_updated": "2026-06-22",
   "slug": "roblox",
-  "bundle_id": "com.roblox.RobloxPlayer"
+  "bundle_id": "com.roblox.RobloxPlayerInstaller",
+  "cf_bundle_version": "7261140",
+  "icons": {
+    "direct_url": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/icons/roblox.png"
+  }
 }

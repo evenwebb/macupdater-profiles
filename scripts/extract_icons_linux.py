@@ -78,9 +78,31 @@ def _resolve_github_release(url: str) -> str | None:
     return None
 
 
+def _scrape_download_links(html: str, base_url: str) -> list[str]:
+    """Extract .dmg/.zip/.pkg download links from an HTML page."""
+    import re
+    from urllib.parse import urljoin
+    links = []
+    # Find href attributes pointing to binary files
+    for m in re.finditer(r'href=["\']([^"\']+\.(?:dmg|zip|pkg|tar\.xz|tbz))["\']', html, re.I):
+        href = m.group(1)
+        full = urljoin(base_url, href)
+        links.append(full)
+    # Also try to find download buttons/links by text
+    for m in re.finditer(r'href=["\']([^"\']+)["\'][^>]*>\s*(?:Download|Mac|macOS|\.dmg)', html, re.I):
+        href = m.group(1)
+        if not any(href.lower().endswith(ext) for ext in ('.dmg','.zip','.pkg','.tar.xz','.tbz')):
+            full = urljoin(base_url, href)
+            if full not in links:
+                links.append(full)
+    return links
+
+
 def _resolve_url(url: str) -> tuple[str, str]:
     """
     Follow redirects to get the final URL and content-type.
+    Resolves GitHub release pages, scrapes download links from HTML pages,
+    and follows HTTP redirects.
     Returns (final_url, content_type).
     """
     # Try GitHub API first
@@ -88,12 +110,38 @@ def _resolve_url(url: str) -> tuple[str, str]:
     if gh_url:
         return gh_url, "application/octet-stream"
 
+    # Try HEAD to check for redirects
     req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT}, method="HEAD")
     try:
         resp = urllib.request.urlopen(req, timeout=30)
-        return resp.geturl(), resp.headers.get("Content-Type", "")
+        final_url = resp.geturl()
+        ct = resp.headers.get("Content-Type", "")
+        if "text/html" not in ct:
+            return final_url, ct
     except Exception:
-        return url, ""
+        pass
+
+    # Page is HTML — try GET and scrape for download links
+    try:
+        req = urllib.request.Request(url, headers={"User-Agent": USER_AGENT})
+        resp = urllib.request.urlopen(req, timeout=30)
+        html = resp.read().decode("utf-8", errors="replace")
+        final_url = resp.geturl()
+
+        links = _scrape_download_links(html, final_url)
+        if links:
+            # Prefer .dmg links, then .zip
+            for link in links:
+                if link.lower().endswith(".dmg"):
+                    return link, "application/x-apple-diskimage"
+            for link in links:
+                if link.lower().endswith(".zip"):
+                    return link, "application/zip"
+            return links[0], "application/octet-stream"
+    except Exception:
+        pass
+
+    return url, "text/html"
 
 
 def download(url: str, work_dir: str, slug: str) -> tuple[str, str] | None:

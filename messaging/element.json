@@ -8,7 +8,7 @@
   "bundle_id": "im.riot.app",
   "category": "messaging",
   "license": "free",
-  "min_os": "macOS 10.15",
+  "min_os": "macOS 12.0",
   "auto_updates": true,
   "skip": false,
   "version_check": {
@@ -32,5 +32,10 @@
     "method": "github_api",
     "field": "published_at"
   },
-  "last_updated": "2026-06-22"
+  "last_updated": "2026-06-22",
+  "cf_bundle_version": "1.12.21",
+  "uses_electron": true,
+  "icons": {
+    "direct_url": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/icons/element.png"
+  }
 }

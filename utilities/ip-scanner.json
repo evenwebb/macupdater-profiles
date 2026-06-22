@@ -1,14 +1,14 @@
 {
   "name": "IP Scanner",
   "slug": "ip-scanner",
-  "bundle_id": "com.10base-t.Interactive.iPScanner",
+  "bundle_id": "com.10baseT.IPScannerMacNMAS",
   "category": "utilities",
   "license": "free",
   "description": "IP Scanner is a network scanning tool for macOS that scans your local network to identify all connected devices and computers, displaying IP addresses, MAC addresses, and device names.",
   "website": "https://10base-t.com",
   "platform": "macOS",
   "architecture": "universal",
-  "min_os": "10.13",
+  "min_os": "macOS 12.4",
   "auto_updates": false,
   "skip": false,
   "version_check": {
@@ -30,5 +30,9 @@
     "field": null
   },
   "notes": "No public version API or Sparkle feed. Version and download URL must be scraped from product page. May also be available on Mac App Store.",
-  "last_updated": "2026-06-22"
+  "last_updated": "2026-06-22",
+  "cf_bundle_version": "1443",
+  "icons": {
+    "direct_url": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/icons/ip-scanner.png"
+  }
 }

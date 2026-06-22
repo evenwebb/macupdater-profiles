@@ -8,7 +8,7 @@
   "website": "https://www.viber.com",
   "platform": "macOS",
   "architecture": "x86_64",
-  "min_os": "11",
+  "min_os": "macOS 10.15",
   "auto_updates": true,
   "skip": false,
   "version_check": {
@@ -30,5 +30,9 @@
     "field": null
   },
   "notes": "Intel-only (x86_64). No public version API. Uses internal auto-updater. Download URL is static (always latest). Version must be detected from the installed app bundle.",
-  "last_updated": "2026-06-21"
+  "last_updated": "2026-06-21",
+  "cf_bundle_version": "2154",
+  "icons": {
+    "direct_url": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/icons/viber.png"
+  }
 }

@@ -32,5 +32,10 @@
     "method": "github_api",
     "field": "published_at"
   },
-  "last_updated": "2026-06-22"
+  "last_updated": "2026-06-22",
+  "cf_bundle_version": "3.201.28",
+  "uses_electron": true,
+  "icons": {
+    "direct_url": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/icons/standard-notes.png"
+  }
 }
