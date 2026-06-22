@@ -8,7 +8,7 @@
   "website": "https://justgetflux.com",
   "platform": "macOS",
   "architecture": "x86_64",
-  "min_os": "10.13",
+  "min_os": "macOS 10.9",
   "auto_updates": true,
   "skip": false,
   "version_check": {
@@ -30,5 +30,9 @@
     "field": null
   },
   "notes": "Intel-only (x86_64). Internal Sparkle feed not publicly accessible. Minimal updates in recent years since macOS added Night Shift. Download URL is static (always latest).",
-  "last_updated": "2026-06-21"
+  "last_updated": "2026-06-21",
+  "cf_bundle_version": "42.2",
+  "icons": {
+    "direct_url": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/icons/flux.png"
+  }
 }

@@ -44,5 +44,7 @@
   "category": "specialized",
   "license": "free",
   "skip": false,
-  "bundle_id": "com.ru.dolphin.anty"
+  "bundle_id": "com.ru.dolphin.anty",
+  "cf_bundle_version": "2026.163.233",
+  "uses_electron": true
 }

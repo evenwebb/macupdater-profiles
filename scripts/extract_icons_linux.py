@@ -389,16 +389,27 @@ def audit_app_bundle(app_path: str, slug: str, profile: dict) -> None:
             print(f"    🔧 architecture mismatch: profile={profile_arch} actual={arch}")
             fixes["architecture"] = arch
 
-    # Check version
-    actual_ver = plist.get("CFBundleShortVersionString")
-    if actual_ver:
-        profile_ver = None
-        vc = profile.get("version_check", {})
-        if vc.get("extraction", {}).get("example"):
-            profile_ver = vc["extraction"]["example"]
-        if actual_ver:
-            pass  # Just report, don't fix — version_check URL is the source of truth
-            # print(f"    ℹ version in bundle: {actual_ver}")
+    # ── build number (future-proofing for Sparkle version matching) ──
+    build = plist.get("CFBundleVersion")
+    if build:
+        profile["cf_bundle_version"] = build
+        fixes["cf_bundle_version"] = build
+
+    # ── display name ──
+    display_name = plist.get("CFBundleDisplayName")
+    if display_name and display_name != profile.get("name", ""):
+        profile["bundle_display_name"] = display_name
+
+    # ── Electron detection ──
+    asar = os.path.join(app_path, "Contents", "Resources", "app.asar")
+    if os.path.isfile(asar):
+        profile["uses_electron"] = True
+        fixes["uses_electron"] = True
+
+    # ── Sparkle detection ──
+    sparkle = os.path.join(app_path, "Contents", "Frameworks", "Sparkle.framework")
+    if os.path.isdir(sparkle):
+        profile["uses_sparkle"] = True
 
     if fixes:
         manifest = json.loads(MANIFEST_PATH.read_text()) if MANIFEST_PATH.exists() else {}
@@ -411,7 +422,9 @@ def audit_app_bundle(app_path: str, slug: str, profile: dict) -> None:
                 with open(profile_path, "w") as f:
                     json.dump(updated, f, indent=2)
                     f.write("\n")
-                print(f"    ✅ {len(fixes)} field(s) corrected in {slug}.json")
+                fix_list = ", ".join(k for k in fixes if k not in ("cf_bundle_version", "bundle_display_name"))
+                shown = fix_list or "metadata enriched"
+                print(f"    ✅ {len(fixes)} fields added/corrected: {shown}")
 
 
 # ── main logic ────────────────────────────────────────────────────────

@@ -1,7 +1,7 @@
 {
   "schema_version": 2,
   "version": 2,
-  "updated": "2026-06-22T17:38:49Z",
+  "updated": "2026-06-22T18:15:32Z",
   "total_profiles": 302,
   "apps": {
     "1password": {
@@ -312,9 +312,11 @@
     },
     "battle-net": {
       "name": "Battle.net",
-      "bundle_id": "com.blizzard.Battle.net",
+      "bundle_id": "net.battle.bootstrapper",
       "alternate_bundle_ids": [],
-      "icons": {},
+      "icons": {
+        "direct_url": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/icons/battle-net.png"
+      },
       "category": "gaming",
       "license": "free",
       "path": "gaming/battle-net.json",
@@ -862,7 +864,9 @@
       "name": "ExpanDrive",
       "bundle_id": "com.expandrive.ExpanDrive",
       "alternate_bundle_ids": [],
-      "icons": {},
+      "icons": {
+        "direct_url": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/icons/expandrive.png"
+      },
       "category": "utilities",
       "license": "free",
       "path": "utilities/expandrive.json",
@@ -944,7 +948,9 @@
       "name": "f.lux",
       "bundle_id": "org.herf.Flux",
       "alternate_bundle_ids": [],
-      "icons": {},
+      "icons": {
+        "direct_url": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/icons/flux.png"
+      },
       "category": "utilities",
       "license": "free",
       "path": "utilities/flux.json",

@@ -5,7 +5,7 @@
   "website": "https://www.blizzard.com",
   "platform": "macOS",
   "architecture": "x86_64",
-  "min_os": "10.15",
+  "min_os": "macOS 10.10",
   "auto_updates": true,
   "version_check": {
     "method": "scrape_html",
@@ -34,5 +34,9 @@
   "license": "free",
   "skip": false,
   "file_type": "dmg",
-  "bundle_id": "com.blizzard.Battle.net"
+  "bundle_id": "net.battle.bootstrapper",
+  "cf_bundle_version": "1.19.3.3219",
+  "icons": {
+    "direct_url": "https://raw.githubusercontent.com/evenwebb/macupdater-profiles/main/icons/battle-net.png"
+  }
 }
