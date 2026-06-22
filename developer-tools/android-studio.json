@@ -1,0 +1,32 @@
+{
+  "name": "Android Studio",
+  "slug": "android-studio",
+  "description": "Official IDE for Android app development \u2014 intelligent code editor, flexible build system, and emulator",
+  "website": "https://developer.android.com/studio",
+  "platform": "macOS",
+  "architecture": "universal",
+  "bundle_id": "com.google.android.studio",
+  "category": "developer-tools",
+  "license": "free",
+  "min_os": "macOS 12.0",
+  "auto_updates": true,
+  "skip": false,
+  "version_check": {
+    "method": "json_api",
+    "url": "https://developer.android.com/studio/releases/platforms",
+    "extraction": {
+      "type": "regex",
+      "pattern": "android-studio-(\\d+\\.\\d+(?:\\.\\d+)?)"
+    }
+  },
+  "download": {
+    "method": "direct_url",
+    "url": "https://developer.android.com/studio",
+    "file_type": "dmg"
+  },
+  "changelog": {
+    "method": "web_scrape",
+    "url": "https://developer.android.com/studio/releases"
+  },
+  "last_updated": "2026-06-22"
+}

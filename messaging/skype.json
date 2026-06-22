@@ -1,0 +1,32 @@
+{
+  "name": "Skype",
+  "slug": "skype",
+  "description": "Microsoft's video calling, messaging, and VoIP application \u2014 connect with anyone, anywhere",
+  "website": "https://www.skype.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "bundle_id": "com.skype.skype",
+  "category": "messaging",
+  "license": "free",
+  "min_os": "macOS 11.0",
+  "auto_updates": true,
+  "skip": false,
+  "version_check": {
+    "method": "redirect_trace",
+    "url": "https://get.skype.com/go/getskype-skypeformac",
+    "extraction": {
+      "type": "regex",
+      "pattern": "Skype[_-](\\d+\\.\\d+(?:\\.\\d+)?)"
+    }
+  },
+  "download": {
+    "method": "direct_url",
+    "url": "https://www.skype.com/en/get-skype",
+    "file_type": "dmg"
+  },
+  "changelog": {
+    "method": "web_scrape",
+    "url": "https://support.microsoft.com/en-us/skype/skype-for-mac-release-notes"
+  },
+  "last_updated": "2026-06-22"
+}

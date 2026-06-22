@@ -1,0 +1,36 @@
+{
+  "name": "GrandPerspective",
+  "slug": "grandperspective",
+  "description": "Graphical disk usage utility for macOS \u2014 uses tree maps to visualize disk usage",
+  "website": "https://grandperspectiv.sourceforge.net",
+  "platform": "macOS",
+  "architecture": "universal",
+  "bundle_id": "net.sourceforge.grandperspectiv",
+  "category": "utilities",
+  "license": "free",
+  "min_os": "macOS 10.13",
+  "auto_updates": false,
+  "skip": false,
+  "version_check": {
+    "method": "sourceforge_json",
+    "url": "https://sourceforge.net/projects/grandperspectiv/best_release.json",
+    "extraction": {
+      "type": "json_path",
+      "path": "release.filename"
+    }
+  },
+  "download": {
+    "method": "direct_url",
+    "url": "https://sourceforge.net/projects/grandperspectiv/files/latest/download",
+    "file_type": "dmg"
+  },
+  "changelog": {
+    "method": "web_scrape",
+    "url": "https://sourceforge.net/projects/grandperspectiv/files"
+  },
+  "release_date": {
+    "method": "sourceforge_json",
+    "field": "release.release_date"
+  },
+  "last_updated": "2026-06-22"
+}

@@ -1,0 +1,32 @@
+{
+  "name": "DEVONthink",
+  "slug": "devonthink",
+  "description": "Professional document and information management \u2014 organize, search, and connect all your documents, notes, and data",
+  "website": "https://www.devontechnologies.com/apps/devonthink",
+  "platform": "macOS",
+  "architecture": "universal",
+  "bundle_id": "com.devon-technologies.think3",
+  "category": "office",
+  "license": "paid",
+  "min_os": "macOS 11.0",
+  "auto_updates": true,
+  "skip": false,
+  "version_check": {
+    "method": "sparkle_appcast",
+    "url": "https://www.devontechnologies.com/appcast/devonthink3.xml",
+    "extraction": {
+      "type": "xpath",
+      "xpath": "//item/enclosure/@*[local-name()='shortVersionString' or local-name()='sparkle:shortVersionString']"
+    }
+  },
+  "download": {
+    "method": "direct_url",
+    "url": "https://www.devontechnologies.com/apps/devonthink",
+    "file_type": "dmg"
+  },
+  "changelog": {
+    "method": "web_scrape",
+    "url": "https://www.devontechnologies.com/blog/categories/devonthink"
+  },
+  "last_updated": "2026-06-22"
+}

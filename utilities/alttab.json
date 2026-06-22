@@ -1,0 +1,36 @@
+{
+  "name": "AltTab",
+  "slug": "alttab",
+  "description": "Windows alt-tab window switcher for macOS \u2014 brings the power of Windows-style window switching to Mac",
+  "website": "https://alt-tab-macos.netlify.app",
+  "platform": "macOS",
+  "architecture": "universal",
+  "bundle_id": "com.lwouis.alt-tab-macos",
+  "category": "utilities",
+  "license": "free",
+  "min_os": "macOS 10.15",
+  "auto_updates": true,
+  "skip": false,
+  "version_check": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/lwouis/alt-tab-macos/releases/latest",
+    "extraction": {
+      "type": "json_path",
+      "path": "tag_name"
+    }
+  },
+  "download": {
+    "method": "direct_url",
+    "url": "https://github.com/lwouis/alt-tab-macos/releases/latest",
+    "file_type": "dmg"
+  },
+  "changelog": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/lwouis/alt-tab-macos/releases/latest"
+  },
+  "release_date": {
+    "method": "github_api",
+    "field": "published_at"
+  },
+  "last_updated": "2026-06-22"
+}

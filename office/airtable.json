@@ -1,0 +1,32 @@
+{
+  "name": "Airtable",
+  "slug": "airtable",
+  "description": "Spreadsheet-database hybrid — organize anything with the power of a database and the simplicity of a spreadsheet",
+  "website": "https://airtable.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "bundle_id": "com.formaairtable.airtable",
+  "category": "office",
+  "license": "free",
+  "min_os": "macOS 11.0",
+  "auto_updates": true,
+  "skip": false,
+  "version_check": {
+    "method": "yaml_api",
+    "url": "https://apps.airtable.com/desktop/latest-mac.yml",
+    "extraction": {
+      "type": "yaml_key",
+      "key": "version"
+    }
+  },
+  "download": {
+    "method": "direct_url",
+    "url": "https://airtable.com/download",
+    "file_type": "dmg"
+  },
+  "changelog": {
+    "method": "web_scrape",
+    "url": "https://support.airtable.com/docs/airtable-mac-app-release-notes"
+  },
+  "last_updated": "2026-06-22"
+}

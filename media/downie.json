@@ -1,0 +1,32 @@
+{
+  "name": "Downie",
+  "slug": "downie",
+  "description": "Video downloader for macOS \u2014 supports over 1,000 different sites including YouTube, Vimeo, and more",
+  "website": "https://software.charliemonroe.net/downie",
+  "platform": "macOS",
+  "architecture": "universal",
+  "bundle_id": "com.charliemonroe.Downie-4",
+  "category": "media",
+  "license": "paid",
+  "min_os": "macOS 11.0",
+  "auto_updates": true,
+  "skip": false,
+  "version_check": {
+    "method": "sparkle_appcast",
+    "url": "https://software.charliemonroe.net/updates/downie4.xml",
+    "extraction": {
+      "type": "xpath",
+      "xpath": "//item/enclosure/@*[local-name()='shortVersionString' or local-name()='sparkle:shortVersionString']"
+    }
+  },
+  "download": {
+    "method": "direct_url",
+    "url": "https://software.charliemonroe.net/downie",
+    "file_type": "dmg"
+  },
+  "changelog": {
+    "method": "web_scrape",
+    "url": "https://software.charliemonroe.net/downie/version-history"
+  },
+  "last_updated": "2026-06-22"
+}

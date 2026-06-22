@@ -1,0 +1,32 @@
+{
+  "name": "Audio Hijack",
+  "slug": "audio-hijack",
+  "description": "Record any application's audio on your Mac \u2014 perfect for podcasts, streaming, and VoIP calls",
+  "website": "https://rogueamoeba.com/audiohijack",
+  "platform": "macOS",
+  "architecture": "universal",
+  "bundle_id": "com.rogueamoeba.audiohijack",
+  "category": "media",
+  "license": "paid",
+  "min_os": "macOS 11.0",
+  "auto_updates": true,
+  "skip": false,
+  "version_check": {
+    "method": "sparkle_appcast",
+    "url": "https://rogueamoeba.com/appcast/audiohijack.xml",
+    "extraction": {
+      "type": "xpath",
+      "xpath": "//item/enclosure/@*[local-name()='shortVersionString' or local-name()='sparkle:shortVersionString']"
+    }
+  },
+  "download": {
+    "method": "direct_url",
+    "url": "https://rogueamoeba.com/audiohijack/download.php",
+    "file_type": "dmg"
+  },
+  "changelog": {
+    "method": "web_scrape",
+    "url": "https://rogueamoeba.com/audiohijack/releasenotes"
+  },
+  "last_updated": "2026-06-22"
+}

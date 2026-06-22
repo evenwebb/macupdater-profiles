@@ -1,0 +1,32 @@
+{
+  "name": "qBittorrent",
+  "slug": "qbittorrent",
+  "description": "Free and reliable P2P BitTorrent client with an integrated search engine and media player",
+  "website": "https://www.qbittorrent.org",
+  "platform": "macOS",
+  "architecture": "universal",
+  "bundle_id": "org.qbittorrent.qBittorrent",
+  "category": "utilities",
+  "license": "free",
+  "min_os": "macOS 11.0",
+  "auto_updates": false,
+  "skip": false,
+  "version_check": {
+    "method": "redirect_trace",
+    "url": "https://www.qbittorrent.org/download.php",
+    "extraction": {
+      "type": "regex",
+      "pattern": "qbittorrent-(\\d+\\.\\d+(?:\\.\\d+)?)"
+    }
+  },
+  "download": {
+    "method": "direct_url",
+    "url": "https://www.qbittorrent.org/download",
+    "file_type": "dmg"
+  },
+  "changelog": {
+    "method": "web_scrape",
+    "url": "https://www.qbittorrent.org/news.php"
+  },
+  "last_updated": "2026-06-22"
+}

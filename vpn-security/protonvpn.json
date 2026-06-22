@@ -1,0 +1,36 @@
+{
+  "name": "Proton VPN",
+  "slug": "protonvpn",
+  "description": "High-speed Swiss VPN that safeguards your privacy \u2014 from the team behind Proton Mail",
+  "website": "https://protonvpn.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "bundle_id": "ch.protonvpn.mac",
+  "category": "vpn-security",
+  "license": "free",
+  "min_os": "macOS 11.0",
+  "auto_updates": true,
+  "skip": false,
+  "version_check": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/ProtonVPN/mac-app/releases/latest",
+    "extraction": {
+      "type": "json_path",
+      "path": "tag_name"
+    }
+  },
+  "download": {
+    "method": "direct_url",
+    "url": "https://protonvpn.com/download",
+    "file_type": "dmg"
+  },
+  "changelog": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/ProtonVPN/mac-app/releases/latest"
+  },
+  "release_date": {
+    "method": "github_api",
+    "field": "published_at"
+  },
+  "last_updated": "2026-06-22"
+}

@@ -1,0 +1,36 @@
+{
+  "name": "HandBrake",
+  "slug": "handbrake",
+  "description": "Open source video transcoder \u2014 convert video from nearly any format to a selection of modern, widely supported codecs",
+  "website": "https://handbrake.fr",
+  "platform": "macOS",
+  "architecture": "universal",
+  "bundle_id": "fr.handbrake.HandBrake",
+  "category": "media",
+  "license": "free",
+  "min_os": "macOS 11.0",
+  "auto_updates": true,
+  "skip": false,
+  "version_check": {
+    "method": "sparkle_appcast",
+    "url": "https://handbrake.fr/appcast.xml",
+    "extraction": {
+      "type": "xpath",
+      "xpath": "//item/enclosure/@*[local-name()='shortVersionString' or local-name()='sparkle:shortVersionString']"
+    }
+  },
+  "download": {
+    "method": "redirect_url",
+    "url": "https://handbrake.fr/download.php",
+    "file_type": "dmg"
+  },
+  "changelog": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/HandBrake/HandBrake/releases/latest"
+  },
+  "release_date": {
+    "method": "github_api",
+    "field": "published_at"
+  },
+  "last_updated": "2026-06-22"
+}

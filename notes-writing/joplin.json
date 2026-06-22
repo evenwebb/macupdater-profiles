@@ -1,0 +1,36 @@
+{
+  "name": "Joplin",
+  "slug": "joplin",
+  "description": "Open source note-taking app \u2014 capture your thoughts and access them from any device",
+  "website": "https://joplinapp.org",
+  "platform": "macOS",
+  "architecture": "universal",
+  "bundle_id": "net.cozic.joplin-desktop",
+  "category": "notes-writing",
+  "license": "free",
+  "min_os": "macOS 10.14",
+  "auto_updates": true,
+  "skip": false,
+  "version_check": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/laurent22/joplin/releases/latest",
+    "extraction": {
+      "type": "json_path",
+      "path": "tag_name"
+    }
+  },
+  "download": {
+    "method": "direct_url",
+    "url": "https://joplinapp.org/download",
+    "file_type": "dmg"
+  },
+  "changelog": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/laurent22/joplin/releases/latest"
+  },
+  "release_date": {
+    "method": "github_api",
+    "field": "published_at"
+  },
+  "last_updated": "2026-06-22"
+}

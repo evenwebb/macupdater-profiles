@@ -1,0 +1,36 @@
+{
+  "name": "Karabiner-Elements",
+  "slug": "karabiner-elements",
+  "description": "Powerful and stable keyboard customizer for macOS",
+  "website": "https://karabiner-elements.pqrs.org",
+  "platform": "macOS",
+  "architecture": "universal",
+  "bundle_id": "org.pqrs.Karabiner-Elements",
+  "category": "utilities",
+  "license": "free",
+  "min_os": "macOS 11.0",
+  "auto_updates": true,
+  "skip": false,
+  "version_check": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/pqrs-org/Karabiner-Elements/releases/latest",
+    "extraction": {
+      "type": "json_path",
+      "path": "tag_name"
+    }
+  },
+  "download": {
+    "method": "direct_url",
+    "url": "https://github.com/pqrs-org/Karabiner-Elements/releases/latest",
+    "file_type": "dmg"
+  },
+  "changelog": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/pqrs-org/Karabiner-Elements/releases/latest"
+  },
+  "release_date": {
+    "method": "github_api",
+    "field": "published_at"
+  },
+  "last_updated": "2026-06-22"
+}

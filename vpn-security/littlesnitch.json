@@ -1,0 +1,32 @@
+{
+  "name": "Little Snitch",
+  "slug": "littlesnitch",
+  "description": "Powerful personal firewall for macOS \u2014 monitor and control your network traffic with per-app rules",
+  "website": "https://www.obdev.at/products/littlesnitch",
+  "platform": "macOS",
+  "architecture": "universal",
+  "bundle_id": "at.obdev.LittleSnitch",
+  "category": "vpn-security",
+  "license": "paid",
+  "min_os": "macOS 11.0",
+  "auto_updates": true,
+  "skip": false,
+  "version_check": {
+    "method": "sparkle_appcast",
+    "url": "https://www.obdev.at/products/littlesnitch/releasenotes.html",
+    "extraction": {
+      "type": "regex",
+      "pattern": "Little\\s+Snitch\\s+(\\d+\\.\\d+(?:\\.\\d+)?)"
+    }
+  },
+  "download": {
+    "method": "direct_url",
+    "url": "https://www.obdev.at/products/littlesnitch/download",
+    "file_type": "dmg"
+  },
+  "changelog": {
+    "method": "web_scrape",
+    "url": "https://www.obdev.at/products/littlesnitch/releasenotes.html"
+  },
+  "last_updated": "2026-06-22"
+}

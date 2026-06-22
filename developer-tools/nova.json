@@ -1,0 +1,32 @@
+{
+  "name": "Nova",
+  "slug": "nova",
+  "description": "Native Mac code editor from Panic \u2014 built for web development with first-class support for HTML, CSS, JS, PHP, Python, and more",
+  "website": "https://nova.app",
+  "platform": "macOS",
+  "architecture": "universal",
+  "bundle_id": "com.panic.Nova",
+  "category": "developer-tools",
+  "license": "paid",
+  "min_os": "macOS 11.0",
+  "auto_updates": true,
+  "skip": false,
+  "version_check": {
+    "method": "sparkle_appcast",
+    "url": "https://nova.app/appcast.xml",
+    "extraction": {
+      "type": "xpath",
+      "xpath": "//item/enclosure/@*[local-name()='shortVersionString' or local-name()='sparkle:shortVersionString']"
+    }
+  },
+  "download": {
+    "method": "direct_url",
+    "url": "https://nova.app/download",
+    "file_type": "dmg"
+  },
+  "changelog": {
+    "method": "web_scrape",
+    "url": "https://nova.app/releases"
+  },
+  "last_updated": "2026-06-22"
+}

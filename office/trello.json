@@ -1,0 +1,32 @@
+{
+  "name": "Trello",
+  "slug": "trello",
+  "description": "Visual project management tool that helps teams organize projects with boards, lists, and cards",
+  "website": "https://trello.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "bundle_id": "com.atlassian.trello",
+  "category": "office",
+  "license": "free",
+  "min_os": "macOS 11.0",
+  "auto_updates": true,
+  "skip": false,
+  "version_check": {
+    "method": "yaml_api",
+    "url": "https://trello.com/desktop-app/update/mac/latest-mac.yml",
+    "extraction": {
+      "type": "yaml_key",
+      "key": "version"
+    }
+  },
+  "download": {
+    "method": "direct_url",
+    "url": "https://trello.com/platforms",
+    "file_type": "dmg"
+  },
+  "changelog": {
+    "method": "web_scrape",
+    "url": "https://trello.com/platforms"
+  },
+  "last_updated": "2026-06-22"
+}

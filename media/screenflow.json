@@ -1,0 +1,32 @@
+{
+  "name": "ScreenFlow",
+  "slug": "screenflow",
+  "description": "Professional screen recording and video editing software for macOS \u2014 record, edit, and share high-quality videos",
+  "website": "https://www.telestream.net/screenflow",
+  "platform": "macOS",
+  "architecture": "universal",
+  "bundle_id": "net.telestream.screenflow",
+  "category": "media",
+  "license": "paid",
+  "min_os": "macOS 11.0",
+  "auto_updates": true,
+  "skip": false,
+  "version_check": {
+    "method": "sparkle_appcast",
+    "url": "http://www.telestream.net/updates/screenflow/appcast.xml",
+    "extraction": {
+      "type": "xpath",
+      "xpath": "//item/enclosure/@*[local-name()='shortVersionString' or local-name()='sparkle:shortVersionString']"
+    }
+  },
+  "download": {
+    "method": "direct_url",
+    "url": "https://www.telestream.net/screenflow/overview.htm",
+    "file_type": "dmg"
+  },
+  "changelog": {
+    "method": "web_scrape",
+    "url": "https://www.telestream.net/screenflow/versions.htm"
+  },
+  "last_updated": "2026-06-22"
+}

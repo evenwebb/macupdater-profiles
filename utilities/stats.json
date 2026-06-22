@@ -1,0 +1,36 @@
+{
+  "name": "Stats",
+  "slug": "stats",
+  "description": "macOS system monitor in your menu bar \u2014 CPU, GPU, memory, disk, network, sensors, battery",
+  "website": "https://github.com/exelban/stats",
+  "platform": "macOS",
+  "architecture": "universal",
+  "bundle_id": "eu.exelban.Stats",
+  "category": "utilities",
+  "license": "free",
+  "min_os": "macOS 12.0",
+  "auto_updates": true,
+  "skip": false,
+  "version_check": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/exelban/stats/releases/latest",
+    "extraction": {
+      "type": "json_path",
+      "path": "tag_name"
+    }
+  },
+  "download": {
+    "method": "direct_url",
+    "url": "https://github.com/exelban/stats/releases/latest",
+    "file_type": "dmg"
+  },
+  "changelog": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/exelban/stats/releases/latest"
+  },
+  "release_date": {
+    "method": "github_api",
+    "field": "published_at"
+  },
+  "last_updated": "2026-06-22"
+}

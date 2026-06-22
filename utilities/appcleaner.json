@@ -1,0 +1,32 @@
+{
+  "name": "AppCleaner",
+  "slug": "appcleaner",
+  "description": "Small application that allows you to thoroughly uninstall unwanted apps",
+  "website": "https://freemacsoft.net/appcleaner",
+  "platform": "macOS",
+  "architecture": "universal",
+  "bundle_id": "com.freemacsoft.AppCleaner",
+  "category": "utilities",
+  "license": "free",
+  "min_os": "macOS 10.13",
+  "auto_updates": false,
+  "skip": false,
+  "version_check": {
+    "method": "scrape_html",
+    "url": "https://freemacsoft.net/appcleaner",
+    "extraction": {
+      "type": "regex",
+      "pattern": "AppCleaner\\s+(\\d+\\.\\d+(?:\\.\\d+)?)"
+    }
+  },
+  "download": {
+    "method": "direct_url",
+    "url": "https://freemacsoft.net/appcleaner",
+    "file_type": "dmg"
+  },
+  "changelog": {
+    "method": "web_scrape",
+    "url": "https://freemacsoft.net/appcleaner"
+  },
+  "last_updated": "2026-06-22"
+}

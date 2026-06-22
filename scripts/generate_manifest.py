@@ -37,6 +37,7 @@ def main():
             count += 1
 
     manifest = {
+        "schema_version": 2,
         "version": 2,
         "updated": datetime.now(timezone.utc).strftime("%Y-%m-%dT%H:%M:%SZ"),
         "total_profiles": count,

@@ -1,7 +1,8 @@
 {
+  "schema_version": 2,
   "version": 2,
-  "updated": "2026-06-21T23:45:46Z",
-  "total_profiles": 220,
+  "updated": "2026-06-22T10:28:55Z",
+  "total_profiles": 245,
   "apps": {
     "1password": {
       "name": "1Password",
@@ -75,12 +76,28 @@
       "path": "specialized/aftershoot.json",
       "skip": false
     },
+    "airtable": {
+      "name": "Airtable",
+      "bundle_id": "com.formaairtable.airtable",
+      "category": "office",
+      "license": "free",
+      "path": "office/airtable.json",
+      "skip": false
+    },
     "alfred": {
       "name": "Alfred",
       "bundle_id": "com.runningwithcrayons.Alfred",
       "category": "utilities",
       "license": "paid",
       "path": "utilities/alfred.json",
+      "skip": false
+    },
+    "alttab": {
+      "name": "AltTab",
+      "bundle_id": "com.lwouis.alt-tab-macos",
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/alttab.json",
       "skip": false
     },
     "amazon-music": {
@@ -99,12 +116,28 @@
       "path": "utilities/amphetamine.json",
       "skip": false
     },
+    "android-studio": {
+      "name": "Android Studio",
+      "bundle_id": "com.google.android.studio",
+      "category": "developer-tools",
+      "license": "free",
+      "path": "developer-tools/android-studio.json",
+      "skip": false
+    },
     "anydesk": {
       "name": "AnyDesk",
       "bundle_id": "com.philandro.anydesk",
       "category": "remote-desktop",
       "license": "free",
       "path": "remote-desktop/anydesk.json",
+      "skip": false
+    },
+    "appcleaner": {
+      "name": "AppCleaner",
+      "bundle_id": "com.freemacsoft.AppCleaner",
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/appcleaner.json",
       "skip": false
     },
     "arc": {
@@ -121,6 +154,14 @@
       "category": "media",
       "license": "free",
       "path": "media/audacity.json",
+      "skip": false
+    },
+    "audio-hijack": {
+      "name": "Audio Hijack",
+      "bundle_id": "com.rogueamoeba.audiohijack",
+      "category": "media",
+      "license": "paid",
+      "path": "media/audio-hijack.json",
       "skip": false
     },
     "backblaze": {
@@ -291,6 +332,14 @@
       "path": "ai-tools/chatgpt.json",
       "skip": false
     },
+    "cheatsheet": {
+      "name": "CheatSheet",
+      "bundle_id": "com.mediaatelier.CheatSheet",
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/cheatsheet.json",
+      "skip": false
+    },
     "chromium": {
       "name": "Chromium",
       "bundle_id": null,
@@ -347,6 +396,14 @@
       "path": "vpn-security/control-d-utility.json",
       "skip": false
     },
+    "craft": {
+      "name": "Craft",
+      "bundle_id": "com.lukilabs.lukiapp",
+      "category": "notes-writing",
+      "license": "free",
+      "path": "notes-writing/craft.json",
+      "skip": false
+    },
     "cursor": {
       "name": "Cursor",
       "bundle_id": null,
@@ -395,6 +452,14 @@
       "path": "specialized/detail-camera-plugin.json",
       "skip": false
     },
+    "devonthink": {
+      "name": "DEVONthink",
+      "bundle_id": "com.devon-technologies.think3",
+      "category": "office",
+      "license": "paid",
+      "path": "office/devonthink.json",
+      "skip": false
+    },
     "discord": {
       "name": "Discord",
       "bundle_id": "com.hnc.Discord",
@@ -417,6 +482,14 @@
       "category": "specialized",
       "license": "free",
       "path": "specialized/dolphin-anty.json",
+      "skip": false
+    },
+    "downie": {
+      "name": "Downie",
+      "bundle_id": "com.charliemonroe.Downie-4",
+      "category": "media",
+      "license": "paid",
+      "path": "media/downie.json",
       "skip": false
     },
     "dropbox": {
@@ -627,6 +700,22 @@
       "path": "email/grammarly-for-safari.json",
       "skip": false
     },
+    "grandperspective": {
+      "name": "GrandPerspective",
+      "bundle_id": "net.sourceforge.grandperspectiv",
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/grandperspective.json",
+      "skip": false
+    },
+    "handbrake": {
+      "name": "HandBrake",
+      "bundle_id": "fr.handbrake.HandBrake",
+      "category": "media",
+      "license": "free",
+      "path": "media/handbrake.json",
+      "skip": false
+    },
     "hazel": {
       "name": "Hazel",
       "bundle_id": null,
@@ -731,12 +820,28 @@
       "path": "utilities/itsycal.json",
       "skip": false
     },
+    "joplin": {
+      "name": "Joplin",
+      "bundle_id": "net.cozic.joplin-desktop",
+      "category": "notes-writing",
+      "license": "free",
+      "path": "notes-writing/joplin.json",
+      "skip": false
+    },
     "kaleidoscope": {
       "name": "Kaleidoscope",
       "bundle_id": null,
       "category": "developer-tools",
       "license": "paid",
       "path": "developer-tools/kaleidoscope.json",
+      "skip": false
+    },
+    "karabiner-elements": {
+      "name": "Karabiner-Elements",
+      "bundle_id": "org.pqrs.Karabiner-Elements",
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/karabiner-elements.json",
       "skip": false
     },
     "keka": {
@@ -819,6 +924,14 @@
       "path": "specialized/linear.json",
       "skip": false
     },
+    "littlesnitch": {
+      "name": "Little Snitch",
+      "bundle_id": "at.obdev.LittleSnitch",
+      "category": "vpn-security",
+      "license": "paid",
+      "path": "vpn-security/littlesnitch.json",
+      "skip": false
+    },
     "lm-studio": {
       "name": "LM Studio",
       "bundle_id": "com.elementlabs.lmstudio",
@@ -841,6 +954,14 @@
       "category": "specialized",
       "license": "free",
       "path": "specialized/logitech-options-plus.json",
+      "skip": false
+    },
+    "logseq": {
+      "name": "Logseq",
+      "bundle_id": "com.electron.logseq",
+      "category": "notes-writing",
+      "license": "free",
+      "path": "notes-writing/logseq.json",
       "skip": false
     },
     "loom": {
@@ -905,6 +1026,14 @@
       "category": "utilities",
       "license": "free",
       "path": "utilities/magnet.json",
+      "skip": false
+    },
+    "malwarebytes": {
+      "name": "Malwarebytes",
+      "bundle_id": "com.malwarebytes.malwarebytes",
+      "category": "vpn-security",
+      "license": "free",
+      "path": "vpn-security/malwarebytes.json",
       "skip": false
     },
     "mamp": {
@@ -987,6 +1116,14 @@
       "path": "utilities/moom.json",
       "skip": false
     },
+    "mos": {
+      "name": "Mos",
+      "bundle_id": "com.caldis.Mos",
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/mos.json",
+      "skip": false
+    },
     "mysql-workbench": {
       "name": "MySQL Workbench",
       "bundle_id": "com.oracle.mysql.workbench",
@@ -1017,6 +1154,14 @@
       "category": "notes-writing",
       "license": "free",
       "path": "notes-writing/notion.json",
+      "skip": false
+    },
+    "nova": {
+      "name": "Nova",
+      "bundle_id": "com.panic.Nova",
+      "category": "developer-tools",
+      "license": "paid",
+      "path": "developer-tools/nova.json",
       "skip": false
     },
     "obs-studio": {
@@ -1227,12 +1372,28 @@
       "path": "developer-tools/postman.json",
       "skip": false
     },
+    "protonvpn": {
+      "name": "Proton VPN",
+      "bundle_id": "ch.protonvpn.mac",
+      "category": "vpn-security",
+      "license": "free",
+      "path": "vpn-security/protonvpn.json",
+      "skip": false
+    },
     "python": {
       "name": "Python",
       "bundle_id": null,
       "category": "developer-tools",
       "license": "free",
       "path": "developer-tools/python.json",
+      "skip": false
+    },
+    "qbittorrent": {
+      "name": "qBittorrent",
+      "bundle_id": "org.qbittorrent.qBittorrent",
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/qbittorrent.json",
       "skip": false
     },
     "quicksilver": {
@@ -1305,6 +1466,14 @@
       "category": "gaming",
       "license": "free",
       "path": "gaming/roblox.json",
+      "skip": false
+    },
+    "screenflow": {
+      "name": "ScreenFlow",
+      "bundle_id": "net.telestream.screenflow",
+      "category": "media",
+      "license": "paid",
+      "path": "media/screenflow.json",
       "skip": false
     },
     "screens": {
@@ -1387,6 +1556,14 @@
       "path": "rss-reading/skim.json",
       "skip": false
     },
+    "skype": {
+      "name": "Skype",
+      "bundle_id": "com.skype.skype",
+      "category": "messaging",
+      "license": "free",
+      "path": "messaging/skype.json",
+      "skip": false
+    },
     "slack": {
       "name": "Slack",
       "bundle_id": "com.tinyspec.Slack",
@@ -1441,6 +1618,14 @@
       "category": "vpn-security",
       "license": "paid",
       "path": "vpn-security/spyderxpro.json",
+      "skip": false
+    },
+    "stats": {
+      "name": "Stats",
+      "bundle_id": "eu.exelban.Stats",
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/stats.json",
       "skip": false
     },
     "steam": {
@@ -1603,12 +1788,28 @@
       "path": "developer-tools/tower.json",
       "skip": false
     },
+    "transmission": {
+      "name": "Transmission",
+      "bundle_id": "org.m0k.transmission",
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/transmission.json",
+      "skip": false
+    },
     "transmit": {
       "name": "Transmit",
       "bundle_id": "com.panic.Transmit",
       "category": "developer-tools",
       "license": "paid",
       "path": "developer-tools/transmit.json",
+      "skip": false
+    },
+    "trello": {
+      "name": "Trello",
+      "bundle_id": "com.atlassian.trello",
+      "category": "office",
+      "license": "free",
+      "path": "office/trello.json",
       "skip": false
     },
     "tunnelblick": {

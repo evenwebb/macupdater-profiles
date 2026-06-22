@@ -1,0 +1,32 @@
+{
+  "name": "CheatSheet",
+  "slug": "cheatsheet",
+  "description": "Hold the Command key to see all available keyboard shortcuts for the current app",
+  "website": "https://www.mediaatelier.com/CheatSheet",
+  "platform": "macOS",
+  "architecture": "universal",
+  "bundle_id": "com.mediaatelier.CheatSheet",
+  "category": "utilities",
+  "license": "free",
+  "min_os": "macOS 10.12",
+  "auto_updates": false,
+  "skip": false,
+  "version_check": {
+    "method": "scrape_html",
+    "url": "https://www.mediaatelier.com/CheatSheet",
+    "extraction": {
+      "type": "regex",
+      "pattern": "CheatSheet\\s+(\\d+\\.\\d+(?:\\.\\d+)?)"
+    }
+  },
+  "download": {
+    "method": "direct_url",
+    "url": "https://www.mediaatelier.com/CheatSheet",
+    "file_type": "dmg"
+  },
+  "changelog": {
+    "method": "web_scrape",
+    "url": "https://www.mediaatelier.com/CheatSheet"
+  },
+  "last_updated": "2026-06-22"
+}

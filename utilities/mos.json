@@ -1,0 +1,36 @@
+{
+  "name": "Mos",
+  "slug": "mos",
+  "description": "Smooth your mouse's scrolling and reverse the scroll direction independently on macOS",
+  "website": "https://mos.caldis.me",
+  "platform": "macOS",
+  "architecture": "universal",
+  "bundle_id": "com.caldis.Mos",
+  "category": "utilities",
+  "license": "free",
+  "min_os": "macOS 10.13",
+  "auto_updates": true,
+  "skip": false,
+  "version_check": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/Caldis/Mos/releases/latest",
+    "extraction": {
+      "type": "json_path",
+      "path": "tag_name"
+    }
+  },
+  "download": {
+    "method": "direct_url",
+    "url": "https://github.com/Caldis/Mos/releases/latest",
+    "file_type": "dmg"
+  },
+  "changelog": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/Caldis/Mos/releases/latest"
+  },
+  "release_date": {
+    "method": "github_api",
+    "field": "published_at"
+  },
+  "last_updated": "2026-06-22"
+}
