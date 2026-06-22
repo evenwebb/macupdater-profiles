@@ -1,0 +1,36 @@
+{
+  "name": "Alacritty",
+  "slug": "alacritty",
+  "description": "Cross-platform, GPU-accelerated terminal emulator \u2014 focused on simplicity and performance",
+  "website": "https://alacritty.org",
+  "platform": "macOS",
+  "architecture": "universal",
+  "bundle_id": "org.alacritty",
+  "category": "developer-tools",
+  "license": "free",
+  "min_os": "macOS 10.15",
+  "auto_updates": false,
+  "skip": false,
+  "version_check": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/alacritty/alacritty/releases/latest",
+    "extraction": {
+      "type": "json_path",
+      "path": "tag_name"
+    }
+  },
+  "download": {
+    "method": "direct_url",
+    "url": "https://github.com/alacritty/alacritty/releases/latest",
+    "file_type": "dmg"
+  },
+  "changelog": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/alacritty/alacritty/releases/latest"
+  },
+  "release_date": {
+    "method": "github_api",
+    "field": "published_at"
+  },
+  "last_updated": "2026-06-22"
+}

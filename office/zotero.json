@@ -1,0 +1,36 @@
+{
+  "name": "Zotero",
+  "slug": "zotero",
+  "description": "Free, easy-to-use tool to help you collect, organize, annotate, cite, and share research \u2014 the standard for academic reference management",
+  "website": "https://www.zotero.org",
+  "platform": "macOS",
+  "architecture": "universal",
+  "bundle_id": "org.zotero.zotero",
+  "category": "office",
+  "license": "free",
+  "min_os": "macOS 10.14",
+  "auto_updates": true,
+  "skip": false,
+  "version_check": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/zotero/zotero/releases/latest",
+    "extraction": {
+      "type": "json_path",
+      "path": "tag_name"
+    }
+  },
+  "download": {
+    "method": "direct_url",
+    "url": "https://www.zotero.org/download",
+    "file_type": "dmg"
+  },
+  "changelog": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/zotero/zotero/releases/latest"
+  },
+  "release_date": {
+    "method": "github_api",
+    "field": "published_at"
+  },
+  "last_updated": "2026-06-22"
+}

@@ -1,0 +1,36 @@
+{
+  "name": "Neovide",
+  "slug": "neovide",
+  "description": "No Nonsense Neovim Client in Rust \u2014 a beautiful, GPU-accelerated GUI for Neovim with smooth animations",
+  "website": "https://neovide.dev",
+  "platform": "macOS",
+  "architecture": "universal",
+  "bundle_id": "com.neovide.neovide",
+  "category": "developer-tools",
+  "license": "free",
+  "min_os": "macOS 11.0",
+  "auto_updates": false,
+  "skip": false,
+  "version_check": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/neovide/neovide/releases/latest",
+    "extraction": {
+      "type": "json_path",
+      "path": "tag_name"
+    }
+  },
+  "download": {
+    "method": "direct_url",
+    "url": "https://github.com/neovide/neovide/releases/latest",
+    "file_type": "dmg"
+  },
+  "changelog": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/neovide/neovide/releases/latest"
+  },
+  "release_date": {
+    "method": "github_api",
+    "field": "published_at"
+  },
+  "last_updated": "2026-06-22"
+}

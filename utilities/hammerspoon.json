@@ -1,0 +1,36 @@
+{
+  "name": "Hammerspoon",
+  "slug": "hammerspoon",
+  "description": "Staggeringly powerful macOS automation tool \u2014 bridge between Lua scripting engine and macOS APIs for window management, keyboard shortcuts, and more",
+  "website": "https://www.hammerspoon.org",
+  "platform": "macOS",
+  "architecture": "universal",
+  "bundle_id": "org.hammerspoon.Hammerspoon",
+  "category": "utilities",
+  "license": "free",
+  "min_os": "macOS 10.15",
+  "auto_updates": true,
+  "skip": false,
+  "version_check": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/Hammerspoon/hammerspoon/releases/latest",
+    "extraction": {
+      "type": "json_path",
+      "path": "tag_name"
+    }
+  },
+  "download": {
+    "method": "direct_url",
+    "url": "https://github.com/Hammerspoon/hammerspoon/releases/latest",
+    "file_type": "dmg"
+  },
+  "changelog": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/Hammerspoon/hammerspoon/releases/latest"
+  },
+  "release_date": {
+    "method": "github_api",
+    "field": "published_at"
+  },
+  "last_updated": "2026-06-22"
+}

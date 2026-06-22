@@ -1,0 +1,36 @@
+{
+  "name": "Amethyst",
+  "slug": "amethyst",
+  "description": "Automatic tiling window manager for macOS \u2014 keeps your windows organized in tiles with keyboard shortcuts",
+  "website": "https://ianyh.com/amethyst",
+  "platform": "macOS",
+  "architecture": "universal",
+  "bundle_id": "com.amethyst.Amethyst",
+  "category": "utilities",
+  "license": "free",
+  "min_os": "macOS 10.15",
+  "auto_updates": true,
+  "skip": false,
+  "version_check": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/ianyh/Amethyst/releases/latest",
+    "extraction": {
+      "type": "json_path",
+      "path": "tag_name"
+    }
+  },
+  "download": {
+    "method": "direct_url",
+    "url": "https://github.com/ianyh/Amethyst/releases/latest",
+    "file_type": "dmg"
+  },
+  "changelog": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/ianyh/Amethyst/releases/latest"
+  },
+  "release_date": {
+    "method": "github_api",
+    "field": "published_at"
+  },
+  "last_updated": "2026-06-22"
+}

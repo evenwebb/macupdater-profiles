@@ -1,0 +1,36 @@
+{
+  "name": "Session",
+  "slug": "session",
+  "description": "Private messenger with no phone number required \u2014 decentralised, end-to-end encrypted, and metadata-resistant",
+  "website": "https://getsession.org",
+  "platform": "macOS",
+  "architecture": "universal",
+  "bundle_id": "com.loki-project.loki-messenger",
+  "category": "messaging",
+  "license": "free",
+  "min_os": "macOS 11.0",
+  "auto_updates": true,
+  "skip": false,
+  "version_check": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/oxen-io/session-desktop/releases/latest",
+    "extraction": {
+      "type": "json_path",
+      "path": "tag_name"
+    }
+  },
+  "download": {
+    "method": "direct_url",
+    "url": "https://getsession.org/download",
+    "file_type": "dmg"
+  },
+  "changelog": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/oxen-io/session-desktop/releases/latest"
+  },
+  "release_date": {
+    "method": "github_api",
+    "field": "published_at"
+  },
+  "last_updated": "2026-06-22"
+}

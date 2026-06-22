@@ -1,0 +1,36 @@
+{
+  "name": "Element",
+  "slug": "element",
+  "description": "All-in-one secure chat app for teams, friends, and organisations \u2014 built on the Matrix protocol with end-to-end encryption",
+  "website": "https://element.io",
+  "platform": "macOS",
+  "architecture": "universal",
+  "bundle_id": "im.riot.app",
+  "category": "messaging",
+  "license": "free",
+  "min_os": "macOS 10.15",
+  "auto_updates": true,
+  "skip": false,
+  "version_check": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/element-hq/element-desktop/releases/latest",
+    "extraction": {
+      "type": "json_path",
+      "path": "tag_name"
+    }
+  },
+  "download": {
+    "method": "direct_url",
+    "url": "https://element.io/download",
+    "file_type": "dmg"
+  },
+  "changelog": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/element-hq/element-desktop/releases/latest"
+  },
+  "release_date": {
+    "method": "github_api",
+    "field": "published_at"
+  },
+  "last_updated": "2026-06-22"
+}

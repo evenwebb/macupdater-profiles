@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "version": 2,
-  "updated": "2026-06-22T10:28:55Z",
-  "total_profiles": 245,
+  "updated": "2026-06-22T10:32:40Z",
+  "total_profiles": 270,
   "apps": {
     "1password": {
       "name": "1Password",
@@ -84,6 +84,14 @@
       "path": "office/airtable.json",
       "skip": false
     },
+    "alacritty": {
+      "name": "Alacritty",
+      "bundle_id": "org.alacritty",
+      "category": "developer-tools",
+      "license": "free",
+      "path": "developer-tools/alacritty.json",
+      "skip": false
+    },
     "alfred": {
       "name": "Alfred",
       "bundle_id": "com.runningwithcrayons.Alfred",
@@ -106,6 +114,14 @@
       "category": "media",
       "license": "free",
       "path": "media/amazon-music.json",
+      "skip": false
+    },
+    "amethyst": {
+      "name": "Amethyst",
+      "bundle_id": "com.amethyst.Amethyst",
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/amethyst.json",
       "skip": false
     },
     "amphetamine": {
@@ -404,6 +420,14 @@
       "path": "notes-writing/craft.json",
       "skip": false
     },
+    "cryptomator": {
+      "name": "Cryptomator",
+      "bundle_id": "org.cryptomator.Cryptomator",
+      "category": "vpn-security",
+      "license": "free",
+      "path": "vpn-security/cryptomator.json",
+      "skip": false
+    },
     "cursor": {
       "name": "Cursor",
       "bundle_id": null,
@@ -500,12 +524,28 @@
       "path": "cloud-backup/dropbox.json",
       "skip": false
     },
+    "duckduckgo": {
+      "name": "DuckDuckGo Browser",
+      "bundle_id": "com.duckduckgo.macos.browser",
+      "category": "browsers",
+      "license": "free",
+      "path": "browsers/duckduckgo.json",
+      "skip": false
+    },
     "easyfind": {
       "name": "EasyFind",
       "bundle_id": "org.grunenberg.EasyFind",
       "category": "utilities",
       "license": "free",
       "path": "utilities/easyfind.json",
+      "skip": false
+    },
+    "element": {
+      "name": "Element",
+      "bundle_id": "im.riot.app",
+      "category": "messaging",
+      "license": "free",
+      "path": "messaging/element.json",
       "skip": false
     },
     "elephas": {
@@ -636,6 +676,14 @@
       "path": "other/gemini.json",
       "skip": false
     },
+    "ghostty": {
+      "name": "Ghostty",
+      "bundle_id": "com.mitchellh.ghostty",
+      "category": "developer-tools",
+      "license": "free",
+      "path": "developer-tools/ghostty.json",
+      "skip": false
+    },
     "gimp": {
       "name": "GIMP",
       "bundle_id": "org.gimp.app",
@@ -658,6 +706,14 @@
       "category": "developer-tools",
       "license": "free",
       "path": "developer-tools/github-desktop.json",
+      "skip": false
+    },
+    "godot": {
+      "name": "Godot",
+      "bundle_id": "org.godotengine.godot",
+      "category": "developer-tools",
+      "license": "free",
+      "path": "developer-tools/godot.json",
       "skip": false
     },
     "google-chrome": {
@@ -706,6 +762,14 @@
       "category": "utilities",
       "license": "free",
       "path": "utilities/grandperspective.json",
+      "skip": false
+    },
+    "hammerspoon": {
+      "name": "Hammerspoon",
+      "bundle_id": "org.hammerspoon.Hammerspoon",
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/hammerspoon.json",
       "skip": false
     },
     "handbrake": {
@@ -844,6 +908,14 @@
       "path": "utilities/karabiner-elements.json",
       "skip": false
     },
+    "keepingyouawake": {
+      "name": "KeepingYouAwake",
+      "bundle_id": "info.marcel-dierkes.KeepingYouAwake",
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/keepingyouawake.json",
+      "skip": false
+    },
     "keka": {
       "name": "Keka",
       "bundle_id": null,
@@ -884,6 +956,14 @@
       "path": "office/kindle-previewer.json",
       "skip": false
     },
+    "kitty": {
+      "name": "kitty",
+      "bundle_id": "net.kovidgoyal.kitty",
+      "category": "developer-tools",
+      "license": "free",
+      "path": "developer-tools/kitty.json",
+      "skip": false
+    },
     "kodi": {
       "name": "Kodi",
       "bundle_id": "org.xbmc.kodi",
@@ -908,6 +988,14 @@
       "path": "utilities/la-texit.json",
       "skip": false
     },
+    "lapce": {
+      "name": "Lapce",
+      "bundle_id": "dev.lapce.lapce",
+      "category": "developer-tools",
+      "license": "free",
+      "path": "developer-tools/lapce.json",
+      "skip": false
+    },
     "libreoffice": {
       "name": "LibreOffice",
       "bundle_id": "org.libreoffice.script",
@@ -922,6 +1010,14 @@
       "category": "specialized",
       "license": "free",
       "path": "specialized/linear.json",
+      "skip": false
+    },
+    "linearmouse": {
+      "name": "LinearMouse",
+      "bundle_id": "com.lujjjh.LinearMouse",
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/linearmouse.json",
       "skip": false
     },
     "littlesnitch": {
@@ -978,6 +1074,14 @@
       "category": "specialized",
       "license": "free",
       "path": "specialized/loupedeck.json",
+      "skip": false
+    },
+    "mac-mouse-fix": {
+      "name": "Mac Mouse Fix",
+      "bundle_id": "com.nuebling.mac-mouse-fix",
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/mac-mouse-fix.json",
       "skip": false
     },
     "maccy": {
@@ -1042,6 +1146,14 @@
       "category": "developer-tools",
       "license": "free",
       "path": "developer-tools/mamp.json",
+      "skip": false
+    },
+    "marktext": {
+      "name": "MarkText",
+      "bundle_id": "com.github.marktext.marktext",
+      "category": "notes-writing",
+      "license": "free",
+      "path": "notes-writing/marktext.json",
       "skip": false
     },
     "microsoft-edge": {
@@ -1130,6 +1242,14 @@
       "category": "developer-tools",
       "license": "free",
       "path": "developer-tools/mysql-workbench.json",
+      "skip": false
+    },
+    "neovide": {
+      "name": "Neovide",
+      "bundle_id": "com.neovide.neovide",
+      "category": "developer-tools",
+      "license": "free",
+      "path": "developer-tools/neovide.json",
       "skip": false
     },
     "netnewswire": {
@@ -1468,6 +1588,14 @@
       "path": "gaming/roblox.json",
       "skip": false
     },
+    "rstudio": {
+      "name": "RStudio",
+      "bundle_id": "com.rstudio.desktop",
+      "category": "developer-tools",
+      "license": "free",
+      "path": "developer-tools/rstudio.json",
+      "skip": false
+    },
     "screenflow": {
       "name": "ScreenFlow",
       "bundle_id": "net.telestream.screenflow",
@@ -1508,12 +1636,28 @@
       "path": "developer-tools/sequel-ace.json",
       "skip": false
     },
+    "session": {
+      "name": "Session",
+      "bundle_id": "com.loki-project.loki-messenger",
+      "category": "messaging",
+      "license": "free",
+      "path": "messaging/session.json",
+      "skip": false
+    },
     "setapp": {
       "name": "Setapp",
       "bundle_id": null,
       "category": "utilities",
       "license": "free",
       "path": "utilities/setapp.json",
+      "skip": false
+    },
+    "shotcut": {
+      "name": "Shotcut",
+      "bundle_id": "org.shotcut.Shotcut",
+      "category": "media",
+      "license": "free",
+      "path": "media/shotcut.json",
       "skip": false
     },
     "shottr": {
@@ -1618,6 +1762,14 @@
       "category": "vpn-security",
       "license": "paid",
       "path": "vpn-security/spyderxpro.json",
+      "skip": false
+    },
+    "standard-notes": {
+      "name": "Standard Notes",
+      "bundle_id": "org.standardnotes.standardnotes",
+      "category": "notes-writing",
+      "license": "free",
+      "path": "notes-writing/standard-notes.json",
       "skip": false
     },
     "stats": {
@@ -1892,6 +2044,14 @@
       "path": "developer-tools/vscode.json",
       "skip": false
     },
+    "vscodium": {
+      "name": "VSCodium",
+      "bundle_id": "com.vscodium",
+      "category": "developer-tools",
+      "license": "free",
+      "path": "developer-tools/vscodium.json",
+      "skip": false
+    },
     "wacom-tablet-driver": {
       "name": "Wacom Tablet Driver",
       "bundle_id": "com.wacom.WacomTabletDriver",
@@ -1906,6 +2066,14 @@
       "category": "developer-tools",
       "license": "free",
       "path": "developer-tools/warp.json",
+      "skip": false
+    },
+    "wezterm": {
+      "name": "WezTerm",
+      "bundle_id": "com.github.wez.wezterm",
+      "category": "developer-tools",
+      "license": "free",
+      "path": "developer-tools/wezterm.json",
       "skip": false
     },
     "whatsapp": {
@@ -1956,12 +2124,44 @@
       "path": "developer-tools/xquartz.json",
       "skip": false
     },
+    "yabai": {
+      "name": "yabai",
+      "bundle_id": "com.koekeishiya.yabai",
+      "category": "utilities",
+      "license": "free",
+      "path": "utilities/yabai.json",
+      "skip": false
+    },
+    "zed": {
+      "name": "Zed",
+      "bundle_id": "dev.zed.Zed",
+      "category": "developer-tools",
+      "license": "free",
+      "path": "developer-tools/zed.json",
+      "skip": false
+    },
+    "zettlr": {
+      "name": "Zettlr",
+      "bundle_id": "com.zettlr.app",
+      "category": "notes-writing",
+      "license": "free",
+      "path": "notes-writing/zettlr.json",
+      "skip": false
+    },
     "zoom-workplace": {
       "name": "Zoom Workplace",
       "bundle_id": "us.zoom.xos",
       "category": "messaging",
       "license": "free",
       "path": "messaging/zoom-workplace.json",
+      "skip": false
+    },
+    "zotero": {
+      "name": "Zotero",
+      "bundle_id": "org.zotero.zotero",
+      "category": "office",
+      "license": "free",
+      "path": "office/zotero.json",
       "skip": false
     }
   }

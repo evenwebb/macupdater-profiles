@@ -1,0 +1,32 @@
+{
+  "name": "RStudio",
+  "slug": "rstudio",
+  "description": "Integrated development environment for R \u2014 the most popular IDE for data science and statistical computing",
+  "website": "https://posit.co/products/open-source/rstudio",
+  "platform": "macOS",
+  "architecture": "universal",
+  "bundle_id": "com.rstudio.desktop",
+  "category": "developer-tools",
+  "license": "free",
+  "min_os": "macOS 11.0",
+  "auto_updates": true,
+  "skip": false,
+  "version_check": {
+    "method": "json_api",
+    "url": "https://www.rstudio.org/links/check_for_update?version=0.0.0&os=mac",
+    "extraction": {
+      "type": "json_path",
+      "path": "update.version"
+    }
+  },
+  "download": {
+    "method": "direct_url",
+    "url": "https://posit.co/download/rstudio-desktop",
+    "file_type": "dmg"
+  },
+  "changelog": {
+    "method": "web_scrape",
+    "url": "https://posit.co/products/open-source/rstudio/release-notes"
+  },
+  "last_updated": "2026-06-22"
+}

@@ -1,0 +1,36 @@
+{
+  "name": "Standard Notes",
+  "slug": "standard-notes",
+  "description": "Simple, private, end-to-end encrypted notes app \u2014 syncs across all your devices with a focus on longevity",
+  "website": "https://standardnotes.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "bundle_id": "org.standardnotes.standardnotes",
+  "category": "notes-writing",
+  "license": "free",
+  "min_os": "macOS 11.0",
+  "auto_updates": true,
+  "skip": false,
+  "version_check": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/standardnotes/app/releases/latest",
+    "extraction": {
+      "type": "json_path",
+      "path": "tag_name"
+    }
+  },
+  "download": {
+    "method": "direct_url",
+    "url": "https://standardnotes.com/download",
+    "file_type": "dmg"
+  },
+  "changelog": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/standardnotes/app/releases/latest"
+  },
+  "release_date": {
+    "method": "github_api",
+    "field": "published_at"
+  },
+  "last_updated": "2026-06-22"
+}

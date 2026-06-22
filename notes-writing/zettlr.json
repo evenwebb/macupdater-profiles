@@ -1,0 +1,36 @@
+{
+  "name": "Zettlr",
+  "slug": "zettlr",
+  "description": "One-stop publication workbench \u2014 Markdown editor for academic writing with Zettelkasten, citations, and export",
+  "website": "https://www.zettlr.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "bundle_id": "com.zettlr.app",
+  "category": "notes-writing",
+  "license": "free",
+  "min_os": "macOS 10.15",
+  "auto_updates": true,
+  "skip": false,
+  "version_check": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/Zettlr/Zettlr/releases/latest",
+    "extraction": {
+      "type": "json_path",
+      "path": "tag_name"
+    }
+  },
+  "download": {
+    "method": "direct_url",
+    "url": "https://www.zettlr.com/download",
+    "file_type": "dmg"
+  },
+  "changelog": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/Zettlr/Zettlr/releases/latest"
+  },
+  "release_date": {
+    "method": "github_api",
+    "field": "published_at"
+  },
+  "last_updated": "2026-06-22"
+}

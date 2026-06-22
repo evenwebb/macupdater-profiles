@@ -1,0 +1,36 @@
+{
+  "name": "kitty",
+  "slug": "kitty",
+  "description": "Cross-platform, fast, feature-rich GPU-accelerated terminal emulator with true color, ligatures, and graphics protocol",
+  "website": "https://sw.kovidgoyal.net/kitty",
+  "platform": "macOS",
+  "architecture": "universal",
+  "bundle_id": "net.kovidgoyal.kitty",
+  "category": "developer-tools",
+  "license": "free",
+  "min_os": "macOS 10.15",
+  "auto_updates": false,
+  "skip": false,
+  "version_check": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/kovidgoyal/kitty/releases/latest",
+    "extraction": {
+      "type": "json_path",
+      "path": "tag_name"
+    }
+  },
+  "download": {
+    "method": "direct_url",
+    "url": "https://sw.kovidgoyal.net/kitty/binary",
+    "file_type": "dmg"
+  },
+  "changelog": {
+    "method": "web_scrape",
+    "url": "https://sw.kovidgoyal.net/kitty/changelog"
+  },
+  "release_date": {
+    "method": "github_api",
+    "field": "published_at"
+  },
+  "last_updated": "2026-06-22"
+}

@@ -1,0 +1,36 @@
+{
+  "name": "VSCodium",
+  "slug": "vscodium",
+  "description": "Free/Libre Open Source Software Binaries of VS Code \u2014 VS Code without Microsoft telemetry and branding",
+  "website": "https://vscodium.com",
+  "platform": "macOS",
+  "architecture": "universal",
+  "bundle_id": "com.vscodium",
+  "category": "developer-tools",
+  "license": "free",
+  "min_os": "macOS 10.15",
+  "auto_updates": true,
+  "skip": false,
+  "version_check": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/VSCodium/vscodium/releases/latest",
+    "extraction": {
+      "type": "json_path",
+      "path": "tag_name"
+    }
+  },
+  "download": {
+    "method": "direct_url",
+    "url": "https://github.com/VSCodium/vscodium/releases/latest",
+    "file_type": "dmg"
+  },
+  "changelog": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/VSCodium/vscodium/releases/latest"
+  },
+  "release_date": {
+    "method": "github_api",
+    "field": "published_at"
+  },
+  "last_updated": "2026-06-22"
+}

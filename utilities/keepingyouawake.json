@@ -1,0 +1,36 @@
+{
+  "name": "KeepingYouAwake",
+  "slug": "keepingyouawake",
+  "description": "Prevents your Mac from going to sleep \u2014 lightweight menu bar utility, the modern successor to Caffeine",
+  "website": "https://keepingyouawake.app",
+  "platform": "macOS",
+  "architecture": "universal",
+  "bundle_id": "info.marcel-dierkes.KeepingYouAwake",
+  "category": "utilities",
+  "license": "free",
+  "min_os": "macOS 10.13",
+  "auto_updates": true,
+  "skip": false,
+  "version_check": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/newmarcel/KeepingYouAwake/releases/latest",
+    "extraction": {
+      "type": "json_path",
+      "path": "tag_name"
+    }
+  },
+  "download": {
+    "method": "direct_url",
+    "url": "https://github.com/newmarcel/KeepingYouAwake/releases/latest",
+    "file_type": "dmg"
+  },
+  "changelog": {
+    "method": "github_api",
+    "url": "https://api.github.com/repos/newmarcel/KeepingYouAwake/releases/latest"
+  },
+  "release_date": {
+    "method": "github_api",
+    "field": "published_at"
+  },
+  "last_updated": "2026-06-22"
+}

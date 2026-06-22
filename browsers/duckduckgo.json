@@ -1,0 +1,32 @@
+{
+  "name": "DuckDuckGo Browser",
+  "slug": "duckduckgo",
+  "description": "Privacy-focused web browser from DuckDuckGo \u2014 built-in tracker blocking, email protection, and Smarter Encryption",
+  "website": "https://duckduckgo.com/app",
+  "platform": "macOS",
+  "architecture": "universal",
+  "bundle_id": "com.duckduckgo.macos.browser",
+  "category": "browsers",
+  "license": "free",
+  "min_os": "macOS 11.0",
+  "auto_updates": true,
+  "skip": false,
+  "version_check": {
+    "method": "sparkle_appcast",
+    "url": "https://staticcdn.duckduckgo.com/macos-desktop-browser/appcast.xml",
+    "extraction": {
+      "type": "xpath",
+      "xpath": "//item/enclosure/@*[local-name()='shortVersionString' or local-name()='sparkle:shortVersionString']"
+    }
+  },
+  "download": {
+    "method": "direct_url",
+    "url": "https://duckduckgo.com/app",
+    "file_type": "dmg"
+  },
+  "changelog": {
+    "method": "web_scrape",
+    "url": "https://duckduckgo.com/app/browser-release-notes"
+  },
+  "last_updated": "2026-06-22"
+}
