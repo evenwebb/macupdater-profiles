@@ -1,0 +1,42 @@
+{
+  "name": "Codex",
+  "slug": "codex",
+  "description": "OpenAI Codex desktop app for managing coding agents, built on GPT-5 with terminal access, file editing, and autonomous task execution",
+  "website": "https://openai.com/codex",
+  "platform": "macOS",
+  "architecture": "separate",
+  "bundle_id": "com.openai.codex",
+  "category": "ai-tools",
+  "license": "free",
+  "min_os": "macOS 12.0",
+  "auto_updates": true,
+  "skip": false,
+  "version_check": {
+    "method": "sparkle_appcast",
+    "url": "https://persistent.oaistatic.com/codex-app-prod/appcast.xml",
+    "extraction": {
+      "type": "sparkle_xml",
+      "version_field": "sparkle:shortVersionString",
+      "build_field": "sparkle:version",
+      "note": "Separate appcasts for arm64 and x64. Intel uses appcast-x64.xml. Items may not be in chronological order — compare all sparkle:version values."
+    },
+    "headers": {}
+  },
+  "download": {
+    "method": "construct_url",
+    "pattern": "https://persistent.oaistatic.com/codex-app-prod/Codex-darwin-{ARCH}-{VERSION}.zip",
+    "file_type": "zip",
+    "headers": {},
+    "note": "Separate downloads for arm64 and x64 architectures"
+  },
+  "changelog": {
+    "method": "sparkle_release_notes",
+    "url": "included in sparkle:releaseNotesLink field of appcast item"
+  },
+  "release_date": {
+    "method": "sparkle_pub_date",
+    "field": "pubDate in appcast <item>"
+  },
+  "notes": "OpenAI Codex is a separate desktop app from ChatGPT. Uses Sparkle for auto-updates with separate appcast feeds for Apple Silicon (appcast.xml) and Intel (appcast-x64.xml). Stores user data in ~/.codex and ~/Library/Application Support/Codex.",
+  "last_updated": "2026-06-22"
+}

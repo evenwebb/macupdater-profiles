@@ -1,8 +1,8 @@
 {
   "schema_version": 2,
   "version": 2,
-  "updated": "2026-06-22T11:18:48Z",
-  "total_profiles": 301,
+  "updated": "2026-06-22T15:46:52Z",
+  "total_profiles": 302,
   "apps": {
     "1password": {
       "name": "1Password",
@@ -497,6 +497,15 @@
       "category": "developer-tools",
       "license": "paid",
       "path": "developer-tools/coderunner.json",
+      "skip": false
+    },
+    "codex": {
+      "name": "Codex",
+      "bundle_id": "com.openai.codex",
+      "alternate_bundle_ids": [],
+      "category": "ai-tools",
+      "license": "free",
+      "path": "ai-tools/codex.json",
       "skip": false
     },
     "control-d-utility": {
