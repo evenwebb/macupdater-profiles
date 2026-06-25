@@ -12,12 +12,9 @@
   "auto_updates": true,
   "skip": false,
   "version_check": {
-    "method": "github_api",
-    "url": "https://api.github.com/repos/sindresorhus/Velja/releases/latest",
-    "extraction": {
-      "type": "json_path",
-      "path": "tag_name"
-    }
+    "method": "itunes_api",
+    "url": "",
+    "extraction": null
   },
   "download": {
     "method": "direct_url",

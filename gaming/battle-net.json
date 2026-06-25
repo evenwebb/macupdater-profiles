@@ -9,7 +9,7 @@
   "auto_updates": true,
   "version_check": {
     "method": "scrape_html",
-    "url": "https://news.blizzard.com/en-us/battle-net",
+    "url": "https://www.blizzard.com/en-us/download/confirmation?product=bnetdesktop",
     "extraction": null,
     "notes": "NO public HTTP endpoint. Uses proprietary TCP protocol on us.patch.battle.net:1119. Agent-based (Battle.net Agent.app) with SQLite DBs. Not REST-based.",
     "headers": {}

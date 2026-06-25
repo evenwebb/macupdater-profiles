@@ -9,7 +9,7 @@
   "auto_updates": true,
   "version_check": {
     "method": "sparkle_appcast",
-    "url": "https://folivora.ai/releases/appcast.xml",
+    "url": "https://folivora.com/releases/appcast.xml",
     "extraction": {
       "type": "xpath",
       "xpath": "//item/enclosure/@*[local-name()='shortVersionString' or local-name()='sparkle:shortVersionString']",

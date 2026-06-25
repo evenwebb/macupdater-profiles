@@ -12,11 +12,10 @@
   "auto_updates": true,
   "skip": false,
   "version_check": {
-    "method": "github_api",
-    "url": "https://api.github.com/repos/LibreWolf-Browser/LibreWolf-MacOS-Updater/releases/latest",
+    "method": "json_api",
+    "url": "https://gitlab.com/api/v4/projects/librewolf-community%2Fbrowser%2Fmacos/repository/tags",
     "extraction": {
-      "type": "json_path",
-      "path": "tag_name"
+      "json_path": "0.name"
     }
   },
   "download": {

@@ -3202,5 +3202,13 @@
       "path": "office/zotero.json",
       "skip": false
     }
+  },
+  "health": {
+    "checked_at": "2026-06-25T23:07:41Z",
+    "total": 280,
+    "ok": 108,
+    "broken": 172,
+    "skipped": 21,
+    "pct": 38
   }
 }

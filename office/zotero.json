@@ -13,7 +13,7 @@
   "skip": false,
   "version_check": {
     "method": "github_api",
-    "url": "https://api.github.com/repos/zotero/zotero/releases/latest",
+    "url": "https://api.github.com/repos/zotero/zotero/releases?per_page=1",
     "extraction": {
       "type": "json_path",
       "path": "tag_name"

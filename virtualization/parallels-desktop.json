@@ -9,7 +9,7 @@
   "auto_updates": true,
   "version_check": {
     "method": "json_api",
-    "url": "https://download.parallels.com/website_links/desktop/{MAJOR}/builds-en_US.json",
+    "url": "https://download.parallels.com/website_links/desktop/20/builds-en_US.json",
     "extraction": {
       "type": "regex_on_redirect_location",
       "note": "JSON catalog contains indirect redirect links. Follow DMG redirect to get versioned URL, then extract version.",

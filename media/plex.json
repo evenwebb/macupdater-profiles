@@ -8,12 +8,10 @@
   "min_os": "macOS 11+ (Big Sur and later)",
   "auto_updates": true,
   "version_check": {
-    "method": "sparkle_appcast",
-    "url": "https://plex.tv/downloads/latest/5?channel=8&build=macos-x86_64",
+    "method": "json_api",
+    "url": "https://plex.tv/api/downloads/5.json?channel=plex-desktop",
     "extraction": {
-      "type": "xpath",
-      "pattern": "Follow redirect to get the versioned download URL, parse version from URL path. Potential Sparkle feed URL not publicly documented.",
-      "notes": "May also be accessible via Homebrew cask version tracking (brew info plex)"
+      "json_path": "computer.MacOS.version"
     },
     "headers": {}
   },

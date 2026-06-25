@@ -13,7 +13,7 @@
   "skip": false,
   "version_check": {
     "method": "github_api",
-    "url": "https://api.github.com/repos/Automattic/simplenote/releases/latest",
+    "url": "https://api.github.com/repos/Automattic/simplenote-electron/releases/latest",
     "extraction": {
       "type": "json_path",
       "path": "tag_name"

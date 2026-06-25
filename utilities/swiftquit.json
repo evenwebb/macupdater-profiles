@@ -13,7 +13,7 @@
   "skip": false,
   "version_check": {
     "method": "github_api",
-    "url": "https://api.github.com/repos/onebadmouse/SwiftQuit/releases/latest",
+    "url": "https://api.github.com/repos/onebadidea/swiftquit/releases/latest",
     "extraction": {
       "type": "json_path",
       "path": "tag_name"
