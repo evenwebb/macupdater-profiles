@@ -74,32 +74,48 @@ def normalize_method(m: str) -> str:
 # ---------------------------------------------------------------------------
 def _normalize_extraction(raw) -> dict:
     if isinstance(raw, dict):
+        # Fix double-escaped backslashes in regex patterns
+        if "pattern" in raw:
+            raw["pattern"] = _fix_pattern(raw["pattern"])
         return raw
     if raw is None:
         return {}
     if isinstance(raw, str):
         s = raw.strip()
         if s.startswith("regex:"):
-            return {"pattern": s[len("regex:"):]}
+            return {"pattern": _fix_pattern(s[len("regex:"):])}
         if s.startswith("sparkle:"):
             return {}
         if s in ("tag_name", "product", "version"):
             return {"json_path": s}
-        return {"pattern": s}
+        return {"pattern": _fix_pattern(s)}
     return {}
 
 
+def _fix_pattern(p: str) -> str:
+    """Fix common regex escaping issues in profile patterns."""
+    if not p:
+        return p
+    # Double-escaped backslashes: \\\\d → \\d (common JSON encoding error)
+    return p.replace("\\\\", "\\")
+
+
 def fetch(url: str) -> tuple[int, str]:
-    """Returns (status_code, body)."""
+    """Returns (status_code, body). Supports gzip decompression."""
+    import gzip, io
     if not url.startswith(("http://", "https://")):
         return -1, f"Invalid URL: {url[:80]}"
-    headers = {"User-Agent": UA}
+    headers = {"User-Agent": UA, "Accept-Encoding": "gzip"}
     if "api.github.com" in url and GITHUB_TOKEN:
         headers["Authorization"] = f"Bearer {GITHUB_TOKEN}"
     req = urllib.request.Request(url, headers=headers)
     try:
         resp = urllib.request.urlopen(req, timeout=TIMEOUT)
-        return resp.status, resp.read().decode("utf-8", "replace")
+        raw = resp.read()
+        # Handle gzip compression
+        if resp.headers.get("Content-Encoding") == "gzip" or raw[:2] == b"\x1f\x8b":
+            raw = gzip.decompress(raw)
+        return resp.status, raw.decode("utf-8", "replace")
     except urllib.error.HTTPError as e:
         return e.code, ""
     except Exception as e:
@@ -117,27 +133,64 @@ def fetch_with_retry(url: str) -> tuple[int, str]:
 
 
 # --- Sparkle ---
+_SPARKLE_NS = [
+    "http://www.andymatuschak.org/xml-namespaces/sparkle",
+    "https://sparkle-project.org/xml-namespaces/sparkle",
+]
+
 def _extract_sparkle(body: str) -> tuple[str | None, str | None]:
-    ns = {"sparkle": "http://www.andymatuschak.org/xml-namespaces/sparkle"}
+    # Try each sparkle namespace
+    for ns_url in _SPARKLE_NS:
+        ns = {"sparkle": ns_url}
+        result = _try_sparkle_ns(body, ns)
+        if result[0]:
+            return result
+
+    # Fallback: try to extract version from filename in enclosure URLs
+    root = ET.fromstring(body)
+    items = root.findall("channel/item")
+    for item in items:
+        encl = item.find("enclosure")
+        if encl is not None:
+            url = encl.get("url", "")
+            m = re.search(r'[-_](\d+\.\d+(?:\.\d+)?(?:\.\d+)?)[-_.]', url)
+            if m:
+                return (m.group(1), None)
+
+    return (None, "No version found in Sparkle feed")
+
+
+def _try_sparkle_ns(body: str, ns: dict) -> tuple[str | None, str | None]:
     root = ET.fromstring(body)
     items = root.findall("channel/item")
     if not items:
-        return None, "No items in feed"
+        return (None, "No items in feed")
 
     best_ver, best = None, None
     for item in items:
         encl = item.find("enclosure")
+        # Try child element first, then enclosure attribute
         sv = item.findtext("sparkle:shortVersionString", namespaces=ns)
         if not sv and encl is not None:
             sv = encl.get(f"{{{ns['sparkle']}}}shortVersionString")
-        ver = encl.get(f"{{{ns['sparkle']}}}version") if encl is not None else None
+        # Check version child element
+        ver = item.findtext("sparkle:version", namespaces=ns)
+        if not ver and encl is not None:
+            ver = encl.get(f"{{{ns['sparkle']}}}version")
+        # Fallback: extract from enclosure URL filename
+        if not sv and not ver and encl is not None:
+            url = encl.get("url", "")
+            m = re.search(r'[-_](\d+\.\d+(?:\.\d+)?(?:\.\d+)?)[-_.]', url)
+            if m:
+                ver = m.group(1)
+
         try:
             vt = tuple(int(x) for x in (sv or ver or "").split("."))
         except (ValueError, TypeError):
             vt = (0,)
         if best_ver is None or vt > best_ver:
             best_ver, best = vt, (sv or ver)
-    return (best, None)
+    return (best, None if best else "No version found")
 
 
 # --- GitHub ---
@@ -188,8 +241,25 @@ def _extract_yaml(body: str, extraction: dict) -> tuple[str | None, str | None]:
 # --- HTML scrape ---
 def _extract_html(body: str, extraction: dict) -> tuple[str | None, str | None]:
     pattern = extraction.get("pattern", r"(\d+\.\d+(?:\.\d+)?)")
-    m = re.search(pattern, body)
-    return (m.group(1) if m else None, None)
+    if pattern:
+        m = re.search(pattern, body)
+        if m:
+            return (m.group(1), None)
+
+    # Fallback: strip HTML and look for common version patterns
+    text = re.sub(r"<[^>]+>", " ", body)
+    text = re.sub(r"\s+", " ", text)
+    # Try common version patterns in order
+    fallbacks = [
+        r"Version\s+(\d+\.\d+(?:\.\d+)?(?:\.\d+)?)",
+        r"v?(\d+\.\d+(?:\.\d+)?(?:\.\d+)?)",
+        r"(\d+\.\d+(?:\.\d+)?(?:\.\d+)?)",
+    ]
+    for fb in fallbacks:
+        m = re.search(fb, text)
+        if m:
+            return (m.group(1), None)
+    return (None, "No version pattern matched")
 
 
 # ---------------------------------------------------------------------------
