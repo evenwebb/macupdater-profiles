@@ -32,7 +32,7 @@ MANIFEST_PATH = REPO / "manifest.json"
 TIMEOUT = 15
 WORKERS = 8
 UA = "MacUpdater-HealthCheck/2.0"
-GITHUB_TOKEN = __import__("os").environ.get("GITHUB_TOKEN", "")
+GITHUB_TOKEN = (__import__("os").environ.get("GITHUB_TOKEN") or __import__("os").environ.get("GH_TOKEN", ""))
 
 # Methods that can't be checked remotely (require local app, auth, etc.)
 SKIP_METHODS = {

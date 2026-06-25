@@ -34,7 +34,7 @@ TIMEOUT = 15
 WORKERS = 8
 RETRIES = 2
 UA = "MacUpdater-HealthCheck/3.0"
-GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN", "")
+GITHUB_TOKEN = os.environ.get("GITHUB_TOKEN") or os.environ.get("GH_TOKEN", "")
 
 # ---------------------------------------------------------------------------
 # Result categories
