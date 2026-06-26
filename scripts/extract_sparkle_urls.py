@@ -33,11 +33,25 @@ IS_MACOS = sys.platform == "darwin"
 
 
 def download(url: str, dest: Path) -> bool:
-    """Download a file. Returns True on success."""
+    """Download a file, following redirects. Returns True on success."""
     try:
         req = urllib.request.Request(url, headers={"User-Agent": UA})
         resp = urllib.request.urlopen(req, timeout=60)
-        dest.write_bytes(resp.read())
+        raw = resp.read()
+
+        # Check if it's HTML (redirect page) instead of binary
+        if raw[:100].strip().startswith(b"<!") or raw[:100].strip().startswith(b"<html"):
+            # Try to extract a redirect or download link from the HTML
+            body = raw.decode("utf-8", "replace")
+            m = re.search(r'https?://[^"\s]+\.(?:dmg|zip|pkg)', body)
+            if m:
+                real_url = m.group(0)
+                print(f"  Following redirect to: {real_url}")
+                req2 = urllib.request.Request(real_url, headers={"User-Agent": UA})
+                resp2 = urllib.request.urlopen(req2, timeout=60)
+                raw = resp2.read()
+
+        dest.write_bytes(raw)
         return True
     except Exception as e:
         print(f"  Download failed: {e}")
@@ -69,16 +83,13 @@ def extract_dmg(dmg_path: Path, dest_dir: Path) -> Path | None:
                 subprocess.run(["hdiutil", "detach", str(mount_point)], capture_output=True)
         print(f"  hdiutil mount failed: {result.stderr[:100]}")
 
-    # Linux: use 7z to extract DMG contents
+    # Linux: use 7z to extract DMG contents (skip symlinks with -snl)
     result = subprocess.run(
-        ["7z", "x", f"-o{dest_dir}", str(dmg_path), "-y"],
+        ["7z", "x", f"-o{dest_dir}", str(dmg_path), "-y", "-snl"],
         capture_output=True, text=True, timeout=60
     )
-    if result.returncode != 0:
-        print(f"  7z extract failed: {result.stderr[:200]}")
-        return None
-
-    # 7z extracts DMG contents — look for .app recursively
+    # 7z may report "Sub items Errors" for symlinks but still succeed
+    # Check for .app regardless of return code
     apps = list(dest_dir.glob("**/*.app"))
     if apps:
         return apps[0]
@@ -194,44 +205,85 @@ KNOWN_DOWNLOADS = {
     "linear": "https://linear.app/download/mac",
     "tower": "https://www.git-tower.com/public/download/mac",
     "evoto": "https://www.evoto.ai/download",
-    "one-switch": "https://fireball.studio/oneswitch/OneSwitch-latest.dmg",
-    "acorn": "https://flyingmeat.com/download/latest/Acorn.zip",
+    "one-switch": "https://fireball.studio/oneswitch/",
+    "acorn": "https://flyingmeat.com/download/Acorn.zip",
     "bartender": "https://www.macbartender.com/Bartender6/Bartender6.dmg",
     "bettertouchtool": "https://folivora.com/releases/BetterTouchTool.zip",
     "daisydisk": "https://daisydiskapp.com/downloads/DaisyDisk.dmg",
     "fantastical": "https://flexibits.com/fantastical/download",
     "hazel": "https://www.noodlesoft.com/download/Hazel-latest.dmg",
     "la-texit": "https://www.chachatelier.fr/latexit/downloads/LaTeXiT.dmg",
-    "poedit": "https://poedit.net/download/Poedit-latest.zip",
+    "poedit": "https://download.poedit.com/Poedit-3.9.1.zip",
     "shottr": "https://shottr.cc/download/Shottr-latest.dmg",
     "windsurf": "https://codeium.com/windsurf/download/mac",
     "raycast": "https://releases.raycast.com/releases/latest/download",
+    "flux": "https://justgetflux.com/dlmac.html",
+    "garmin-express": "https://www.garmin.com/en-US/software/express/",
+    "postman": "https://dl.pstmn.io/download/latest/osx_arm64",
+    "spark-mail": "https://sparkmailapp.com/download",
+    "tower": "https://www.git-tower.com/public/download/mac",
 }
 
 
-def scrape_download_link(page_url: str, slug: str = "") -> str | None:
-    """Scrape a download page for a DMG/ZIP link."""
-    # Use known-good URL if available
+def find_download_link(page_url: str, slug: str = "") -> str | None:
+    """Find the actual DMG/ZIP download link from an app's website."""
+    # Method 1: Use known-good URL
     if slug in KNOWN_DOWNLOADS:
         return KNOWN_DOWNLOADS[slug]
 
+    # Method 2: Scrape the page for direct DMG/ZIP links
     try:
         req = urllib.request.Request(page_url, headers={"User-Agent": UA})
         resp = urllib.request.urlopen(req, timeout=15)
         body = resp.read().decode("utf-8", "replace")
 
-        # Look for DMG/ZIP download links — prefer direct file links
+        # Look for direct file links
         patterns = [
             r'href="(https?://[^"]+\.dmg)"',
             r'href="(https?://[^"]+\.zip)"',
-            r'href="(https?://[^"]+/download[^"]*)"',
+            r'https?://[^"\'\\s]+\.(?:dmg|zip)',
         ]
         for p in patterns:
             matches = re.findall(p, body, re.IGNORECASE)
-            if matches:
-                return matches[0]
+            for m in matches:
+                if 'appcast' not in m.lower() and 'update' not in m.lower():
+                    return m
+
+        # Look for download buttons/links
+        dl_patterns = [
+            r'href="([^"]*download[^"]*\.dmg[^"]*)"',
+            r'href="([^"]*download[^"]*\.zip[^"]*)"',
+            r'(https?://[^"]+/download[^"]*)"',
+        ]
+        for p in dl_patterns:
+            m = re.search(p, body, re.IGNORECASE)
+            if m:
+                dl = m.group(1)
+                if not dl.startswith('http'):
+                    from urllib.parse import urljoin
+                    dl = urljoin(page_url, dl)
+                return dl
     except Exception:
         pass
+
+    # Method 3: Try common URL patterns
+    domain = urllib.parse.urlparse(page_url).netloc
+    common_patterns = [
+        f"https://{domain}/download/latest",
+        f"https://{domain}/download",
+        f"https://download.{domain}/latest",
+        f"https://dl.{domain}/latest",
+    ]
+    for url in common_patterns:
+        try:
+            req = urllib.request.Request(url, headers={"User-Agent": UA})
+            resp = urllib.request.urlopen(req, timeout=10)
+            final_url = resp.geturl()
+            if final_url != url:
+                return final_url
+        except Exception:
+            continue
+
     return None
 
 
@@ -274,7 +326,7 @@ def process_profile(slug: str, apply: bool = False) -> str | None:
     print(f"  Page: {page_url}")
 
     # Scrape for download link
-    dl_url = scrape_download_link(page_url, slug)
+    dl_url = find_download_link(page_url, slug)
     if not dl_url:
         print(f"  Could not find download link on page")
         return None
@@ -286,16 +338,26 @@ def process_profile(slug: str, apply: bool = False) -> str | None:
         tmp = Path(tmp)
         dl_path = tmp / "download"
 
-        # Determine file type from URL
-        is_dmg = dl_url.lower().endswith(".dmg")
-        is_zip = dl_url.lower().endswith(".zip")
-
-        if not (is_dmg or is_zip):
-            print(f"  Unknown file type: {dl_url}")
-            return None
-
+        # Try download and detect type from content
         if not download(dl_url, dl_path):
             return None
+
+        # Detect file type from magic bytes
+        header = dl_path.read_bytes()[:4]
+        # ZIP files start with PK
+        if header[:2] == b"PK":
+            is_zip, is_dmg = True, False
+        # gzip starts with 1f 8b
+        elif header[:2] == b"\x1f\x8b":
+            import gzip
+            decompressed = gzip.decompress(dl_path.read_bytes())
+            dl_path.write_bytes(decompressed)
+            header = dl_path.read_bytes()[:4]
+            is_zip = header[:2] == b"PK"
+            is_dmg = not is_zip
+        else:
+            # Assume DMG (or 7z can handle it)
+            is_zip, is_dmg = False, True
 
         # Extract
         app_path = None
@@ -349,7 +411,7 @@ def main():
                 url = data.get("version_check", {}).get("url", "")
                 method = data.get("version_check", {}).get("method", "")
                 # Placeholder or sparkle with no real URL
-                if not url.startswith(("http://", "https://")):
+                if not url or not url.startswith(("http://", "https://")):
                     slugs.append(pf.stem)
         print(f"Found {len(slugs)} profiles with placeholder URLs")
     else:
