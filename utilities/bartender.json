@@ -9,7 +9,7 @@
   "auto_updates": true,
   "version_check": {
     "method": "sparkle_appcast",
-    "url": "https://macbartender.com/appcast.xml",
+    "url": "https://downloads.macbartender.com/B2/updates/AppcastB6.xml",
     "extraction": {
       "type": "xpath",
       "xpath": "//item/enclosure/@*[local-name()='shortVersionString' or local-name()='sparkle:shortVersionString']",

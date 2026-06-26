@@ -9,7 +9,7 @@
   "auto_updates": true,
   "version_check": {
     "method": "sparkle_appcast",
-    "url": "SUFeedURL_in_app_bundle",
+    "url": "https://updates.fournova.com/tower3-mac/stable/updates",
     "extraction": {
       "type": "sparkle_feed",
       "pattern": null

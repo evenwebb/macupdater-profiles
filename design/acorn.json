@@ -9,7 +9,7 @@
   "auto_updates": true,
   "version_check": {
     "method": "sparkle_appcast",
-    "url": "https://flyingmeat.com/acorn/appcast.xml",
+    "url": "https://flyingmeat.com/download/acorn8update.xml",
     "extraction": {
       "type": "xpath",
       "xpath": "//item/enclosure/@*[local-name()='shortVersionString' or local-name()='sparkle:shortVersionString']",

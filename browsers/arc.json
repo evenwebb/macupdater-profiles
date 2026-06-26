@@ -9,7 +9,7 @@
   "auto_updates": true,
   "version_check": {
     "method": "sparkle_appcast",
-    "url": "Sparkle appcast URL is BLOCKED/protected \u2014 not publicly accessible",
+    "url": "https://releases.arc.net/updates.xml",
     "extraction": {
       "type": "xpath",
       "pattern": "sparkle:shortVersionString (appcast not reachable)"

@@ -9,7 +9,7 @@
   "auto_updates": true,
   "version_check": {
     "method": "sparkle_appcast",
-    "url": "Sparkle SUFeedURL is embedded in the app bundle \u2014 exact URL not publicly documented",
+    "url": "https://downloads.sparkmailapp.com/Spark3/mac/dist/appcast.xml",
     "extraction": {
       "type": "xpath",
       "pattern": "sparkle:shortVersionString (if appcast URL discovered from app bundle)"
